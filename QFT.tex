@@ -1,0 +1,115 @@
+\documentclass[10pt]{book} 
+
+\input{structure} 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	Apuntes teoría Cuántica de Campos
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=12cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Teoría Cuántica de Campos y temas selectos de física de partículas\\[15pt] % Book title
+{\Large E. Rojas, O. Rosero, L. Rozo}\\[20pt] % Subtitle
+{\huge }}}; % Author name
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent DERECHOS RESERVADOS \copyright\ 2021\\ % Copyright notice
+
+\noindent \textsc{Published by Universidad de Nariño}\\ % Publisher
+
+\noindent \textsc{book-website.com}\\ % URL
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
+
+\noindent \textit{First printing, July 2021} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_0.pdf} % Table of contents heading image
+\pagestyle{empty} % No headers
+\tableofcontents % Print the table of contents itself
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+\pagestyle{fancy} % Print headers again
+%----------------------------------------------------------------------------------------
+\part{Teoría cuántica de campos}
+%	CAPITULOS
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1 Introducción
+\input{Capitulos/Cap_1/Capitulo1.tex} 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2 Teoría Clasica de Campos
+\input{Capitulos/Cap_2/Capitulo2.tex} 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3 Cuantización de Campo Escalar
+\input{Capitulos/Cap_3/Capitulo3.tex} 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 4
+\input{Capitulos/Cap_4/Capitulo4.tex} 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 5 
+\input{Capitulos/Cap_5/Capitulo5.tex} 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 6 
+\input{Capitulos/Cap_6/Capitulo6.tex} 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 7 
+\input{Capitulos/Cap_7/Capitulo7.tex} 
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%%%PARTE 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Temas selectos de física de partículas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Capítulos--------------------------------------------------------
+\input{Capitulos/Temas_selectos/feynmanCalc}
+\input{Capitulos/Temas_selectos/teoriasGauge}
+\input{Capitulos/Temas_selectos/simetriasRotas}
+\input{Capitulos/Temas_selectos/modeloEstandar}
+\input{Capitulos/Temas_selectos/anomalias}
+\input{Capitulos/Temas_selectos/oscNeutrinos}
+\input{Capitulos/Temas_selectos/renormalizacion}
+\input{Capitulos/Temas_selectos/noPerturbativa}
+%------------------------------------------------------------------
+
+%   Apéndices 
+%----------------------------------------------------------------------------------------
+\appendix
+\input{Capitulos/Apendices/apendices.tex}
+
+\end{document}

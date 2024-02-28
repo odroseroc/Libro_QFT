@@ -1,0 +1,16 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'QFT.blg'
+[72] biber:322> INFO - === Sun Oct 15, 2023, 19:31:28
+[86] Biber.pm:415> INFO - Reading 'QFT.bcf'
+[156] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
+[170] Biber.pm:4256> INFO - Processing section 0
+[170] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
+[170] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
+[180] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[180] bibtex.pm:1653> INFO - LaTeX decoding ...
+[185] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
+[215] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[215] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[215] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[217] bbl.pm:652> INFO - Writing 'QFT.bbl' with encoding 'UTF-8'
+[218] bbl.pm:755> INFO - Output to QFT.bbl

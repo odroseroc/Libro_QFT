@@ -1,0 +1,135 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {part}{\@mypartnumtocformat {I}{Teoría cuántica de campos}}{7}{part.1}%
+\ttl@starttoc {default@1}
+\contentsline {chapter}{\numberline {1}Introducción}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}\textquestiondown Porqu\'{e} una teoría Cu\'{a}ntica de Campos?}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Operadores Aniquilador y Creador}{10}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Relatividad Especial}{17}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Espacio y tiempo en teor\'{\i }a cu\'{a}ntica relativista}{20}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Unidades Naturales}{21}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Teor\'{\i }a Cl\'{a}sica de Campos}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Mecánica de partículas}{23}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Principio de acción y ecuaciones de Euler-Lagrange}{23}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Formalismo Hamiltoniano y corchetes de Poisson}{26}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Formalismo Lagrangiano en teoría Clásica de Campos}{27}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}La funcional Acción y el Lagrangiano}{27}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Formulaci\'{o}n Lagrangiana en una dimensi\'{o}n para sistemas cont\'{\i }nuos}{32}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Formulaci\'{o}n Lagrangiana en tres dimensiones para sistemas cont\'{\i }nuos con un n\'{u}mero arbitrario de variables de campo}{35}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Formalismo Hamiltoniano en teoría Clásica de Campos}{39}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Leyes de conservación en Teoría Clásica de Campos}{41}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Primer Teorema de Noether}{41}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Aplicaciones del Teorema de Noether}{48}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Invarianza ante traslaciones Espacio-Temporales}{49}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Invarianza de Lorentz o ante rotaciones y boots}{51}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Simetrías Internas}{54}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Simetrías de Poincare}{55}{subsection.2.4.6}%
+\contentsline {section}{\numberline {2.5}Adicional: Segundo Teorema de Noether}{56}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Cuantización de Campo Escalar}{59}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cuantización canónica del campo escalar real}{59}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Ecuación de movimiento}{59}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Cuantización canónica}{60}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Análisis de Fourier para campo escalar}{62}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Orden normal de operadores}{72}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Espacio de Fock}{73}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Estado vacío y punto cero}{75}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}Campo escalar complejo}{76}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Operadores creador y Aniquilador}{76}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Partículas y antipartículas}{78}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Espacio de estados y Hamiltoniano}{81}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Propagador para campo escalar}{81}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Adicional: Interpretación de partícula y función de n Puntos}{90}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Interpretación de Partícula}{90}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Funciones de n puntos}{93}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Campos Fermiónicos}{95}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Hamiltoniano de Dirac}{95}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Propiedades de las matrices Gamma}{97}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Ecuación de Dirac}{103}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Soluciones de Ondas planas de la ecuación de Dirac}{110}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Espinores de energía positiva y negativa}{110}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Soluciones en la representación de Dirac-Pauli}{113}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Operadores de Proyección}{115}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Operadores de proyección para soluciones positivas y negativas de energía}{116}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Operador de proyección de Helicidad}{118}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Operadores de proyección de quiralidad}{123}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Operadores de proyección de espín}{124}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Lagrangiano de Dirac}{126}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Análisis de Fourier para campo fermiónico}{130}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Propagador de la ecuación de Dirac}{138}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Teorías interactuantes, la matriz S}{145}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ejemplos de Interacciones}{145}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Evolución de un operador}{147}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Cap 6}{149}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Cap 7}{151}{chapter.7}%
+\contentsline {part}{\@mypartnumtocformat {II}{Temas selectos de física de partículas}}{153}{part.2}%
+\ttl@stoptoc {default@1}
+\ttl@starttoc {default@2}
+\contentsline {chapter}{\numberline {8}El cálculo de Feynman}{155}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Decaimientos y dispersión}{155}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Teorías gauge}{157}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Simetrías}{157}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Clasificación de simetrías}{157}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Grupos y simetrías}{158}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Ejemplos de grupos de simetrías continuas}{158}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.1.4}Generadores de grupos continuos}{159}{subsection.9.1.4}%
+\contentsline {section}{\numberline {9.2}Derivada covariante de un grupo gauge}{160}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Conmutador de derivadas covariantes}{162}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Simetrías rotas en la naturaleza}{165}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Ruptura espontánea de la simetría}{165}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Teorema de Nambu-Goldstone}{168}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Teorema de Nambu-Goldstone y generadores del grupo de simetría}{171}{subsection.10.2.1}%
+\contentsline {section}{\numberline {10.3}Mecanismo de Higgs}{174}{section.10.3}%
+\contentsline {section}{Ap\'endice: Expansi\'on de Baker-Campbell-Hasudorff}{176}{section*.11}%
+\contentsline {chapter}{\numberline {11}Modelo estándar}{179}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Lagrangiano del ME}{182}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Bosones gauge de $\mathrm {SU}(2)_L \otimes \mathrm {U}(1)$}{182}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Acoplamiento a fermiones}{186}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Mecanismo de GIM}{189}{section.11.4}%
+\contentsline {chapter}{\numberline {12}Cancelación de anomalías}{193}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Ejemplos de cancelación de anomalías}{201}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Anomalía de sabor $\mathrm {SU}(2)$}{201}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Anomalía de color $\mathrm {SU}(3)$}{202}{subsection.12.1.2}%
+\contentsline {subsection}{\numberline {12.1.3}Anomalía de hipercarga $\mathrm {U}(1)$}{203}{subsection.12.1.3}%
+\contentsline {subsection}{\numberline {12.1.4}Anomalía con tres gluones}{204}{subsection.12.1.4}%
+\contentsline {subsection}{\numberline {12.1.5}Anomalía gravitacional}{205}{subsection.12.1.5}%
+\contentsline {chapter}{\numberline {13}Masas de neutrinos, mezclas y oscilaciones}{207}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Oscilaciones de neutrinos}{207}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Masas de neutrinos}{212}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Conjugado de carga}{212}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Término de masa de Dirac}{213}{subsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.2.3}Término de masa de Majorana}{214}{subsection.13.2.3}%
+\contentsline {subsection}{\numberline {13.2.4}Autoestados del operador conjugación de carga}{214}{subsection.13.2.4}%
+\contentsline {paragraph}{Invarianza bajo una fase}{215}{section*.22}%
+\contentsline {subsection}{\numberline {13.2.5}Mecanismo de sube y baja}{215}{subsection.13.2.5}%
+\contentsline {chapter}{\numberline {14}Renormalización}{219}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Sistemática de la renormalización}{219}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Grado superficial de divergencia}{219}{subsection.14.1.1}%
+\contentsline {section}{\numberline {14.2}Teoría de perturbación renormalizada}{224}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Divergencias originadas de la dispersión dos-a-dos}{227}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}Parámetros de Feynman y rotación de Wick}{228}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}Regularización dimensional}{232}{subsection.14.2.3}%
+\contentsline {subsection}{\numberline {14.2.4}Divergencias originadas de la autoenergía}{235}{subsection.14.2.4}%
+\contentsline {chapter}{\numberline {15}Teoría cuántica de campos no-perturbativa}{239}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Ecuaciones de Schwinger-Dyson}{239}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Autoenergía}{239}{subsection.15.1.1}%
+\contentsline {section}{\numberline {15.2}Ecuación de Bethe-Salpeter}{242}{section.15.2}%
+\contentsline {chapter}{\numberline {A}Introducción a teoría de grupos}{245}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Teoría de grupos}{245}{section.Alph1.1}%
+\contentsline {subsection}{\numberline {A.1.1}Grupos de Lie}{247}{subsection.Alph1.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Representaciones de grupos}{247}{subsection.Alph1.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Álgebra de Lie asociada a un grupo}{251}{subsection.Alph1.1.3}%
+\contentsline {subsubsection}{Grupo Euclideo}{255}{section*.31}%
+\contentsline {section}{\numberline {A.2}Representaciones Irreducibles}{255}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Grupo de Lorentz}{256}{section.Alph1.3}%
+\contentsline {subsubsection}{Transformaciones de Lorentz}{256}{section*.32}%
+\contentsline {subsubsection}{Componentes del grupo de Lorentz}{258}{section*.34}%
+\contentsline {subsection}{\numberline {A.3.1}Álgebra del grupo de Lorentz}{259}{subsection.Alph1.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Representaciones Tensoriales}{263}{subsection.Alph1.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}Representaciones Espinoriales}{266}{subsection.Alph1.3.3}%
+\contentsline {section}{\numberline {A.4}Representaciones sobre campos}{268}{section.Alph1.4}%
+\contentsline {subsection}{\numberline {A.4.1}Campos Escalares}{268}{subsection.Alph1.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Campos de Weyl, Dirac y Majorana}{268}{subsection.Alph1.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}Campos vectoriales}{270}{subsection.Alph1.4.3}%
+\contentsline {section}{\numberline {A.5}Grupo de Poincare}{271}{section.Alph1.5}%
+\contentsline {subsection}{\numberline {A.5.1}Representaciones sobre los campos}{271}{subsection.Alph1.5.1}%
+\contentsline {subsection}{\numberline {A.5.2}Representaciones sobre estados de una partícula}{272}{subsection.Alph1.5.2}%
+\contentsfinish 
