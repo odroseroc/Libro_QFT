@@ -1,0 +1,345 @@
+\chapter{Teoría cuántica de campos no-perturbativa}
+
+\section{Ecuaciones de Schwinger-Dyson}
+
+
+En general, en teoría cuántica de campos, tendremos, como objetos fundamentales, las \textbf{funciones de Green de $n$ puntos} (también conocidas como \emph{funciones de correlación}), que corresponden al valor esperado en el vacío del producto ordenado temporalmente de los campos:
+%
+\begin{equation}
+	G(x_1, x_2, \cdots, x_n) = \mel**{0}{\ortmp \qty( \hat{\phi}(x_1) \hat{\phi}(x_2) \cdots \hat{\phi}(x_n) )}{0} \,.
+\end{equation}
+
+Estas ecuaciones estarán relacionadas con ciertos términos del Lagrangiano a nivel árbol, por ejemplo, la función de dos puntos estará asociada al propagador y, en general, si existe un término de la forma
+%
+\begin{equation*}
+	\lagdn = \frac{\lambda_n}{n!} \phi^n
+\end{equation*}
+
+\noindent existirá, a nivel árbol, una contribución a la función de Green de $n$ puntos. Las funciones de Green y las relaciones entre ellas definirán la dinámica de una teoría cuántica de campos.
+
+
+
+
+%%%%%%%%%%
+\subsection{Autoenergía}
+
+Consideremos el propagador libre de una partícula. Este propagador puede contener correcciones a un loop, por ejemplo
+%
+\begin{equation}
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propagador.eps}
+	\end{gathered}
+	\> = \>
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{autoenergiaV4.eps}
+	\end{gathered}
+	\>+\>
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{autoenergiaV3.eps}
+	\end{gathered}\,,
+\end{equation}
+
+\noindent donde el primer término tiene un vértice al que conectan cuatro partículas, mientras que el segundo término tiene dos vértices a los que conectan tres partículas, en cada uno. Por ello, los términos de interacción del Lagrangiano que corresponden a estos diagramas son, respectivamente,
+%
+\begin{equation}
+	\lagdn_I = \frac{\lambda}{4!}\phi^4 + \frac{\mu}{3!}\phi^3 \,.
+\end{equation}
+
+Ahora, es posible sustraer las patas externas de los diagramas y expresar esto en términos de diagramas amputados, así
+%
+\begin{equation}
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propagador.eps}
+	\end{gathered}
+	\> = \>
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{autoenergia_pata.eps}
+	\end{gathered}
+	\underbrace{\left(
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{autoenergiaV4_amputado.eps}
+	\end{gathered}
+	\>+\>
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{autoenergiaV3_amputado.eps}
+	\end{gathered}
+	\right)}_{\equiv \Sigma}
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{autoenergia_pata.eps}
+	\end{gathered} \,,
+\end{equation}
+
+\noindent donde el término entre paréntesis se denomina la \textbf{autoenergía} $\Sigma$ y es dada por
+%
+\begin{equation}
+	\Sigma = \text{suma de todos los diagramas 1PI} \,.
+\end{equation}
+
+Empelaremos el concepto de la autoenergía para calcular el propagador completo de la QED. Para indicar que son propagadores o vértices completos, emplearemos la notación de ubicar un círculo negro sobre el objeto
+%
+\begin{equation}
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propQEDcompleto.eps}
+	\end{gathered}
+	\>=\>
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propQEDlibre.eps}
+	\end{gathered}
+	\>+\>
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propQED1.eps}
+	\end{gathered}
+	\>+\>
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propQED2.eps}
+	\end{gathered}
+	\>+\> \cdots \,.
+\end{equation}
+
+Llamaremos $S_F$ al propagador completo del fermión y $S_F^0$ al propagador libre. Tenemos, entonces
+%
+\begin{IEEEeqnarray*}{rCl}
+	S_F &=& S_F^0 + S_F^0 \Sigma S_F^0 + S_F^0 \Sigma S_F^0 \Sigma S_F^0 + \cdots \\
+	%%%%
+	&=& S_F^0 + S_F^0\Sigma \qty(S_F^0 + S_F^0\Sigma S_F^0 + \cdots) \\
+	%%%%
+	&=& S_F^0 + S_F^0\Sigma S_F \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Ahora, multiplicando esta expresión por $S_F^{0\>-1}$ por izquierda, y por $S_F^{-1}$ por derecha, tenemos
+%
+\begin{IEEEeqnarray*}{rCl}
+	S_F^{0\>-1} S_F S_F^{-1} &=& \underbrace{S_F^{0\>-1}S_F^0}_{\mathbb{1}}S_F^{-1} + \underbrace{S_F^{0\>-1}\Big[ S_F^0 \Big.}_{\mathbb{1}} \Sigma \underbrace{\Big. S_F \Big] S_F^{-1} }_{\mathbb{1}} \slj
+	%%%%
+	\Rightarrow S_F^{0\>-1} &=& S_F^{-1} + \Sigma \slj
+	%%%%
+	\IEEEeqnarraymulticol{3}{c}{\therefore \> \boxed{ S_F^{-1} = S_F^{0\>-1} - \Sigma}\,. \label{eq:Schwinger-Dyson} \IEEEyesnumber}
+\end{IEEEeqnarray*}
+
+Esta es la \textbf{ecuación de Schwinger-Dyson} para el propagador del fermión. Diagramáticamente esto puede escribirse como
+%
+\begin{equation}
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propQEDcompleto.eps}
+	\end{gathered} ^{-1}
+	\>=\> 
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propQEDlibre.eps}
+	\end{gathered}^{-1}
+	\>-\> 
+	\begin{gathered}
+		\centering
+		\includegraphics[scale=0.25]{noPert_propQED1.eps}
+	\end{gathered} \,.
+\end{equation}
+
+Nótese que esta es una ecuación integral. El propagador del fermión es dado por
+%
+\begin{equation}
+	S_F = \frac{\ii F(p)}{\slashed{p} - M(p)} \,,
+\end{equation}
+
+\noindent donde $M(p)$ es la función de masa \textcolor{red}{****revisar diferencia entre $M(p)$ de Peskin y de Swimming with quarks****}. El propagador completo del fotón será
+%
+\begin{equation}
+	\Delta^{\mu\nu} = \ii \qty[\frac{\Delta(q)}{q^2} \qty(q^{\mu\nu} - \frac{1^\mu q^\nu}{q^2}) + \xi \frac{q^\mu q^\nu}{q^4}] \,,
+\end{equation}
+
+\noindent donde $\xi$ es el parámetro que fija el gauge (gauge-fixing parameter), y por lo tanto no depende de la función $\Delta(q)$, de modo que la información física está contenida en el primer término en el corchete.
+
+En general, a nivel perturbativo, $F(p)$ y $\Delta(q)$ son $1$, pero para determinadas teorías, especialmente las que exhiben acoplamiento fuerte, pueden cambiar la estructura del vacío y hacer que los grados fundamentales de éste no sean fermiones, sino pares fermión-antifermión que fungen como partículas de espín cero. Estas características suelen surgir a energías muy altas y representan simetrías $\U{1}$ que pudieron existir, por ejemplo, en el universo temprano.
+
+Ahora, el inverso del propagador del fermión será dado por
+%
+\begin{equation}
+	\begin{IEEEeqnarraybox}[][c]{rCl}
+		S_F^{-1} &=& \frac{\slashed{p} - M(p)}{\ii F} \,,
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+\noindent que puede reemplazarse en la ecuación de Schwinger-Dyson \eqref{eq:Schwinger-Dyson} para obtener
+%
+\begin{IEEEeqnarray*}{rCl}
+	S_F^{-1} &=& S_F^{0\>-1} - \Sigma \slj
+	%%%%
+	\frac{\slashed{p} - M}{\ii F} &=& \frac{\slashed{p} - m}{\ii}
+	- \int \frac{\dd[4]{k}}{(2\cpi)^4} \overbrace{\qty(-\ii e \gamma^\mu)}^{\substack{\text{vértice}\\ \text{desnudo}}} \overbrace{\frac{\ii F(k)}{\slashed{k} - M(k)}}^{\substack{\text{propagador} \\ \text{completo}}} \overbrace{\qty(-\ii e \Gamma^\nu)}^{\substack{\text{vértice} \\ \text{completo}}} \\
+	%%
+	&& \times\>
+	\underbrace{\ii \qty[\frac{\Delta}{q^2} \qty(g^{\mu\nu} - \frac{q^\mu q^\nu}{q^2}) + \xi \frac{q^\mu q^\nu}{q^4}]}_{\substack{\text{propagador} \\ \text{del fotón}}} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Identifiquemos de dónde provienen los términos en la integral que representa la autoenergía. Tenemos que la autoenergía está representada por el diagrama
+%
+\begin{equation}
+	\Sigma = \begin{gathered}
+		\centering
+		\includegraphics[scale=0.3]{autoenergia_momentos.eps}
+	\end{gathered} \,,
+\end{equation}
+
+\noindent de donde $k-1 = p \>\Rightarrow\> q = k - p$. Claramente vemos el vértice desundo, los propagadores completos y el vértice completo de la derecha. Ahora, hemos puesto $\Gamma^\nu$ en la expresión, que representa una generalización de las matrices $\gamma$ de Dirac, que da cuenta de la posible complejidad del vértice completo. 
+
+Simplificando tenemos
+%
+\begin{IEEEeqnarray*}{rCl}
+	\frac{\slashed{p} - M}{\ii F} &=& \frac{\slashed{p} - m}{\ii}
+	- e^2\int \frac{\dd[4]{k}}{(2\cpi)^4} \gamma^\mu \frac{F(k)}{\slashed{k} - M(k)} \Gamma^\mu \\
+	%%
+	&& \times\> \underbrace{\ii \qty[\frac{\Delta}{q^2} \qty(g^{\mu\nu} - \frac{q^\mu q^\nu}{q^2}) + \xi \frac{q^\mu q^\nu}{q^4}]}_{\equiv D(q)} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Ahora, sabemos que 
+%
+\begin{equation}
+	\frac{e^2}{4\cpi} = \alpha \quad\Rightarrow\quad \alpha = 4\cpi e^2 \,,
+\end{equation}
+
+de modo que
+%
+\begin{equation}
+	\boxed{
+	\slashed{p} - M = \slashed{p} - m 4\cpi e^2 \int \frac{\dd[4]{k}}{(2\cpi)^4} \gamma^\mu \frac{F(k)}{\slashed{k} - M(k)} \Gamma^\mu D(q)
+	} \,,
+\end{equation}
+
+\noindent que es una ecuación para $M$ y para $F$ que puede resolverse numéricamente. Esta es la forma final de la ecuación de Schwinger-Dyson para un fermión. Tanto $M$ como $F$ son funciones, mientras que $\Gamma^\mu$ es una estructura compleja que puede contener múltiples funciones, y para la que existen aproximaciones en la literatura.
+
+
+
+
+%----------------------------------------------------
+\section{Ecuación de Bethe-Salpeter}
+
+\textcolor{blue}{QED Greiner}
+
+La ecuación de Bethe-Salpeter es una ecuación relativista para la función de onda de un estado ligado de dos fermiones. Este estado puede constar de una partícula y una antipartícula, o de dos partículas. El siguiente es un resultado importante que usaremos en el desarrollo de esta sección
+%
+\begin{equation}
+	\psi(x) = -\ii \int_S \dd{\sigma} S_F(x - x') n_\mu(x') \gamma^\mu \psi(x')
+\end{equation}
+
+\noindent donde $S$ es la frontera de un volumen en cuatro dimensiones ($S$ es tridimensional), $n_\mu$ es un vector normal a la superficie en $x'$, y $\dd{\sigma} = \dd{\sigma(x')}$ \,.
+
+\begin{proof}
+Para demostrar esta expresión partimos del teorema de Gauss en cuatro dimensiones
+%
+\begin{equation}
+	\int \dd[4]{x} \pdv{F_\mu}{x^\mu} = \int_S \dd{\sigma(x)} F_\mu n^\mu \,.
+	\label{eq:tmaGauss4D}
+\end{equation}
+
+Vamos a asumir que
+%
+\begin{equation}
+	F_\mu(x') = \ii S_F(x-x') \gamma_\mu \psi(x') \,.
+\end{equation}
+
+Podríamos cuestionar el hecho de que, en el teorema de la divergencia que mencionamos, $F_\mu$ es un cuadrivector, mientras que con esta definición, quedaría un índice espinorial libre. Este índice no afecta la validez del argumento, pues no interviene en estos cálculos. Ahora,
+%
+\begin{IEEEeqnarray*}{rCl}
+	\pdv{F_\mu}{x^{\prime \mu}} &=& \ii \partial'_\mu \qty[S_F(x-x')] \gamma^\mu \psi(x') + S_F(x-x') \underbrace{\ii \gamma^\mu \partial_\mu \psi(x')}_{\substack{m\psi(x')\\\text{por la ecuación} \\ \text{de Dirac}}} \slj
+	%%%%
+	&=& \qty[\ii \pdv{x^{\prime\mu}} \qty[S_F(x - x')] \gamma^\mu + mS_F(x - x')] \psi(x') \,. \label{eq:BS_1} \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Ahora, por definición de la función de Green tenemos que
+%
+\begin{equation}
+	\qty(\ii \gamma^\mu \partial'_\mu - m )S(x-x') = \delta^4(x-x').
+\end{equation}
+
+Es posible multiplicar a la izquierda por $S$, de modo que tenemos
+%
+\begin{equation}
+	S(x-x') \qty(\ii \gamma^\mu \partial'_\mu - m)S(x-x') = S(x-x')\delta^4(x-x')
+\end{equation}
+
+\noindent e integramos por partes\footnote{La integración por partes puede realizarse debido a que, siempre que trabajamos con una función $\delta$, tácitamente, podemos asumir que la expresión está bajo una integral.} para obtener
+%
+\begin{IEEEeqnarray*}{rCl}
+	- \int \dd[4]{x'} \qty(-\partial'_\mu S \ii \gamma^\mu)S &=& \int \dd[4]x' S \delta^4(x-x') \\
+	%%%%
+	-\int \dd[4]{x'} S \qty(\ii \gamma^\mu \overset{\leftarrow}{\partial'_\mu} + m)S &=& \int \dd[4]{x'} S \delta^4(x-x') \,.
+\end{IEEEeqnarray*}
+
+Ahora, prescindiendo del símbolo de integral tenemos que
+%
+\begin{IEEEeqnarray*}{rCl}
+	-S \qty(\ii \gamma^\mu \overset{\leftarrow}{\partial'_\mu} + m)S &=& S \delta^4(x-x') \slj
+	%%%%
+	\therefore\> S \qty(\ii \gamma^\mu \overset{\leftarrow}{\partial'_\mu} + m) &=& -\delta^4(x-x') \,,
+\end{IEEEeqnarray*}
+
+\noindent que comparando con \eqref{eq:BS_1}, notamos que tiene la misma forma. Entonces tenemos que
+%
+\begin{equation*}
+	\pdv{F_\mu}{x^{\prime \mu}} = S_F \qty(\ii \gamma^\mu \overset{\leftarrow}{\partial'_\mu} + m) \psi(x') = -\delta^4(x-x') \psi(x')
+\end{equation*}
+
+\begin{equation}
+	\therefore\> \pdv{F_\mu}{x^{\prime \mu}} = -\delta^4(x-x') \psi(x') \,.
+\end{equation}
+
+Si integramos esta expresión obtenemos
+%
+\begin{equation}
+	\int \dd[4]{x'} F^\mu = -\int \dd[4]{x'} \delta^4(x-x') \psi(x') = -\psi(x) \,.
+\end{equation}
+
+Con esto hemos trabajado el lado izquierdo de \eqref{eq:tmaGauss4D}. Trabajemos ahora el lado derecho.
+%
+\begin{IEEEeqnarray*}{rCl}
+	\int_S \dd{\sigma(x')} F_\mu(x') n^\mu(x') = \ii \int_S \dd{\sigma(x')} S_F(x-x') \gamma_\mu n^\mu(x') \psi(x') \,.
+\end{IEEEeqnarray*}
+
+Uniendo las expresiones para el lado izquierdo y el derecho tenemos
+%
+\begin{equation}
+	\boxed{
+	\psi(x) = - \ii \int_S \dd{\sigma(x')} S_F(x-x') \gamma_\mu n^\mu(x') \psi(x') } \,.
+\end{equation}
+\mbox{}
+\end{proof}
+
+
+Esta identidad será nuestro punto de partida para demostrar la ecuación de Bethe-Salpeter. Ésta ecuación relativista, en cierto modo, asume el papel que, en mecánica cuántica, tendría la ecuación de Schrödinger. Mientras que esta última genera un espectro de energía, la ecuación de Bethe-Salpeter será capaz de generar un espectro de masas en teoría de campos.
+
+La identidad que acabamos de demostrar nos permite estudiar el caso de dos partículas propagándose libremente. Consideremos el siguiente diagrama, que representa dos cuerpos que no interactúan, propagándose en el espacio. La función de onda, según lo que hemos visto, será simplemente el producto de las funciones de onda de cada cuerpo:\\
+
+\begin{minipage}{0.2\textwidth}
+	\includegraphics[scale=0.2]{noPert/BS_paralelas1.eps}
+\end{minipage}
+\begin{minipage}{0.8\textwidth}
+	\begin{IEEEeqnarray*}{rCl}
+		\psi(x_3) \psi(x_4) &=& \qty(- \ii \int \dd{\sigma(x_1)} S_{F}(x_3 - x_1) \slashed{n}(x_1) \psi(x_1)) \\
+		%%
+		&& \times \qty(- \ii \int \dd{\sigma(2)} S_{F}(x_4 - x_2) \slashed{n}(x_2) \psi(x_2)) \,; \quad \slashed{n} = \gamma^\mu n_\mu \slj
+		%%%%
+		&=& \qty(- \ii \int \dd{\sigma_1} S_{F31} \slashed{n}_1 \psi_1) \qty(- \ii \int \dd{\sigma_2} S_{F42} \slashed{n}_2 \psi_2)\quad \substack{\text{notación}\\\text{simplificada}} \\
+		%%%%
+		&=& \int \dd{\sigma_1} \dd{\sigma_2} \ii S_{F21} \ii S_{F42} \slashed{n}_1 \slashed{n}_2 \psi_1 \psi_2
+	\end{IEEEeqnarray*}
+\end{minipage}
+
+\begin{cabox}
+	Cabe anotar que los elementos en las expresiones anteriores portan índices espinoraiales, que si hacemos explícitos (en color naranja) aparecen en la expresión como
+	\begin{equation}
+		\psi_{\textcolor{orange}{\gamma}}(x_3)_{\psi\textcolor{orange}{\xi}}(x_4) = \qty(- \ii \int \dd{\sigma_1} S_{F31\textcolor{orange}{\gamma\beta}} \slashed{n}_{1\textcolor{orange}{\beta\alpha}} \psi_{1\textcolor{orange}{\alpha}}) \qty(- \ii \int \dd{\sigma_2} S_{F42} \slashed{n}_2 \psi_2)
+	\end{equation}
+\end{cabox}
+

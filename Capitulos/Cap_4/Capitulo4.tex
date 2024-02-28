@@ -1,0 +1,2500 @@
+%----------------------------------------------------------------------------------------
+%	CHAPTER 4 Cuantización de Campo de Dirac
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_4.pdf}
+
+\chapter{Campos Fermiónicos} 
+
+\label{capitulo_4}
+
+Hasta ahora solo se ha trabajado la cuantización del campo escalar real y complejo, los cuales eran invariantes ante transformaciones del grupo de Lorentz. Los campos escalares se encargan de describir partículas que tienen espín entero. Ahora, nos concentraremos en el análisis de campos de Dirac, los cuales describen partículas de espín $1/2$.
+
+\section{Hamiltoniano de Dirac}
+
+En el capitulo anterior se trato de buscar la interpretación a la solución negativa de la ecuación de Klein-Gordon, hecho que permitió entender y darle un significado físico en el campo escalar tanto real, como complejo. Sin embargo, Dirac intentó darle un significado alternativo a este problema y es así como se explica el comportamiento de partículas con espín sementero. Para entender esto partimos nuevamente de la mecánica cuántica no relativista donde la ecuación de Schrödinger en la representación de las coordenadas se obtiene por reemplazar por operadores la energía y el momento, 
+
+\begin{equation}
+	\begin{split}
+		E &\implies \hat{E} = \ii \pdv{t}\\
+		\vb*{p} & \implies \hat{\vb*{p}} = - \ii \grad,
+	\end{split}
+	\label{eq_4.1}
+\end{equation}
+en la ecuación de autovalores 
+
+\begin{equation}
+	\OH \psi = E \psi. 
+	\label{eq_4.2}
+\end{equation}
+
+En el repaso de relatividad especial, se ha definido el cuadrivector momento 
+
+\begin{equation}
+	p^\mu = \qty\big(E,\vb*{p}),
+\end{equation}
+el cual satisface la siguiente propiedad (en unidades naturales)
+
+\begin{equation}
+	p^\mu p_\mu = E^2 - \vb*{p}^2 = m^2.
+	\label{eq_4.4}
+\end{equation}
+
+Al exigir que la energía relativista sea positiva se deberá cumplir 
+
+\begin{equation}
+	E = \qty\big( \vb*{p}^2 + m^2 )^{1/2}.
+	\label{eq_4.5}
+\end{equation}
+
+La ecuación de autovalores asociada al autovector $\psi$ se puede determinar usando en (\ref{eq_4.5}) las reglas de cuantización (\ref{eq_4.1}), de tal manera que se obtiene
+
+\begin{IEEEeqnarray}{C}
+	\hat{E} \psi = \qty\big( \vb*{\Op}^2 + m^2 )^{1/2} \psi ,
+	\label{eq_4.6}
+\end{IEEEeqnarray} 
+
+donde es posible expandir el RHS de tal forma que $\qty\big( \vb*{\Op}^2 + m^2 )^{1/2} \psi = m \qty\bigg[ 1 + \frac{\Op^2}{2m^2} - \frac{\Op^4}{8m^4} + \cdots ]\psi$, lo que implica conocer las derivadas de orden superior de la función de onda $\psi$. Es aquí donde Dirac propone una manera de evitar este tipo de dificultades buscando la forma de linealizar la ecuación (\ref{eq_4.5}). Una manera de lograr esto es proponiendo la existencia de un operador $D$, para ello reescribimos (\ref{eq_4.6}) en la representación de las coordenadas como:
+
+\begin{equation}
+	\ii \pdv{\psi}{t} = \qty( -\laplacian + m^2 )^{1/2} \psi ,
+	\label{eq_4.7}
+\end{equation}
+donde se propone que 
+\newcommand{\OD}{D}
+
+\begin{equation}
+	\boxed{
+	\OD^2 = \Op^2 = -\qty( \pdv{t} )^2 + \laplacian, }
+\end{equation}
+
+que implica reescribir (\ref{eq_4.7}) como,
+
+\begin{IEEEeqnarray}{rCl}
+	\qty( \ii \pdv{t} )^2 = - \laplacian+m^2 \implies  && -\qty(  \pdv{t} )^2 + \laplacian = m^2 \implies \hat{D}^2 = m^2,
+	\label{eq_4.8}
+\end{IEEEeqnarray}
+
+lo que verifica satisfactoriamente la ecuación (\ref{eq_4.4}). Si se propone la linealización de la ecuación de Dirac a través de
+
+\begin{equation}
+	\boxed{
+		D \equiv \gamma^\mu p_\mu,}
+		\label{eq_4.9}
+\end{equation}
+
+se debe cumplir (\ref{eq_4.8}), de manera que 
+
+\begin{IEEEeqnarray*}{rCl}
+	D^2 &=& \gamma^\mu \gamma^\nu p_\mu p_\nu\\
+	&=& \frac{1}{2} \qty\big( \gamma^\mu \gamma^\nu + \gamma^\nu \gamma^\mu )p_\mu p_\nu\\
+	&=& p^2.
+\end{IEEEeqnarray*}
+ identidad que se garantiza solamente si 
+ 
+ \begin{equation}
+ 	\boxed{
+ 	\qty{\gamma^\mu ,\gamma^\nu} =\gamma^\mu \gamma^\nu + \gamma^\nu \gamma^\mu = 2 g^{\mu \nu} } \, .
+ 	\label{eq_4.11}
+ \end{equation}
+
+El anticonmutador obtenido obtenido anteriormente representa $16$ ecuaciones, debido a la dimensión de la métrica de Minkowski. Esta condición garantiza que la dimensión de las matrices gamma sea $4$. En la literatura $\gamma^\mu$ representan las matrices \textbf{gamma de Dirac} y la ecuación (\ref{eq_4.11}) implica que las ($\gamma^{\mu \prime}$s) satisfacen el \textbf{álgebra de Clifford}.\\
+
+A partir de (\ref{eq_4.11}) se deducen dos propiedades importantes,
+
+\begin{theorem}[Propiedad 1] \label{Theorem_prop1}
+	Mostrar que $(\gamma^0)^2 = 1$ y $ (\gamma^i)^2 = -1$.\\
+	\emph{Demostración}\\
+	Partimos de la propiedad de anticonmutación de las matrices gamma (\ref{eq_4.11}) y consideramos $\mu=\nu=0$
+	
+	\begin{IEEEeqnarray}{rCl}
+		2 \gamma^0 \gamma^0 = 2g^{00} \implies \qty(\gamma^0)^2 = 1, \IEEEyessubnumber
+		\label{eq_4.11a}
+	\end{IEEEeqnarray}
+	
+	luego, consideramos $\mu=\nu=i$, entonces
+	\begin{IEEEeqnarray}{rCl+x*}
+		2 \gamma^i \gamma^i= 2g^{ii} \implies \qty(\gamma^i)^2 = -1. \IEEEyessubnumber   \\ &&& \nonumber\IEEEQEDhere
+		\label{eq_4.11b}
+	\end{IEEEeqnarray}
+\end{theorem}
+
+\begin{theorem}[Propiedad 2]
+	Si $\mu\neq \nu$ entonces las matrices gamma anticonmutan.\\
+	\emph{Demostración}\\
+	Partimos nuevamente de la propiedad de anticonmutación de las matrices gamma (\ref{eq_4.11}) y consideramos $\mu\neq \nu$, entonces
+	\begin{IEEEeqnarray}{rCl+x*}
+		\qty{\gamma^\mu,\gamma^\nu} &=& 2g^{\mu\nu}, \qquad \text{si} \quad (\mu\neq \nu) \implies g^{\mu\nu} = 0  \notag \\
+		&\therefore& \qty{\gamma^\mu,\gamma^\nu} = 0 ,   \IEEEyessubnumber   \\ &&& \nonumber\IEEEQEDhere
+		\label{eq_4.11c}
+	\end{IEEEeqnarray}
+	ecuación conocida como la relación de anticonmutación de las matrices gamma si $ \mu\neq \nu $.
+\end{theorem}
+
+Con las propiedades anteriores y la definición del operador $D$ podemos reescribir el Hamiltoniano como (ya se corrobora este resultado más adelante)
+
+\begin{equation}
+	  \boxed{
+	H=\gamma^0\qty( \vb*{\gamma}\cdot \vb*{p} + \gamma^0 m ).}
+	\label{eq_4.12}
+\end{equation}
+
+ \subsection{Propiedades de las matrices Gamma}
+ 
+ Vamos a demostrar una serie de propiedades asociadas a las matrices gamma y con las cuales podremos realizar cálculos de manera mas rápida y eficiente.
+ 
+ \begin{theorem}[Propiedad Cíclica de las trazas]
+ 	Sean $A$ y $B$ dos matrices de dimensión $n$, entonces 
+ 	\begin{IEEEeqnarray}{rCl}
+ 		\Tr(AB) & = & \Tr(BA). \IEEEyesnumber
+ 		\IEEEyessubnumber
+ 		\label{eq_4.13a}
+ 	\end{IEEEeqnarray}
+ 	\emph{Demostración}\\
+ 	Partimos del lado izquierdo de la ecuación (\ref{eq_4.13a}),
+ 	
+ 	\begin{IEEEeqnarray*}{rCl+x*}
+ 		\Tr(AB) = (AB)_{ii}  =A_{ij} B_{ji} = B_{ji} A_{ij} = (BA)_{jj} = \Tr(BA).    \\ &&& \nonumber\IEEEQEDhere
+ 	\end{IEEEeqnarray*}
+ 	
+  De aquí es obvio que 
+  \begin{IEEEeqnarray}{rCl}
+  	\Tr( A_1 A_2 A_3 ) & = & \Tr( A_2 A_3 A_1 ) = \Tr( A_3 A_1 A_2). \IEEEyessubnumber
+  \end{IEEEeqnarray}
+  	Con este resultado podemos generalizar para $k$ matrices que  
+  	\begin{IEEEeqnarray}{rCl}
+  	\Tr( A_1 A_2 \ldots A_k ) & = & \Tr( A_2 A_3 \ldots A_k A_1 ). \IEEEyessubnumber
+  	\label{eq_4.24c}
+  \end{IEEEeqnarray}
+\end{theorem}
+
+\vspace{2cm}
+\begin{theorem}[Propiedad 3 - Traza de las matrices gamma]
+	La traza de cada una de las matrices gamma es cero.\\
+	\begin{IEEEeqnarray}{rCl}
+		\Tr(\gamma^\mu) = 0 \quad \forall ~ \mu. \IEEEyessubnumber
+		\label{eq_4.13d}
+	\end{IEEEeqnarray}
+	\emph{Demostración}\\
+	Partimos nuevamente de la propiedad de las matrices gamma (\ref{eq_4.11}) y consideramos $\mu = \nu$, entonces
+	
+	\begin{IEEEeqnarray*}{rCl}
+		2\gamma^\mu \gamma^\mu &=& 2 g^{\mu \mu}  \implies \frac{\gamma^\mu \gamma^\mu }{g^{\mu \mu}} = 1,
+	\end{IEEEeqnarray*}
+	
+	donde $g^{\mu \mu}$ representa un número (elemento de la diagonal principal de la métrica) y $1$ representa la matriz identidad. Ahora si multiplicamos el resultado anterior por $\gamma^\nu$,
+	\begin{IEEEeqnarray*}{rCl's}
+		\gamma^\nu = \frac{\gamma^\nu \gamma^\mu \gamma^\mu }{g^{\mu \mu}}  &&\implies \Tr(\gamma^\nu) = \Tr(\frac{\gamma^\nu \gamma^\mu \gamma^\mu }{g^{\mu \mu}}) \\
+		\implies && \Tr(\gamma^\nu) = \frac{1}{g^{\mu \mu}} \Tr( \gamma^\nu \gamma^\mu \gamma^\mu ) \\
+		&& \qquad \quad =  -\frac{1}{g^{\mu \mu}} \Tr( \gamma^\mu \gamma^\nu \gamma^\mu ) & \footnotesize{Si $\mu\neq \nu$ entonces las matrices gamma anticonmutan}\\
+		&& \qquad \quad = -\frac{1}{g^{\mu \mu}} \Tr( \gamma^\nu \gamma^\mu \gamma^\mu ) & \footnotesize{Por la propiedad cíclica de las trazas}\\
+		&& \qquad \quad = - \Tr( \gamma^\nu \frac{\gamma^\mu \gamma^\mu}{g^{\mu \mu}} )\\
+		&& \qquad \quad =  - \Tr( \gamma^\nu ) , 
+	\end{IEEEeqnarray*}
+	por lo tanto,
+	\begin{IEEEeqnarray}{rCl+x*}
+		\Tr( \gamma^\nu ) = 0. \IEEEyessubnumber \\ &&& \nonumber\IEEEQEDhere
+	\end{IEEEeqnarray}
+\end{theorem}
+
+
+Antes de dar el resto de propiedades asociadas a las matrices gamma, es útil para nuestros cálculos definir una quinta matriz denominada \textbf{gamma 5} $\qty( \gamma^5 )$.
+
+\begin{definition}
+	Se define la matriz $\gamma^5$ como el producto de cuatro matrices gamma\footnote{A pesar de que utiliza la letra gamma, no es una de las matrices gamma que pertenece al álgebra de Clifford.}
+	\begin{equation}
+		\gamma^5 \equiv \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3,
+		\label{eq_4.14}
+	\end{equation}
+	pero usaremos una definición alternativa dada por 
+	\begin{equation}
+		\boxed{
+		\gamma^5 = \frac{\ii}{4!} \epsilon_{\mu \nu \alpha \beta } \gamma^\mu \gamma^\nu \gamma^\alpha \gamma^\beta. }
+		\label{eq_4.15}
+	\end{equation}
+\end{definition}
+Una forma de demostrar la ecuación (\ref{eq_4.15}) es usando la propiedad de anticonmutación de las matrices gamma, y la definición del tensor generalizado delta de Kronecker 
+
+\begin{equation}
+	\delta^{i_1,,\ldots,i_r}_{j_1,\ldots,j_r} =\det \mqty(  \delta^{i_1}_{j_1} & \delta^{i_1}_{j_2} & \ldots &  \delta^{i_1}_{j_r}  \\
+	 \delta^{i_2}_{j_1} & \delta^{i_2}_{j_2} & \ldots & \delta^{i_2}_{j_r} \\
+	 \vdots & \vdots & \vdots & \vdots\\
+	   \delta^{i_r}_{j_1} & \delta^{i_r}_{j_2} & \ldots &\delta^{i_r}_{j_1} ),
+\end{equation}
+donde es posible emplear el tensor Levi-civita de modo que 
+
+\begin{equation*}
+	\delta^{i_1,,\ldots,i_r}_{j_1,,\ldots,j_r} = \epsilon^{i_1,,\ldots,i_r} \epsilon_{j_1,,\ldots,j_r},
+\end{equation*}
+así, en cuatro dimensiones se sigue que 
+
+\begin{equation}
+	\delta^{0 1 2 3}_{\mu \nu \alpha \beta} = \epsilon^{0123} \epsilon_{j_1,,\ldots,j_r} = \epsilon_{\mu \nu \alpha \beta} ,
+\end{equation}
+por lo tanto al introducir el delta de Kronecker en la matriz $\gamma^5$ se obtiene
+
+\begin{equation}
+	\begin{split}
+		\gamma^5 &= \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3\\
+		& = \frac{\ii}{4!} \delta^{0 1 2 3}_{\mu \nu \alpha \beta} \gamma^\mu \gamma^\nu \gamma^\alpha \gamma^\beta \\
+		&=  \frac{\ii}{4!} \epsilon_{\mu \nu \alpha \beta} \gamma^\mu \gamma^\nu \gamma^\alpha \gamma^\beta.
+	\end{split}
+\end{equation}
+
+Ahora, veamos la condición de hermiticidad de cada una de las matrices gamma. Siendo $H$ un operador hermítico se debe cumplir que 
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty\big(\gamma^0\qty( \vb*{\gamma}\cdot \vb*{p} + \gamma^0 m ))^\dag &=& \gamma^0\qty( \vb*{\gamma}\cdot \vb*{p} + \gamma^0 m )\\
+	\qty( \gamma^0 \gamma^i p^i)^\dag +  m &=& \gamma^0 \gamma^i p^i + m\\
+	\qty( \gamma^i )^\dag p^i \qty( \gamma^0 )^\dag &=& \gamma^0 \gamma^i p^i\\
+	\qty( \gamma^i )^\dag p^i \qty( \gamma^0 )^\dag &=& - \gamma^i p^i \gamma^0.
+\end{IEEEeqnarray*}
+La anterior igualdad se cumple si 
+\begin{equation}
+	 \boxed{
+	\qty(\gamma^0)^\dag = \gamma^0, \qquad  \qquad \qty( \gamma^i )^\dag = - \gamma^i,}
+\end{equation}
+
+lo que en forma compacta se escribe
+
+\begin{equation}
+	\boxed{
+		\qty( \gamma^\mu )^\dag = \gamma^0 \gamma^\mu \gamma^0.}
+	\label{eq_4.20}
+\end{equation}
+
+Con las condiciones fundamentales asociadas a las matrices gamma, se establecen una serie de propiedades de las matrices $\gamma^mu$ y $\gamma^5$.
+
+\begin{theorem}[Propiedades de $\gamma^5$] \label{theoremgamma5}
+	Las propiedades que satisface la matriz $\gamma^5$ son:
+	\begin{enumerate}
+		\item La matriz $\gamma^5$ es hermitica: 
+		 \begin{IEEEeqnarray}{rCl}
+			\qty(\gamma^5)^\dag &=& \gamma^5. \IEEEyessubnumber
+		\end{IEEEeqnarray}
+		\item  Sus autovalores son $\pm 1$ porque 
+		 \begin{IEEEeqnarray}{rCl}
+				\qty(\gamma^5)^2 &=& 1.  \quad \text{Matriz identidad en 4 dimensiones.}  \IEEEyessubnumber
+		\end{IEEEeqnarray}
+		\item La matriz gamma 5 anticonmuta con las cuatro matrices gamma
+		 \begin{IEEEeqnarray}{rCl}
+				\qty{ \gamma^5, \gamma^\mu } = \gamma^5\gamma^\mu + \gamma^\mu \gamma^5 = 0.    \IEEEyessubnumber
+		\end{IEEEeqnarray}
+		\end{enumerate}  
+	
+		 \emph{Demostración}\\
+		 
+		Una manera de demostrar la primera propiedad es
+		\begin{IEEEeqnarray*}{rCl's+x*}
+			\qty(\gamma^5)^\dag &=& \qty( \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3 )^\dag \\
+			&=& -\ii \qty(\gamma^3)^\dag \qty(\gamma^2) ^\dag \qty(\gamma^1)^\dag \qty(\gamma^0)^\dag \\
+			&=& -\ii   \qty(-\gamma^3) \qty(-\gamma^2)  \qty(-\gamma^1) \qty(\gamma^0)  & \footnotesize{Condición de Hemirticidad} \\ 
+			&=&  \ii   \qty(\gamma^0) \qty(\gamma^1) \qty(\gamma^2) \qty(\gamma^3)  & \footnotesize{Por la propiedad de anticonmutación de las matrices gamma} \\
+			&=& \gamma^5. \\* &&& \nonumber\IEEEQEDhere
+		\end{IEEEeqnarray*}
+		
+		
+		La segunda propiedad se corrobora de manera directa haciendo
+		
+		\begin{IEEEeqnarray*}{rCl's+x*}
+			\qty(\gamma^5)^2 &=& \gamma^5 \gamma^5\\
+			&=& -\gamma^0 \gamma^1 \gamma^2 \gamma^3  \gamma^0 \gamma^1 \gamma^2 \gamma^3  \\
+			&=& \gamma^0 \gamma^0 \gamma^1\gamma^1 \gamma^2\gamma^2 \gamma^3\gamma^3 & \footnotesize{Aplicando la regla de anticonmutación de las matrices gamma} \\
+			&=& \qty(  \gamma^0 )^2 \qty(  \gamma^1  )^2 \qty(  \gamma^2  )^2 \qty(  \gamma^3  )^2 \\
+			&=&   (1)^2 (-1)^2 (-1)^2 (-1)^2  & \footnotesize{ Por el teorema \ref{Theorem_prop1}}\\
+			&=& 1.  \\* &&& \nonumber\IEEEQEDhere
+		\end{IEEEeqnarray*}
+		
+		Finalmente, la tercer propiedad  se demuestra partiendo del conmutador
+		\begin{equation*}
+			\qty{ \gamma^5,\gamma^\mu } = \gamma^5 \gamma^\mu + \gamma^\mu \gamma^5,
+		\end{equation*}
+		al analizar el primer término $ \gamma^5 \gamma^\mu = \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3 \gamma^\mu $. Al conmutar $\gamma^\mu$ con cada una de las matrices gamma, tenemos los diferentes casos 
+		
+		\begin{equation*}
+			\left\{ \,
+			\begin{IEEEeqnarraybox}[][c]{l?s}
+				\IEEEstrut
+				\mu=0 \to  \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3 \gamma^0 = (-1)^3 \ii \gamma^0 \gamma^0  \gamma^1  \gamma^2  \gamma^3   \\
+				\mu=1 \to \ii \gamma^0\gamma^1 \gamma^2 \gamma^3 \gamma^1 = (-1)^3 \ii \gamma^1 \gamma^0  \gamma^1  \gamma^2   \gamma^3     \\
+				\mu=2 \to \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3 \gamma^2 = (-1)^3 \ii \gamma^2 \gamma^0  \gamma^1  \gamma^2 \gamma^3    \\
+				\mu=3 \to \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3 \gamma^3 = (-1)^3 \ii \gamma^3 \gamma^0  \gamma^1  \gamma^2  \gamma^3  .
+				\IEEEstrut
+			\end{IEEEeqnarraybox}
+			\right.
+			\label{eq:example_left_right1}
+		\end{equation*}
+		que en notación compacta es 
+		\begin{equation*}
+			\gamma^5 \gamma^\mu = - \gamma^\mu \gamma^5 ,
+		\end{equation*}
+		entonces se demuestra que 
+		\begin{IEEEeqnarray*}{rCl+x*}
+			\qty{ \gamma^5,\gamma^\mu } &=& 0.  \\* &&& \nonumber\IEEEQEDhere
+		\end{IEEEeqnarray*}
+\end{theorem}
+
+El conjunto de matrices $\qty{ \gamma^0,\gamma^1,\gamma^2,\gamma^3, \ii \gamma^5}$, junto con las propiedades definidas en el teorema \ref{theoremgamma5} forman la base del álgebra de Clifford en 5 dimensiones del espacio - tiempo asociado a una métrica de dimensión $D=1+4$.\\
+
+El resto de propiedades asociadas al conjunto de matrices $\gamma^\mu$ y $\gamma^5$ son:
+
+\begin{theorem}
+	Identidades asociadas a las matrices $\gamma^\mu$ y $\gamma^5$:
+	\begin{enumerate}
+		\item \textbf{Propiedad 4}
+		\begin{IEEEeqnarray}{rCl}
+			\gamma^\mu \gamma_\mu = 4. \IEEEyessubnumber
+		\end{IEEEeqnarray}
+	
+	\item \textbf{Propiedad 5}
+	\begin{IEEEeqnarray}{rCl}
+		\gamma^\mu \gamma^\nu \gamma_\mu = -2 \gamma^\nu. \IEEEyessubnumber
+	\end{IEEEeqnarray}
+
+	\item \textbf{Propiedad 6}
+	\begin{IEEEeqnarray}{rCl}
+		\gamma^\mu \gamma^\nu \gamma^\rho \gamma_\mu = 4 g^{\nu \rho}. \IEEEyessubnumber
+	\end{IEEEeqnarray}
+	
+	\item \textbf{Propiedad 7}
+	\begin{IEEEeqnarray}{rCl}
+		\gamma^\mu \gamma^\nu \gamma^\rho \gamma^\sigma \gamma_\mu = -2 \gamma^\sigma \gamma^\rho \gamma^\nu. \IEEEyessubnumber
+	\end{IEEEeqnarray}
+
+	\item \textbf{Propiedad 9}
+	\begin{IEEEeqnarray}{rCl}
+		\gamma^\mu \gamma^\nu \gamma^\rho = g^{\mu \nu} \gamma^\rho - g^{\mu \rho} \gamma^\nu + g^{\nu \rho} \gamma^\mu - \ii \epsilon^{\sigma \mu \nu \rho} \gamma_{\sigma} \gamma^5 . \IEEEyessubnumber 
+	\end{IEEEeqnarray}
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Identidades de las trazas asociadas a las matrices gamma
+	\begin{enumerate}
+		\item \textbf{Propiedad 10} La traza de cualquier producto impar de gammas $\qty(\gamma^\mu)$ es cero
+		\begin{IEEEeqnarray}{rCl}
+			\Tr\qty( \underbrace{\gamma^\mu \gamma^\nu \gamma^\rho \cdots \gamma^\sigma}_{\text{número impar}} ) = 0. \IEEEyessubnumber
+		\end{IEEEeqnarray}
+	
+	\item \textbf{Propiedad 11} La traza de $\gamma^5$ por un producto de un número impar de gammas también es cero
+	\begin{IEEEeqnarray}{rCl}
+		\Tr\qty( \gamma^5 \underbrace{ \gamma^\mu \gamma^\nu \gamma^\rho \cdots \gamma^\sigma}_{\text{número impar}} ) = 0. \IEEEyessubnumber
+	\end{IEEEeqnarray}
+
+	\item \textbf{Propiedad 12}
+	\begin{IEEEeqnarray}{rCl}
+		\Tr( \gamma^\mu \gamma^\nu) = 4g^{\mu\nu} . \IEEEyessubnumber
+	\end{IEEEeqnarray}
+
+	\item \textbf{Propiedad 13}
+	\begin{IEEEeqnarray}{rCl}
+		\Tr( \gamma^\mu \gamma^\nu \gamma^\rho \gamma^\sigma ) = 4\qty\big( g^{\mu \nu} g^{\rho \sigma} - g^{\mu \rho} g^{\nu \sigma} + g^{\mu \sigma} g^{\nu \rho} )  . \IEEEyessubnumber
+	\end{IEEEeqnarray}
+
+	\item \textbf{Propiedad 14}
+	\begin{IEEEeqnarray}{rCl}
+		\Tr( \gamma^5 ) = \Tr( \gamma^\mu \gamma^\nu \gamma^5 )  = 0. \IEEEyessubnumber
+	\end{IEEEeqnarray}
+
+	\item \textbf{Propiedad 15}
+	\begin{IEEEeqnarray}{rCl}
+		\Tr( \gamma^\mu \gamma^\nu \gamma^\rho \gamma^\sigma \gamma^5 ) = 4 \ii \epsilon^{ \mu \nu \rho \sigma} . \IEEEyessubnumber
+	\end{IEEEeqnarray}
+
+	\item \textbf{Propiedad 16}
+	\begin{IEEEeqnarray}{rCl}
+		\Tr( \gamma^{\mu_1} \cdots \gamma^{\mu_n} ) =  \Tr( \gamma^{\mu_n} \cdots \gamma^{\mu_1} )  . \IEEEyessubnumber
+	\end{IEEEeqnarray}
+	\end{enumerate}
+\end{theorem}
+
+Se deja a modo de ejercicio demostrar las propiedades mencionadas anteriormente.\\
+
+Se define las matrices $\sigma$ en términos de las matrices gamma como
+
+\begin{equation}
+	\sigma^{\mu \nu} \equiv \frac{\ii}{2} \comm{\gamma^\mu}{\gamma^\nu} = - \sigma^{\nu \mu}, 
+\end{equation}
+por la antisimetría se sigue automáticamente que  
+
+\begin{equation}
+	\sigma^{00} = \sigma^{ii} = 0,
+\end{equation}
+de manera que las componentes diferentes de cero son
+\begin{equation}
+	\sigma^{12} \qty(\sigma^{21}) , \sigma^{13} \qty(\sigma^{31}) , \sigma^{23} \qty(\sigma^{32}) . 
+\end{equation}
+Estas 6 matrices de dimensión $4$ que están relacionadas con el momento angular de espín de campos que obedecen la ecuación de Dirac o partículas con espín semi-entero.\\
+
+Vamos a definir el conjunto de $16$ matrices linealmente independientes 
+\begin{equation}
+	\boxed{
+	\Gamma = \qty{ 1, \gamma^\mu, \sigma^{\mu \nu}, \gamma^5 \gamma^\mu, \gamma^5 } } \, ,
+\end{equation}
+que definen una base un espacio vectorial de matrices de dimensión $4$.\\
+
+
+ Volviendo la expresión para el hamiltoniano dada en (\ref{eq_4.12}), veamos que en efecto se cumple, entonces calculemos:
+ 
+ \begin{IEEEeqnarray*}{rCl}
+ 	H^2 & = & \gamma^0 \qty( \vb*{\gamma}\cdot \vb*{p} + m ) \gamma^0 \qty( \vb*{\gamma}\cdot \vb*{p} + m )\\
+ 	& = &  \qty( \gamma^0 \gamma^i p ^i + \gamma^0 m ) \qty( \gamma^0 \gamma^j p ^j + \gamma^0 m )\\
+ 	& = & \gamma^0 \gamma^i \gamma^0 \gamma^j p ^i p ^j + m \gamma^0 \gamma^i \gamma^0 p^i + m \gamma^0 \gamma^0 \overbrace{\gamma^j p ^j}^{j\to i} + \gamma^0\gamma^0 m^2\\
+ 	& =& - \cancelto{1}{\qty(\gamma^0)^2} \gamma^i  \gamma^j p^i p ^j + m\gamma^0 \qty(  \gamma^i \gamma^0  + \gamma^0 \gamma^i ) p^i + m^2 \cancelto{1}{\qty(\gamma^0)^2}\\
+ 	& = &  \gamma^i  \gamma^j p ^i p ^j + m \gamma^0  \qty{\gamma^i ,\gamma^0} p^i + m^2,
+ \end{IEEEeqnarray*}
+pero podemos reescribir 
+
+\begin{IEEEeqnarray*}{rCl}
+	\gamma^i \gamma^j p^i p^j &=& \frac{1}{2} \qty( \gamma^i \gamma^j + \gamma^j \gamma^i ) p^i p^j= \frac{1}{2} \qty{\gamma^i , \gamma^j} p^i p^j ,
+\end{IEEEeqnarray*}
+así 
+\begin{IEEEeqnarray*}{rCl}
+	H^2 & = & \frac{1}{2} \overbrace{\qty{\gamma^i , \gamma^j}}^{2g^{ij}} p^i p^j + m \gamma^0  \overbrace{\qty{\gamma^i ,\gamma^0}}^{2g^{i0}} p^i + m^2\\
+	&=& g^{ij} p^i p^j + \cancelto{0}{2 m \gamma^0 g^{i0} p^i} + m^2\\
+	&=& p^i p^i + m^2 = E^2 
+\end{IEEEeqnarray*}
+\begin{equation}
+	\boxed{
+	H^2 = E^2 }\, .
+\end{equation}
+El anterior resultado corrobora que el cuadrado del Hamiltoniano no es más que el cuadrado de la energía.\\
+  
+Cabe resaltar que la representación de las matrices gamma no es única. Si tenemos un conjunto de matrices $\gamma^\mu$ que satisfacen las relaciones (\ref{eq_4.11}) y (\ref{eq_4.20}), entonces un nuevo conjunto de matrices definidas como 
+\begin{equation}
+	\boxed{
+	\tilde{\gamma}^\mu = U \gamma^\mu U^\dag} \, ,
+	\label{eq_4.26}
+\end{equation}
+siendo $U$ una matriz unitaria\footnote{La acción de la matriz unitaria aplica es sobre los índices espinoriales, mas no sobre los vectoriales. De otro modo $U$ actúa sobre las entrada de la matriz gamma.}, cumplen que 
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty{ \tilde{\gamma}^\mu, \tilde{\gamma}^\nu } &=& \tilde{\gamma}^\mu \tilde{\gamma}^\nu + \tilde{\gamma}^\nu \tilde{\gamma}^\mu\\
+	&=&  U \gamma^\mu U^\dag U \gamma^\nu U^\dag + U \gamma^\nu U^\dag  U\gamma^\mu U^\dag \\
+	& =& U \gamma^\mu  \gamma^\nu U^\dag + U \gamma^\nu \gamma^\mu U^\dag, \qquad \text{donde $U^\dag U = U U^\dag = 1$ por ser matriz unitaria}\\
+	& = & U \qty{ \gamma^\mu , \gamma^\nu } U^\dag = 2g^{\mu \nu} U U^\dag\\
+	& = & 2g^{\mu \nu},
+\end{IEEEeqnarray*}
+ que no es mas que la propiedad (\ref{eq_4.11}). Resulta que el reciproco de esta afirmación también es válida, es decir si las matrices $\gamma^\mu$ y $\tilde{\gamma}^\mu$ cumplen la ecuación (\ref{eq_4.11}), entonces existe una matriz $M$ constante de dimensión $4$, tal que
+ \begin{equation*}
+ 	\tilde{\gamma}^\mu = M \gamma^\mu M^{-1}.
+ \end{equation*}
+Si cumplen la condición (\ref{eq_4.11}), solo resta que se cumpla la ecuación (\ref{eq_4.20}), esto es
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty(\tilde{\gamma}^\mu) ^\dag &=& \tilde{\gamma}^0 \tilde{\gamma}^\mu \tilde{\gamma}^0 \\
+	&=& M \gamma^0 M^{-1} M \gamma^\mu M^{-1}  M \gamma^0 M^{-1} \\
+	& = & M \gamma^0 \gamma^\mu \gamma^0 M^{-1}. \\
+	&=& M \gamma^0 \gamma^0 \gamma^0 M^{-1} = \tilde{\gamma}^0, \quad \text{si $\mu =0.$}\\
+	&=& M \gamma^0 \gamma^i \gamma^0 M^{-1} = -\tilde{\gamma}^i, \quad \text{si $\mu =i $}.
+\end{IEEEeqnarray*}
+
+lo que se cumple solamente si $M$ es una matriz unitaria.
+
+\subsection{Ecuación de Dirac}
+Considerando el Hamiltoniano (\ref{eq_4.12}), es claro que se debe cumplir 
+\begin{equation*}
+	H\psi = E \psi \implies \gamma^0\qty( \vb*{\gamma}\cdot \vb*{p} + \gamma^0 m ) \psi = E \psi 
+\end{equation*}
+al cuantizar la relación anterior:
+
+\begin{IEEEeqnarray}{rCl}
+	\gamma^0\qty( -\ii \gamma^i \partial_i  + \gamma^0 m ) \psi =  \ii \pdv{\psi}{t} \implies \qty\big( \ii \gamma^0  \partial_0 + \ii  \gamma^i \partial_i - m) \psi(x) =0.
+\end{IEEEeqnarray}
+
+que se reescribe como 
+
+\begin{equation}
+	\boxed{ \qty\big( \ii\gamma^\mu \partial_\mu -m )\psi(x)  =0. }
+	\label{eq_4.28}
+\end{equation}
+
+La relación (\ref{eq_4.28}) es conocida como la forma covariante de la ecuación de Dirac.
+
+\begin{definition}[Notación slash de Feynman]
+	La notación \textbf{slash de Feynman} esta definida por
+	\begin{equation}
+		\slashed{a} \equiv  \gamma^\mu a_\mu 
+	\end{equation}
+	para cualquier cuadrivector $a$.
+\end{definition}
+ La ecuación de Dirac empleando la notación slash queda
+ 
+ \begin{equation}
+ 	\boxed{ \qty\big( \ii \slashed{\partial} -m )\psi(x) =0. }
+ 	\label{eq_4.30}
+ \end{equation}
+
+Vamos a estudiar un poco mas la naturaleza del denominado \textbf{espinor}\footnote{Los espinores son elementos que viven en un espacio interno o también llamado espacio espinorial y por ende no siguen las mismas reglas de las transformaciones de Lorentz, como si lo hacen los vectores en el espacio de minkowski.} $\psi(x)$ que es una matriz columna de 4 elementos. Al final del repaso de las propiedades de las matrices gamma, hablamos de que la representación de las matrices gamma $ (\gamma^\mu) $ no es única, por lo tanto se espera que las soluciones a la ecuación de Dirac $\psi (x)$ tampoco serán únicas. Supongamos que el espinor $\tilde{\psi}(x)$ satisface la ecuación de Dirac (\ref{eq_4.28}), donde las matrices gamma ahora son una representación diferente mediada por la matriz unitaria $U$ como se muestra en  (\ref{eq_4.26}). Entonces, una representación del espinor puede ser dada por la acción de la matriz $U$,
+
+\begin{equation}
+	\tilde{\psi}(x) = U \psi(x),
+\end{equation}
+
+y siendo que la ecuación de Dirac es una cantidad covariante a nivel relativista, se fija la condición de transformación del espinor $\psi$. Una manera de ver esto es considerar que la ecuación de Dirac (\ref{eq_4.28}) se garantice también en otro sistema de referencia (por conveniencia el sistema primado) 
+
+\begin{equation}
+	\qty( \ii \gamma^\mu \partial_\mu ^\prime - m ) \psi^\prime (x^\prime) = 0.
+	\label{eq_4.32}
+\end{equation} 
+
+Para darle una interpretación a esta ecuación, en el capitulo \ref{capitulo_22} estudiamos que las coordenadas bajo una transformación de Lorentz se transforman mediante la matriz $\Lambda$, 
+\begin{equation}
+	x^{\prime \mu} = \Lambda^\mu_{~\nu} x^\nu,
+\end{equation}
+y como consecuencia de realizar una transformación en las coordenadas, el espinor también sufre una transformación, solamente que esta se realiza en el espacio espinorial o espacio interno, dado que $\psi$ no esta establecido en el espacio donde viven los vectores $x^\mu$. En el espacio interno debe existir otra representación que me represente la transformación de Lorentz asociada a $x^\mu$ (elemento del espacio tiempo de Minkowski), entonces se espera una transformación de la forma
+
+\begin{equation}
+	\psi^\prime (x^\prime) = S(\Lambda) \psi(x)
+\end{equation} 
+
+donde $S(\Lambda)$ es la transformación de Lorentz en el espacio interno, y esta a su vez depende de la transformación $\Lambda$ realizada en el espacio-tiempo. Los indices de la matriz $S$ en principio son \textbf{espinoriales} dado que $S$ actúa sobre un espinor.\\
+
+Ya establecido el punto de partida, tenemos como objetivo encontrar cual es la forma de esta representación de la transformación de Lorentz en el espacio espinorial. \\
+
+En el espacio tiempo una transformación de Lorentz se puede escribir en términos de derivadas. En el caso de un vector contravariante,
+
+\begin{IEEEeqnarray*}{rCl}
+	x^{\prime \mu} = \Lambda^\mu_{~\nu} x^\nu &\implies& \pdv{x^{\prime \mu}}{x^\alpha} = \pdv{x^\alpha} \qty\big( \Lambda^\mu_{~\nu} x^\nu ) =\Lambda^\mu_{~\nu} \pdv{x^\nu}{x^\alpha}  =  \Lambda^\mu_{~\nu} \delta^\nu_\alpha 
+\end{IEEEeqnarray*}
+es decir,
+\begin{equation}
+	\boxed{ \Lambda^\mu_{~\nu} = \pdv{x^{\prime \mu}}{x^\nu} . }
+\end{equation}
+De la misma manera para un vector covariante $x_\mu^\prime = \Lambda_\mu ^{~\nu} x_\nu$
+
+\begin{equation}
+	\boxed{ \Lambda_\mu^{~\nu} = \pdv{x_ {\mu}^\prime }{x_\nu}. }
+\end{equation}
+
+Las relaciones anteriores permiten ver como se transforma una derivada, para ello consideremos la representación (\ref{eq_4.46}) 
+
+\begin{IEEEeqnarray*}{rCl}
+	\partial^\prime_\mu =  \pdv{x^\nu}{x^{\prime \mu}} \partial_\nu,
+\end{IEEEeqnarray*}
+donde $ \pdv{x^\nu}{x^{\prime \mu}} $ se halla a partir de 
+
+\begin{IEEEeqnarray*}{rCl}
+	\Lambda^{~\sigma}_\mu x^{\prime \mu} = \Lambda^{~\sigma}_\mu \Lambda^\mu_{~\nu} x^\nu = \delta^\sigma_\nu x^\nu = x^\sigma , 
+\end{IEEEeqnarray*}
+así se deriva que 
+
+\begin{IEEEeqnarray*}{rCl}
+	x^\mu = \Lambda_{\nu}^{~\mu} x^{\prime \nu } \longrightarrow \Lambda_{\nu}^{~\mu}  = \pdv{x^\mu}{x^{\prime \nu}}.
+\end{IEEEeqnarray*}
+Con este resultado se halla la forma en como se transforma una derivada, esto es
+\begin{equation}
+	\boxed{ \partial^\prime_\mu =  \Lambda_{\mu}^{~\nu} \partial_\nu. }
+\end{equation}
+
+Con los elementos obtenidos hasta aquí, podemos ver la forma en como transforma la ecuación de Dirac, partiendo de (\ref{eq_4.32})
+
+\begin{IEEEeqnarray}{rCl}
+	\qty\bigg( \ii \gamma^\mu \Lambda_\mu^{~\nu} \partial_\nu - m ) S\qty(\Lambda)  \psi(x) &=& 0 \notag \\
+	\ii \gamma^\mu \Lambda_\mu^{~\nu} \partial_\nu S\qty(\Lambda) \psi(x) - m S\qty(\Lambda) \psi(x) &=& 0,
+	\label{eq_4.38}
+\end{IEEEeqnarray}
+
+pero recuerde que la matriz $\Lambda_\mu^{~\nu}$ esta definida en el espacio tiempo, por lo que posee \textbf{indices vectoriales}, las matrices gamma, a pesar de depender de un índice vectorial, en la ecuación de Dirac aparece multiplicando al espinor $\psi$, de manera que tiene una dependencia implícita de \textbf{índices espinorales}, los cuales se manifiestan en cada una de las entradas de las $\gamma^\mu$ y finalmente como ya se menciono $S$ es una representación definida en el espacio espinorial por lo que sus indices son espinoriales. Entonces nosotros podemos proponer el conmutador
+\begin{equation}
+	\comm{\Lambda}{S} = 0.
+\end{equation} 
+Si multiplicamos (\ref{eq_4.38}) por $S^{-1}(\Lambda)$, y tenemos presente el comentario anterior 
+
+\begin{IEEEeqnarray}{rCl}
+	\qty\bigg[\ii S^{-1} (\Lambda) \gamma^\mu  S\qty(\Lambda) \Lambda_\mu^{~\nu} \partial_\nu  -  m S^{-1} \qty(\Lambda) S\qty(\Lambda)] \psi(x) &=& 0 \notag \\
+	\qty\bigg[\ii S^{-1} (\Lambda) \gamma^\mu  S\qty(\Lambda) \Lambda_\mu^{~\nu} \partial_\nu  -  m ] \psi(x) &=& 0 ,\label{eq_4.40}
+\end{IEEEeqnarray}
+
+y al comparar (\ref{eq_4.40}) con la expresión (\ref{eq_4.28}) se obtiene la propiedad
+
+\begin{equation}
+	\boxed{ \gamma^\nu = S^{-1} (\Lambda) \gamma^\mu  S\qty(\Lambda) \Lambda_\mu^{~\nu}. }
+	\label{eq_4.41}
+\end{equation}
+
+Si se considera una representación infinitesimal del grupo de Lorentz (ver apéndice \ref{Apendice_A} en la sección grupo de Lorentz)  
+
+\begin{equation}
+	\Lambda_{\mu \nu} = g_{\mu \nu} + \omega_{\mu \nu},
+	\label{eq_4.42}
+\end{equation}
+siendo la métrica una cantidad invariante, se tiene en el caso de una transformación dos veces covariante,
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		g = g^{\prime}  \implies g_{\rho \sigma} &=&\Lambda^{~\mu}_{\rho} \Lambda^{~\nu}_{\sigma} g_{\mu \nu}  \\
+		&=&\qty\big( g^{~\mu}_{\rho} + \omega^{~\mu}_{\rho} ) \qty\big( g^{~\nu}_{\sigma} + \omega^{~\nu}_{\sigma} )g_{\mu \nu} \\
+		&=&\qty\big( g^{~\mu}_{\rho}g^{~\nu}_{\sigma} + g^{~\mu}_{\rho} \omega^{~\nu}_{\sigma} + \omega^{~\mu}_{\rho}g^{~\nu}_{\sigma} + \overbrace{\omega^{~\mu}_{\rho}\omega^{~\nu}_{\sigma}}^{\approx 0}  ) g_{\mu \nu} \\
+		&=& g^{~\mu}_{\rho}g^{~\nu}_{\sigma}  g_{\mu \nu} + g^{~\mu}_{\rho} \omega^{~\nu}_{\sigma} g_{\mu \nu} + \omega^{~\mu}_{\rho}g^{~\nu}_{\sigma} g_{\mu \nu}  \\
+		&=& g^{~\mu}_{\rho}g_{\sigma \mu } +  g^{~\mu}_{\rho} \omega_{\sigma \mu}  + \omega^{~\mu}_{\rho}g_{\sigma \mu },
+	\end{IEEEeqnarray*}
+\end{prof}
+
+lo que se reduce a primer orden a
+
+\begin{equation}
+	\cancel{g_{\rho \sigma}} = \cancel{g_{\rho \sigma}} + \omega_{\sigma \rho} + \omega_{\rho \sigma}, \implies \omega_{\sigma \rho} = - \omega_{\rho \sigma},
+	\label{eq_4.43}
+\end{equation}
+estableciendo que el parámetro infinitesimal de la transformación de Lorentz es \textbf{antisimétrico}\\
+
+
+\begin{cabox}
+	Note que la expresión (\ref{eq_4.43}) empleando la métrica para elevar el índice $\sigma$ se puede reescribir como
+	\begin{equation*}
+		\omega^\sigma_{~\rho} = - \omega_{\rho}^{~\sigma},
+	\end{equation*} 
+	esto quiere decir que la antisimetria no es solamente realizar la transpuesta de una matriz y multiplicarla por un signo menos. La forma correcta de describir la transpuesta de $\omega_{\mu}^{~\nu}$ es
+	\begin{equation*}
+		\omega_{\mu}^{~\nu} = g_{\mu \rho} \omega^{\rho}_{~\sigma} g^{\sigma \nu}.
+	\end{equation*}
+\end{cabox}
+
+Para encontrar una representación de la matriz $S(\Lambda)$ en el espacio espinorial, y conociendo de entrada que el conjunto de este conjunto de matrices definen un grupo de Lie, podemos proponer una representación infinitesimal como siendo
+
+\begin{equation}
+	S(\Lambda) \equiv \idnt - \frac{\ii}{4} \beta_{\mu \nu} \omega^{\mu \nu},
+	\label{eq_4.44}
+\end{equation} 
+
+donde $\idnt$ es la matriz identidad $4\times 4$ y $ \beta_{\mu \nu} $ matrices también del mismo orden, cuyos índices para ambas son \textbf{espinoriales} pues implicitamente depende de las matrices $\gamma$. Nuevamente $ \omega^{\mu \nu} $ son los parámetros independientes establecidos en el grupo de Lorentz (asociados a rotaciones y boots). El factor $ - \frac{\ii}{4} $ se escribe a conveniencia. \\
+ 
+ La inversa de la ecuación (\ref{eq_4.44}) viene dada por
+ 
+ \begin{equation}
+ 	S(\Lambda) \equiv \idnt + \frac{\ii}{4} \beta_{\mu \nu} \omega^{\mu \nu},
+ 	\label{eq_4.45}
+ \end{equation} 
+ 
+A primer orden los generadores satisfacen la siguiente condición
+
+\begin{IEEEeqnarray*}{rCl}
+	SS^{-1} &=& \qty(1 - \frac{\ii}{4} \beta_{\mu \nu} \omega^{\mu \nu})\qty(1 + \frac{\ii}{4} \beta_{\mu \nu} \omega^{\mu \nu}) \\
+	&=& \bcancel{1} + \frac{\ii}{4} \beta_{\mu \nu} \omega^{\mu \nu}  - \frac{\ii}{4} \beta_{\mu \nu} \omega^{\mu \nu} = \bcancel{1},
+\end{IEEEeqnarray*}
+que implica lo siguiente 
+\begin{IEEEeqnarray*}{c}
+	\qty(\beta_{\mu \nu}+\beta_{\nu\mu})\omega^{\mu \nu}=0 \Rightarrow \beta_{\mu \nu} = - \beta_{\nu\mu},
+\end{IEEEeqnarray*}
+
+por lo que las matrices $\beta_{\mu \nu}$ son \textbf{antisimétricas}. Ahora, vamos a analizar más a profundidad la ecuación (\ref{eq_4.41}) donde consideraremos aproximaciones a primer orden en los parámetros infinitesimales $\omega$, 
+
+\begin{IEEEeqnarray*}{rCl}
+	\gamma^\nu &=&  \qty( 1 + \frac{\ii}{4} \beta_{\rho \tau} \omega^{\rho \tau}) \gamma^\mu \qty( 1 - \frac{\ii}{4} \beta_{\theta \sigma} \omega^{\theta \sigma})\qty\bigg(g_\mu^{~\nu} + \omega_{\mu}^{~\nu}) \\
+	& \approx & \qty( \gamma^\mu - \frac{\ii}{4} \gamma^\mu \underbrace{\beta_{\theta \sigma} \omega^{\theta \sigma}}_{\theta \to \rho, \sigma \to \tau} + \frac{\ii}{4} \beta_{\rho \tau} \omega^{\rho \tau}\gamma^\mu )\qty\bigg(g_\mu^{~\nu} + \omega_{\mu}^{~\nu}) \\
+	&=&  \qty( \gamma^\mu - \frac{\ii}{4} \gamma^\mu \beta_{\rho \tau} \omega^{\rho \tau} + \frac{\ii}{4} \beta_{\rho \tau} \omega^{\rho \tau}\gamma^\mu )\qty\bigg(g_\mu^{~\nu} + \omega_{\mu}^{~\nu})\\
+	&=&  \qty( \gamma^\mu - \frac{\ii}{4}  \omega^{\rho \tau} \qty\big( \gamma^\mu \beta_{\rho \tau} - \beta_{\rho \tau} \gamma^\mu) )\qty\bigg(g_\mu^{~\nu} + \omega_{\mu}^{~\nu})\\
+	&=& \qty( \gamma^\mu - \frac{\ii}{4}  \omega^{\rho \tau} \comm{\gamma^\mu}{\beta_{\rho \tau }})\qty\bigg(g_\mu^{~\nu} + \omega_{\mu}^{~\nu}),
+\end{IEEEeqnarray*}
+donde podemos simplificar a primer orden en $\omega$,
+
+\begin{IEEEeqnarray*}{rCl}
+	\gamma^\nu &=&  \gamma^\mu g_\mu^{~\nu} - \frac{\ii}{4}  \omega^{\rho \tau} \comm{\gamma^\mu}{\beta_{\rho \tau }} g_\mu^{~\nu}  + \gamma^\mu \omega_{\mu}^{~\nu} \\
+	\bcancel{\gamma^\nu} &=&  \bcancel{\gamma^\nu} - \frac{\ii}{4}  \omega^{\rho \tau} \comm{\gamma^\nu}{\beta_{\rho \tau }} + \gamma^\mu \omega_{\mu}^{~\nu},
+\end{IEEEeqnarray*}
+de manera que 
+\begin{equation}
+	 - \frac{\ii}{4}  \omega^{\rho \tau} \comm{\gamma^\nu}{\beta_{\rho \tau }} + \gamma^\mu \omega_{\mu}^{~\nu} = 0.
+	 \label{eq_4.46}
+\end{equation}
+
+Analizando el segundo término de la ecuación anterior,
+
+\begin{IEEEeqnarray*}{rCl}
+	\gamma^\mu \omega_{\mu}^{~\nu} &=&  \frac{\gamma^\mu}{2}\qty\big( \overbrace{\omega_{\mu}^{~\nu} + \omega^{\nu}_{~\mu}}^{0} + \omega_{\mu}^{~\nu} - \omega^{\nu}_{~\mu})\\
+	&=&  \frac{\gamma^\mu}{2} \qty( \omega_{\mu}^{~\nu} - \omega^{\nu}_{~\mu} ),
+\end{IEEEeqnarray*}
+donde 
+\begin{IEEEeqnarray*}{rCl}
+	\omega_{\mu}^{~\nu} = \omega^{\rho \tau} g_{\rho \mu} g_{\tau}^{~\nu}, \qquad \qquad  \omega^{\nu}_{~\mu} = \omega^{\rho \tau} g_{\rho}^{~\nu} g_{\tau \mu}.    
+\end{IEEEeqnarray*}
+Por lo tanto reescribimos (\ref{eq_4.46}) como 
+
+\begin{equation}
+	\omega^{\rho \tau} \qty( - \frac{\ii}{4}  \comm{\gamma^\nu}{\beta_{\rho \tau }} + \frac{\gamma^\mu}{2} \qty[ g_{\rho \mu} g_{\tau}^{~\nu} - g_{\rho}^{~\nu} g_{\tau \mu} ] ) = 0.
+	\label{eq_4.47}
+\end{equation}
+
+Para comprender la expresión (\ref{eq_4.47}) consideremos lo siguiente 
+
+\begin{IEEEeqnarray*}{rCl's}
+	\omega^{\rho \tau} T_{\rho \tau} &=& \frac{1}{2} \omega^{\rho \tau} T_{\rho \tau} + \frac{1}{2} \omega^{\rho \tau} T_{\rho \tau} \\
+	& = &  \omega^{\rho \tau} \qty\bigg( \underbrace{\frac{1}{2} T_{\rho \tau} - \frac{1}{2} T_{\tau \rho }}_{T_{\qty[\rho \tau]}} + \underbrace{ \frac{1}{2} T_{\rho \tau} + \frac{1}{2} T_{\tau \rho } }_{T_{\qty(\rho \tau)}} )\\
+	&=&  \omega^{\rho \tau} \qty( T_{\qty[\rho \tau]} + T_{\qty(\rho \tau)} ) & \footnotesize{pero $\omega^{\rho \sigma}$ es completamente antisimétrico}\\
+	&=& \omega^{\qty[\rho \tau]} \qty( T_{\qty[\rho \tau]} + T_{\qty(\rho \tau)} )\\
+	&=&  \omega^{\qty[\rho \tau]}T_{\qty[\rho \tau]} + \underbrace{\omega^{\qty[\rho \tau]}T_{\qty(\rho \tau)}}_{0} = 0 ,
+\end{IEEEeqnarray*}
+ lo que quiere decir que al contraer los indices $\rho, \tau$ se debe tener presente su antisimetria manifiesta en $\omega^{\rho \tau}$. Por ejemplo si consideramos la expansión en los índices $0,1$, 
+ 
+ \begin{IEEEeqnarray*}{rCl}
+ 	\omega^{\rho \tau} T_{\rho \tau} &=& \omega^{0 1} T_{0 1} + \omega^{1 0} T_{1 0} = \omega^{0 1} T_{0 1} - \omega^{0 1} T_{1 0} = \omega^{0 1} \underbrace{\qty\big( T_{0 1} - T_{1 0} )}_{0} .
+ \end{IEEEeqnarray*}
+Por lo tanto 
+\begin{equation}
+	\omega^{\rho \tau} T_{\rho \tau} = 0 \implies T_{\qty[\rho \tau]} = 0.
+	\label{eq_4.48}
+\end{equation}
+
+\begin{cabox}
+	Tenga presente que $\omega^{\tau \rho}$ no implica que $T_{\rho \tau}$ es igual a cero ya que $\omega^{\tau \rho}$ es antisimétrico. Cuando se toma en cuenta la esta antisimetría podremos concluir que $T_{\qty[\tau \rho]}$ (con índices antisimetrizados)  es cero como se indica en la ecuación (\ref{eq_4.48}) ya que estas cantidades en efecto son linealmente independientes.
+\end{cabox}
+
+
+El anterior análisis establece que la cantidad entre paréntesis (\ref{eq_4.47}) debe ser una cantidad antisimétrica en los índices $\rho \tau$ y debe ser igual a
+
+\begin{equation}
+	 - \frac{\ii}{4}  \comm{\gamma^\nu}{\beta_{\qty[\rho \tau] }} + \frac{\gamma^\mu}{2} \qty( g_{\rho \mu} g_{\tau}^{~\nu} - g_{\rho}^{~\nu} g_{\tau \mu} )  = 0,
+	\label{eq_4.51}
+\end{equation}
+condición que se verifica porque ya se determinado que $\beta$ es una matriz antisimétrica. De manera que se halla el conmutador,
+
+\begin{IEEEeqnarray}{rCl}
+	\comm{\gamma^\nu}{\beta_{\qty[\rho \tau] }} &=& 2\ii \qty( g_{\rho \mu} g_{\tau}^{~\nu} \gamma^\mu - g_{\rho}^{~\nu} g_{\tau \mu} \gamma^\mu ) \notag \\
+	&=& 2\ii \qty( g_{\tau}^{~\nu} \gamma_\rho - g_{\rho}^{~\nu} \gamma_\tau ).
+\end{IEEEeqnarray}
+
+Una matriz $\beta$ que satisface la relación de antisimetria y el conmutador hallado anteriormente, se propone como siendo 
+
+\begin{equation}
+	\beta_{\mu,\nu} \equiv \frac{\ii}{2} \comm{\gamma_\mu}{\gamma_\nu} = \sigma_{\mu \nu},
+\end{equation}
+puesto que 
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\comm{\gamma^\mu}{\sigma_{\rho \tau}} &=& \frac{\ii}{2} \comm{\gamma^\mu}{\comm{\gamma_{\rho}}{\gamma_{\tau}}}\\
+		&=& \frac{\ii}{2} \comm{\gamma^\mu}{\gamma_\rho \gamma_\tau - \gamma_\tau \gamma_\rho} = \frac{\ii}{2} \qty(\comm{\gamma^\mu}{\gamma_\rho \gamma_\tau} - \comm{\gamma^\mu}{ \gamma_\tau \gamma_\rho})\\
+		&=& \frac{\ii}{2} \qty(\comm{\gamma^\mu}{\gamma_\rho }\gamma_\tau +\gamma_\rho \comm{\gamma^\mu}{ \gamma_\tau} - \comm{\gamma^\mu}{ \gamma_\tau }\gamma_\rho- \gamma_\tau \comm{\gamma^\mu}{  \gamma_\rho})\\
+		&=& \frac{\ii}{2} \bigg( \cancel{\qty{\gamma^\mu,\gamma_\rho}\gamma_\tau}  +\bcancel{\gamma_\rho \acomm{\gamma^\mu}{ \gamma_\tau}} - \bcancel{\acomm{\gamma^\mu}{ \gamma_\tau }\gamma_\rho}- \cancel{\gamma_\tau \acomm{\gamma^\mu}{  \gamma_\rho}} \\
+		&& \qquad - 2\gamma_\rho \gamma^\mu\gamma_\tau  - 2\gamma_\rho \gamma_\tau \gamma^\mu + 2 \gamma_\tau \gamma^\mu \gamma_\rho + 2 \gamma_\tau \gamma_\rho \gamma^\mu \bigg)\\
+		&=& \frac{\ii}{2} \qty(2\gamma_\tau \gamma^\mu \gamma_\rho + 2 \gamma^\mu \gamma_\tau \gamma_\rho - 2 \gamma_\rho \gamma^\mu \gamma_\tau - 2 \gamma^\mu \gamma_\rho \gamma_\tau) \\
+		&=& \ii \qty(\acomm{\gamma_\tau}{\gamma^\mu}\gamma_\rho - \acomm{\gamma_\rho}{\gamma^\mu}\gamma_\tau) \\
+		&=& 2 \ii \qty( g_\tau^{~\mu} \gamma_\rho - g_\rho^{~\mu} \gamma_\tau ).
+	\end{IEEEeqnarray*}
+\end{prof}
+
+Como ya tenemos una expresión para el generador $\beta$, podemos escribir la representación de la matriz $S$ que garantiza la invarianza de la ecuación de Dirac, entonces tenemos
+
+\begin{equation}
+	S(\Lambda) =\idnt- \frac{\ii}{4} \sigma_{\mu \nu} \omega^{\mu \nu} ,
+\end{equation}
+de manera que un espinor se transforma infinitesimalmente en el espacio espinorial como
+
+\begin{equation}
+	\psi^\prime(x^\prime) = \qty( \idnt- \frac{\ii}{4} \sigma_{\mu \nu} \omega^{\mu \nu} ) \psi(x).
+	\label{eq_4.53} 
+\end{equation}.
+
+Una transformación finita se construye a partir de una serie de transformaciones infinitesimales 
+
+\begin{IEEEeqnarray*}{rCl}
+	\psi^\prime(x^\prime) = \underbrace{S(\Lambda) \cdots S(\Lambda)}_{N\to \infty} \psi \implies  \psi^\prime(x^\prime) = \qty( \idnt - \frac{\ii}{4} \sigma_{\mu \nu} \frac{\omega^{\mu \nu}}{N} )^N \psi(x), 
+\end{IEEEeqnarray*}
+
+entonces una transformación finita el espacio interno se representa por
+
+\begin{equation}
+	\boxed{ \psi^\prime(x^\prime) = \ee^{-\frac{\ii}{4} \sigma_{\mu \nu} \omega^{\mu \nu} } \psi(x) . }
+	\label{eq_4.54}
+\end{equation}
+
+Los elementos $\psi(x)$ son llamados espinores puesto que obedecen la regla de transformación (\ref{eq_4.54}). En el apéndice \ref{Apendice_A} se demostró que el operador generador asociado a las rotaciones, se lo representa como $J_{\mu \nu}$ siendo este el operador de momento angular. Al extender este concepto a rotaciones para campo fermiónico tenemos la siguiente transformación (\textcolor{red}{-- Revisar texto y sección --})
+
+\begin{equation}
+	\psi^\prime (x) = \qty(\idnt - \frac{\ii}{2} J_{\mu \nu} \omega^{\mu \nu} ) \psi(x),
+	\label{eq_4.55}
+\end{equation}
+
+que se interpreta como siendo una transformación local en el campo $\psi(x)$, dado que esta cambiando la forma del campo y se mantiene fijo el punto $x$ del espacio tiempo. Por otro lado de la transformación de Lorentz infinitesimal (\ref{eq_4.42}) tenemos que 
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCls}
+		\psi^\prime (x^\prime) &=& \psi^\prime \qty( x^\mu + \omega^{\mu \nu} x_\nu  )\\
+		&=& \psi^\prime \qty( x + \omega^{\mu \nu} x_\nu  )\\
+		&=& \psi^\prime (x) + \omega^{\mu \nu} x_\nu  \partial_\mu \psi^\prime (x) & \footnotesize{Por serie de Taylor a primer orden}\\
+		&=& \psi^\prime (x) + \frac{1}{2} \qty(\omega^{\mu \nu} x_\nu  \partial_\mu + \omega^{\mu \nu} x_\nu  \partial_\mu ) \psi^\prime (x)\\
+		&=& \psi^\prime (x) + \frac{\omega^{\mu \nu}}{2} \qty\bigg( x_\nu  \partial_\mu -  x_\mu  \partial_\nu ) \psi^\prime (x),
+	\end{IEEEeqnarray*}
+\end{prof}
+
+pero al emplear (\ref{eq_4.55}) a primer orden en los parámetros infinitesimales se deriva que 
+
+\begin{IEEEeqnarray*}{rCl}
+	\psi^\prime (x^\prime) &=& \qty(\idnt - \frac{\ii}{2} J_{\mu \nu} \omega^{\mu \nu} ) \psi(x) + \frac{\omega^{\mu \nu}}{2} \qty\bigg( x_\nu  \partial_\mu -  x_\mu  \partial_\nu ) \qty(\idnt - \frac{\ii}{2} J_{\mu \nu} \omega^{\mu \nu} ) \psi(x)\\
+	&=& \qty(\idnt - \frac{\ii}{2} J_{\mu \nu} \omega^{\mu \nu} + \frac{\omega^{\mu \nu}}{2} \qty\bigg( x_\nu  \partial_\mu -  x_\mu  \partial_\nu )) \psi(x),
+\end{IEEEeqnarray*}
+y de la transformación asociada a un espinor (\ref{eq_4.53}),
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty( \idnt- \frac{\ii}{4} \sigma_{\mu \nu} \omega^{\mu \nu} ) \psi(x) = \qty( \idnt - \frac{\ii}{2} J_{\mu \nu} \omega^{\mu \nu} + \frac{\omega^{\mu \nu}}{2} \qty\bigg( x_\nu  \partial_\mu -  x_\mu  \partial_\nu )) \psi(x),
+\end{IEEEeqnarray*}
+y siendo $\psi(x)$ en principio arbitrario, se debe cumplir que 
+
+\begin{IEEEeqnarray*}{rCl}
+	 \bcancel{\idnt}- \frac{\ii}{4} \sigma_{\mu \nu} \omega^{\mu \nu} &=& \bcancel{\idnt} - \frac{\ii}{2} J_{\mu \nu} \omega^{\mu \nu} + \frac{\omega^{\mu \nu}}{2} \qty\bigg( x_\nu  \partial_\mu -  x_\mu  \partial_\nu) \\
+	 - \frac{\ii}{4} \sigma_{\mu \nu} \omega^{\mu \nu} &=& \qty[ - \frac{\ii}{2} J_{\mu \nu}  + \frac{1}{2} \qty\bigg( x_\nu  \partial_\mu -  x_\mu  \partial_\nu) ]\omega^{\mu \nu}.
+\end{IEEEeqnarray*}
+Por el planteamiento ya expuesto para demostrar la expresión (\ref{eq_4.47}) se tiene que el operador de momento angular (antisimétrico) tiene la forma:
+\begin{equation}
+	\boxed{J_{\mu \nu} = \ii \qty\big( x_\mu \partial_\nu - x_\nu \partial_\mu ) + \frac{1}{2} \sigma_{\mu \nu}. }
+\end{equation}
+
+El primer término es la expresión familiar para el momento angular orbital, pero hay un segundo término el cual asocia el momento angular de espín, es por esto que $J_{\mu \nu}$ es un momento angular generalizado. Por otro lado, el conocer como es el operador de momento angular implica que las soluciones de la ecuación de Dirac llevan implícito algún momento angular ya sea orbital o de espín.
+
+ \section{Soluciones de Ondas planas de la ecuación de Dirac}
+ 
+ \subsection{Espinores de energía positiva y negativa}
+ 
+ Recuerde que cuando estudiamos la cuantización del campo escalar real vimos que el mismo satisfacía la ecuación de Klein-Gordon. Esto nos permitió entender por qué el campo se describía como una combinación lineal de las soluciones clásicas de la ecuación. Para el campo de Dirac sucede lo mismo, por este motivo, vamos a recordar brevemente las soluciones de la ecuación de Dirac.
+ 
+ La ecuación de Dirac es
+ \begin{equation}
+ 	\qty( \ii \gamma^\mu \partial_\mu - m ) \psi(x) = 0,
+ 	\label{eq_4.57}
+ \end{equation} 
+ donde vimos que las matrices gamma (consideradas e dimensión 4) satisfacen el álgebra de Clifford
+ 
+ \begin{equation}
+ 	\acomm{\gamma^\mu}{\gamma^\nu} = 2g^{\mu \nu}.
+ \end{equation}
+
+Una representación de esta álgebra es dada por las matrices 
+
+\begin{equation}
+	\boxed{
+		\begin{IEEEeqnarraybox}[][b]{C}
+			\gamma^0 = \mqty( \idnt_{2\times 2} & 0_{2\times 2}  \\	  0_{2\times 2} & - \idnt_{2\times 2} ),\qquad \gamma^i =  \mqty( 0_{2\times 2} & \sigma^i \\	-\sigma^i & 0_{2\times 2} ). \IEEEyesnumber
+		\end{IEEEeqnarraybox}	
+		}
+	\label{eq_4.59}
+\end{equation}
+
+Podemos escribir una solución de onda plana a la ecuación (\ref{eq_4.57}) como siendo,
+
+\begin{equation}
+	\psi(x) = \ee^{ - \ii E t } \varphi(\vb*{x}),
+\end{equation}
+ 
+ donde se la ha escrito factorizada por una fase. Ahora, si asumimos que se cumple $\partial_i \psi(x) = 0$ lo que implica que esta es una cantidad invariante bajo traslaciones espaciales, la ecuación de Dirac (\ref{eq_4.57}) se escribe como
+ 
+\begin{IEEEeqnarray*}{rCl}
+	\qty(\ii \gamma^0 \partial_0 -m )  \psi(x) & = & 0\\
+	\qty(\ii \gamma^0 \partial_0 -m )  \ee^{ -\ii E t } \varphi(\vb*{x}) & = & 0\\
+	\qty( \ii \gamma^0 ( -\ii E ) - m  )  \ee^{ -\ii E t } \varphi(\vb*{x}) & = & 0 \\
+	\qty(  \gamma^0 E - m  ) \psi(x) & = & 0,
+\end{IEEEeqnarray*}
+
+ y como en general $  \psi(x)  = \ee^{ -\ii E t } \varphi(\vb*{x})  \neq 0 $, se tiene la ecuación matricial
+
+\begin{equation}
+	\qty( \gamma^0 E - m ) = 0.
+	\label{eq_4.61}
+\end{equation}
+
+que impone la condición,
+
+\begin{IEEEeqnarray}{rCl}
+	\gamma^0 \gamma^0 E - \gamma^0 m = 0 \implies E= m \gamma^0,
+\end{IEEEeqnarray}
+
+La ecuación anterior implica la existencia de energías negativas por la forma explicita de la matriz $\gamma^0$. Una manera alternativa de ver esto, es partiendo del hecho que (\ref{eq_4.61}) que es una ecuación matricial igualada a cero, entonces se debe cumplir \textcolor{red}{--Revisar--}
+
+\begin{IEEEeqnarray*}{rCl}
+	\det( \gamma^0 E - m ) = 0 \implies  \det \spmqty{ E-m & 0 & 0 & 0 \\ 0 & E-m & 0 & 0 \\ 0 & 0 & -E-m & 0 \\ 0 & 0 & 0 & -E-m  }= (E-m)^2(E+m)^2 = 0,
+\end{IEEEeqnarray*}
+ por lo tanto, esta ecuación algebraica posee dos soluciones
+ 
+ \begin{equation}
+ 	\boxed{
+ 	E= \pm m.}
+ \end{equation}
+
+De aquí se deriva que para cada valor de la energía tenemos una solución a la ecuación de Dirac (sigue la misma estructura de una ecuación de autovalores). En este caso obtuvimos una solución muy particular por la condición impuesta inicialmente. Vamos a asumir una solución en términos de ondas planas de la forma  
+\begin{equation}
+	\psi(x) = \left\{ \,
+	\begin{IEEEeqnarraybox}[][c]{l?s}
+		\IEEEstrut
+		u_s (\vb*{p}) \ee^{- \ii p x} \\
+		v_s (\vb*{p}) \ee^{ \ii p x}.
+		\IEEEstrut
+	\end{IEEEeqnarraybox}
+	\right.  
+	\label{eq_4.64}
+\end{equation}
+ 
+ Las funciones de onda plana tienen gran importancia, dado que, en virtud del análisis de Fourier, todas las posibles soluciones a la ecuación de Dirac pueden expresarse como una combinación de soluciones de onda plana. Veamos si las ondas planas propuestas en (\ref{eq_4.64})  satisfacen la ecuación de Dirac,
+ 
+ \begin{IEEEeqnarray*}{rCl}
+ 	\qty( \ii \gamma^\mu \partial_\mu  - m ) u_s (\vb*{p}) \ee^{- \ii p x} &=& 0  \notag \\
+ 	\qty( \ii \gamma^\mu \qty( -\ii p_\mu ) - m ) u_s (\vb*{p}) \ee^{- \ii p x} &=& 0, \qquad \ee^{- \ii p x}\neq 0 \notag  \\
+ 	\qty(  \gamma^\mu  p_\mu  - m ) u_s (\vb*{p}) &=&  0,
+ \end{IEEEeqnarray*}
+\begin{equation}
+	\boxed{\qty(  \slashed{p}  - m ) u_s (\vb*{p}) =  0.}
+	 	\label{eq_4.65}
+\end{equation}
+
+Del mismo modo para la otra solución 
+
+ \begin{IEEEeqnarray*}{rCl}
+	\qty( \ii \gamma^\mu \partial_\mu  - m ) v_s (\vb*{p}) \ee^{ \ii p x} &=& 0  \notag \\
+	\qty( \ii \gamma^\mu \qty( \ii p_\mu ) - m ) v_s (\vb*{p}) \ee^{ \ii p x} &=& 0, \qquad \ee^{ \ii p x}\neq 0 \notag  \\
+	\qty(  \gamma^\mu  p_\mu  + m ) v_s (\vb*{p})  &=&  0,
+\end{IEEEeqnarray*}
+
+\begin{equation}
+	\boxed{\qty(  \slashed{p}  + m ) v_s (\vb*{p})  = 0.}
+	\label{eq_4.66}
+\end{equation}
+  
+Las expresiones (\ref{eq_4.65}) y (\ref{eq_4.66}) representan las ecuaciones de Dirac en el espacio de momentos, es decir en términos de la transformada de Fourier.\\
+
+Cabe resaltar que las soluciones (\ref{eq_4.64}) deben incluir algunos factores que garantizan la condición de normalización. El índice $ s $ etiqueta las dos soluciones independientes tanto para $u$ como para $v$, siendo $ u_{s} $ solución asociada a valores de energía positiva de una partícula con momento $\vb*{p}$ caracterizados por la relación de dispersión $ E_{p} = \sqrt{ \vb*{p}^2 + m^2 } $; mientras que las soluciones asociadas a $v_s$ corresponden a energías negativas de una partícula con momento $-\vb*{p}$ y energía $ E_{p} = -\sqrt{ \vb*{p}^2 + m^2 } $.\\
+
+\begin{definition}[Conjugación de Dirac]
+	Se define la conjugación de Dirac de un espinor $\psi(x)$ como,
+	\begin{equation}
+		\overline{\psi} = \psi^\dag \gamma^0.
+	\end{equation}
+\end{definition}
+
+Estudiemos el auto adjunto de cada una de las ecuaciones de Dirac, es decir
+\begin{IEEEeqnarray*}{rCl's}
+	\qty[ \qty( \gamma^\mu p_\mu - m  ) u_s (\vb*{p}) ]^\dag &=& 0^\dag\\
+	u^\dag_s (\vb*{p}) \qty( \qty(\gamma^\mu)^\dag p_\mu - m  ) &=& 0 & \footnotesize{empleando (\ref{eq_4.20})}\\
+	u^\dag_s (\vb*{p}) \qty( \gamma^0 \gamma^\mu \gamma^0 p_\mu - m  ) &=& 0\\
+	u^\dag_s (\vb*{p}) \gamma^0 \qty(  \gamma^\mu  p_\mu \gamma^0  - \gamma^0 m  ) &=& 0\\
+	u^\dag_s (\vb*{p}) \gamma^0 \qty(  \gamma^\mu  p_\mu  -  m  ) \gamma^0  &=& 0,
+\end{IEEEeqnarray*} 
+de manera que 
+\begin{equation}
+	\boxed{
+	\bar{u}_s(\vb*{p}) \qty( \slashed{p} - m ) = 0.}
+	\label{eq_4.68}
+\end{equation}
+ 
+ De manera similar se puede calcular el adjunto hermítico de la ecuación (\ref{eq_4.66}),
+ 
+ \begin{equation}
+ 	\boxed{
+ 	\bar{v}_s(\vb*{p}) \qty( \slashed{p} + m ) = 0.}
+ 	\label{eq_4.69}
+ \end{equation}
+ 
+Las soluciones linealmente independientes se pueden escribir en términos de los elementos de una base en el espacio espinorial, los cuales pueden estar asociadas a la dirección del espín de la partícula. La condición de normalización que se va a imponer dado un conjunto de espinores será:
+
+\begin{equation}
+	\boxed{
+	\begin{IEEEeqnarraybox}{rCl}
+		u_r^\dag (\vb*{p}) u_s (\vb*{p}) & = & v_r^\dag (\vb*{p}) v_s (\vb*{p}) =2E_p \delta_{rs}\\
+		v_r^\dag (\vb*{p}) u_s (\vb*{-p}) & = & u_r^\dag (\vb*{p}) v_s (\vb*{-p}) = 0
+	\end{IEEEeqnarraybox}
+	} \, .
+	\label{eq_4.70}
+\end{equation}
+
+Las ecuaciones anteriores hacen que el conjunto de espinores $u$ u $v$ constituyan una base que sea ortonormal. Para comprender el sentido de esta base consideremos la ecuación de Dirac para soluciones de energía positiva (\ref{eq_4.65}) y multipliquemosla por $\bar{u}_r(\vb*{p})\gamma^\mu$,
+
+\begin{equation}
+		\bar{u}_r(\vb*{p})\gamma^\mu ( \slashed{p} - m ) u_s(\vb{p}) = 0,
+		\label{eq_4.71}
+\end{equation}
+y realizando el mismo procedimiento con la ecuación de Dirac conjugada de energías positivas (\ref{eq_4.68}), multiplicando a la derecha por $\gamma^\mu u_s(\vb{p})$, 
+
+\begin{equation}
+	\bar{u}_r(\vb*{p}) ( \slashed{p} - m ) \gamma^\mu u_s(\vb{p}) = 0,
+	\label{eq_4.72}
+\end{equation}
+Sumando las expresiones (\ref{eq_4.71}) y (\ref{eq_4.72}),
+
+\begin{IEEEeqnarray*}{rCl}
+	\bar{u}_r(\vb*{p} ) \qty( \gamma^\mu \slashed{p} + \slashed{p} \gamma^\mu  ) u_s (\vb*{p}) - 2m \bar{u}_r(\vb*{p} ) \gamma^\mu u_s(\vb*{p}) &=& 0\\
+	\bar{u}_r(\vb*{p} ) \qty( \gamma^\mu \gamma^\nu p_\nu  + \gamma^\nu p_\nu  \gamma^\mu  ) u_s (\vb*{p}) - 2m \bar{u}_r(\vb*{p} ) \gamma^\mu u_s(\vb*{p}) &=& 0\\
+	p_\nu \bar{u}_r(\vb*{p} ) \underbrace{\qty( \gamma^\mu \gamma^\nu   + \gamma^\nu  \gamma^\mu  ) }_{2g^{\mu \nu}}  u_s (\vb*{p}) - 2m \bar{u}_r(\vb*{p} ) \gamma^\mu u_s(\vb*{p}) &=& 0
+\end{IEEEeqnarray*}
+entonces,
+\begin{equation}
+	p^\mu \bar{u}_r(\vb*{p}) u_{s}(\vb*{p}) = m \bar{u}_r(\vb*{p}) \gamma^\mu u_{s}(\vb*{p}) 
+\end{equation}
+esta también puede ser una candidata a relación de normalización de los espinores, solamente que tiene un problema y es su dependencia con la masa $m$, por lo tanto en partículas donde tengamos masa igual a cero es donde tendremos dificultades con este resultado. Por lo tanto la ecuación (\ref{eq_4.70}) es una condición de normalización aceptable para trabajar con espinores, pues esta normalizada a la energía y ya no hay problema al tener un valor de masa cero. De igual manera se puede hacer el tratamiento con los $v_s (\vb*{p})$.\\
+
+Por último, esta base de espinores también satisface las relaciones de completitud
+
+\begin{equation}
+	\boxed{ 
+	\begin{IEEEeqnarraybox}{rCl}
+		\sum_s u_s \qty(\vb*{p})  \overline{u}_s \qty(\vb*{p}) &=& \slashed{p} + m \\ 
+		\sum_s  v_s \qty(\vb*{p})  \overline{v}_s \qty(\vb*{p}) &=& \slashed{p} - m 
+	\end{IEEEeqnarraybox}	
+ } \, ,
+\end{equation}
+
+que se deja al lector demostrar.
+
+\subsection{Soluciones en la representación de Dirac-Pauli}
+
+Ya presentamos en la ecuación (\ref{eq_4.59}) una representación a las matrices gamma, donde $\gamma^i$ depende de la forma explicita de las matrices de Pauli
+
+\begin{equation}
+	\boxed{
+	\sigma^1 = \mqty(\pmat{1}), \qquad  \sigma^2 =  \mqty(\pmat{2}),  \qquad \sigma^3 =  \mqty(\pmat{3})}.
+\end{equation}
+
+Determinemos las soluciones explicitas a la ecuación de Dirac en esta base, entonces estudiemos 
+
+\begin{IEEEeqnarray*}{rCl}
+	\slashed{p} - m &=& \gamma^\mu p_\mu - m \\
+	&=& \gamma^0 p_0 - \gamma^i p^i - m\\
+	&=& \gamma^0 E_p- \vb*{\gamma}\cdot \vb*{p} - m\\
+	&=& E_p \spmqty{ \vb*{1} & 0 \\ 0 & - \vb*{1} } - \spmqty{ 0 & \sigma^i p^i \\ -\sigma^i p^i & 0 } - \spmqty{ m & 0 \\ 0 & m } ,
+\end{IEEEeqnarray*}
+ahora, si suponemos que la forma del espinor es 
+\begin{equation}
+	u \equiv \mqty( \phi_t \\ \phi_b ),
+\end{equation}
+donde $\phi_t$ y $\phi_b$ son las componentes top y bottom del espinor. Reemplazando en la ecuación de Dirac (\ref{eq_4.65}) se obtiene
+
+\begin{IEEEeqnarray*}{rCl}
+	\mqty( E_p-m & -\sigma^i p^i \\ \sigma^i p^i & -E_p - m  )  \mqty( \phi_t \\ \phi_b  ) = \mqty( 0 \\ 0 ), 
+\end{IEEEeqnarray*}
+este resultado no es mas que un sistema de dos ecuaciones con dos incógnitas, donde la tarea es ahora determinar los valores de las componentes top y bottom. Resulta que el determinante de esta matriz es cero, de modo que este sistema posee infinitas soluciones. Vamos a determinar alguna de ellas. Reescribamos el sistema de ecuaciones 
+
+\begin{IEEEeqnarray}{rCl}
+	\qty( E_p - m )\phi_t - \sigma^i p^i \phi_b &=& 0 \label{eq_4.76} \\
+	\sigma^i p^i \phi_t - \qty( E_p + m )\phi_b  &=& 0, \label{eq_4.77}
+\end{IEEEeqnarray}
+de (\ref{eq_4.77}),
+\begin{equation}
+	\phi_b = \frac{\sigma^i p^i}{E_p + m} \phi_t,
+\end{equation}
+de manera que una posible solución es
+\begin{equation}
+	u = \mqty( \phi_t \\ \frac{\vb*{\sigma}  \cdot  \vb*{p}}{E_p + m} \phi_t  ).
+\end{equation}
+
+Pero, esta no es una solución única, puesto que pueden haber dos soluciones linealmente independientes en por la forma de $\phi_t$, dado que es un vector columna de dos componentes y se puede escribir en términos de una base de manera conveniente. La elección de esta base conlleva a determinar una solución para el espinor $u$ a través de $\phi_t$. Vamos a proponer que $\phi_t$ esta representado en un espacio generado por la base 
+
+\begin{equation}
+	\chi_+ = \mqty( 1 \\ 0), \qquad \chi_- = \mqty(0 \\ 1).
+	\label{eq_chi+-}
+\end{equation}
+Ahora, la normalización del espinor $u$ solución a la ecuación de Dirac (\ref{eq_4.65}), de acuerdo a (\ref{eq_4.70}) será
+\begin{equation*}
+	u_r^\dag u_r = 2E_p,
+\end{equation*} 
+con 
+\begin{equation*}
+	u^\dag = \mqty( \phi_t^\dag & \qty[ \frac{\vb*{\sigma} \cdot \vb*{p}}{E_p + m} \phi_t ]^\dag  ).
+\end{equation*}
+
+Entonces tenemos que 
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl's}
+		u^\dag u &=& \phi_t^\dag \spmqty{ 1 &  \qty[ \frac{\vb*{\sigma} \cdot  \vb*{p}}{E_p + m} ]^\dag  } \phi_t  \spmqty{ 1 \\ \frac{\vb*{\sigma}  \cdot  \vb*{p}}{E_p + m}  }\\
+		&=& \abs{ \phi_t }^2 \spmqty{ 1 &  \qty[ \frac{\vb*{\sigma} \cdot  \vb*{p}}{E_p + m} ]^\dag  } \spmqty{ 1 \\ \frac{\vb*{\sigma}  \cdot  \vb*{p}}{E_p + m}  }\\
+		&=& \abs{ \phi_t }^2 \qty( 1+  \mqty[ \frac{\vb*{\sigma} \cdot  \vb*{p}}{E_p + m} ]^\dag \mqty[ \frac{\vb*{\sigma} \cdot  \vb*{p}}{E_p + m} ] )\\
+		&=& \abs{ \phi_t }^2 \mqty( 1 + \frac{ \qty\big(\vb*{p} \cdot \vb*{\sigma}^\dag ) \qty\big( \vb*{\sigma}\cdot \vb*{p} ) }{\qty(E_p + m )^2} )  & \footnotesize{pero $\vb*{\sigma}^\dag = \vb*{\sigma}$}   \\
+		&=& \abs{ \phi_t }^2 \mqty( 1 + \frac{ \qty( \vb*{\sigma}\cdot \vb*{p} )^2 }{\qty(E_p + m )^2} )   & \footnotesize{las matrices de Pauli satisfacen $\qty(\sigma^i)^2 = 1$}   \\
+		&=&  \abs{ \phi_t }^2 \mqty( 1 + \frac{ \vb*{\abs{\vb*{p}}} ^2 }{\qty(E_p + m )^2} ) \\
+		&=&  \abs{ \phi_t }^2 \mqty( 1 + \frac{ \qty(E_p +m ) \qty(E_p - m ) }{\qty(E_p + m )^2} ),
+	\end{IEEEeqnarray*}
+\end{prof}
+
+e implementando la relación de normalización tenemos la condición 
+\begin{IEEEeqnarray}{rCl}
+	\abs{ \phi_t }^2 \mqty( 1 + \frac{ E_p - m }{E_p + m } ) = 2E_p \implies \abs{ \phi_t }^2 = E_p + m . 
+\end{IEEEeqnarray}
+Se ha determinado el factor que garantiza la condición de normalización de los espinores $u$, por lo tanto las soluciones a la ecuación de Dirac son 
+
+\begin{equation}
+	\boxed{ u_{\pm} = \sqrt{ E_p + m } \mqty(  \chi_{\pm}  \\ \frac{\vb*{\sigma} \cdot \vb*{p} }{E_p + m} \chi_\pm  ) .  }
+	\label{eq_espinoru+-}
+\end{equation}
+
+Ahora, para los estados de energía negativa se realiza un procedimiento similar, donde partimos de (\ref{eq_4.66}) ya en su forma matricial
+
+\begin{equation}
+	\mqty( E_p + m & - \sigma^i p^i \\ -\sigma^i p^i & -\qty(E-m) ) \mqty(\phi_t \\ \phi_b ) = \mqty( 0 \\ 0 ),
+\end{equation}
+donde una clara diferencia con respecto al análisis anterior es el signo de las $m$. Por lo tanto tenemos el sistema de ecuaciones 
+\begin{IEEEeqnarray}{rCl}
+	\qty(E_p + m) \phi_t - \sigma^i p^i \phi_b = 0 \label{eq_4.84} \\
+	 \sigma^i p^i \phi_t - (E- m) \phi_b = 0.
+\end{IEEEeqnarray}
+proponemos nuevamente a partir de (\ref{eq_4.84}),
+
+\begin{equation}
+	\phi_t = \frac{\vb*{\sigma} \cdot \vb*{p} }{E_p + m} \phi_b,
+\end{equation}
+donde la libertad de escoger una base se hace de acuerdo a los $\phi_b$, al contrario de lo propuesto en el estudio de $u$. Así, se determina que la solución normalizada de acuerdo a (\ref{eq_4.70}), para el espinor de energía negativa es
+
+\begin{equation}
+	\boxed{ v_{\pm} = \pm \sqrt{ E_p +m } \mqty( \frac{\vb*{\sigma} \cdot \vb*{p} }{E_p + m}  \chi_\mp \\  \chi_\mp  ). }
+	\label{eq_espinorv_+-}
+\end{equation}
+
+Cuando se profundice sobre el espín, se explicara con más claridad el por que de la elección de los signos en las soluciones de $u$ y $v$.
+
+
+\section{Operadores de Proyección} \label{seccion operadores de proyeccion}
+
+Como la ecuación de Dirac presentaba diferentes soluciones $u$, $v$ se ve la necesidad de darles su interpretación física, para ello se introduce el concepto de los \textbf{operadores de proyección}, que como su nombre lo indica proyectarán a $u$, $v$ a una solución adecuada coherente con lo que se este estudiando. En nuestro análisis estudiaremos solamente los más importantes, los cuales estarán asociados con el espín, helicidad, entre otras.\\
+
+Dado un operador proyector $\OP$, en general satisface 
+
+\begin{IEEEeqnarray}{rCll}
+	\sum_i \OP_i =\idnt, &\qquad \OP_i^2 = \OP_i, & \qquad \OP_i \OP_j = \delta_{ij} \quad \forall \quad (i \neq j), 
+	\label{eq_prop.proy}
+\end{IEEEeqnarray}
+estas definiciones permiten establecer que
+
+\begin{prof}
+	\begin{IEEEeqnarray}{l}
+		\OP_1 + \OP_2 = \idnt ,\\
+		\qty( \OP_1 + \OP_2 )^2 = \OP_1^2 + \OP_2^2 + \OP_1 \OP_2 + \OP_2 \OP_1 = \OP_1 + \OP_2 = \idnt \\
+		\qty( \idnt - \OP_1 )^2 = \idnt - 2\OP_1 + \OP_1^2 = \idnt - 2\OP_1  + \OP_1 = \idnt - \OP_1 = \OP_2\\
+		\qty( \idnt - \OP_2 )^2 = 1 - \OP_2 = \OP_1.
+	\end{IEEEeqnarray}
+\end{prof}
+
+\subsection{Operadores de proyección para soluciones positivas y negativas de energía}
+
+El operador proyector en este caso se define 
+
+\begin{equation}
+	\boxed{ \Lambda_{\pm} (\vb*{p}) = \frac{\pm \slashed{p} +m }{2m},}
+	\label{eq_operador energia+-}
+\end{equation}
+ 
+el cual nos permite encontrar estados que pueden ser de energía positiva o negativa, pero no ambas. Para entenderlo vamos a introducir la siguiente propiedad. 
+
+\begin{prof}
+	Dados dos cuadrivectores $a$ y $b$ escritos en notación slash de Feynman, de su anticonmutador se deduce
+	\begin{IEEEeqnarray}{rCL}
+		\acomm{\slashed{a}}{ \slashed{b} } &=& \acomm{\gamma^\mu a_\mu}{\gamma^\nu b_\nu} = 2g^{\mu \nu} a_\mu b_\nu=2a \cdot b \nonumber \\
+		\Rightarrow && \slashed{a} \slashed{b} = 2a \cdot b - \slashed{b} \slashed{a}.  \label{eq_propiedad slash ab}
+	\end{IEEEeqnarray}
+\end{prof}
+
+Por lo tanto, de la propiedad (\ref{eq_propiedad slash ab}) si $a=b$, 
+
+\begin{equation}
+	\slashed{a}\slashed{a} = a \cdot a,
+	\label{propiedadslashaa}
+\end{equation} 
+
+Empleando este resultado, veamos si el operador dado en (\ref{eq_operador energia+-}) es proyector, para ello calculemos
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty( \Lambda_{\pm} )^2 &=& \qty(  \frac{\pm \slashed{p} +m }{2m}  ) \qty(  \frac{\pm \slashed{p} +m }{2m} )\\
+	&=& \frac{1}{4m} \qty\big( \slashed{p}\slashed{p}\pm\slashed{p} m \pm \slashed{p} m + m^2 )\\
+	&=& \frac{1}{4m} \qty\big( p\cdot p \pm2\slashed{p} m + m^2 ) \\
+	&=& \frac{1}{4m} \qty\big( \underbrace{p^2}_{m^2} \pm 2\slashed{p} m + m^2 )  \\ 
+	&=& \frac{2m^2 \pm \slashed{p} m }{4m^2}\\
+	&=& \frac{\pm \slashed{p} + m}{2m} \slj
+	%%%
+	\IEEEeqnarraymulticol{3}{c}{\boxed{ \qty( \Lambda_{\pm} )^2 = \Lambda_{\pm}  }\,.} \IEEEyesnumber \label{eq_prop,proy+- 1}
+\end{IEEEeqnarray*}
+
+De igual modo ahora 
+
+\begin{IEEEeqnarray*}{rCl}
+	\Lambda_+ \Lambda_- &=& \qty(  \frac{\slashed{p} +m }{2m}  ) \qty(  \frac{-\slashed{p} +m }{2m} )\\
+	&=& \frac{-\slashed{p}^2 + \slashed{p}m - \slashed{p} m + m^2  }{4m^2}\\
+	&=& \frac{-m^2 + m^2 }{4m^2} \slj
+	%%%
+	\IEEEeqnarraymulticol{3}{c}{ \boxed{ \Lambda_+ \Lambda_- = 0} \,. } \IEEEyesnumber \label{eq_prop,proy+- 2}
+\end{IEEEeqnarray*}
+
+de manera similar se puede mostrar que 
+
+\begin{equation}
+	\boxed{\Lambda_{-} \Lambda_{+} = 0 } \, .   \label{eq_prop,proy+- 3}
+\end{equation}
+
+Por ultimo hallemos
+
+\begin{IEEEeqnarray*}{rCL}
+	\Lambda_{+}+\Lambda_{-} &=&  \frac{\slashed{p} +m }{2m} +  \frac{-\slashed{p} +m }{2m}\\
+	&=&  \frac{\slashed{p} - \slashed{p} + m 2 m  }{2m}\\
+	&=& \frac{2m}{2m} =\idnt \slj
+	%%%
+	\IEEEeqnarraymulticol{3}{c}{ \boxed{ \Lambda_{+}+\Lambda_{-}  = \idnt } \, . }  \IEEEyesnumber \label{eq_prop,proy+- 4}
+\end{IEEEeqnarray*}
+ 
+ El conjunto de resultados (\ref{eq_prop,proy+- 1}) a (\ref{eq_prop,proy+- 4}) satisfacen las propiedades definidas para un operador proyector (\ref{eq_prop.proy}), en efecto $\Lambda_{\pm}$ es un \textbf{operador proyector}.\\
+ 
+ Ahora veamos la implicación de este operador sobre las soluciones a la ecuación de Dirac. Entonces si se aplica el operador a la solución $u$,
+
+\begin{IEEEeqnarray*}{rCl's}
+	\Lambda_{\pm} u &=& \frac{\pm \slashed{p} + m }{2m} u & \footnotesize{ De la ecuación de Dirac (\ref{eq_4.65})  $\slashed{p} u = mu $ }\\
+	&=& \frac{\pm m + m }{2m} u \\
+	&=& \left\{ \begin{IEEEeqnarraybox}[][c]{l's}
+		\IEEEstrut
+		u & con $ (+) $ \slj 
+		0 & con $ (-) $
+		\IEEEstrut
+	\end{IEEEeqnarraybox} \right. \IEEEyesnumber \,,
+	\label{eq_acción Lambda+ sobre u}
+\end{IEEEeqnarray*}
+
+ y del mismo modo para $v$, 
+
+\begin{IEEEeqnarray*}{rCl's}
+	\Lambda_{\pm} v &=& \frac{\pm \slashed{p} + m }{2m} v & \footnotesize{ De la ecuación de Dirac (\ref{eq_4.66})  $\slashed{p} v = -mv $ }\\
+	&=& \frac{\mp m + m }{2m} v  \\
+	&=&  \left\{ \begin{IEEEeqnarraybox}[][c]{l's}
+		\IEEEstrut
+		0 & con $ (+) $ \slj 
+		v & con $ (-) $
+		\IEEEstrut
+	\end{IEEEeqnarraybox} \right.  \IEEEyesnumber   \,,
+\end{IEEEeqnarray*}
+
+Entonces $u_s (\vb*{p})$ es autoestado del operador $\Lambda_{+}$, en tanto que $v_s (\vb*{p})$ es autoestado del operador $\Lambda_{-}$.
+
+\begin{equation}
+	\boxed{
+	\begin{IEEEeqnarraybox}{rCl}
+		\Lambda_+ (\vb*{p}) u_s (\vb*{p}) &=& u_s (\vb*{p}) \\
+		\Lambda_- (\vb*{p}) v_s (\vb*{p}) &=& v_s (\vb*{p})
+	\end{IEEEeqnarraybox}
+	}\, .
+\end{equation}
+
+Haciendo uso de (\ref{eq_4.68}) y (\ref{eq_4.69}), de manera similar se demuestra que 
+
+\begin{equation}
+	\boxed{
+		\begin{IEEEeqnarraybox}{rCl}
+			\overline{u}_s (\vb*{p}) \Lambda_+ (\vb*{p})  &=& \overline{u}_s (\vb*{p}) \\
+			\overline{v}_s (\vb*{p}) \Lambda_- (\vb*{p})  &=& \overline{v}_s (\vb*{p})
+	\end{IEEEeqnarraybox}
+	}\, .
+\end{equation}
+
+\subsection{Operador de proyección de Helicidad}
+
+De la mecánica cuántica se sabe que el espín de un fermión, cuando se mide en cualquier dirección puede ser $\frac{1}{2}$ o $-\frac{1}{2}$ (en unidades naturales). Un caso interesante es estudiar el espín pero en la misma dirección que se esta moviendo el fermión, esta medida es lo que llamaremos \textbf{helicidad}, de modo que los operadores de proyección de helicidad pueden ser positivos o negativos.\\
+
+El operador generador del momento angular de espín es dado por las matrices $\frac{1}{2} \sigma_{\mu \nu} $. Vamos a definir el operador de espín como siendo
+
+ \begin{equation}
+ 	\boxed{ \Sigma^i \equiv \frac{1}{2} \epsilon_{ijk} \sigma^{jk}}\, ,
+ 	\label{eq_operador proyector de espín}
+ \end{equation}
+donde 
+
+\begin{equation*}
+	\sigma^{jk} = \frac{\ii}{2} \comm{\gamma^j}{\gamma^k}.
+\end{equation*}
+
+En forma explicita es posible escribir el operador de espín como 
+\begin{equation}
+	\vb*{\Sigma}= \qty( \sigma^{23} , \sigma^{31} , \sigma^{12}  ) 
+	\label{eq_formaexplicitadelvectorSigma}
+\end{equation}
+
+Con el objetivo de corroborar lo anterior tomemos el caso particular de
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\Sigma^3 & = & \frac{1}{2} \epsilon_{3jk} \sigma^{jk} = \frac{1}{2}  \qty\big( \epsilon_{312} \sigma^{12} - \epsilon_{321} \sigma^{21}  )\\
+		&=&   \epsilon_{123} \sigma^{12} = \sigma^{12}\\
+		&=& \frac{1}{2} \qty( \gamma^1 \gamma^2 - \gamma^2 \gamma^1 ) = \frac{1}{2} \qty( \gamma^1 \gamma^2 + \gamma^1 \gamma^2  )\\
+		&=& \ii \gamma^1 \gamma^2.
+	\end{IEEEeqnarray*}
+Su forma explicita matricial, considerando la representación (\ref{eq_4.59}) es
+
+\begin{IEEEeqnarray*}{rCl}
+	\Sigma^3 &=& \ii \spmqty{ 0 & \sigma^1 \\ -\sigma^1 & 0 } \spmqty{ 0 & \sigma^2 \\ -\sigma^2 & 0 }  \\
+	& =  & \ii \spmqty{ -\sigma^1 \sigma^2 & 0 \\ 0 & -\sigma^1 \sigma^2  },
+\end{IEEEeqnarray*}
+Pero las matrices de Pauli satisfacen,
+\begin{equation}
+	\boxed{ \comm{\sigma_i}{\sigma_j} = 2\ii \epsilon_{ijk} \sigma_k,  \qquad  \acomm{\sigma_j}{\sigma_j} =2\delta_{ij} } \, .
+	\label{eq_propiedadesmatricespauli}
+\end{equation}
+de manera que $\sigma_1 \sigma_2 = \ii \sigma_3$, así
+\begin{IEEEeqnarray*}{rCl}
+	\Sigma^3 &=& \mqty( \sigma^3 & 0 \\ 0 & \sigma^3 )\, .
+\end{IEEEeqnarray*}
+\end{prof}
+
+En términos de la matrices gamma el operador de espín se puede escribir
+
+\begin{equation}
+	\Sigma^i = \frac{\ii}{2} \epsilon_{ijk} \gamma^j \gamma^k \Rightarrow \vb*{\Sigma} = \ii \qty( \gamma^2 \gamma^3 , \gamma^3 \gamma^1 , \gamma^1 \gamma^2  ).
+	\label{eq_Sigma en terminos de las gammas}
+\end{equation}
+ 
+
+Considerando la proyección escalar del operador de espín a lo largo de la dirección de movimiento de una partícula con momento $\vb*{p}$, 
+
+\newcommand{\prp}{\vdot}
+
+\begin{equation}
+	\boxed{ \Sigma_p = \vb*{\Sigma} \prp \hat{ \vb*{p} } = \frac{\vb*{\Sigma \prp \vb*{p} }}{ \abs{ \vb*{p} } }  }\, .
+\end{equation}
+
+La característica de este operador es tener autovalores $\pm 1$, para demostrar lo dicho calculemos
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty( \Sigma_p )^2 &=& \frac{1}{ \abs{\vb*{p}}^2}   \qty( \vb*{\Sigma} \prp \vb*{p}  ) ^2    \\
+	&=& \frac{1}{ \abs{\vb*{p}}^2  } \qty\big[ \ii\qty( \gamma^2 \gamma^3 p_1 ,  \gamma^3 \gamma^1 p_2 , \gamma^1 \gamma^2)  \prp \qty( p_1,p_2,p_3 ) ]^2  \\
+	&=& -\frac{1}{ \abs{\vb*{p}}^2  } \qty\big(  \gamma^2 \gamma^3 p_1  +  \gamma^3 \gamma^1 p_2  +   \gamma^1 \gamma^2 p_3 )^2\\
+	&=& -\frac{1}{ \abs{\vb*{p}}^2  } \bigg[ \qty( \gamma^2 \gamma^3)^2 p_1^2 +  \qty( \gamma^3 \gamma^1 )^2 p_2^2  + \qty( \gamma^1 \gamma^2 )^2 p_3^2 \\
+	&&  +\>  \gamma^2 \gamma^3 \gamma^3 \gamma^1 p_1 p_2 + \gamma^3 \gamma^1 \gamma^2 \gamma^3 p_1 p_2 +\gamma^2 \gamma^3\gamma^1 \gamma^2 p_1 p_3 \\
+	&& +\> \gamma^1 \gamma^2 \gamma^2 \gamma^3 p_1 p_3 + \gamma^3 \gamma^1 \gamma^1 \gamma^2 p_2 p_3 + \gamma^1 \gamma^2 \gamma^3 \gamma^1 p_2 p_3\bigg].  
+\end{IEEEeqnarray*}
+
+para simplificar este término realizamos los siguientes cálculos: 
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\qty( \gamma^2 \gamma^3  )^2 &=& \gamma^2 \gamma^3 \gamma^2 \gamma^3 = -\gamma^2 \underbrace{\gamma^3 \gamma^3}_{\idnt} \gamma^2 = -\underbrace{\gamma^2 \gamma^2}_{\idnt} = -\idnt  \\
+		\qty( \gamma^3 \gamma^1  )^2 &=& \gamma^3 \gamma^1 \gamma^3 \gamma^1 = -\gamma^3 \underbrace{\gamma^1 \gamma^1}_{\idnt} \gamma^3 = -\underbrace{\gamma^3 \gamma^3}_{\idnt} = -\idnt \\
+		\qty( \gamma^1 \gamma^2  )^2 &=& \gamma^1 \gamma^2 \gamma^1 \gamma^2 = -\gamma^2 \underbrace{\gamma^1 \gamma^1}_{\idnt} \gamma^2 = -\underbrace{\gamma^2 \gamma^2}_{\idnt} = -\idnt,
+	\end{IEEEeqnarray*}
+	y los productos de gammas cruzados que resultan en 
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\gamma^2 \gamma^3 \gamma^3 \gamma^1 &=&  -\gamma^2 \gamma^1, \qquad \gamma^3 \gamma^1 \gamma^2 \gamma^3 = -\gamma^1 \gamma^2, \\
+		 \gamma^2 \gamma^3 \gamma^1 \gamma^2 &=& -\gamma^3 \gamma^1 , \qquad \gamma^1 \gamma^2 \gamma^2 \gamma^3 = - \gamma^1 \gamma^3, \\
+		 \gamma^3 \gamma^1 \gamma^1 \gamma^2 &=& -\gamma^3 \gamma^2, \qquad \gamma^1 \gamma^2 \gamma^3 \gamma^1 = -\gamma^2 \gamma^3.
+	\end{IEEEeqnarray*}
+\end{prof}
+
+
+con los cuales, 
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty( \Sigma_p )^2 &=& -\frac{1}{ \abs{\vb*{p}}^2} \bigg[ -p_1^2 -p_2^2 - p_3^2 \textcolor{red}{ -\cancel{\gamma^2 \gamma^1}}p_1 p_2  \textcolor{red}{- \cancel{ \gamma^1 \gamma^2 }}p_1 p_2  \\
+	&&  \textcolor{blue}{ - \> \bcancel{\gamma^3  \gamma^1  } }p_1 p_3 \textcolor{blue}{ - \bcancel{\gamma^1  \gamma^3  } }p_1 p_3  \textcolor{green}{ - \cancel{\gamma^3  \gamma^2  } }p_2 p_3  \textcolor{green}{ - \cancel{\gamma^2  \gamma^3  } }p_2 p_3  \bigg] \\
+	&=& \frac{\abs{ \vb*{p} }}{ \abs{ \vb*{p} } }
+\end{IEEEeqnarray*}
+\begin{equation}
+	\boxed{ \qty( \Sigma_p )^2 =1 }\, .
+	\label{eq_autovaloresSigma_p}
+\end{equation}
+
+Por lo tanto se verifica que los autovalores correspondientes al operador $  \Sigma_p  $ son $ \pm 1 $. De cierta manera esto es verdadero, puesto que dada una ecuación de autovalores:
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\hat{A} \vb{v} &=& \lambda \vb{v} \Rightarrow \hat{A}^2 \vb{v}= \lambda \qty(\hat{A} \vb{v})    \implies   \hat{A}^2 \vb{v} = \lambda^ 2 \vb{v} \\
+		&& \therefore \hat{A}^2 \vb{v} =  \vb{v}  \qquad \text{si $\lambda= \pm 1 $.} 
+	\end{IEEEeqnarray*}
+\end{prof}
+
+Se define el \textbf{operador de proyección de helicidad},
+
+\begin{equation}
+	\boxed{
+	\Pi_{\pm} \qty( \vb*{p} ) = \frac{1}{2} \qty( 1 \pm \Sigma_p )} \, ,
+\end{equation}
+el cual satisface las propiedades de un operador proyector (\ref{eq_prop.proy}). Demostremos lo anterior, por lo tanto
+
+
+	\begin{IEEEeqnarray}{rCl+x*}
+		\qty( \Pi_\pm  )^2 &=& \frac{1}{4} \qty( 1 \pm \Sigma_p ) \qty( 1 \pm \Sigma_p ) \nonumber \\
+		&=&   \frac{1}{4} \qty\big( 1 + \overbrace{\Sigma_p^2}^{1} \pm 2\Sigma_p  ) \nonumber \\
+		&=&  \frac{1}{2} \qty(  1 \pm \Sigma_p  )  \nonumber \slj
+		&=& \Pi_\pm .  \\* &&& \nonumber\IEEEQEDhere
+ 	\end{IEEEeqnarray}
+ 
+ 	\begin{IEEEeqnarray}{rCl+x*}
+ 		\Pi_+  + \Pi_- = \frac{1}{2} \qty( 1 + \Sigma_p ) +  \frac{1}{2} \qty( 1 - \Sigma_p ) = 1. \\* &&& \nonumber\IEEEQEDhere
+ 	\end{IEEEeqnarray}
+ 
+ 	\begin{IEEEeqnarray}{rCl+x*}
+ 		\Pi_+ \Pi_- &=& \frac{1}{4} \qty( 1 + \Sigma_p ) \qty( 1 - \Sigma_p ) \nonumber \\
+ 		&=& \frac{1}{4} \qty( 1 - \Sigma_p + \Sigma_p - \Sigma_p^2 ) = 0. \\* &&& \nonumber\IEEEQEDhere
+ 	\end{IEEEeqnarray}
+
+
+
+Otra propiedad importante del operador proyector de helicidad, es que conmuta con el operador proyector de energía
+
+\begin{equation}
+	\boxed{ 	\comm{\Lambda_+}{\Pi_\pm}=0, \qquad \comm{\Lambda_- }{\Pi_\pm } = 0} \, .
+	\label{eq_conmutadoreslambdayPi} 
+\end{equation}
+
+Una manera de demostrar estos conmutadores, es identificando cada conmutador como un operador que actúa sobre un espinor solución de la ecuación de Dirac homogénea. Empleando el espinor correspondiente a valores de energía positiva,
+	\begin{IEEEeqnarray*}{rCl}
+		\comm{\Lambda_+}{\Pi_\pm} u &=& \Lambda_+ \Pi_\pm u - \Pi_\pm \Lambda_+ u,
+	\end{IEEEeqnarray*}
+donde la acción del operador $\Pi_\pm$ sobre $u$ empleando (\ref{eq_autovaloresSigma_p}) es
+\begin{IEEEeqnarray*}{rCl}
+	\Pi_\pm u &=& \frac{1}{2} \qty( 1 \pm \Sigma_p )u = \frac{1}{2} \qty\big( u \pm \underbrace{\Sigma_p u}_{\pm u} )\\
+	&=& \frac{1}{2} \qty\big( 1  \pm \qty(\pm 1)  )u = u \slj
+	\IEEEeqnarraymulticol{3}{c}{ \therefore \Pi_\pm u =  u  \,.} \IEEEyesnumber \label{Pi_+- sobre u}
+\end{IEEEeqnarray*}
+Además, la acción del operador $ \Lambda_+$ sobre $u$ de acuerdo a (\ref{eq_acción Lambda+ sobre u}) es
+\begin{equation}
+	\therefore \Lambda_+ u = u,
+\end{equation}
+de manera que 
+\begin{IEEEeqnarray*}{rCl}
+	\comm{\Lambda_+}{\Pi_\pm} u = \Lambda_+ u - \Pi_\pm u = u-u =0.
+\end{IEEEeqnarray*}
+Puesto que $u$ es un espinor arbitrario se verifica que $\comm{\Lambda_+}{\Pi_\pm} = 0$. Siguiendo el mismo procedimiento se demuestra que el segundo conmutador de (\ref{eq_conmutadoreslambdayPi}) es nulo, solamente que se debe emplear la solución $v$ de la ecuación de Dirac, asociada a energías negativas.\\
+
+Una implicación de (\ref{eq_conmutadoreslambdayPi}) es que ellos poseen una base de autoestados en común que los diagonaliza en simultaneo.  Por lo tanto, una partícula puede tener bien definida su energía, y al mismo tiempo tener bien definida su helicidad.\\
+
+Por ejemplo, estudiemos una partícula que se mueve en la dirección del eje $z$ positivo, entonces se caracteriza por tener un momento lineal
+
+\begin{equation}
+	\vb*{p} = \qty( 0,0,p^3 ),
+	\label{eq_momentosolop_3}
+\end{equation}
+ 
+además, le corresponden los espinores de energía positiva y negativa, en la representación Dirac-Pauli, empleando (\ref{eq_espinoru+-}) y (\ref{eq_espinorv_+-}),
+ 
+ \begin{IEEEeqnarray*}{rCl}
+ 	u_\pm &=& \sqrt{E_p + m} \mqty( \chi_{\pm}  \\  \frac{\sigma^3p_3}{E_p + m} \chi_{\pm}), \qquad v_\pm = \pm \sqrt{E_p + m } \mqty( \frac{\sigma^3p_3 }{E_p + m} \chi_\mp \\  \chi_{mp} ) .
+ \end{IEEEeqnarray*}
+ 
+ Para esta partícula el operador proyección de espín se escribe como
+ 
+ \begin{IEEEeqnarray}{rCl}
+ 	\Sigma_p &=& \frac{\vb*{\Sigma} \prp \vb*{p} }{ \abs{\vb*{p}}} = \frac{1}{ \abs{\vb*{p}} } \qty( \Sigma^3 p_3 ) =  \frac{\ii p_3 }{ \abs{\vb*{p}} } \gamma^1 \gamma^2 \nonumber \\
+ 	&=&  \frac{p_3 }{ p_3 } \mqty( \sigma^3 & 0 \\ 0 & \sigma^3 ) \nonumber \\
+ 	&=&  \sigma^3 \idnt , 
+ \end{IEEEeqnarray}
+donde se ha usado la representación explicita de las matrices gamma en términos de las matrices de Pauli, y se ha empleado el modulo del momento lineal conforme con (\ref{eq_momentosolop_3}). La acción de este operador sobre cada espinor es:
+
+\begin{IEEEeqnarray*}{rCl}
+	\Sigma_p u_\pm &=& \sigma^3 \idnt \sqrt{E_p + m} \mqty( \chi_{\pm}  \\  \frac{\sigma^3p_3}{E_p + m} \chi_{\pm})\\
+	&=& \sigma^3 \sqrt{E_p + m} \mqty( \chi_{\pm}  \\  \frac{\sigma^3p_3}{E_p + m} \chi_{\pm})\\
+	&=& \sqrt{E_p + m} \mqty(  \sigma^3 \chi_{\pm}  \\  \frac{\sigma^3 p_3}{E_p + m}  \sigma^3 \chi_{\pm}).
+\end{IEEEeqnarray*}
+
+Para simplificar esta expresión, hacemos uso de la representación (\ref{eq_chi+-}) junto con $\sigma^3$,
+
+\begin{prof}
+	\begin{equation*}
+		\sigma^3 \chi_\pm = \left\{ \,
+		\begin{IEEEeqnarraybox}[][c]{l}
+			\IEEEstrut
+			\sigma^3 \chi_+ = \mqty( 1 & 0 \\ 0 & -1 ) \mqty( 1 \\ 0 ) = \mqty( 1 \\ 0 ) = \chi_+ \\
+			\sigma^3 \chi_- =  \mqty( 1 & 0 \\ 0 & -1 ) \mqty( 0 \\ 1 ) = -\mqty( 0 \\ 1 ) =- \chi_- 
+			\IEEEstrut
+		\end{IEEEeqnarraybox}
+		\right.  
+	\end{equation*}
+	\begin{equation}
+		\sigma^3 \chi_\pm = \textcolor{red}{\pm} \chi_\pm.
+		\label{eq_sigma3sobrechi+-}
+	\end{equation}
+\end{prof}
+
+Entonces,
+
+\begin{IEEEeqnarray*}{rCl}
+	\Sigma_p u_\pm &=& \sqrt{E_p + m} \mqty(  \textcolor{red}{\pm} \chi_{\pm}  \\  \frac{\sigma^3 p_3}{E_p + m}  \qty( \textcolor{red}{\pm} \chi_{\pm}))\\
+	&=& \textcolor{red}{\pm} \sqrt{E_p + m} \mqty(   \chi_{\pm}  \\   \frac{\sigma^3 p_3}{E_p + m}  \chi_{\pm})\\
+	\IEEEeqnarraymulticol{3}{c}{ \boxed{\Sigma_p u_\pm  = \textcolor{red}{\pm}  u_\pm  } \,.} \IEEEyesnumber \label{eq_Sigma_psobre_u_+-}
+\end{IEEEeqnarray*}
+De la misma forma determinemos la acción de $\Sigma_p$ sobre $v_\pm$, esto es
+
+\begin{IEEEeqnarray*}{rCl}
+	\Sigma_p v_\pm &=& \pm \sigma^3 \idnt \sqrt{E_p + m} \mqty(  \frac{\sigma^3p_3}{E_p + m} \chi_{\mp}  \\   \chi_{\mp})\\
+	&=& \pm  \sqrt{E_p + m} \mqty(  \frac{\sigma^3p_3}{E_p + m} \sigma^3 \chi_{\mp}  \\   \sigma^3 \chi_{\mp})\\
+	&=& \pm  \sqrt{E_p + m} \mqty(  \frac{\sigma^3p_3}{E_p + m}  \qty( \textcolor{blue}{\mp} \chi_{\mp})  \\    \textcolor{blue}{\mp} \chi_{\mp})\\
+\IEEEeqnarraymulticol{3}{c}{ \boxed{\Sigma_p v_\pm  = \textcolor{blue}{\mp} v_{\pm}  } \,.} \IEEEyesnumber \label{eq_Sigma_psobre_v_+-}
+\end{IEEEeqnarray*}
+En la última expresión se empleo el cálculo (\ref{eq_sigma3sobrechi+-}). Las ecuaciones (\ref{eq_Sigma_psobre_u_+-}) y (\ref{eq_Sigma_psobre_v_+-}) muestran que los espinores $u_{\pm}$ y $v_{\pm}$ son autoestados del operador proyector de espín con autovalores $\pm 1$ y $\mp 1$ respectivamente.  Es aquí donde podemos darle un significado a los subíndices de los espinores, recordemos que el operador de helicidad $\Pi_{\pm}$ está definido en términos de $\Sigma_p$, por lo que fácilmente se verifica que $u$ es también autovector de $\Pi_{\pm}$, con autovalores $\pm1$, que en realidad son los posibles valores esperados de la helicidad. Con respecto al espinor $v$, aún cuando también es autovector de $\Sigma_p$, sus signos están intercambiados y esto nos da entender que sus posibles resultados  son los opuestos a la helicidad. Sobre esto ya hablaremos un poco más adelante. 
+
+\subsection{Operadores de proyección de quiralidad}
+Si tenemos un operador $\hat{Q}$ que satisface $\hat{Q}^2 = \idnt$, es posible definir operadores proyectores de la forma $\hat{P}_+ = \frac{1}{2} \qty( 1+\hat{Q} ) $y $\hat{P}_- = \frac{1}{2} \qty( 1-\hat{Q} ) $. Lo que caracteriza esta definición es que se cumplen las propiedades de un proyector (\ref{eq_prop.proy}). Hasta ahora se ha tratado con el operador de proyección de valores de energía y helicidad.\\
+
+Otro par de operadores que tienen importancia en el estudio de neutrinos y renormalización son los \textbf{proyectores de quiralidad} que se definen en términos de $\gamma^5$ como,
+
+\begin{equation}
+	\boxed{	\mathsf{L} = \frac{1}{2} \qty(1-\gamma^5), \qquad \mathsf{R} = \frac{1}{2} \qty(1+\gamma^5)  }\, .
+\end{equation}
+
+Los operadores de quiralidad permiten proyectar un campo de Dirac sus componentes izquierda y derecha (espinores de Weyl) mediante
+
+\begin{equation}
+	\psi_L = \mathsf{L} \psi = \frac{1}{2} \qty(1-\gamma^5)\psi, \qquad \psi_R = \mathsf{R} \psi = \frac{1}{2} \qty(1+\gamma^5)\psi \,.
+\end{equation}
+
+Vamos a demostrar que estos operadores son iguales a los operadores de proyección de helicidad en el límite cuando la masa tiende a cero.
+
+\begin{prof}
+	Consideremos la ecuación de Dirac (\ref{eq_4.57}) sin masa 
+	\begin{equation}
+		\ii \gamma^\mu \partial_\mu \psi (x) = 0,  \quad \Rightarrow \quad \gamma^\mu p_\mu \psi(x) = 0 \, ,
+		\label{eq_ecuaciondeDiracsin masa}
+	\end{equation}
+	
+	cuya solución en la base de los momentos, de acuerdo a (\ref{eq_4.64}) para valores de energía positiva viene siendo 
+	
+	\begin{equation}
+		\psi(x) = u(\vb*{p}) \ee^{-\ii p \cdot x} \, .
+	\end{equation}
+
+	Podemos reescribir la ecuación de Dirac \ref{eq_ecuaciondeDiracsin masa} como
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\gamma^\mu p_\mu u(\vb*{p}) \ee^{-\ii p \cdot x} & = & \qty( \gamma^0 p_0 - \vb*{\gamma} \prp \vb*{p} ) u(\vb*{p}) \ee^{-\ii p \cdot x } = 0 \slj
+		%%
+		\IEEEeqnarraymulticol{3}{c}{ \therefore \quad \gamma^0 p_0  u(\vb*{p}) = \qty( \gamma^i p^i )  u(\vb*{p})  \,. } \IEEEyesnumber \label{eq_result1 ecdiracsinmasa}
+	\end{IEEEeqnarray*}
+
+	Multiplicando el lado izquierdo de (\ref{eq_result1 ecdiracsinmasa}) por $\gamma^5 \gamma^0$,
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\gamma^5 \gamma^0  \gamma^0 p_0  u(\vb*{p}) &=&  \gamma^5 \gamma^0 \gamma^i p^i   u(\vb*{p})\\
+		&=&  \qty\big( \underbrace{\gamma^5 \gamma^0 \gamma^1 }_{\ii \gamma^2 \gamma^3 = \sigma^{23} } p^1  + \underbrace{\gamma^5 \gamma^0 \gamma^2}_{\ii \gamma^1 \gamma^3 = \sigma^{ 31 }} p^2  + \underbrace{\gamma^5 \gamma^0 \gamma^3}_{\ii \gamma^1 \gamma^2 = \sigma^{12} }  p^3  ) u(\vb*{p})
+	\end{IEEEeqnarray*}
+	 luego, de la forma explicita del vector $\vb*{\Sigma}$, (\ref{eq_formaexplicitadelvectorSigma}), podemos reescribir el resultado anterior como
+	 \begin{IEEEeqnarray*}{rCl}
+	 	\gamma^5 \underbrace{\gamma^0  \gamma^0}_{\idnt} p_0 u(\vb*{p})  &=& \qty(\vb*{\Sigma} \prp \vb*{p}) u(\vb*{p})\, .
+	 \end{IEEEeqnarray*}
+ 	
+ 	Sin embargo, como se esta trabajando en el caso de $m=0$, tenemos que $p_0 = E_p = \sqrt{ \abs{\vb*{p}}^2 + m^2 } = \abs{\vb*{p}}$, por lo tanto 
+ 	
+ 	\begin{IEEEeqnarray}{rCl}
+ 		\gamma^5 u(\vb*{p}) &=& \frac{\vb*{\Sigma} \prp \vb*{p}}{\abs{\vb*{p}}} u(\vb*{p}) \nonumber \\
+ 		&=& \Sigma_p u(\vb*{p})  \, .
+ 	\end{IEEEeqnarray}
+ 	
+ 	Si consideramos la acción del operador helicidad a una partícula sin masa con energía positiva:
+ 	
+ 	\begin{IEEEeqnarray}{rCl}
+ 		\Pi_- u(\vb*{p}) &=& \frac{1}{2} \qty( 1 - \Sigma_p ) u(\vb*{p}) = \frac{1}{2} \qty( 1 - \gamma^5 ) u(\vb*{p}) = \mathsf{L} u(\vb*{p}) \, ,\\
+ 		\Pi_+ u(\vb*{p}) &=& \frac{1}{2} \qty( 1 + \Sigma_p ) u(\vb*{p}) = \frac{1}{2} \qty( 1 + \gamma^5 ) u(\vb*{p}) = \mathsf{R} u(\vb*{p}) \, ,
+ 	\end{IEEEeqnarray}
+ 
+ 	que es equivalente a la acción de los operadores de quiralidad. 
+\end{prof}
+
+\subsection{Operadores de proyección de espín}
+
+Hemos definido anteriormente los operadores de helicidad, con la peculiaridad de ser la proyección escalar del operador de espín a lo largo de la dirección del movimiento de la partícula. Pero si estudiamos una partícula en un marco de referencia en la cual esta en reposo, nos es inútil este operador. Entonces se ve la necesidad de introducir un nuevo proyector. \\
+
+Si deseamos proyectar los estados de espín de una partícula en una dirección dada, usualmente en mecánica cuántica se establece el operador de espín $\hat{S}_z$ a lo largo del eje $z$. Por lo tanto para una partícula con espín $1/2$ tenemos asociados dos posibles resultados $+1/2$ y $-1/2$. Los estados en los que pueden estar la partícula en el eje $z$ son $\ket{\frac{1}{2}, \frac{1}{2}} = \smqty(1 \\ 0)$ y $\ket{\frac{1}{2}, -\frac{1}{2}} = \smqty(0 \\ 1)$, los cuales constituyen una base. Ahora si deseamos medir el espín de la partícula en la dirección $x$ o $y$, comúnmente se escribe el estado como una combinación lineal de los estados obtenidos en el eje $z$ y los correspondientes operadores de espín son cada una de las matrices de Pauli $\sigma^i$.\\
+
+Si deseamos conocer el estado cuántico y el espín de una partícula pero en una dirección arbitraria, el planteamiento anterior no permite calcularlo directamente. Entonces se propone definir un nuevo operador que \emph{proyecte los estados de espín en una cierta dirección} denotada por el vector unitario  $\hat{\vb*{s}}$. Para ello, primero definimos un cuadrivector unitario $n^\mu$ cuyas componentes se definen como:
+
+\begin{IEEEeqnarray}{rCl}
+	n^0 &=& \frac{\vb*{p} \vdot \hat{\vb*{\vb*{s}}} }{m} \\
+	n^i &=& \hat{\vb*{s}} - \frac{ \qty( \vb*{p} \vdot \hat{\vb*{s}} )  p^i }{m\qty( E+m )},
+\end{IEEEeqnarray}
+
+siendo $p^\mu = (E,\vb*{p})$ el cuadrimomento de una partícula de masa $m$.\\
+
+Veamos en que resulta la contracción $p^\mu n_\mu$.
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		p^\mu n_\mu &=& p^0 n^0 - p^i n^i\\
+		&=&  \frac{ E \qty(\vb*{p} \vdot \vb*{\hat{s}}) }{m} -\qty( \vb*{p} \vdot \hat{\vb*{s}}) - \frac{ \qty( \vb*{p} \vdot \hat{\vb*{s}} )  \abs{\vb*{p}}^2 }{m\qty( E+m )}\\
+		&=& \qty(\vb*{p} \vdot \vb*{\hat{s}})\qty\bigg( \frac{E}{m}-1 - \frac{\abs{\vb*{p}}^2}{m(E+m)} )\\
+		&=& \qty(\vb*{p} \vdot \vb*{\hat{s}})\qty\bigg( \frac{E\qty(E+m) - m\qty(E+m) -  \abs{\vb*{p}}^2 }{m\qty(E+m)}  )\\
+		&=& \qty(\vb*{p} \vdot \vb*{\hat{s}})\qty\bigg( \frac{E^2 + \cancel{Em} - \cancel{Em} - m^2 -  \abs{\vb*{p}}^2 }{m\qty(E+m)}  ) \\
+		&=& \qty(\vb*{p} \vdot \vb*{\hat{s}})\qty\bigg( \frac{E^2  \overbrace{- m^2 -  \abs{\vb*{p}}^2}^{-E^2} }{m\qty(E+m)}  ) = 0 \slj
+		\IEEEeqnarraymulticol{3}{c}{ \therefore \quad p^\mu n_\mu = 0  \,. } \IEEEyesnumber \label{eq_productopmunmu}
+	\end{IEEEeqnarray*}
+\end{prof}
+
+Ahora, si se calcula la contracción $n^\mu n_\mu$, tenemos que
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		n^\mu n_\mu &=& n^0 n^0 - n^i n^i\\
+		%%
+		&=&  \frac{ \qty(\vb*{p} \vdot \vb*{\hat{s}})^2 }{m^2} - \qty[ \hat{\vb*{s}} + \frac{ \qty( \vb*{p} \vdot \hat{\vb*{s}} ) \vb*{p} }{m\qty( E+m )}]^2\\
+		%%
+		&=&  \frac{ \qty(\vb*{p} \vdot \vb*{\hat{s}})^2 }{m^2} -  \hat{\vb*{s}}^2  - \frac{ \qty( \vb*{p} \vdot \hat{\vb*{s}})^2  \abs{\vb*{p}}^2   }{m^2 (E+m)^2} - \frac{ 2 \qty( \vb*{p} \vdot \hat{\vb*{s}} )^2  }{ m(E+m) }  \\
+		%%
+		&=&  \qty(\vb*{p} \vdot \vb*{\hat{s}})^2  \qty\bigg[ \frac{1}{m^2}  -  \frac{ \abs{\vb*{p}}^2  }{m^2 (E+m)^2} - \frac{2 }{m(E+m)} ] -  \hat{\vb*{s}}^2   \\
+		%% 
+		&=& \qty(\vb*{p} \vdot \vb*{\hat{s}})^2  \qty\bigg[ \frac{ (E+m)^2 -\abs{\vb*{p}}^2 - 2 m(E+m) }{m^2 (E+m)^2} ] -  \hat{\vb*{s}}^2 
+	\end{IEEEeqnarray*}
+
+	\begin{IEEEeqnarray*}{rCl}
+		n^\mu n_\mu &=& \qty(\vb*{p} \vdot \vb*{\hat{s}})^2  \qty\bigg[ \frac{ E^2 +\textcolor{red}{m^2} + \cancel{2Em} -\abs{\vb*{p}}^2 - \cancel{2Em} -\textcolor{red}{2m^2} }{m^2 (E+m)^2} ] -  \hat{\vb*{s}}^2\\
+		&=& \qty(\vb*{p} \vdot \vb*{\hat{s}})^2  \qty\bigg( \frac{ E^2 \overbrace{-m^2 -\abs{\vb*{p}}^2}^{-E^2} }{m^2 (E+m)^2} ) -  \hat{\vb*{s}}^2 \slj
+		%%
+		\IEEEeqnarraymulticol{3}{c}{ \therefore \quad n^\mu n_\mu = - \hat{\vb*{s}}^2 = -1  \,. } \IEEEyesnumber \label{eq_productonmunmu}
+	\end{IEEEeqnarray*}
+\end{prof}
+
+La propiedad (\ref{eq_productonmunmu}) permite escribir el operador identidad como $\qty(\gamma^5 \slashed{n})^2$, 
+
+\begin{equation}
+	\qty(\gamma^5 \slashed{n})^2 = \gamma^5 \slashed{n} \gamma^5 \slashed{n} = - \underbrace{\qty(\gamma^5)^2}_{\idnt} \slashed{n} \slashed{n}= -n \cdot n = - \idnt \underbrace{n^\mu n_\mu }_{-1}= \idnt,
+\end{equation}
+donde se ha usado la propiedad (\ref{eq_propiedad slash ab}). Con estas herramientas ya podemos construir los operadores de proyección 
+
+\begin{equation}
+	\boxed{ P_\uparrow \equiv \frac{1}{2} \qty( 1 + \gamma_5 \slashed{n}), \qquad P_\downarrow \equiv \frac{1}{2} \qty( 1 - \gamma_5 \slashed{n}) }\, ,
+	\label{eq_operador P arriba y P abajo}
+\end{equation}
+
+que nos permiten encontrar los valores del espín de una partícula proyectados en una dirección en específico. Por ejemplo si consideramos que queremos hallar el espín en la dirección $\hat{i}$, es decir $\hat{\vb*{s}} = \qty( 1 , 0 ,0)$, en el sistema de referencia en el cual el momento lineal de la partícula es cero (sistema en reposo, $\vb*{p} = 0$), tenemos que el cuadrivector $n$ es de la forma
+
+\begin{IEEEeqnarray*}{rCl}
+	n^0 &=& \frac{\vb*{p} \vdot \hat{\vb*{\vb*{s}}} }{m} = 0 \\
+	n^i &=& \hat{\vb*{s}} - \frac{ \qty( \vb*{p} \vdot \hat{\vb*{s}} )  p^i }{m\qty( E+m )} = \hat{\vb*{s}} = \hat{i} =\qty( 1 , 0 ,0) \slj
+	\IEEEeqnarraymulticol{3}{c}{ \therefore \quad n^\mu = (0,\hat{i}) = (0,1,0,0)  \, , } \IEEEyesnumber \label{eq_n particula en x}
+\end{IEEEeqnarray*}
+
+por lo tanto se tiene que 
+
+\begin{equation*}
+	\slashed{n} = \gamma^\mu n_\mu = -\gamma^1,
+\end{equation*} 
+
+de tal manera que 
+
+\begin{IEEEeqnarray*}{rCl}
+	\gamma_5 \slashed{n} &=& - \gamma_5 \gamma^1 = - \qty(-\ii \gamma_0 \gamma_1 \gamma_2 \gamma_3) \gamma^1 = - \ii \gamma^0 \gamma^1 \gamma^2 \gamma^3 \gamma^1\\
+	&=&   - \ii \gamma^0 \underbrace{\gamma^1 \gamma^1}_{-\idnt} \gamma^2  \gamma^3  = \gamma^0 \underbrace{ \ii \gamma^2  \gamma^3}_{\sigma^{23}} =  \gamma^0 \sigma^{23}  \\
+	&=& \gamma^0 \Sigma^1 \, ,
+\end{IEEEeqnarray*}
+donde se ha usado las expresiones (\ref{eq_formaexplicitadelvectorSigma}) y (\ref{eq_Sigma en terminos de las gammas}). Con este resultado, los operadores definidos en (\ref{eq_operador P arriba y P abajo}) son:
+
+\begin{eqnarray}
+	P_\uparrow = \frac{1}{2} \qty( 1+ \gamma^0 \Sigma^1 ), \qquad P_\downarrow =\frac{1}{2} \qty( 1 - \gamma^0 \Sigma^1 ).
+	\label{eq_P arriba P abajo direccion i}
+\end{eqnarray}
+ 
+Lo que caracteriza a $P_\uparrow$ y $P_\downarrow$ dados en (\ref{eq_P arriba P abajo direccion i}) es que conmutan con el operador proyector de espín $\Sigma^1$ en la dirección $x$ definido en (\ref{eq_operador proyector de espín}). Entonces, $P_\uparrow$ y $P_\downarrow$ al depender de $\gamma_5 \slashed{n}$, implica que $\gamma_5 \slashed{n}$ y  $\Sigma^1$ tienen en común el mismo conjunto de autoestados los cuales están bien definidos en la componente $x$. Por lo tanto los operadores (\ref{eq_operador P arriba y P abajo}) \textbf{proyectan los dos valores posibles de las componentes del espín en alguna dirección establecida}.
+
+\section{Lagrangiano de Dirac}
+
+La ecuación de Dirac es posible derivarla de la siguiente densidad Lagrangiana,
+
+\begin{equation}
+	\boxed{	\lagdn = \bpsi \qty( \ii \slashed{\partial} - m ) \psi}\, ,
+	\label{eq_lagrangiano de Dirac}
+\end{equation}
+
+que escrita en términos de indices espinoriales $\alpha, \beta$ es
+
+\begin{equation}
+	\lagdn = \bpsi_\alpha \qty( \ii \gamma^\mu_{\alpha \beta} \partial_\mu - m \delta_{\alpha \beta}  ) \psi_{\beta} \, .
+\end{equation}
+
+Este Lagrangiano se caracteriza por tener dos grados de libertad $\psi$ y $\bpsi$, por lo tanto le corresponden dos ecuaciones de Euler-Lagrange. En el caso de $\bpsi$,
+
+\begin{equation}
+	\partial_\mu \qty( \pdv{\lagdn}{\qty( \partial_\mu \bpsi )} ) - \pdv{\lagdn}{\bpsi} = 0.
+	\label{eq_ecuacion euler lagrange bpsi}
+\end{equation}
+
+Evaluando cada derivada,
+\begin{equation*}
+		\pdv{\lagdn}{\qty( \partial_\mu \bpsi )} = 0 \, .
+\end{equation*}
+\begin{IEEEeqnarray*}{rCl}
+	 \pdv{\lagdn}{\bpsi_\theta} &=& \pdv{\bpsi_\alpha}{\bpsi_\theta}  \qty( \ii \gamma^\mu_{\alpha \beta} \partial_\mu - m \delta_{\alpha \beta}  ) \psi_{\beta} = \delta_{\alpha \theta} \qty( \ii \gamma^\mu_{\alpha \beta} \partial_\mu - m \delta_{\alpha \beta}  ) \psi_{\beta}  \\
+	 &=& \qty( \ii \gamma^\mu_{\theta \beta} \partial_\mu - m \delta_{\theta \beta}  ) \psi_{\beta}  \, .
+\end{IEEEeqnarray*}
+Reemplazando cada una de las derivadas en la ecuación de movimiento (\ref{eq_ecuacion euler lagrange bpsi}),
+\begin{equation}
+	\boxed{ \qty(\ii \slashed{\partial} -m)\psi = 0 }\, .
+\end{equation}
+se obtiene la ecuación de Dirac (\ref{eq_4.30}) en forma covariante. Ahora la relación de Euler-Lagrange para el campo $\psi$ es,
+
+\begin{equation}
+	\partial_\mu \qty( \pdv{\lagdn}{\qty( \partial_\mu \psi )} ) - \pdv{\lagdn}{\psi} = 0,
+	\label{eq_ecuacion euler lagrange psi}
+\end{equation}
+donde cada derivada es
+
+\begin{IEEEeqnarray*}{rCl}
+	\pdv{\lagdn}{\qty( \partial_\nu \psi_\theta )} &=& \pdv{\qty( \partial_\nu \psi_\theta )} \qty[  \bpsi_\alpha \qty( \ii \gamma^\mu_{\alpha \beta} \partial_\mu - m \delta_{\alpha \beta}  ) \psi_{\beta}] = \ii \bpsi_\alpha \gamma^\mu_{\alpha \beta}  \pdv{\qty( \partial_\mu \psi_\beta )}{\qty( \partial_\nu \psi_\theta )} \\
+	&=& \ii \bpsi_\alpha \gamma^\mu_{\alpha \beta} \delta_\mu^\nu \delta_{\theta \beta} =  \ii \bpsi_\alpha \gamma^\nu_{\alpha \theta} \, .
+\end{IEEEeqnarray*}
+\begin{IEEEeqnarray*}{rCl}
+	\pdv{\lagdn}{\psi_\theta} &=& \pdv{\psi_\theta} \qty[  \bpsi_\alpha \qty( \ii \gamma^\mu_{\alpha \beta} \partial_\mu - m \delta_{\alpha \beta}  ) \psi_{\beta} ]  = -m \bpsi_\alpha \delta_{\alpha \beta} \pdv{\psi_\beta}{\psi_\theta} \\
+	&=& -m \bpsi_{\beta} \delta_{\beta \theta} = -m \bpsi_{\theta} \, .
+\end{IEEEeqnarray*}
+Por lo tanto la ecuación de movimiento (\ref{eq_ecuacion euler lagrange psi}) queda,
+
+\begin{IEEEeqnarray*}{rCl}
+	\ii \partial_\mu \qty( \bpsi \gamma^\mu ) - \qty(-m \bpsi) &=& 0\\
+	\ii \gamma^\mu \partial_\mu  \bpsi   + m \bpsi &=& 0 \slj
+	\IEEEeqnarraymulticol{3}{c}{ \boxed{ \bpsi \qty( \ii  \overleftarrow{\slashed{\partial}} + m ) = 0 } \, . } \IEEEyesnumber \label{eq_ecuacion de movimiento psi}
+\end{IEEEeqnarray*}
+
+En la teoría clásica se había dicho que la densidad lagrangiana asociada a un sistema físico era una cantidad escalar, sin embargo al aplicar las reglas de cuantización, las observables clásicas se describen en términos de operadores, caracterizados por ser hermíticos. Resulta que el Lagrangiano de Dirac presentado en (\ref{eq_lagrangiano de Dirac}) no es hermítico, dado que,
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty( \ii \bpsi \slashed{\partial} \psi  )^\dag &=& \qty( \ii \bpsi \gamma^\mu \partial_\mu \psi  )^\dag = -\ii \qty( \partial_\mu \psi )^\dag \qty( \gamma^\mu)^\dag \bpsi^\dag \\
+	&=& -\ii \partial_\mu \psi^\dag (\gamma^0 \gamma^\mu \gamma^0) \qty(\psi^\dag \gamma^0)^\dag \\
+	&=& -\ii \partial_\mu \psi^\dag \gamma^0 \gamma^\mu \gamma^0  \gamma^{0 \dag} \qty(\psi^\dag )^\dag \\
+	&=& -\ii \partial_\mu  \underbrace{\psi^\dag \gamma^0}_{\bpsi} \gamma^\mu \underbrace{\gamma^0  \gamma^0}_{\idnt} \psi \\
+	&=& -\ii \qty( \partial_\mu \bpsi ) \gamma^\mu \psi \, .
+\end{IEEEeqnarray*}
+
+Este término hace que el Lagrangiano de Dirac no sea hermítico. Por lo tanto se propone construir un nuevo Lagrangiano con la característica de ser hermítico y que no afecte las ecuaciones de movimiento derivadas anteriormente. \\
+
+El procedimiento para construir el nuevo Lagrangiano es adicionando un término, tal que su cuadridivergencia sea nula, pues esto garantizará que no cambien las ecuaciones de movimiento asociadas a dicho Lagrangiano. Entonces se propone 
+\begin{equation}
+	\lagdn \rightarrow \lagdn + \partial_\mu F^\mu (\phi) \, . 
+\end{equation}
+
+\begin{prof}
+	Sea un nuevo Lagrangiano $\lagdn^\prime = \lagdn + \partial_ \mu F^\mu(\phi) $, si el término adicional depende solo de los campos y no de sus derivadas, no se ven afectadas las ecuaciones de E-L, una manera de ver esto es haciendo:
+	\begin{IEEEeqnarray*}{rCl}
+		\partial_\mu \qty(\pdv{\lagdn^\prime}{\qty( \partial_\mu \phi )})- \pdv{\lagdn^\prime}{\phi} &=& 0 \\
+		\partial_\mu \qty(\pdv{\lagdn}{\qty( \partial_\mu \phi )})- \pdv{\lagdn}{\phi} +  \qty\bigg[ \partial_\mu \qty(\pdv{ \qty(\partial_\nu F^\nu ) }{\qty( \partial_\mu \phi )}   )- \pdv{ \qty(\partial_\nu F^\nu ) }{\phi} ] &=& 0 \,  .
+	\end{IEEEeqnarray*}
+	Si expandimos y simplificamos el segundo término del lado izquierdo,
+	
+	\begin{IEEEeqnarray*}{rCl}
+		$ \faDrupal $ &=& \partial_\mu \qty(\pdv{ \qty(\partial_\nu F^\nu ) }{\qty( \partial_\mu \phi )}   )- \pdv{ \qty(\partial_\nu F^\nu ) }{\phi} \\
+		&=& \partial_\mu \qty(\pdv{\qty( \partial_\mu \phi )} \pdv{F^\nu}{\phi} \pdv{ \phi }{x^\nu}  ) - \pdv{\phi} \pdv{F^\nu}{\phi} \pdv{ \phi }{x^\nu} \\
+		&=& \partial_\mu \qty\bigg(  \pdv{F^\nu}{\phi} \underbrace{\pdv{\qty(\partial_\nu \phi)}{\qty( \partial_\mu \phi )}}_{\delta_{\nu}^{\mu} } )- \pdv[2]{F^\nu}{\phi} \partial_\nu \phi \\
+		&=& \pdv{ \phi }\pdv{F^\mu}{\phi} \pdv{\phi}{x^\mu} - \pdv[2]{F^\nu}{\phi}  \partial_\nu \phi \\
+		&=& \cancel{\pdv[2]{F^\mu}{\phi} \partial_\mu \phi} - \cancel{\pdv[2]{F^\nu}{\phi} \partial_\nu \phi } = 0.
+	\end{IEEEeqnarray*}
+	Entonces se verifica que 
+	\begin{equation*}
+		\partial_\mu \qty(\pdv{\lagdn^\prime}{\qty( \partial_\mu \phi )})- \pdv{\lagdn^\prime}{\phi} = \partial_\mu \qty(\pdv{\lagdn}{\qty( \partial_\mu \phi )})- \pdv{\lagdn}{\phi}  = 0\, ,
+	\end{equation*}
+	lo que quiere decir que las ecuaciones de movimiento no se ven afectadas por la adición de una cuadridivergencia al Lagrangiano, la cual depende únicamente de los campos. 
+\end{prof}
+
+Volviendo al análisis del Lagrangiano de Dirac, en la practica, para hallar el término adicional, lo que se suele hacer es integrar $-\ii \qty(\partial_\mu  \bpsi)  \gamma^\mu \psi  $. Entonces,
+
+\begin{IEEEeqnarray*}{rCl}
+	-\ii  \int \dd[4]{x}  \qty( \partial_\mu \bpsi )\gamma^\mu \psi	&=&  -\ii \int \dd[4]{x}  \partial_\mu \qty(\bpsi \gamma^\mu \psi ) + \int \dd[4]{x}\bpsi \ii \gamma^\mu \partial_\mu \psi\, .
+\end{IEEEeqnarray*}
+Si extendemos el teorema de Gauss o de la divergencia a 4 dimensiones, entonces la primer integral del lado derecho puede escribirse como una integral sobre la hipersuperficie cerrada caracterizada por un vector normal $n_\mu$. Entonces tenemos la siguiente integral, 
+
+\begin{IEEEeqnarray*}{rCl}
+	-\ii \int \dd[4]{x}  \qty( \partial_\mu \bpsi )\gamma^\mu \psi &=& \cancelto{0}{-\ii  \oint_\Sigma  \bpsi \gamma^\mu \psi n_\mu \dd{a} } +  \int \dd[4]{x}  \bpsi \ii \gamma^\mu \partial_\mu \psi   \, ,
+\end{IEEEeqnarray*}
+y siendo que la superficie $\Sigma$ se extiende sobre todo el espacio, los campos tienen que ser asintóticos en el infinito, de modo que la contribución de esta integral es nula y por ende es un término que no afecta las ecuaciones de movimiento. Bajo este planteamiento, proponemos el Lagrangiano,
+
+\begin{IEEEeqnarray*}{rCl}
+	\lagdn^\prime &=& \lagdn - \frac{\ii}{2} \partial_\mu \qty( \bpsi \gamma^\mu \psi )\\
+	&=&  \ii \bpsi \gamma^\mu \partial_\mu \psi - \frac{\ii}{2} \partial_\mu \qty( \bpsi \gamma^\mu \psi ) - m\bpsi \psi 
+\end{IEEEeqnarray*} 
+\begin{equation}
+	\boxed{ \lagdn^\prime  = \frac{\ii}{2} \qty[\bpsi \gamma^\mu \partial_\mu \psi -  \qty( \partial_\mu \bpsi ) \gamma^\mu \psi ]- m\bpsi \psi}
+\end{equation}
+
+Este nuevo Lagrangiano cumple la condición de ser hermítico, ademas conlleva a las mismas ecuaciones de movimiento prescritas por el Lagrangiano  de Dirac. \\
+
+El Lagrangiano de Dirac es invariante ante transformaciones de simetría interna dadas por el grupo  $\U{1}$, que corresponden a multiplicar el campo por una fase, es decir
+
+\begin{equation}
+	\psi \rightarrow \psi^\prime = \ee^{-\ii q \theta } \psi \, .
+\end{equation}
+Bajo esta simetría se tiene, 
+
+\begin{equation}
+	\bpsi \rightarrow \bpsi^{\prime} = \qty( \ee^{-\ii q \theta}  \psi )^\dag \gamma^0 = \psi^\dag \ee^{\ii q \theta} \gamma^0 = \ee^{\ii q \theta} \bpsi \,  .
+\end{equation}
+
+Además el Lagrangiano permanece invariante, dado que 
+
+\begin{IEEEeqnarray*}{rCl}
+	\lagdn^\prime &=& \ii \bpsi^\prime \gamma^\mu \partial_\mu \psi^\prime - m \bpsi^\prime \psi \\
+	%%
+	&=& \ii \ee^{\ii q \theta} \bpsi \gamma^\mu \partial_\mu\ee^{-\ii q \theta } \psi - m \ee^{\ii q \theta} \ee^{-\ii q \theta } \bpsi   \psi\\
+	&=& \ii \bpsi \gamma^\mu \partial_\mu \psi - m \bpsi   \psi = \lagdn\, . 
+\end{IEEEeqnarray*}
+
+Esta simetría implica la existencia de una corriente conservada, que de acuerdo con el teorema de Noether (ver capitulo \ref{capitulo_22} en la sección \ref{seccion: Primer teorema de Noether}) se determina como,
+
+\begin{equation}
+	f^\mu (x) = \pdv{\lagdn}{\qty( \partial_\mu \phi_r)} \delta \phi_r(x) - \delta x^\nu \qty( \pdv{\lagdn}{\qty( \partial_\mu \phi_r)} \partial_\nu \phi_r (x) - g^\mu_{~\nu} \lagdn )\, .
+\end{equation}
+
+La simetría se caracteriza solamente por variaciones en los campos, de manera que $\delta x^\nu = 0$. Para evaluar las variaciones en los campos, se considera $\theta$ como un parámetro infinitesimal,
+
+\begin{IEEEeqnarray*}{rCl}
+	\delta \psi &=& \psi^\prime - \psi =  \ee^{-\ii q \theta } \psi- \psi \approx \qty(1 - \ii q \theta)\psi - \psi = -\ii q \theta \psi \, ,
+\end{IEEEeqnarray*}
+
+\begin{IEEEeqnarray*}{rCl}
+	\delta \bpsi &=& \bpsi^\prime - \bpsi =  \ee^{\ii q \theta } \psi- \psi \approx \qty(1 + \ii q \theta)\psi - \psi = \ii q \theta \psi \, .
+\end{IEEEeqnarray*}
+
+Entonces la corriente de Noether se reduce a
+
+\begin{IEEEeqnarray*}{rCl}
+	f^\mu (x) &=& \pdv{\lagdn}{\qty( \partial_\mu \phi_r)} \delta \phi_r(x) \\
+	&=& \underbrace{\pdv{\lagdn}{\qty( \partial_\mu \bpsi)}}_{0} \delta \bpsi + \pdv{\lagdn}{\qty( \partial_\mu \psi)} \delta \psi\\
+	&=& \qty(\ii \bpsi \gamma^\mu ) \qty( -\ii q \theta \psi ) \\
+	&=&  q \theta \bpsi \gamma^\mu \psi \, .
+\end{IEEEeqnarray*}
+Aplicando este resultado a la ecuación de continuidad $\partial_\mu f^\mu = 0$, se deduce que
+ 
+\begin{IEEEeqnarray*}{rCl}
+ \theta	\partial_\mu\qty( q  \bpsi \gamma^\mu \psi ) = 0 \, ,
+\end{IEEEeqnarray*}
+de manera que la corriente de Noether asociada a esta simetría es
+
+\begin{equation}
+	\boxed{ J^\mu = q  \bpsi \gamma^\mu \psi  } \, .
+\end{equation}
+
+La carga conservada, se determina de la componente cero de la corriente (ver capitulo \ref{capitulo_22} en la sección \ref{seccion: Primer teorema de Noether}), esto es
+
+\begin{equation*}
+	Q = \int \dd[3]{x} J^0 \, , 
+\end{equation*}
+
+en el caso de campo fermiónico, 
+
+\begin{equation}
+	\boxed{Q = q \int \dd[3]{x} \bpsi \gamma^0 \psi = q \int \dd[3]{x} \psi^\dag \psi }\, .
+	\label{eq_carga de noether para fermiones}
+\end{equation}
+
+\section{Análisis de Fourier para campo fermiónico}
+
+En este punto comienza el proceso de cuantización de la teoría asociada al campo fermiónico. Primero encontremos una representación del operador Hamiltoniano, para ello partimos de su forma clásica,
+
+\begin{IEEEeqnarray*}{rCl}
+	H  &=& \int \dd[3]{x} \qty(  \pdv{\lagdn}{\qty( \partial_0 \psi_\alpha )} \partial_{0}\psi_\alpha - \lagdn ) \\
+		&= & \int \dd[3]{x} \qty(  \ii \bpsi \gamma^0 \partial_0 \psi -\ii \bpsi \gamma^\mu \partial_\mu \psi + m \bpsi \psi )\\
+		&=&  \int \dd[3]{x} \qty(  \cancel{\ii \bpsi \gamma^0 \partial_0 \psi }-\cancel{\ii \bpsi \gamma^0 \partial_0 \psi } + \ii \bpsi \gamma^i \partial_i \psi + m \bpsi \psi )\\
+		\IEEEeqnarraymulticol{3}{c}{ \boxed {H =  \int \dd[3]{x}  \bpsi \qty(-\ii \vb*{\gamma} \vdot \grad +m)\psi  }  \,. } \IEEEyesnumber \label{eq_Hamiltoniano de Dirac 1}
+\end{IEEEeqnarray*}
+
+Nuevamente pueden aparecer inconvenientes asociados al orden de los operadores y se tendrá que dar una nueva prescripción para construir el Hamiltoniano cuántico.\\
+
+Para construir el campo de Dirac, seguimos la misma metodología del campo escalar (ver capitulo \ref{capitulo_3}, sección \ref{Cap_3 Subsección: Análisis de Fourier para campo escalar}), entonces el análogo de la ecuación (\ref{eq_3.35}) en términos de campo fermiónico es
+
+\newcommand{\Opsi}{\psi}
+\newcommand{\Od}{d}
+
+\begin{equation}
+	\boxed{\Opsi(x) = \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty( \Ob_{sp} u_{sp} \ee^{-\ii p \cdot x} + \Od^\dag_{sp} v_{sp} \ee^{\ii p\cdot x } ) } \, ,
+	\label{eq_operador campo psi}
+\end{equation}
+
+donde $\Ob_{sp} \equiv \Ob_s(\vb*{p})$, $u_{sp} \equiv u_s (\vb*{p})$, $\Od_{sp} \equiv \Od_s(\vb*{p})$, $v_{sp} \equiv v_s (\vb*{p})$. 
+
+\begin{cabox}
+	En el texto guía \textcolor{blue}{ AMITABHA LAHIRI \& PALASH B. PAL} se emplea la notación $f_s(\vb*{p})$ y $\hat{f}_s(\vb*{p})$, de manera que la ecuación (\ref{eq_operador campo psi}) se escribe, 
+	\begin{equation*}
+		\psi(x) = \int \frac{\dd[3]{p}}{ \sqrt{\qty( 2\pi )^3 2 E_p }} \sum_{s=1,2} \qty( f_{s} (\vb*{p}) u_{s} (\vb*{p}) \ee^{-\ii p \cdot x} + \hat{f}^\dag_{s} (\vb*{p}) v_{s} (\vb*{p}) \ee^{\ii p\cdot x } ) \, .
+	\end{equation*}
+	En el desarrollo de estas notas, emplearemos la notación del texto \textcolor{red}{FIELD QUANTIZATION, WALTER GREINER},	en el cual $f_s(\vb*{p}) \to \Ob_{sp} $ y $\hat{f}_s(\vb*{p}) \to \Od_{bs}$.
+\end{cabox}  
+
+Tomado el adjunto hermítico del operador $\Opsi$,
+
+\begin{IEEEeqnarray*}{rCl}
+	\Opsi^\dag (x) &=& \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty(\Ob^\dag_{sp}  u^\dag_{sp}  \ee^{\ii p \cdot x} +  \Od_{sp} v^\dag_{sp}  \ee^{-\ii p\cdot x } ) \, ,
+\end{IEEEeqnarray*}
+
+multiplicando el lado derecho por $\gamma^0$,
+
+\begin{IEEEeqnarray*}{rCl}
+	\Opsi^\dag (x) \gamma^0 &=& \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty(\Ob^\dag_{sp}  u^\dag_{sp} \gamma^0  \ee^{\ii p \cdot x} +  \Od_{sp} v^\dag_{sp} \gamma^0  \ee^{-\ii p\cdot x } ) \, ,
+\end{IEEEeqnarray*}
+ 
+se deriva la  descomposición de Fourier para el campo $\bpsi$
+\newcommand{\Obpsi}{\bpsi}
+
+\begin{equation}
+	\boxed{ \Obpsi (x)  =\int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty(\Ob^\dag_{sp}  \overline{u}_{sp}  \ee^{\ii p \cdot x} +  \Od_{sp} \overline{v}_{sp} \ee^{-\ii p\cdot x } )  } \, .
+\end{equation}
+
+Para poder reescribir el Hamiltoniano (\ref{eq_Hamiltoniano de Dirac 1}), veamos la acción de este sobre el campo $\Opsi$, entonces calculemos primero
+
+\begin{IEEEeqnarray}{rCl}
+	\qty(-\ii \vb*{\gamma} \vdot \grad +m) u_{sp} \ee^{-\ii p \cdot x}  &=&  \qty\big(-\ii \gamma^i \underbrace{\partial_i}_{\ii p^i} +m) u_{sp} \ee^{-\ii p \cdot x}  \nonumber  \\
+	   &=&  \qty( \gamma^i p^i +m) u_{sp} \ee^{-\ii p \cdot x} \, ,
+\end{IEEEeqnarray}
+
+el último resultado se halla empleando la ecuación de Dirac (\ref{eq_4.65}), de donde se deduce
+
+\begin{equation}
+	\qty(\slashed{p} - m )u_{sp} = 0 \Rightarrow \qty(\gamma^0 p^0 - \gamma^i p^i - m ) u_{sp} =0 \implies \qty(\gamma^i p^i + m ) u_{sp} = \gamma^0 E_p u_{sp}\, .
+\end{equation}
+
+\begin{equation}
+	\boxed{\therefore \quad \qty(-\ii \vb*{\gamma} \vdot \grad +m) u_{sp} \ee^{-\ii p \cdot x}  = \gamma^0 E_p u_{sp}  \ee^{-\ii p \cdot x}  } \, .
+	\label{eq_primera parte del Hamiltoniano de Dirac}
+\end{equation}
+
+Ahora, determinemos
+
+\begin{IEEEeqnarray}{rCl}
+	\qty(-\ii \vb*{\gamma} \vdot \grad +m) v_{sp} \ee^{\ii p \cdot x}  &=&  \qty\big(-\ii \gamma^i \partial_i +m) v_{sp} \ee^{\ii p \cdot x}  \nonumber  \\
+	&=& \qty\big(-\ii \gamma^i \qty(\ii p_i) +m) v_{sp} \ee^{\ii p \cdot x}  \nonumber  \\
+	&=&  \qty( - \gamma^i p^i +m) v_{sp} \ee^{\ii p \cdot x} \, .
+\end{IEEEeqnarray}
+
+De manera similar, si apelamos a la ecuación de Dirac para soluciones de energía negativa (\ref{eq_4.66}), se demuestra que
+
+\begin{equation}
+	\qty(\slashed{p} + m )v_{sp} = 0  \implies \qty(-\gamma^i p^i + m ) v_{sp} = -\gamma^0 E_p v_{sp}\, ,
+\end{equation}
+
+\begin{equation}
+	\boxed{\therefore \quad \qty(-\ii \vb*{\gamma} \vdot \grad +m) v_{sp} \ee^{\ii p \cdot x}  = - \gamma^0 E_p v_{sp}  \ee^{\ii p \cdot x}  } \, .
+	\label{eq_Segunda parte del Hamiltoniano de Dirac}
+\end{equation}
+
+Los resultados (\ref{eq_primera parte del Hamiltoniano de Dirac}) y (\ref{eq_Segunda parte del Hamiltoniano de Dirac}) nos indican que el operador Hamiltoniano adopta dos formas diferentes, dependiendo si actúa sobre $u$ o sobre $v$. Antes de cuantizar el Hamiltoniano, determinemos
+
+\begin{IEEEeqnarray}{rCl}
+	\qty(-\ii \vb*{\gamma} \vdot \grad +m) \Opsi(x) &=&  \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \bigg( \Ob_{sp}  \qty(-\ii \vb*{\gamma} \vdot \grad +m) u_{sp} \ee^{-\ii p \cdot x} \nonumber \slj
+	&& +\> \Od^\dag_{sp} \qty(-\ii \vb*{\gamma} \vdot \grad +m) v_{sp} \ee^{\ii p\cdot x } \bigg)  \nonumber \\
+	&=& \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty( \Ob_{sp}  \gamma^0 E_p u_{sp} \ee^{-\ii p\cdot x } - \Od^\dag_{sp} \gamma^0 E_p v_{sp} \ee^{\ii p\cdot x } )\, .
+	\label{eq_parte 2 Hamultoniano de Dirac}
+\end{IEEEeqnarray}
+
+Haciendo uso de (\ref{eq_parte 2 Hamultoniano de Dirac}), el operador Hamiltoniano se puede escribir como:
+
+\newcommand{\pp}{p^\prime}
+
+\newcommand{\spr}{s^\prime}
+
+
+\begin{IEEEeqnarray*}{rCl}
+	\OH &=&  \int \dd[3]{x}  \Obpsi \qty(-\ii \vb*{\gamma} \vdot \grad + m)\Opsi \\
+	&=&  \int \dd[3]{x}  \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty(\Ob^\dag_{sp}  \overline{u}_{sp}  \ee^{\ii p \cdot x} +  \Od_{sp} \overline{v}_{sp} \ee^{-\ii p\cdot x } ) \\
+	&& \times \>  \int \frac{\dd[3]{\pp}}{ \sqrt{2\qty( 2\pi )^3 E_{\pp} }} \sum_{s^\prime=1,2} E_{\pp} \qty( \Ob_{\spr  \pp} u_{\spr \pp}  \gamma^0 \ee^{-\ii \pp\cdot x } - \Od^\dag_{\spr \pp} \gamma^0  v_{s\pp} \ee^{\ii \pp\cdot x } ) \slj
+	&=& \int \frac{\dd[3]{x}}{2\qty( 2\pi )^3 } \int \dd[3]{p} \int \dd[3]{\pp} \sqrt{\frac{E_{\pp}}{E_p}} \sum_{s,\spr} \qty(  \Ob^\dag_{sp}  \overline{u}_{sp}  \ee^{\ii p \cdot x} +  \Od_{sp} \overline{v}_{sp} \ee^{-\ii p\cdot x }  ) \\
+	&& \times \> \qty(  \Ob_{\spr  \pp}  \gamma^0 u_{\spr \pp} \ee^{-\ii \pp\cdot x } - \Od^\dag_{\spr \pp} \gamma^0  v_{s\pp} \ee^{\ii \pp\cdot x }  ) \, . 
+\end{IEEEeqnarray*}
+Hemos escrito $\sum_{s,\spr} \equiv \sum_{s=1,2} \sum_{\spr=1,2} $, para no hacer tan extenso el resultado. Vamos a factorizar $\gamma^0$ del segundo paréntesis y vamos a distribuirlo en el primero, a lado derecho de los términos $\overline{u}$ y $\overline{v}$, de este modo es posible reescribir
+\begin{IEEEeqnarray*}{rCl}
+	\overline{u}_{sp} \gamma^0 &=& u_{sp}^\dag \gamma^0 \gamma^0 =  u_{sp}^\dag \\
+	\overline{v}_{sp} \gamma^0 &=& v_{sp}^\dag \gamma^0 \gamma^0 =  v_{sp}^\dag \, .
+\end{IEEEeqnarray*}
+Así, 
+ 
+\begin{equation}
+\boxed{
+	\begin{IEEEeqnarraybox}{rCl}
+		\OH &=& \int \frac{\dd[3]{x}}{2\qty( 2\pi )^3 } \int \dd[3]{p} \int \dd[3]{\pp} \sqrt{\frac{E_{\pp}}{E_p}} \sum_{s,\spr} \qty(  \Ob^\dag_{sp} u_{sp}^\dag  \ee^{\ii p \cdot x} +  \Od_{sp} v_{sp}^\dag \ee^{-\ii p\cdot x }  ) \nonumber   \\
+		&&  \times \> \qty(  \Ob_{\spr  \pp} u_{\spr \pp} \ee^{-\ii \pp\cdot x } - \Od^\dag_{\spr \pp}  v_{\spr \pp} \ee^{\ii \pp\cdot x }  ) \, . 
+		\label{eq_primera version del Hamiltoniano}
+	\end{IEEEeqnarraybox}	
+  }
+\end{equation}
+ Ahora procedemos a simplificar esta expresión, de tal manera que el Hamiltoniano tenga una forma parecida al obtenido al campo escalar. Entonces,
+ 
+ \newcommand{\ddiracp}{\delta^3\qty(\vb*{p} - \vb*{p}^\prime ) }
+ \newcommand{\ddiracpp}{\delta^3\qty(\vb*{p} + \vb*{p}^\prime ) }
+ 
+ \begin{prof}
+ 	\begin{IEEEeqnarray*}{rCl}
+ 		\OH &=& \int \frac{\dd[3]{x}}{2\qty( 2\pi )^3 } \int \dd[3]{p} \int \dd[3]{\pp} \sqrt{\frac{E_{\pp}}{E_p}} \\
+ 		&& \times \> \sum_{s,\spr} \Big[ \qty(  \Ob^\dag_{sp} u_{sp}^\dag  \Ob_{\spr  \pp} u_{\spr \pp} \ee^{\ii \qty( p  - \pp ) \cdot x} +  \Od_{sp} v_{sp}^\dag \Ob_{\spr  \pp} u_{\spr \pp} \ee^{-\ii \qty( p + \pp )\cdot x }  )   \\
+ 		%%
+ 		&&  \qquad \quad - \> \qty(  \Ob^\dag_{sp} u_{sp}^\dag \Od^\dag_{\spr \pp}  v_{\spr \pp}  \ee^{\ii \qty( p + \pp ) \cdot x} +  \Od_{sp} v_{s p}^\dag  \Od^\dag_{\spr \pp}  v_{\spr \pp} \ee^{-\ii \qty(p - \pp )\cdot x }  )  \Big]  \, . 
+ 	\end{IEEEeqnarray*}
+ 
+ Para lograr simplificar esta expresión, empleamos el resultado deducido en (\ref{eq_3.50}),
+ 
+ \begin{equation}
+ 	\int \dd[3]{x} \ee^{ \textcolor{red}{\pm} \ii \qty( p \textcolor{blue}{\pm} \pp )\cdot x } = (2\pi)^3 \ee^{ \textcolor{red}{\pm} \ii \qty( E_p \textcolor{blue}{\pm} E_{\pp}  )x^0 }  \delta^3 \qty( \vb*{p} \textcolor{blue}{\pm} \vb*{p}^\prime  ) \, . \label{eq_integral que conlleva al delta de Dirac}
+ \end{equation}
+ 
+Evaluando la integral sobre $x$, 
+ 
+ \begin{IEEEeqnarray*}{rCl}
+ 	\OH &=&  \frac{1}{2 \cancel{\qty(2\pi)^3 } }  \int \dd[3]{p} \int \dd[3]{\pp} \sqrt{\frac{E_{\pp}}{E_p}} \cancel{\qty(2\pi)^3 }\\
+ 	&& \times \> \sum_{s,\spr} \Big[ \qty\Big(  \Ob^\dag_{sp} \Ob_{\spr  \pp}  u_{sp}^\dag u_{\spr \pp} \ee^{\ii \qty( E_p  - E_{\pp} ) x^0  } \ddiracp +  \Od_{sp} \Ob_{\spr  \pp} v_{sp}^\dag u_{\spr \pp} \ee^{-\ii \qty( E_p + E_{\pp} ) x^0 } \ddiracpp  )   \\
+ 	%%
+ 	&&  \qquad \quad - \> \qty(  \Ob^\dag_{sp} \Od^\dag_{\spr \pp} u_{sp}^\dag  v_{\spr \pp}  \ee^{\ii \qty( E_p + E_{\pp} ) x^0 } \ddiracpp +  \Od_{sp}  \Od^\dag_{\spr \pp} v_{sp}^\dag v_{\spr\pp} \ee^{-\ii \qty(E_p - E_{\pp} ) x^0 }  \ddiracp ) \Big]  \, ,
+ \end{IEEEeqnarray*}
+
+ ahora, se aplica la integral sobre $\pp$ aplicando las propiedades del delta de Dirac, 
+
+ \begin{IEEEeqnarray*}{rCl}
+	\OH &=&  \frac{1}{2}  \int \dd[3]{p} \sqrt{\frac{\cancel{E_{p}}}{\cancel{E_{p}}}} \sum_{s,\spr} \Big[ \qty\Big(  \Ob^\dag_{sp} \Ob_{\spr  p}  u_{sp}^\dag u_{\spr p} \underbrace{\ee^{\ii \qty( E_p  - E_{p} ) x^0  }}_{1}  +  \Od_{sp} \Ob_{\spr , -p} v_{sp}^\dag u_{\spr ,-p} \ee^{-\ii \qty( E_p + E_{-p} ) x^0 }  )   \\
+	%%
+	&&  \qquad - \> \qty\Big(  \Ob^\dag_{sp} \Od^\dag_{\spr ,-p} u_{sp}^\dag  v_{\spr , -p}  \ee^{\ii \qty( E_p + E_{-p} ) x^0 } +  \Od_{sp}  \Od^\dag_{\spr p} v_{sp}^\dag v_{\spr p} \underbrace{\ee^{-\ii \qty(E_p - E_{p} ) x^0 }}_{1}   ) \Big]  \, ,
+\end{IEEEeqnarray*} 
+ 
+ donde se ha usado que $E_{-p}=E_p$. Ahora, emplearemos la condición de normalización de los espinores presentada en (\ref{eq_4.70}), que la podemos reescribir como  
+
+\begin{IEEEeqnarray}{rCl}
+		u_{sp}^\dag u_{\spr p}  & =& v_{sp}^\dag  v_{\spr p} =2E_p \delta_{s ,\spr} \nonumber \\
+		v_{sp}^\dag u_{\spr,-p}  & =&  u_{s p}^\dag  v_{\spr,-p} = 0 \, . \label{eq_normalización entre espinores}
+\end{IEEEeqnarray}
+
+Entonces, 
+
+ \begin{IEEEeqnarray*}{rCl}
+	\OH &=&  \frac{1}{2}  \int \dd[3]{p}  \sum_{s,\spr} \Big[ \qty\Big(  \Ob^\dag_{sp} \Ob_{\spr  p} \underbrace{ u_{sp}^\dag u_{\spr p}}_{2 E_p \delta_{s, \spr}  } +  \Od_{sp} \Ob_{\spr , -p} \underbrace{v_{sp}^\dag u_{\spr ,-p}}_{0} \ee^{-\ii \qty( E_p + E_{-p} ) x^0 }  )   \\
+	%%
+	&&  \qquad - \> \qty\Big(  \Ob^\dag_{sp} \Od^\dag_{\spr ,-p} \underbrace{u_{sp}^\dag  v_{\spr , -p} }_{0} \ee^{\ii \qty( E_p + E_{-p} ) x^0 } +  \Od_{sp}  \Od^\dag_{\spr p}   \underbrace{v_{ s  p}^\dag v_{\spr p}}_{2E_p \delta_{s, \spr}}  ) \Big]  \, \slj
+	&=& \frac{1}{\cancel{2}}  \int \dd[3]{p}  \cancel{2} E_p  \sum_{s, \spr}  \qty\Big(  \Ob^\dag_{sp} \Ob_{\spr  p} \delta_{s ,\spr} -  \Od_{sp}  \Od^\dag_{\spr p}  \delta_{s ,\spr}  )   
+\end{IEEEeqnarray*} 
+\end{prof}
+
+\begin{equation}
+	\boxed{
+		\OH =  \int \dd[3]{p} E_p \sum_{s} \qty\Big(  \Ob^\dag_{sp} \Ob_{s  p} -  \Od_{sp}  \Od^\dag_{s p}  ) 
+	}\, .
+\label{eq_Hamiltoniano de Dirac segunda forma}
+\end{equation}
+
+Esta expresión para el Hamiltoniano depende de los operadores $\Ob_{sp}$ y $\Od_{sp}$, que en contraste con el desarrollo de campo escalar, también representan \textbf{operadores de aniquilación}, en tanto que $\Ob_{sp}^\dag$ y $\Od_{sp}^\dag$ representan \textbf{operadores de creación}, por tanto podemos intuir como se construye el espacio de Fock para fermiones.\\
+
+Hasta ahora no se han introducido relaciones de conmutación entre los operadores de creación o destrucción. Si queremos ver cual es el espectro de $\OH$, podemos reescribir $\OH$ en términos de operadores número, ya que conocemos sus valores esperados. El primer sumando dentro de la integral de (\ref{eq_Hamiltoniano de Dirac segunda forma}) representa el operador número que cuenta partículas del tipo $b$ con un $s$ y momento $\vb*{p}$ bien definidos. No obstante, para que el segundo término sea un operador número se debería cambiar el orden en los operadores $d$. Si suponemos que los operadores creación y aniquilación satisfacen las siguientes relaciones de anticonmutación,
+
+\begin{equation*}
+	\comm{\Ob_{sp}}{\Ob^\dag_{\spr  \pp}} = \comm{\Od_{sp}}{\Od^\dag_{\spr  \pp}} = \ddiracp \delta_{s \spr} \, ,
+\end{equation*}
+tenemos que 
+
+\begin{equation*}
+	\Od_{sp} \Od_{sp}^\dag =\Od_{sp}^\dag \Od_{sp} +  \comm{\Ob_{sp}}{\Ob^\dag_{\spr  \pp}} = \Od_{sp}^\dag \Od_{sp} + \delta^3 (\vb*{0}) \, ,  
+\end{equation*}
+  
+ con lo cual el Hamiltoniano se reescribe
+  
+ \begin{IEEEeqnarray*}{rCl}
+ 	\OH &=&   \int \dd[3]{p} E_p \sum_{s} \qty\Big(  \Ob^\dag_{sp} \Ob_{s  p} -  \Od^\dag_{s p} \Od_{sp}  )  + \text{cte} \, .
+ \end{IEEEeqnarray*}
+  
+Observe que al Hamiltoniano ahora se le adiciona una constante que en principio es infinita. Si olvidamos por un instante dicha constante, suponiendo que estamos midiendo energías menos dicha constante, tenemos que el Hamiltoniano al depender de la diferencia de los operadores número $\Ob^\dag_{sp} \Ob_{sp} - \Od^\dag_{sp} \Od_{sp}$, entonces los autovalores de $\OH$ no están acotados por debajo. Para ver esto, note que los estados con un número arbitrario de $n$ partículas del tipo $d$ con $s$ y $\vb*{p}$ bien definidos, son autoestados de $\OH$, con autovalor proporcional a $-n$, por lo que se se pueden obtener valores de energía tan negativos como se quiera. La conclusión a la que se llega es que\emph{imponer condiciones de conmutación sobre los operadores de creación y destrucción del campo de Dirac conlleva a obtener un Hamiltoniano que no es definido positivo}.\\
+
+Si ahora, imponemos \emph{relaciones de anticonmutación}, habrá un cambio en el signo, y el operador tipo  $d$ aparece sumando, lo que hace que el Hamiltoniano sea definido positivo. Por lo tanto se debe cumplir
+
+\begin{equation}
+	\boxed{\acomm{\Ob_{sp}}{\Ob^\dag_{\spr  \pp}} = \acomm{\Od_{sp}}{\Od^\dag_{\spr  \pp}} = \ddiracp \delta_{s \spr} } \, ,
+	\label{eq_relaciones de anticonmutación entre creador y destructor}
+\end{equation}
+
+y cero en las demás combinaciones. Si evaluamos el valor esperado de la energía en el estado vacío tenemos que,
+
+
+\begin{IEEEeqnarray*}{rCl}
+	\ev{\OH}{0} &=& \int \dd[3]{p}  E_p  \qty\Big(  \cancelto{0}{\ev{\Ob^\dag_{sp} \Ob_{s  p}}{0}} +  \cancelto{0}{\ev{\Od^\dag_{s p} \Od_{sp}}{0}} + \delta^3 (\vb*{0}) \braket{0} )  \\
+	&=& \delta^3 (\vb*{0}) \int \dd[3]{p}  E_p \to \infty \, .
+\end{IEEEeqnarray*}
+
+Vamos a hacer lo mismo que con el campo escalar, y sustraer esta energía definiendo el operador Hamiltoniano ordenado normalmente. Dados dos operadores fermiónicos $\chi_1$ y $\chi_2$, es posible escribir cada uno de ellos como la suma de operadores que evolucionan con frecuencia positiva y negativa
+\begin{equation*}
+	\chi_1 = \chi_1^+ + \chi_1^- \, , \qquad  \chi_2 = \chi_2^+ + \chi_2^- \, ,
+\end{equation*}
+entonces el orden normal de la composición $\chi_1 \chi_2$ se define
+
+\begin{equation}
+	 \onor \chi_1 \chi_1 \onor \equiv \chi_1^- \chi_2^- + \chi_1^- \chi_2^+ - \chi_2^- \chi_1^+ + \chi_1^+ \chi_2^+ \, .
+\end{equation}
+
+Esta definición difiere en un signo menos en el caso del ordenamiento normal para bosones (\ref{eq_3.64}) descrita en el capitulo \ref{capitulo_3}. En términos simples el ordenamiento normal lleva los operadores de creación a la izquierda y cambia un signo. Por lo tanto al considerar el ordenamiento normal al integrando de (\ref{eq_Hamiltoniano de Dirac segunda forma}),
+
+\begin{equation}
+	\onor \Ob^\dag_{sp} \Ob_{s  p} -  \Od_{sp}  \Od^\dag_{s p} \onor = \onor \Ob^\dag_{sp} \Ob_{s  p} \onor  -  \onor \Od_{sp}  \Od^\dag_{s p} \onor  = \Ob^\dag_{sp} \Ob_{s  p} +  \Od^\dag_{sp} \, .  \Od_{s p} 
+\end{equation}
+
+Así, el Hamiltoniano (\ref{eq_Hamiltoniano de Dirac segunda forma}) reescrito en orden normal es
+
+\begin{equation}
+	\boxed{ \onor \OH \onor \equiv \OH =  \int \dd[3]{p} E_p \sum_{s} \qty\Big(  \Ob^\dag_{sp} \Ob_{s  p} +  \Od^\dag_{sp}  \Od_{s p}  )  } \, .
+	\label{eq_Hamiltoniano campo de Dirac}
+\end{equation}
+
+Con esta definición de Hamiltoniano, el espectro de energía ya esta acotado por debajo, siendo el valor de energía en el estado vacío $0$.
+
+\begin{cabox}
+	Las definiciones de orden normal que se hicieron para bosones y fermiones están fuertemente asociadas a las relaciones que cumplen los operadores de creación y destrucción. En el caso de campo escalar, el usar las relaciones de conmutación entre $\Oa_p$ y $\Oa^\dag_p$, permitieron hacer aparecer el operador número y eliminar la constante infinita (garantizando $\OH$ positivo), que era lo equivalente a tomar el orden normal para bosones. Ahora en el campo de Dirac, el usar las relaciones de \textbf{anticonmutación} para hacer aparecer el operador número y sustraer el término infinito, es equivalente a tomar el orden normal para fermiones, donde hay un cambio de signo adecuado para que $\OH$ sea definido positivo. 
+\end{cabox}
+
+Veamos algunas implicaciones de las relaciones de anticonmutación (\ref{eq_relaciones de anticonmutación entre creador y destructor}) y la definición de ordenamiento normal para fermiones. 
+
+\begin{itemize}
+	
+
+\item En el caso de la carga de Noether (\ref{eq_carga de noether para fermiones}), si empleamos las expansiones de Fourier de los campos $\Opsi$ y $\Opsi^\dag$, y consideramos el orden normal tenemos:
+
+\begin{IEEEeqnarray}{rCl}
+		\onor \OQ \onor &=& q \int \dd[3]{p}  \onor \Opsi^\dag \Opsi  \onor  \nonumber \\
+		&=& q \sum_{s} \int \dd[3]{p} \qty( \Ob^\dag_{sp}  \Ob_{sp} - \Od^\dag_{sp}  \Od_{sp} ) \, .
+		\label{eq_operador carga de Noether fermiones}
+\end{IEEEeqnarray}
+
+Se deja como ejercicio demostrar (\ref{eq_operador carga de Noether fermiones}). En términos del operador número escribimos la carga conservada como
+
+\begin{equation}
+	\onor \OQ \onor  =  q \qty( \ON_{b} - \ON_d  ) \, ,
+\end{equation}
+
+que representa la diferencia entre los operadores del número de partículas de tipo $b$, $\ON_b \equiv \int \dd[3]{p} \sum_s \Ob_{sp}^\dag \Ob_{sp} $, y el número de partículas de tipo $d$, $\ON_d \equiv \int \dd[3]{p} \sum_s \Od_{sp}^\dag \Od_{sp}$. Dándole la misma interpretación del análisis de campo escalar, vemos que la carga de las partículas tipo $d$ creadas por $\Od^\dag_{sp}$, es opuesta a la de partículas tipo $b$, que son creadas por $\Ob^\dag_{sp}$.  Este hecho se interpreta como siendo las partículas del tipo $d$ las correspondientes antipartículas de cada partícula del tipo $b$. 
+
+\vspace{0.6cm}
+\item Siendo que el anticonmutador (\ref{eq_relaciones de anticonmutación entre creador y destructor}) es cero para las demás combinaciones, podemos establecer
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\acomm{\Ob^\dag_{sp}}{\Ob^\dag_{sp}} &=& 0 \implies \Ob^\dag_{sp}\Ob^\dag_{sp}= 0 \\
+		 \acomm{\Od^\dag_{sp}}{\Od^\dag_{sp}} &=& 0 \implies \Od^\dag_{sp}\Od^\dag_{sp}= 0 \, ,
+	\end{IEEEeqnarray*}
+de manera que si se crea por ejemplo una partícula del tipo $b$ con espín y momento bien definido, ya no es posible crear una segunda partícula con el mismo $s$ y $\vb*{p}$ (en un mismo punto del espacio tiempo). Por lo tanto, los anticonmutadores cumplen el \textit{principio de exclusión de Pauli} en el cual no pueden existir dos partículas en el mismo estado cuántico.  
+
+\item Es posible construir el espacio de Fock (espacio de estados) de manera análoga que en el campo escalar. Se asume la existencia de un estado $\ket{0}$ que es aniquilado por $\Ob_{sp}$ y $\Od_{sp}$ para todos los valores de $s$ y $\vb*{p}$. 
+
+\begin{equation}
+	\Ob_{sp} \ket{0} = 0 \, ,\qquad \Od_{sp} \ket{0} = 0 \, .
+\end{equation}
+
+Luego, si sobre el vacío actúan los operadores de creación, cada uno genera \emph{estados de varias partículas con momento y energía definidos}. Por ejemplo el estado 
+
+\begin{equation*}
+	\Ob^\dag_{s_1 p_1} \Ob^\dag_{s_2 p_2} \Od^\dag_{s_3 p_3} \ket{0} \, ,
+\end{equation*}
+
+representa un estado de 3 partículas, dos del tipo $b$ con momentos $\vb*{p}_1$ y $\vb*{p}_2$ (y etiquetas $s_1$ y $s_2$ que vana estar asociadas con el espín de cada partícula), y una del tipo  $d$ con momento $\vb*{p}_3$ y espín $s_3$.
+\end{itemize}
+
+
+Empleemos el operador Hamiltoniano (\ref{eq_Hamiltoniano campo de Dirac})  y las relaciones de anticonmutación (\ref{eq_relaciones de anticonmutación entre creador y destructor}) para calcular el siguiente conmutador:
+
+\begin{IEEEeqnarray}{rCl}
+	\comm{\OH}{\Ob^\dag_{rk}} & = & \int \dd[3]{p} E_p \comm{  \sum_{s} \qty\big(  \Ob^\dag_{sp} \Ob_{s  p} +  \Od^\dag_{sp}  \Od_{s p}  ) }{  \Ob^\dag_{rk}  } \nonumber  \slj
+	&=& \int \dd[3]{p} E_p  \sum_{s} \qty(   \comm{\Ob^\dag_{sp} \Ob_{s  p}}{  \Ob^\dag_{rk}    } + \comm{\Od^\dag_{sp}  \Od_{s p}  }{  \Ob^\dag_{rk}  } ) \, ,
+\end{IEEEeqnarray}
+
+Para desarrollar cada conmutador empleamos las relaciones de anticonmutación (\ref{eq_relaciones de anticonmutación entre creador y destructor}),
+
+\begin{prof}
+	\begin{IEEEeqnarray}{rCl}
+		\comm{\Ob^\dag_{sp} \Ob_{s  p}}{ \Ob^\dag_{rk} } &=& \Ob^\dag_{sp} \Ob_{s  p} \Ob^\dag_{rk} + \textcolor{red}{ \Ob^\dag_{sp}  \Ob^\dag_{rk} \Ob_{s  p}  } - \Ob^\dag_{rk} \Ob^\dag_{sp} \Ob_{s  p}  - \textcolor{red}{ \Ob^\dag_{sp}  \Ob^\dag_{rk} \Ob_{s  p}  }  \nonumber \\
+		&=& \Ob^\dag_{sp} \underbrace{\qty(\Ob_{s  p} \Ob^\dag_{rk} + \textcolor{red}{ \Ob^\dag_{rk} \Ob_{s  p}  })}_{\delta^3( \vb*{p}- \vb*{k} ) \delta_{ rs } } -  \underbrace{\qty( \Ob^\dag_{rk}  \Ob_{s  p}  + \textcolor{red}{ \Ob^\dag_{sp}  \Ob^\dag_{rk} })}_{\acomm{ \Ob^\dag_{rk} }{ \Ob^\dag_{sp} } = 0 }   \Ob_{s  p}  \nonumber \\
+		&=& \Ob^\dag_{s p} \delta_{ rs } \delta^3( \vb*{p}- \vb*{k} )  \, .
+	\end{IEEEeqnarray}
+	
+	Es sencillo demostrar que 
+	
+	\begin{equation}
+		\comm{\Od^\dag_{sp}  \Od_{s p}  }{  \Ob^\dag_{rk}  } = 0 \, ,
+	\end{equation}
+	puesto que las relaciones de anticonmutación que se derivaran de este conmutador son cero.
+\end{prof}
+
+De este modo, 
+
+\begin{IEEEeqnarray}{rCl}
+	\comm{\OH}{\Ob^\dag_{rk}} &=& \int \dd[3]{p} E_p \sum_{s} \Ob^\dag_{sp} \delta_{ rs } \delta^3( \vb*{p}- \vb*{k} ) \nonumber  \slj
+	&=& \int \dd[3]{p}  E_p \Ob^\dag_{rp}  \delta^3( \vb*{p}- \vb*{k} ) \nonumber \slj
+	\IEEEeqnarraymulticol{3}{c}{ \boxed{ \comm{\OH}{\Ob^\dag_{rk}} = E_k \Ob^\dag_{rk}  } \, . } \IEEEyesnumber \label{eq_relacion de conmutación entre E y b daga}
+\end{IEEEeqnarray}
+
+De la misma manera se puede demostrar el siguiente conmutador,
+
+\begin{equation}
+	\boxed{ \comm{\OH}{\Od^\dag_{rk}} = E_k \Od^\dag_{rk}  } \, . 
+	\label{eq_relacion de conmutadcion entre E y d daga}
+\end{equation}
+
+Los conmutadores (\ref{eq_relacion de conmutación entre E y b daga}) y (\ref{eq_relacion de conmutadcion entre E y d daga}) muestran que los valores de las energías serán positivos para partículas y antipartículas respectivamente. \textcolor{red}{Revisar y complementar}\\
+
+Ahora vamos a determinar la forma explicita del operador $\Ob_{sp}$, entonces partimos del operador (\ref{eq_operador campo psi}),
+
+\begin{IEEEeqnarray*}{rCl}
+	\Opsi(x) &=&  \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty( \Ob_{sp} u_{sp} \ee^{-\ii p \cdot x} + \Od^\dag_{sp} v_{sp} \ee^{\ii p\cdot x } )\, .
+\end{IEEEeqnarray*}
+
+Multiplicando el lado izquierdo por $u^\dag_{rk}$, una fase, e integrando sobre $x$, tenemos
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\int \dd[3]{x} \ee^{\ii k \cdot x} u^\dag_{rk} \Opsi(x)  &=& \int \dd[3]{x} \ee^{\ii k \cdot x} u^\dag_{rk} \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2} \qty( \Ob_{sp} u_{sp} \ee^{-\ii p \cdot x} + \Od^\dag_{sp} v_{sp} \ee^{\ii p\cdot x } )\\
+		&=& \int \dd[3]{x} \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s=1,2}  \qty( \Ob_{sp}  u^\dag_{rk} u_{sp} \ee^{-\ii \qty( p - k ) \cdot x} + \Od^\dag_{sp} u^\dag_{rk} v_{sp} \ee^{\ii \qty( p + k )\cdot x } ) \, .
+	\end{IEEEeqnarray*}
+	
+	Evaluando la integral en $x$ en RHS, esta solo actúa sobre las exponenciales, por lo tanto podemos aplicar (\ref{eq_integral que conlleva al delta de Dirac}) y así obtener,
+	
+	\begin{IEEEeqnarray*}{rCl}
+	\int \dd[3]{x} \ee^{\ii k \cdot x} u^\dag_{rk} \Opsi(x)  &=& \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \qty(2\pi)^3 \sum_{s=1,2}  \Big( \Ob_{sp}  u^\dag_{rk} u_{sp}  \ee^{-\ii \qty( E_p - E_k )  x^0} \delta^3( \vb*{p} - \vb*{k} ) \\
+	&& +\> \Od^\dag_{sp} u^\dag_{rk}  v_{sp} \ee^{\ii \qty( E_p + E_k ) x^0 } \delta^3( \vb*{p} + \vb*{k} )  \Big) \, ,
+	\end{IEEEeqnarray*}	
+	
+	Ahora, se aplica la integral sobre los momentos $\vb*{p}$, 
+	
+	\begin{IEEEeqnarray*}{rCl}
+	\int \dd[3]{x} \ee^{\ii k \cdot x} u^\dag_{rk} \Opsi(x)  &=& \sqrt{\frac{\qty( 2\pi )^3}{2 E_k }} \sum_{s}  \Big( \Ob_{sk}  u^\dag_{rk} u_{sk}  \underbrace{\ee^{-\ii \qty( E_k - E_k )  x^0} }_{1} + \Od^\dag_{s,-k} u^\dag_{rk}  v_{s,-k} \ee^{\ii \qty( E_{k} + E_k ) x^0 } \Big) \, ,
+	\end{IEEEeqnarray*}	
+ 	
+ 	donde se ha aplicado que $E_{-k} = E_k$ por la forma de la relación de dispersión. Por ultimo, si aplicamos las condiciones de normalización de los espinores (\ref{eq_normalización entre espinores}), 
+ 	
+ 		\begin{IEEEeqnarray*}{rCl}
+ 		\int \dd[3]{x} \ee^{\ii k \cdot x} u^\dag_{rk} \Opsi(x)  &=& \sqrt{\frac{\qty( 2\pi )^3}{2 E_k }} \sum_{s}  \Big( \Ob_{sk}  \underbrace{u^\dag_{rk} u_{sk}}_{2 E_k \delta_{rs}} 
+ 		+ \> \Od^\dag_{s,-k} \underbrace{u^\dag_{rk}  v_{s,-k}}_{0} \ee^{\ii \qty( E_{k} + E_k ) x^0 } \Big) \\
+ 		&=& \sqrt{\frac{2 \qty( 2\pi )^3}{ E_k }}  \sum_{s}  \qty( E_k \Ob_{sk}  \delta_{rs}  ) \\
+ 		&=&  \sqrt{ 2 \qty( 2\pi )^3 E_k  }   E_k \Ob_{rk} \, ,
+ 	\end{IEEEeqnarray*}	
+ 
+\end{prof}
+
+Por lo tanto,
+ 
+ \begin{equation}
+	\boxed{\Ob_{sp} = \frac{1}{ 2 \qty( 2\pi )^3 E_p  } \int \dd[3]{x} \ee^{\ii p \cdot x} u^\dag_{sp} \Opsi(x)  } \, .
+	\label{eq_expresion operador b}
+ \end{equation}
+De manera muy similar, a modo de ejercicio se deja que multiplicando el lado izquierdo de $\Opsi$ por $\int \dd[3]{x} \ee^{-\ii k \cdot x} v^\dag_{rk}$, 
+
+\begin{equation}
+	\boxed{\Od^\dag_{sp} = \frac{1}{ 2 \qty( 2\pi )^3 E_p  } \int \dd[3]{x} \ee^{-\ii p \cdot x} v^\dag_{sp} \Opsi(x)  } \, .
+	\label{eq_expresion operador d daga}
+\end{equation}
+
+Ahora, haciendo uso de (\ref{eq_expresion operador b}) y (\ref{eq_expresion operador d daga}) podemos calcular el conmutador entre $\comm{\Ob_{sp}}{\Od^\dag_{rk}}$. Ahora vamos a buscar una interpretación adicional de estos operadores con los proyectores definidos en la sección \ref{seccion operadores de proyeccion}.
+
+
+\section{Propagador de la ecuación de Dirac}
+
+El conocer el propagador de la ecuación de Dirac implica saber como evoluciona el campo fermiónico en el espacio tiempo. Haremos un procedimiento similar al hecho con el campo escalar en la sección \ref{seccion: propagador campo escalar}. Inicialmente se considera la ecuación de Dirac acoplada a una fuente 
+
+\begin{equation}
+	\qty( \ii \gamma^\mu \partial_\mu - m ) \psi(x) = J(x) \, ,
+\end{equation}
+
+\begin{cabox}
+	La función de Green asociada a la ecuación de Dirac se conoce con el nombre de propagador y debe satisfacer la siguiente relación 
+	
+	\begin{IEEEeqnarray}{rCl}
+		\qty( \ii \gamma^\mu \partial_\mu - m ) S(x-x^\prime) = \delta^4 \qty(x-x^\prime) \, .
+		\label{eq_funcion de green ED}
+	\end{IEEEeqnarray} 
+	En principio cualquier función de Green debe satisfacer la expresión anterior.
+\end{cabox}
+
+La solución a la ecuación de Dirac viene dada por la suma de su parte homogénea, con la no homogénea que resulta de la convolución entre la función de Green y la fuente. Esto se escribe como
+
+\begin{equation}
+	\psi(x)  = \psi_0 (x) + \int \dd[4]{x^\prime} S(x-x^\prime) J(x^\prime) \, , 
+\end{equation}
+
+siendo $\psi_0 (x)$ es la solución a la ecuación homogénea. Verifiquemos que en efecto esto se cumple.
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\qty( \ii \gamma^\mu \partial_\mu - m ) \psi(x) &=& \qty( \ii \gamma^\mu \partial_\mu - m ) \qty(\psi_0 (x)  + \int \dd[4]{x^\prime} S(x-x^\prime) J(x^\prime)  ) \\
+		%%
+		&=& \underbrace{ \qty( \ii \gamma^\mu \partial_\mu - m )  \psi_0 (x) }_0 +  \qty( \ii \gamma^\mu \partial_\mu - m ) \int \dd[4]{x^\prime} S(x-x^\prime) J(x^\prime)\\
+		%%
+		&=& \int \dd[4]{x^\prime}  \underbrace{\qty( \ii \gamma^\mu \partial_\mu - m ) S(x-x^\prime)}_{  \delta^4 \qty(x-x^\prime) } J(x^\prime)\\
+		%%
+		&=& \int \dd[4]{x^\prime}  \delta^4 \qty(x-x^\prime) J(x^\prime)\\
+		%%
+		&=& J(x) \, .
+	\end{IEEEeqnarray*}
+\end{prof}
+
+Ahora procedemos a determinar la expresión para la función de Green, para ello se debe solucionar la ecuación (\ref{eq_funcion de green ED}). Entonces es mas útil escribir la transformada de Fourier de la función de Green asociada a la ecuación de Dirac, así
+
+\begin{equation}
+	S(x-x^\prime) = \int \frac{\dd[4]{ p }}{\qty(2\pi) ^4 } \ee^{- \ii p \cdot \qty( x - x^\prime ) } S(p) \, .
+	\label{eq_Transformada de Fourier de S(x-xl)}
+\end{equation} 
+
+Veamos que sucede cuando aplicamos el operador de la ecuación de Dirac a la expresión anterior
+
+\begin{IEEEeqnarray}{rCl}
+	 \qty( \ii \gamma^\mu \partial_\mu^x - m ) S(x-x^\prime) &=& \qty( \ii \gamma^\mu \partial_\mu^x - m ) \int \frac{\dd[4]{ p }}{\qty(2\pi) ^4 } \ee^{- \ii p \cdot \qty( x - x^\prime ) } S(p) \nonumber \\
+	 &=& \int \frac{\dd[4]{ p }}{\qty(2\pi) ^4 } \qty( \ii \gamma^\mu \partial_\mu^x - m )  \ee^{- \ii p \cdot \qty( x - x^\prime ) } S(p) \nonumber \\
+	 &=& \int \frac{\dd[4]{ p }}{\qty(2\pi) ^4 } \qty( \ii \gamma^\mu \qty(-\ii p_\mu) - m )  \ee^{- \ii p \cdot \qty( x - x^\prime ) } S(p) \nonumber \\
+	 &=& \int \frac{\dd[4]{ p }}{\qty(2\pi) ^4 } \qty( \gamma^\mu  p_\mu - m )  \ee^{- \ii p \cdot \qty( x - x^\prime ) } S(p) = \delta^4 \qty(x-x^\prime) \label{eq_accion oD}  \, ,
+\end{IEEEeqnarray}
+
+donde se debe garantizar lo propuesto para la función de Green en (\ref{eq_funcion de green ED}). Para ver que forma debe tener la transformada de Fourier de $S(p)$, escribamos la transformada de Fourier del delta de Dirac en (\ref{eq_accion oD}), entonces se debe cumplir:
+
+\begin{equation}
+	\int \frac{\dd[4]{ p }}{\qty(2\pi) ^4 } \qty( \gamma^\mu  p_\mu - m )  \ee^{- \ii p \cdot \qty( x - x^\prime ) } S(p) = \int \frac{\dd[4]{ p }}{\qty(2\pi) ^4 } \ee^{- \ii p \cdot \qty( x - x^\prime ) } \, ,
+\end{equation}
+
+por lo tanto esta identidad se garantiza solo si
+
+\begin{equation}
+	\qty( \gamma^\mu  p_\mu - m )   S(p) = 1 \, .
+	\label{eq_primera condicion sobre S(p)}
+\end{equation}
+
+La ecuación (\ref{eq_primera condicion sobre S(p)}) interpreta a $S(p)$ como la matriz inversa del operador $\qty( \gamma^\mu  p_\mu - m ) $.  Reescribamos este resultado multiplicando el LHS de (\ref{eq_primera condicion sobre S(p)}) por $\qty( \gamma^\nu p_\nu + m )$, 
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty( \gamma^\nu p_\nu + m ) \qty( \gamma^\mu  p_\mu - m )   S(p) &=& \qty( \gamma^\nu p_\nu + m ) \, ,
+\end{IEEEeqnarray*}
+
+donde,
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\qty( \gamma^\nu p_\nu + m ) \qty( \gamma^\mu  p_\mu - m ) &=& \gamma^\nu p_\nu \gamma^\mu  p_\mu +\cancel{ m \gamma^\mu  p_\mu}-\cancel{ m \gamma^\nu p_\nu} -m^2 \\
+		&=&  \gamma^\nu p_\nu \gamma^\mu  p_\mu - m^2 \\
+		&=& \underbrace{\slashed{p}\slashed{p}}_{p^2} - m^2\\
+		&=& p^2 - m^2  \, .
+	\end{IEEEeqnarray*}
+\end{prof}
+En este resultado se ha empleado la ecuación (\ref{propiedadslashaa}). Con ello se deriva que
+
+\begin{IEEEeqnarray*}{rCl}
+	\qty(p^2 - m^2) S(p) &=& \slashed{p} + m \\
+	\IEEEeqnarraymulticol{3}{c}{ \therefore \quad S(p) = \frac{ \slashed{p} +m }{p^2 - m^2} \, . }  
+\end{IEEEeqnarray*}
+
+De la misma manera que en campo escalar, introducimos la prescripción de Feynman, de modo que la transformada de Fourier se $S(x-x^\prime)$ se reescriba como
+
+\begin{equation}
+	\boxed{ S(p)  \equiv S_F (p) =\frac{ \slashed{p} +m }{p^2 - m^2 +\ii \epsilon}    } \, .
+	\label{eq_transformada de Fourier S(p)}
+\end{equation}
+
+Empleando la transformada de Fourier (\ref{eq_transformada de Fourier S(p)}) en la expresión (\ref{eq_Transformada de Fourier de S(x-xl)}),
+
+\begin{IEEEeqnarray*}{rCl}
+	S(x-x^\prime) &=& \int \frac{\dd[4]{p}}{\qty(2\pi)^4 } \ee^{ - \ii p \cdot \qty(x-x^\prime) }  \frac{ \slashed{p} +m }{p^2 - m^2 +\ii \epsilon} \\
+	&=& \int \frac{\dd[4]{p}}{\qty(2\pi)^4}  \frac{ \qty(\gamma^\mu p_\mu +m)  \ee^{ - \ii p \cdot \qty(x-x^\prime) }  }{p^2 - m^2 +\ii \epsilon} \, ,
+\end{IEEEeqnarray*} 
+
+aqui vamos a aplicar el hecho que la acción del operador de la ecuación de Dirac sobre la exponencial es 
+
+\begin{equation}
+	 \qty(\ii \gamma^\mu \partial_\mu +m)  \ee^{ - \ii p \cdot \qty(x-x^\prime) } = \qty(\gamma^\mu p_\mu +m)  \ee^{ - \ii p \cdot \qty(x-x^\prime) } \, ,
+\end{equation}
+
+con lo cual
+
+\begin{IEEEeqnarray}{rCl}
+	S(x-x^\prime)  &=& \int \frac{\dd[4]{p}}{\qty(2\pi)^4}  \frac{ \qty( -\ii \gamma^\mu \partial_\mu +m)  \ee^{ - \ii p \cdot \qty(x-x^\prime) }  }{p^2 - m^2 +\ii \epsilon} \nonumber \\
+		&=& \qty( -\ii \gamma^\mu \partial_\mu +m) \int \frac{\dd[4]{p}}{\qty(2\pi)^4} \frac{ \ee^{ - \ii p \cdot \qty(x-x^\prime) }  }{p^2 - m^2 +\ii \epsilon} \, , \label{eq_propagador cF}
+\end{IEEEeqnarray}
+
+observe que el término de la integral en el lado derecho de este resultado tiene la misma forma del propagador de Feynman (\ref{eq_3.122}) para un campo escalar
+
+\begin{equation}
+	\Delta_F \qty(x-x^\prime) = \int \frac{\dd[4]{p}}{\qty(2\pi)^4} \frac{ \ee^{ - \ii p \cdot \qty(x-x^\prime) }  }{p^2 - m^2 +\ii \epsilon}\, .
+\end{equation}
+
+La resolución de esta integral se presenta en la sección \ref{seccion: propagador campo escalar}. Aquí se determina que es posible escribir el propagador de Feynman en la forma de (\ref{eq_3.137}), esto es
+
+\begin{equation}
+	\ii \Delta_F \qty(x-x^\prime) = \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \qty[ \Theta(t-t^\prime) \ee^{-\ii p \vdot \qty(x-x^\prime)} + \Theta(t^\prime - t) \ee^{\ii p \vdot \qty(x-x^\prime)} ] \, .
+\end{equation} 
+
+Haciendo uso de estos resultados en el propagador de campo fermiónico (\ref{eq_propagador cF}), tenemos que 
+
+\begin{IEEEeqnarray*}{rCl}
+	\ii S_F (x-x^\prime) &=& \qty( -\ii \gamma^\mu \partial_\mu +m) \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \qty[ \Theta(t-t^\prime) \ee^{-\ii p \vdot \qty(x-x^\prime)} + \Theta(t^\prime - t) \ee^{\ii p \vdot \qty(x-x^\prime)} ] \\
+	%%
+	&=& \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \qty[ \Theta(t-t^\prime)  \qty( -\ii \gamma^\mu \partial_\mu +m)  \ee^{-\ii p \vdot \qty(x-x^\prime)} + \Theta(t^\prime - t) \qty( -\ii \gamma^\mu \partial_\mu +m)  \ee^{\ii p \vdot \qty(x-x^\prime)} ]\\
+	%%
+	&& -\> \ii \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \textcolor{blue}{ \gamma^\mu \partial_\mu \Theta(t-t^\prime)}  \ee^{-\ii p \vdot \qty(x-x^\prime)} 
+	- \ii  \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \textcolor{blue}{\gamma^\mu \partial_\mu \Theta(t^\prime-t)}  \ee^{\ii p \vdot \qty(x-x^\prime)} \, ,
+\end{IEEEeqnarray*}
+
+estudiando los dos últimos términos,
+	
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		$\faFutbolO$ &=& -\ii \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \overbrace{\textcolor{blue}{ \gamma^\mu \partial_\mu \Theta(t-t^\prime)}}^{\gamma^0 \partial_0 \Theta(t-t^\prime) + \gamma^i \cancelto{0}{\partial_i \Theta(t-t^\prime)} }  \ee^{-\ii p \vdot \qty(x-x^\prime)} \\
+		%%
+		&& \qquad -\> \ii  \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \overbrace{\textcolor{blue}{\gamma^\mu \partial_\mu \Theta(t^\prime-t)}}^{\gamma^0 \partial_0 \Theta(t^\prime -t)+\gamma^i \cancelto{0}{\partial_i \Theta(t^\prime -t)} }  \ee^{\ii p \vdot \qty(x-x^\prime)} \\
+		&=& -\>\ii \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \underbrace{\textcolor{blue}{ \gamma^0 \partial_0 \Theta(t-t^\prime)}}_{\gamma^0 \delta(t-t^\prime)}  \ee^{-\ii p \vdot \qty(x-x^\prime)} 
+		-\> \ii  \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \underbrace{\textcolor{blue}{\gamma^0 \partial_0 \Theta(t^\prime-t)}}_{-\gamma^0 \delta(t^\prime -t) }  \ee^{\ii p \vdot \qty(x-x^\prime)} \\
+		%%
+		&=&  -\ii \gamma^0 \delta(t-t^\prime) \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p}  \ee^{-\ii p \vdot \qty(x-x^\prime)} 
+		+ \> \ii  \gamma^0 \underbrace{\delta(t^\prime -t)}_{\delta(t-t^\prime)} \underbrace{\int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p}    \ee^{\ii p \vdot \qty(x-x^\prime)}}_{\vb*{p} \to -\vb*{p}^\prime }\\
+		%%
+		&=& \cancel{-\ii \gamma^0 \delta(t-t^\prime) \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p}  \ee^{-\ii p \vdot \qty(x-x^\prime)} }+ \cancel{\ii \gamma^0 \delta(t-t^\prime) \int \frac{\dd[3]{p^\prime}}{2 \qty(2\pi)^3 E_{p ^\prime}}  \ee^{-\ii p^\prime \vdot \qty(x-x^\prime)} }\\
+		&=& 0 \, .
+	\end{IEEEeqnarray*}
+\end{prof}
+
+Por lo tanto,
+
+\begin{IEEEeqnarray*}{rCl}
+	\ii S_F (x-x^\prime)  &=&  \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \qty\Big[ \Theta(t-t^\prime) \underbrace{\qty( -\ii \gamma^\mu \partial_\mu +m) \ee^{-\ii p \vdot \qty(x-x^\prime)}}_{ \qty(\slashed{p} + m) \ee^{-\ii p \vdot \qty(x-x^\prime)}  } + \Theta(t^\prime - t) \underbrace{\qty( -\ii \gamma^\mu \partial_\mu +m) \ee^{\ii p \vdot \qty(x-x^\prime)}}_{\qty( -\slashed{p} + m ) \ee^{\ii p \vdot \qty(x-x^\prime)} } ] \\
+	%%
+	\IEEEeqnarraymulticol{3}{c}{  \boxed{ \ii S_F (x-x^\prime) = \int \frac{\dd[3]{p}}{2 \qty(2\pi)^3 E_p} \qty[ \Theta(t-t^\prime)  \qty(\slashed{p} + m) \ee^{-\ii p \vdot \qty(x-x^\prime)} - \Theta(t^\prime - t) \qty( \slashed{p} - m ) \ee^{\ii p \vdot \qty(x-x^\prime)} ] } \, .  }  \IEEEyesnumber \IEEEeqnarraynumspace \label{eq_propagador de Dirac}
+\end{IEEEeqnarray*}
+
+Veamos si es posible escribir este resultado en términos del operador de ordenamiento temporal $\mathcal{T}$. Calculemos 
+
+\begin{IEEEeqnarray}{rCl}
+	\Obpsi (x) \ket{0} &=& \int  \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s} \qty(\Ob^\dag_{sp}  \overline{u}_{sp}  \ee^{\ii p \cdot x} +  \Od_{sp} \overline{v}_{sp} \ee^{-\ii p\cdot x } ) \ket{0} \notag \\
+	&=& \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s} \qty(\Ob^\dag_{sp}  \ket{0})  \overline{u}_{sp}  \ee^{\ii p \cdot x} \, ,
+\end{IEEEeqnarray}
+
+donde $\Ob^\dag_{sp}  \ket{0}$ representa la creación de una partícula del tipo $b$ con momento y espín bien definidos. Si calculamos ahora 
+
+\begin{IEEEeqnarray}{rCl}
+	 \bra{0} \Opsi (x) &=& \bra{0} \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s} \qty(\Ob_{sp} u_{sp}  \ee^{-\ii p \cdot x} +  \Od^\dag_{sp} v_{sp} \ee^{\ii p\cdot x } ) \notag \\
+	&=& \int \frac{\dd[3]{p}}{ \sqrt{2\qty( 2\pi )^3 E_p }} \sum_{s} \qty( \bra{0} \Ob_{sp} ) u_{sp} \ee^{-\ii p\cdot x }    \, .
+\end{IEEEeqnarray}
+
+Con estos resultados podemos determinar:
+
+\newcommand{\xp}{x^\prime}
+
+\begin{prof}
+	\begin{IEEEeqnarray*}{rCl}
+		\ev{\Opsi(x) \Obpsi(\xp)}{0}  &=& \int \frac{\dd[3]{p}}{ \sqrt{2 \qty(2\pi)^3 E_p} } \int \frac{\dd[3]{p^\prime}}{ \sqrt{2 \qty(2\pi)^3 E_{\pp}} }  \sum_{s} \sum_{s^\prime} \qty( \bra{0} \Ob_{sp} ) u_{sp}  \ee^{-\ii p \cdot x}  \qty(\Ob^\dag_{s^\prime \pp} \ket{0} ) \overline{u}_{s^\prime \pp} \ee^{\ii \pp \cdot \xp}  \\
+		&=& \int \frac{\dd[3]{p}}{ \sqrt{2 \qty(2\pi)^3 E_p} } \int \frac{\dd[3]{p^\prime}}{ \sqrt{2 \qty(2\pi)^3 E_{\pp}} }  \sum_{s} \sum_{s^\prime} \bra{0} \Ob_{sp} \Ob^\dag_{s^\prime \pp} \ket{0} u_{sp} \overline{u}_{s^\prime \pp} \ee^{-\ii p \cdot x} \ee^{\ii \pp \cdot \xp}\, ,
+	\end{IEEEeqnarray*}
+
+	luego, usando que 
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\bra{0} \Ob_{sp} \Ob^\dag_{s^\prime \pp} \ket{0} &=& - \cancelto{0}{\bra{0} \Ob^\dag_{s^\prime \pp} \Ob_{sp}  \ket{0}} + \underbrace{\braket{0}}_1 \delta^3\qty(\vb*{p} -\vb*{p}^\prime ) \delta_{s \spr}\\
+		&=& \delta^3\qty(\vb*{p} -\vb*{p}^\prime ) \delta_{s \spr}
+	\end{IEEEeqnarray*}
+	
+	obtenemos
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\ev{\Opsi(x) \Obpsi(\xp)}{0}  &=& \int \frac{\dd[3]{p}}{ \sqrt{2 \qty(2\pi)^3 E_p} } \int \frac{\dd[3]{p^\prime}}{ \sqrt{2 \qty(2\pi)^3 E_{\pp}} }  \sum_{s} \sum_{s^\prime}  \delta^3\qty(\vb*{p} -\vb*{p}^\prime ) \delta_{s \spr}  u_{sp} \overline{u}_{s^\prime \pp} \ee^{-\ii p \cdot x} \ee^{\ii \pp \cdot \xp} \\
+		&=&  \int \frac{\dd[3]{p}}{ 2 \qty(2\pi)^3 E_p }  \underbrace{\sum_{s}    u_{sp} \overline{u}_{s p}}_{\slashed{p} + m} \ee^{-\ii p \cdot \qty(x- \xp) } \\
+		%%
+	%	&=& \int \frac{\dd[3]{p}}{ 2 \qty(2\pi)^3 E_p }  \underbrace{\qty(\gamma^\mu p_\mu +m )  \ee^{-\ii p \cdot \qty(x- \xp) }}_{\qty(\ii \gamma^\mu \partial_\mu + m)\ee^{-\ii p \cdot \qty(x- \xp)  }} \\
+		%%
+		\IEEEeqnarraymulticol{3}{c}{  \boxed{ \therefore \ev{\Opsi(x) \Obpsi(\xp)}{0}  =  \int \frac{\dd[3]{p}}{ 2 \qty(2\pi)^3 E_p } \qty(\slashed{p} +m ) \ee^{-\ii p \cdot \qty(x- \xp) }  } \, . } \IEEEyesnumber  \label{eq_valor esperado psi bpsi}
+	\end{IEEEeqnarray*}
+
+	De la misma manera es posible demostrar que 
+
+	\begin{equation}
+		\boxed{ \ev{\Obpsi(\xp) \Opsi(x)}{0}  =    \int \frac{\dd[3]{p}}{ 2 \qty(2\pi)^3 E_p }  \qty(\slashed{p} - m )\ee^{-\ii p \cdot \qty(\xp - x) }   } \, .
+		\label{eq_valor esperado bpsi psi}
+	\end{equation}
+
+\end{prof}
+
+Los resultados (\ref{eq_valor esperado psi bpsi}) y (\ref{eq_valor esperado bpsi psi}) permiten reescribir (\ref{eq_propagador de Dirac}) de la siguiente manera,
+
+\begin{equation}
+	\ii S_F (x-\xp) = \Theta\qty(t-t^\prime) \ev{\Opsi(x) \Obpsi(\xp)}{0}  - \Theta\qty(t^\prime - t) \ev{\Obpsi(\xp) \Opsi(x)}{0} \, . 
+\end{equation}
+
+que no es mas que una suma pesada de dos funciones fermiónicas de dos puntos. Entonces podemos escribir el propagador en términos del operador ordenamiento temporal de modo que
+
+\begin{equation}
+	\boxed{  \ii S_F(x-\xp) = \ev{\mathcal{T} \qty[  \Opsi(x) \Obpsi{\xp} ] }{0}  } \, ,
+	\label{eq_prpagador en terminos del ordenamiento temporal}
+\end{equation}
+
+donde $\mathcal{T}$ para campo fermiónico se define como
+
+\begin{equation}
+	\boxed{
+		\mathcal{T} \qty\big[ \Opsi_\alpha \qty(x) \Obpsi_\beta \qty(x^\prime) ] = \left\{ \,
+		\begin{IEEEeqnarraybox}[][c]{l?s}
+			\IEEEstrut
+			\Opsi_\alpha \qty(x) \Obpsi_\beta \qty(x^\prime) & Si $\quad t>t^\prime$  \\
+			- \Obpsi_\beta \qty(x^\prime) \Opsi_\alpha \qty(x) & Si $\quad t<t^\prime$ 
+			\IEEEstrut
+		\end{IEEEeqnarraybox}
+		\right. 
+		\label{eq_ordenamiento temporal de campo fermionico}} \, .
+\end{equation}
+
+El propagador de la ecuación de Dirac (\ref{eq_prpagador en terminos del ordenamiento temporal}) describe una partícula que viaja en el espacio tiempo de $\qty(t^\prime, \xp)$ a $\qty(t,x)$, o una antipartícula que va de $\qty(t,x)$ a $\qty(t^\prime, \xp)$.

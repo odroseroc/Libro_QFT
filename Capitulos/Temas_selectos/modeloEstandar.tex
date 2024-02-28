@@ -1,0 +1,733 @@
+\chapter{Modelo estándar}
+\label{ch:ME}
+
+
+En este capítulo planteamos el esquema general del modelo estándar (ME) de partículas elementales. Comenzamos enumerando las interacciones contempladas en el modelo y el esquema de multipletes que constituyen las familias y sus correspondientes simetrías. Posteriormente planteamos el Lagrangiano del ME a partir de las simetrías gauge contempladas y luego estudiamos los bosones a los que dan origen el grupo gauge $\SU{2} \otimes \U{1}$ y los autoestados de masa constituidos a partir de mezclas de éstos.También estudiamos la forma como se da el acoplamiento a fermiones a partir de los términos del Lagrangiano y establecemos las matrices de rotación de estados de masa para quarks (matriz CKM) y para leptones (matriz PMNS). Finalmente analizamos el mecanismo de GIM, que permitió el descubrimiento del quark charm y que explica por qué algunos proceso que involucran un cambio de extrañeza, son suprimidos en la naturaleza.\\
+
+
+Hacia la década de 1930 se creía que el protón, el neutrón el electrón y el neutrino~\footnote{El neutrino fue postulado por Pauli para explicar el espectro continuo de energías de los electrones emitidos en un decaimiento beta, pero para este momento de la historia se creía que nunca iba a ser detectado directamente.} constituían todo el esquema de partículas elementales en la naturaleza y que por lo tanto, toda la materia podía ser completamente explicada. Posteriormente se descubre el muón, que resultó ser una partícula con las mismas propiedades que el electrón, excepto por su masa, que es casi doscientas veces mayor que la del primero. Nadie supo qué hacer con esta nueva partícula, pues no encajaba en el esquema que se había desarrollado hasta entonces. El desconcierto de la comunidad científica es sintetizado por I. Rabi, quien, ante el descubrimiento de esta nueva partícula exclamó:  "¿quién ordenó esto?", pues el muón parecía no tener ninguna función importante en la naturaleza. Años más tarde aparecería el tauón, con una masa de casi cuatro mil veces mayores que el electrón y que junto con éste, el muón y sus respectivos neutrinos conforma lo que hoy llamamos las familias leptónicas.
+
+Nuestro panorama actual de partículas elementales propone que toda la materia está formada por leptones y quarks. Sin embargo, un quark nunca ha sido detectado en aislamiento, lo único que podemos detectar son estados ligados de ellos. El primero de estos estados ligados que se detectó fue el protón (dos quarks $u$ y un quark $d$) y se clasifica, al igual que el neutrón (dos quarks $d$ y un quark $u$), como un barión, es decir, un estado ligado de tres quarks. Los mesones son también estados ligados, en esta ocasión de un par quark-antiquark~\footnote{Los mesones y los bariones se conocen con el nombre general de estados hadrónicos.}. Existen tres tipos de quarks con carga $2/3$ (up, charm, top) y tres tipos de quarks con carga $(-1/3)$ (down, strange, bottom).
+
+Así pues, en el actual modelo estándar (ME) de partículas elementales tenemos tres familias de leptones y tres familias de quarks que constituyen los \emph{fermiones} elementales y que son los componentes fundamentales de la materia común. Estas tres familias se clasifican en seis dobletes, dados por:
+%
+\begin{equation} \label{eq:contenidoParticulasME}
+	\begin{IEEEeqnarraybox}[][c]{rCCC}
+		\IEEEstrut
+		\text{Leptones} \Bigg\{ \Bigg. & \quad \mqty(\nu_e \\ e)\,,\qquad & \mqty(\nu_\mu \\ \mu)\,,\qquad & \mqty(\nu_\tau \\ \tau)\,, \lj
+		%%
+		\text{Quarks} \Bigg\{ \Bigg. & \quad \mqty(u \\ d)\,,\qquad & \mqty(c \\ s)\,,\qquad & \mqty(t \\ b)\,.
+		\IEEEstrut
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+Adicional a esto, en el ME existen tres interacciones posibles, que son mediadas por bosones (partículas con espín entero): la interacción \emph{débil}, mediada por los bosones $W^{\pm}$ y $Z$, la interacción \emph{fuerte}, mediada por los gluones, y la interacción \emph{electromagnética}, mediada por los fotones. Únicamente los bosones mediadores de la interacción débil son partículas masivas. En la tabla~\ref{tb:interaccionesME} se muestra un resumen de las interacciones del ME, sus mediadores y las partículas que son afectadas por cada una.
+
+\begin{table}[ht]
+	\caption{Resumen de interacciones del ME.}
+	\centering
+	\begin{tabular}{*3{C{3.5cm}}}
+		\hline \hline
+		\textbf{Interacción} & \textbf{Mediadores} & \thead{\textbf{Partículas} \\ \textbf{susceptibles}} \\
+		\hline
+		Electromagnética & Fotones & \thead{Partículas con \\ carga eléctrica} \\
+		Fuerte & Gluones & Quarks \\
+		Débil & Bosones $W^+,\, W^-,\, Z$ & \thead{Partes izquierdas de \\ todos los fermiones} \\
+		\hline \hline
+	\end{tabular}
+	\label{tb:interaccionesME}
+\end{table}
+
+Nótese que sólo las partes izquierdas de las partículas son capaces de percibir la interacción débil. Definimos los dobletes izquierdos como
+%
+\begin{equation}
+	L = \pmqty{f_1 \\ f_2}_L = P_L \pmqty{f_1 \\ f_2} \,,
+\end{equation}
+
+\noindent donde $f_i$ son las componentes de cualquier doblete fermiónico, y $P_L$ es el operador de proyección izquierdo. Por su parte, los campos derechos
+%
+\begin{equation}
+	f_R = P_R\> f \,,
+\end{equation}
+
+\noindent donde $P_R$ es el operador de proyección derecho, son ciegos a la interacción débil.
+
+La agrupación de los fermiones en dobletes responde al hecho de que la simetría que gobierna la interacción fuerte es $\SU{2}$, y cada familia de fermiones se presenta como un doblete de este grupo. Es por ello que la parte derecha de los campos, que no son susceptibles a la interacción débil, sólo se presentan como teniendo una sóla componente, es decir, como un singlete de $\SU{2}_L$. En consecuencia, las partes derechas e izquierdas de los fermiones transformarán, bajo $\SU{2}$ según:
+%
+\begin{equation}
+	\begin{IEEEeqnarraybox}[][c]{l}
+		L \longrightarrow L' = \ee^{\ii \vb*{\theta} \vdot \vb*{\sigma}/2} L \,, \slj
+		%%
+		R \longrightarrow R' = R \,,
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+\noindent donde $\vb*{\sigma} = (\sigma_1,\, \sigma_2,\, \sigma_3)$ son las matrices de Pauli
+
+\begin{equation}
+	\sigma_1 = \mqty(\pmat{1})\,, \qquad \sigma_2 = \mqty(\pmat{2})\,, \qquad \sigma_3 = \mqty(\pmat{3}) \,.
+\end{equation}
+
+Adicional a la simetría $\SU{2}_L$ que gobierna las interacciones débiles, el ME presenta las simetrías $\SU{3}_C$ para las interacciones débiles~\footnote{El subíndice $C$ hace referencia a que ésta se denomina simetría del color, puesto que, análogamente a como la carga eléctrica es la propiedad que hace a las partículas susceptibles a la interacción electromagnética, se denomina \emph{carga de color} a la propiedad de las partículas que las hace susceptibles a las interacciones fuertes. La propiedad asociada a las interacciones débiles no tiene un nombre oficial asignado, pero suele llamársele \emph{carga débil}.}, y $\U{1}$ para la hipercarga~\footnote{La hipercarga es un número cuántico conservado bajo interacciones fuertes. Matemáticamente la hipercarga es $Y = B + S + C + B' + T'$, donde estas letras significan respectivamente, número bariónico, extrañeza, "charmness", "bottomness" y "topness". La hipercarga se relaciona a la carga eléctrica $Q$ mediante la fórmula de Gell-Mann--Nishijima: $Q = I_3 + Y$, donde $I_3$ es la tercera componente del isoespín, i.e. $+1/2$ para las componentes superiores de los dobletes de fermiones y $-1/2$ para las componentes inferiores.} $Y$. Así, el grupo gauge del ME es
+%
+\begin{equation} \label{eq:grupoGaugeME}
+	\boxed{ \SU{3}_C \otimes \SU{2}_L \otimes \U{1}_Y } \,.
+\end{equation}
+
+Tomemos como ejemplo el doblete izquierdo de quarks up-down. Este multiplete es un doblete de $\SU{2}_L$, i.e.
+%
+\begin{equation*}
+	q_L = \pmqty{u_L \\ d_L} \,,
+\end{equation*}
+
+\noindent pero a la vez, cada componente es un triplete de color, es decir:
+%
+\begin{center}
+	\includegraphics[scale=0.25]{diagrama_sextete.eps}   . \\
+\end{center}
+
+Por el contrario, las partes derechas de los quarks son singletes de isoespín, pero siguen siendo tripletes de color:
+%
+\begin{equation*}
+	\pmqty{u_{1R} \\ u_{2R} \\u_{3R}}\,, \quad \text{y} \quad \pmqty{d_{1R} \\ d_{2R} \\d_{3R}} \,,
+\end{equation*}
+
+\noindent cada multiplete de color debe ir por separado. \\
+
+
+Ahora, el grupo $\SU{2}_L$ sólo tiene un generador diagonal, que llamamos $T_3$, mientras que el grupo $\U{1}$ tiene un único generador $Y$, que es proporcional a la identidad. Definimos el operador de carga como:
+%
+\begin{equation} \label{eq:opCargaME_def}
+	\boxed{Q = T^3 + Y} \,.
+\end{equation}
+
+Explícitamente, con $Y = -1/2$,
+%
+\begin{equation*}
+	Q = T^3 + Y = \frac{\sigma^3}{2} + Y \mathbb{1} =\pmqty{ \tfrac{1}{2} & 0 \\ 0 & \tfrac{1}{2}} +  \frac{(-1)}{2} \pmqty{1 & 0 \\ 0 & 1} = \pmqty{0 & 0 \\ 0 & -1} \,,
+\end{equation*}
+
+\noindent cuyos valores en la diagonal corresponden a las cargas de $\smqty(\nu_e \\ e)$, 
+%
+\begin{equation}
+	\pmqty{0 & 0 \\ 0 & -1} \pmqty{\nu_e \\ e} \left\{ \, 
+	\begin{IEEEeqnarraybox}[][c]{cCl}
+		\IEEEstrut
+		\pmqty{0 & 0 \\ 0 & -1} \pmqty{\nu_e \\ 0} &=& 0\pmqty{\nu_e \\ 0} \longrightarrow \text{autovalor cero} \,, \\
+		%%
+		\pmqty{0 & 0 \\ 0 & -1} \pmqty{0 \\ e} &=& -1\pmqty{0 \\ e} \longrightarrow \text{autovalor } -1 \,.
+		\IEEEstrut
+	\end{IEEEeqnarraybox}
+	\right.
+\end{equation}
+
+
+
+
+%----------------------------------------------------------------------
+\section{Lagrangiano del ME}
+
+En el Lagrangiano del ME tenemos tres contribuciones:
+%
+\begin{equation}
+	\lagdn = \lagdn_1 + \lagdn_2 + \lagdn_3 \,,
+\end{equation}
+
+\noindent donde
+%
+\begin{IEEEeqnarray}{rCl}
+	\lagdn_1 &=& -\frac{1}{4} \underbrace{W^a_{\mu \nu}W^{a\> \mu \nu}}_{\substack{\text{Interacción} \\ \text{débil}}} 
+	- \frac{1}{4} \underbrace{F_{\mu \nu}F^{\mu \nu}}_{\substack{\text{Interacción de} \\ \text{hipercarga}}}
+	- \frac{1}{4} \underbrace{G^a_{\mu \nu} G^{a\> \mu \nu}}_{\substack{\text{Interacción} \\ \text{fuerte}}} \,, \IEEEyesnumber \IEEEyessubnumber* \slj
+	%%
+	\lagdn_2 &=& \underbrace{\ii \overline{L} \gamma^\mu \codv_\mu L}_{\substack{\text{Componentes} \\ \text{izquierdas}}} + \underbrace{\ii \overline{R} \gamma^\mu \codv_\mu R}_{\substack{\text{Componentes} \\ \text{derechas}}} \,, \slj
+	%%
+	\lagdn_3 &=& (\codv_\mu \phi)^\dag (\codv^\mu \phi) - m^2 \phi^\dag \phi - \lambda (\phi^\dag \phi)^2 + G_e \underbrace{\qty(\overline{L}\phi R + \overline{R} \phi^\dag L)}_{\substack{\text{Términos de} \\ \text{Yukawa}}} + \text{ h.c.} \,,
+\end{IEEEeqnarray}
+
+\noindent donde $\phi$ es el \emph{doblete escalar} o \emph{doblete de Higgs}, y $\text{h.c.}$ significa hermítico conjugado. La componente $\lagdn_1$ incluye todo lo que son las interacciones entre partículas; la componente $\lagdn_2$ es el Lagrangiano asociado a los términos cinéticos de los fermiones. Las derivadas covariantes en estos términos llevan información sobre qué interacciones pueden ver cada parte. Finalmente, el término $\lagdn_3$ es la contribución relacionada con el campo escalar. En éste, los términos de Yukawa entre el escalar que contiene al HIggs y los fermiones del ME es lo que le da masa a estas partículas. Veremos esto con detalle más adelante.
+
+
+Adicionalmente,
+%
+\allowdisplaybreaks[0]
+\begin{IEEEeqnarray}{rCl}
+	W^a_{\mu \nu} &=& \partial_\mu W^a_\nu - \partial_\nu W^a_\mu + g f^{abc} W^b_\mu W^c_\nu \,, \IEEEyesnumber \IEEEyessubnumber* \slj
+	%%
+	F_{\mu\nu} &=& \partial_\mu B_\nu - \partial_\nu B_\mu \,, \slj
+	%%
+	\codv_\mu R &=& \qty(\partial_\mu - \ii g' Y B_\mu - \frac{\ii}{2} g^{\prime \prime} \lambda_i G^i_\mu)R \,, \slj
+	%%
+	\codv_\mu L &=& \qty(\partial_\mu - \ii g' Y B_\mu - \frac{\ii}{2} g \sigma_i W^i_\mu - \frac{\ii}{2} g^{\prime \prime} \lambda_i G^i_\mu) L \,, \slj
+	%%
+	\codv_\mu \phi &=& \qty(\partial_\mu - \frac{\ii}{2} g \sigma_i W^i_\mu - \ii g' Y B_\mu) \phi \,,
+\end{IEEEeqnarray}
+\allowdisplaybreaks[1]
+
+\noindent donde $\lambda_i$ son las matrices de Gell-Mann, y 
+%
+\begin{equation}
+	\phi = \pmqty{\phi^{+} \\ \phi^{0}}\,.
+\end{equation}
+
+El operador de carga para este doblete es dado por:
+%
+\begin{equation}
+	Q = \pmqty{\tfrac{1}{2} & 0 \\ 0 & -\tfrac{1}{2}} + \frac{1}{2} \pmqty{1 & 0 \\ 0 & 1} = \pmqty{1 & 0 \\ 0 & 0} \,,
+\end{equation}
+
+\noindent con un valor de hipercarga $Y=\frac{1}{2}$, es decir, el doblete escalar contiene un campo con carga $+1$ y un campo neutro.
+
+
+
+
+%----------------------------------------------------------------------
+\section{Bosones gauge de $\SU{2}_L \otimes \U{1}$}
+
+Asumamos que el campo $\phi$ adquiere un valor esperado en el vacío (vev). Debido a la libertad de las rotaciones en $\SU{2}$ podemos expresar esta valor como
+%
+\begin{equation}
+	\phi_0 = \mel{0}{\phi}{0} = \frac{1}{\sqrt{2}} \pmqty{0 \\ v} \,.
+\end{equation}
+
+Entonces, como se vio en el capítulo 2, el término cuadrático en la derivada covariante aplicada al campo bosónico originará la masa de los bosones gauge. Determinemos este cuadrado:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\qty(\codv_\mu \phi_0)^\dag \qty(\codv^\mu \phi_0) &=& 
+	  \qty[\qty(\partial_\mu 
+	  - \frac{\ii}{2}\sigma^i W^i_\mu 
+	  - \ii \frac{g'}{2} B_\mu)\pmqty{0 \\ \tfrac{v}{\sqrt{2}}}]^\dag \\
+	  %%
+	  && \times \qty(\partial_\mu 
+	  - \frac{\ii}{2}\sigma^i W^i_\mu 
+	  - \ii \frac{g'}{2} B_\mu)\pmqty{0 \\ \tfrac{v}{\sqrt{2}}} \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\codv_\mu &=& -\frac{\ii}{2} g \sigma^i W^i_\mu - \frac{\ii g'}{2} B_\mu \mathbb{1} \\
+	%%
+	\qquad \qquad &=& -\frac{\ii}{2} g 
+	  \qty[W^1_\mu \mqty(\pmat{1})
+	  + W^2_\mu \mqty(\pmat{2})
+	  + W^3_\mu \mqty(\pmat{3})]\\
+	  && \times
+	  \frac{\ii g'}{2} B_\mu \pmqty{1 & 0 \\ 0 & 1} \slj
+	  %%
+	&=& -\frac{\ii}{2} \pmqty{
+	  g W^3_\mu + g' B_\mu & \qty(W^1_\mu - \ii W^2_\mu)g \\
+	  \qty(W^1_\mu + \ii W^2_\mu)g & -g W^3_\mu + g' B_\mu \,.  \IEEEyesnumber
+  	}
+\end{IEEEeqnarray*}
+
+Aplicando este resultado sobre el vev:
+%
+\begin{IEEEeqnarray}{rCl}
+	\codv_\mu \phi_0 &=& \frac{\ii}{2} \pmqty{
+	  (W^1_\mu - \ii W^2_\mu)g \frac{v}{\sqrt{2}} \\
+	  (-g W^3_\mu + g' B_\mu) \frac{v}{\sqrt{2}}
+	}
+\end{IEEEeqnarray}
+
+Entonces,
+%
+\begin{IEEEeqnarray*}{rCl}
+	\qty(\codv_\mu \phi_0)^\dag \qty(\codv^\mu \phi_0) &=&
+	  - \frac{\ii}{2} \pmqty{(W^1_\mu + \ii W^2_\mu)g \frac{v}{\sqrt{2}}) & (-g W^3_\mu + g' B_\mu) \frac{v}{\sqrt{2}}} \\
+	  %%
+	  && \times \frac{\ii}{2} \pmqty{ (W^1_\mu - \ii W^2_\mu)g \frac{v}{\sqrt{2}} \\
+	  	(-g W^3_\mu + g' B_\mu) \frac{v}{\sqrt{2}}} \slj
+  	%%
+  	&=& \frac{1}{4} \bigg[ 
+  	  (W^1_\mu W^{1 \mu} + W_\mu^2 W^{2\mu}) \frac{(gv)^2}{2} \bigg. \\
+  	  && \bigg. +\> (-g W^3_\mu + g' B_\mu)(-g W^{3\> \mu} + g' B^\mu) \frac{v^2}{2} \bigg] \,. \label{eq:prod_codvPhi_0_ME} \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+El último término se puede escribir como:
+%
+\begin{IEEEeqnarray*}{l}
+	\frac{1}{4} \qty((g')^2 + g^2) \qty(\frac{-g W^3_\mu + g' B_\mu}{\sqrt{(g')^2 + g^2}}) \qty(\frac{-g W^{3\> \mu} + g' B_\mu}{\sqrt{(g')^2 + g^2}}) \frac{v^2}{2} \\
+	%%
+	\hspace{5.5cm} = \frac{1}{2} \qty(\frac{\sqrt{(g')^2 + g^2}}{2} v)^2 Z_\mu Z^\mu \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde hemos definido la función de onda del bosón $Z$ como
+%
+\begin{equation}
+	\boxed{
+	Z_\mu = \frac{1}{\sqrt{(g')^2 + g^2}} \qty(g W^3_\mu - g' B_\mu)
+	} \,.
+\end{equation}
+
+Volviendo a la ecuación \eqref{eq:prod_codvPhi_0_ME}, para el primer término tenemos:
+%
+\begin{IEEEeqnarray*}{rCl}
+		\frac{1}{2} \qty(\frac{g v}{2})^2 \qty(W^1_\mu W^{1\> \mu} + W^2_\mu W^{2\> \mu})
+	%%
+	&=& \frac{1}{2} \qty(\frac{g v}{2})^2 \qty(2 \frac{(W^1_\mu - \ii W^{2}_\mu)}{\sqrt{2}} \frac{(W^{1\> \mu} + \ii W^{2\> \mu})}{\sqrt{2}}) \\
+	%%
+	&=& \qty(\frac{g v}{2})^2 W^{+}_\mu W^{-\> \mu} \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent con las funciones de onda de los bosones $W^{\pm}$
+%
+\begin{equation}
+	\boxed{
+	W^+_\mu = \frac{(W^1_\mu - \ii W^{2}_\mu)}{\sqrt{2}} \,, \qquad \qquad W^-_\mu = \frac{(W^{1}_{\mu} + \ii W^{2}_{\mu})}{\sqrt{2}}
+	} \,,
+\end{equation}
+
+\noindent que corresponden a un campo cargado $W^+$ y su antipartícula $W^-$, y que tienen una masa
+%
+\begin{equation}
+	m_W = \frac{g v}{2} \,.
+\end{equation}
+
+El campo neutro se puede escribir como:
+%
+\begin{equation}
+	Z_\mu = \frac{1}{\sqrt{(g')^2 + g^2}} \qty(g W^3_\mu - g' B_\mu) = \cos \theta_W W^3_\mu - \sin \theta_\mu B_\mu \,,
+\end{equation}
+
+\noindent con
+%
+\begin{equation} \label{eq:def_anguloWeinberg}
+	\cos \theta_W = \frac{g}{\sqrt{(g')^2 + g^2}} \,, \qquad \qquad \sin \theta_W = \frac{g'}{\sqrt{(g')^2 + g^2}} \,,
+\end{equation}
+
+\noindent donde $\theta_W$ se conoce como el \emph{ángulo de Weinberg}.\\
+
+
+Estas tres partículas masivas corresponden a los tres bosones que han adquirido masa debido al mecanismo de Higgs, puesto que hay tres generadores que no dejan invariante el vacío. Para encontrar el bosón no-masivo de esta teoría consideremos lo siguiente:
+
+En general, para fermiones con hipercarga $Y$ tendremos que:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\codv_\mu &=& \partial_\mu - \ii \frac{g W^i \sigma^i}{2} - \ii \frac{g'}{2} Y B_\mu \\
+	%%
+	&=& \partial - \frac{\ii g}{2} \pmqty{
+	  W^3_\mu & W^1_\mu - \ii W^2_\mu \\
+	  W^1_\mu + \ii W^2\mu & -W^3_\mu
+	} - \frac{\ii g'}{2} \pmqty{Y b_\mu & 0 \\ 0 & Y B_\mu} \\
+	%%
+	&=& \partial_\mu - \frac{\ii g}{\sqrt{2}} \underbrace{\pmqty{
+	  0 & \frac{W^1_\mu - \ii W^2_\mu}{\sqrt{2}} \\
+	  \frac{W^1_\mu + \ii W^2_\mu}{\sqrt{2}} & 0
+	}}_{\text{parte cargada}} - \frac{\ii}{2} \underbrace{\bigg[ g \sigma^3 W^3_\mu + g' Y B_\mu \bigg]}_{\text{parte neutra}} \,. \label{eq:codv_ME_fermiones} \IEEEyesnumber
+\end{IEEEeqnarray*} 
+
+Ahora, vamos a definir:
+%
+\begin{equation}
+	\boxed{
+	A_\mu = \frac{g' W^3_\mu + g B_\mu}{\sqrt{(g')^2 + g^2}} \,, \qquad \qquad Z_\mu = \frac{g W^3_\mu - g' B_\mu}{\sqrt{(g')^2 + g^2}}
+	} \,,
+\end{equation}
+
+\noindent donde $A_\mu$ corresponde a la función de onda del fotón, y vamos a mostrar que en términos de estas dos cantidades, el término etiquetado como la parte neutra en \eqref{eq:codv_ME_fermiones}, puede ecribirse como:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\IEEEeqnarraymulticol{3}{c}{
+		\boxed{ \frac{1}{\sqrt{(g')^2 + g^2}} Z_\mu \bigg( g^2 T^3 - (g')^2 Y \bigg)	
+		+ \frac{g g'}{\sqrt{(g')^2 + g^2}} A_\mu \bigg( T^3 + Y \bigg) } \label{eq:termNeutro_Zyfoton}
+	} \IEEEyesnumber \lj
+	%%
+	\hspace{1.8cm} &=& \frac{1}{\sqrt{(g')^2 + g^2}} \frac{(g W^3_\mu - g' B_\mu)}{\sqrt{(g')^2 + g^2}} \bigg[ g^2 T^3 - (g')^2 Y \bigg] \\
+	%
+	&& +\> \frac{g g'}{\sqrt{(g')^2 + g^2}} \frac{g' W^3\mu + g B_\mu}{\sqrt{(g')^2 + g^2}} \bigg[ T^3 + Y \bigg] \slj
+	%%
+	&=& \qty(\frac{1}{\sqrt{(g')^2 + g^2}})^2 \Bigg\{ T^3 \bigg[ g^2 \qty(g W^3_\mu - g' B_\mu) + g g' \qty(g' W^3_\mu + g B_\mu) \bigg] \Bigg. \\
+	%
+	&& \Bigg. +\> Y \bigg[ - (g')^2 (g W^3_\mu - g' B_\mu) + g g' (g' W^3_\mu + g B_\mu) \bigg] \Bigg\} \slj
+	%%
+	&=& \qty(\frac{1}{\sqrt{(g')^2 + g^2}})^2 \Bigg\{ T^3 \bigg[W^3_\mu \qty(g^3 + g(g')^2) + B_\mu \cancelto{0}{\qty(-g^2 g' + g' g^2)} \bigg] \Bigg. \\
+	%
+	&& \Bigg. +\> Y \bigg[ W^3_\mu \cancelto{0}{\qty(-(g')^2g + g (g')^2)} + B_\mu \qty((g')^3 + g^2 g') \bigg] \Bigg\} \slj
+	%%
+	&=& \frac{1}{\cancel{(g')^2 + g^2}} \Bigg\{ T^3 \bigg[ W^3_\mu g \cancel{\qty(g^2 + (g')^2)} \bigg] + B_\mu g' \cancel{\qty((g')^2 + g^2)} \Bigg\} \slj
+	%%
+	&=& T^3 W^3_\mu g + Y B_\mu g' \,,
+\end{IEEEeqnarray*}
+
+\noindent donde $T^3 \equiv \sigma^3/2$, con lo cual, en efecto, \eqref{eq:termNeutro_Zyfoton} es equivalente a la parte neutra de la derivada covariante.
+
+Podemos identificar la carga fundamental con la constante de acoplamiento del fotón, es decir,
+%
+\begin{equation}
+	e = \frac{g g'}{\sqrt{g^2 + (g')^2}} \,.
+\end{equation}
+
+Las funciones de onda de los bosones $W^{\pm},\, Z$ y del fotón que hemos definido, corresponden a \emph{autoestados de masa}. En términos de éstos, la derivada covariante para un fermión con hipercarga $Y$ es dada por:
+%
+\begin{equation} \label{eq:codv_fermiones_estadosDeMasa}
+	\boxed{
+	\begin{IEEEeqnarraybox}[][b]{rCl}
+		\codv_\mu &=& \partial_\mu - \ii \frac{g}{\sqrt{2}} \qty(W^+_\mu T^+ + W^-_\mu T^-) - \ii \frac{1}{\sqrt{g^2 + g^{\prime 2}}} Z_\mu \qty(g^2 T^3 - g^{\prime 2} - g^{\prime 2} Y) \\
+		%
+		&& -\> \ii \frac{g g'}{\sqrt{g^2 + g^{\prime 2}}} A_\mu \qty(T^3 + Y) \,, \IEEEyesnumber
+	\end{IEEEeqnarraybox}
+	}
+\end{equation}
+
+\noindent donde hemos definido
+%
+\begin{equation}
+	T^{\pm} \equiv \frac{1}{2} \qty(\sigma^1 \pm \ii \sigma^2) = \frac{1}{2} \qty[ \pmqty{0 & 1 \\ 1 & 0} \pm \ii \pmqty{0 & -\ii \\ \ii & 0} ] \,,
+\end{equation}
+
+\noindent es decir,
+
+\begin{equation*}
+	T^+ = \pmqty{0 & 1 \\ 0 & 0} \,, \qquad\qquad T^- = \pmqty{0 & 0 \\ 1 & 0} \,.
+\end{equation*}
+
+Ahora, para simplificar \eqref{eq:codv_fermiones_estadosDeMasa}, notamos que los campos del $Z$ y del fotón se pueden representar como una rotación ortogonal de los campos gauge $W^3_\mu$ y $B_\mu$ de la siguiente forma:
+
+\begin{equation}
+	\pmqty{Z^0_\mu \\ A_\mu} = \pmqty{
+	  \cos \theta_W & -\sin \theta_W \\
+	  \sin \theta_W & \cos \theta_W
+	} \pmqty{W^3_\mu \\ B_\mu} \,,
+\end{equation}
+
+\noindent donde $\theta_W$ es el ángulo de Weinberg, definido en \eqref{eq:def_anguloWeinberg}. Además, podemos realizar una manipulación en el acoplamiento del $Z$, haciendo:
+
+\begin{IEEEeqnarray*}{rCl}
+	g^2 T^3 - g^{\prime 2} Y &=& \qty(g^2 + g^{\prime 2}) T^3 - g^{\prime 2} \underbrace{\qty[T^3 + Y]}_{Q} \\
+	%%
+	&=& \qty(g^2 + g^{\prime 2}) \bigg[T^3 - \underbrace{\sin^2 \theta_W}_{\frac{g^{\prime 2}}{g^{\prime 2}  + g^2}} Q \bigg] \\
+	%%
+	&=& \sqrt{(g^2 + g^{\prime 2})} \underbrace{\frac{\sqrt{(g^2 + g^{\prime 2})}}{g}}_{1/{\cos \theta_{W}}} g \qty[T^3 - \sin^2{\theta_W}\> Q] \\
+	%%
+	&=& \sqrt{g^2 + g^{\prime 2}} \frac{1}{\cos \theta_W} g \qty[T^3 - \sin^2{\theta_W}\> Q] \,,
+\end{IEEEeqnarray*}
+
+\noindent y finalmente, con este resultado en \eqref{eq:codv_fermiones_estadosDeMasa} tenemos:
+%
+\begin{IEEEeqnarray}{c}
+	\boxed{
+	\codv_\mu = \partial_\mu - \ii \frac{g}{\sqrt{2}} \qty(W^+ T ^+ + W^- T^-) - \ii \frac{g}{\cos \theta_W} Z_\mu \underbrace{\qty(T^3 - \sin^2{\theta_W}\> Q)}_{\text{Carga débil del } Z} - \ii e A_\mu Q} \,,\label{eq:codv_fermiones_simplif}
+\end{IEEEeqnarray}
+
+\noindent donde 
+%
+\begin{equation*}
+	e = \frac{g g'}{\sqrt{g^2 + g^{\prime 2}}} \quad \Rightarrow \quad g =\frac{e}{\sin \theta_W} \,.
+\end{equation*}
+
+con la expresión marcada en \eqref{eq:codv_fermiones_simplif} como \emph{carga débil del $Z$}, podemos determinar una carga débil para cada fermión del ME, pues cada fermión tiene un valor de $T^3$ y tiene una carga eléctrica. Así, la carga débil de algún fermión $\psi$ será dada por
+%
+\begin{equation}
+	\qty(T^3 - \sin^2 \theta_W Q) \psi \,.
+\end{equation}
+
+Finalmente, recordemos que las masas del $Z$ y de los $W^\pm$ eran dadas por
+%
+\begin{equation*}
+	m_Z = \frac{v}{2}\sqrt{g^2 + g^{\prime 2}} \,, \qquad \qquad m_W = \frac{v}{2} g \,,
+\end{equation*}
+
+de modo que, la razón de estas dos masas:
+%
+\begin{equation}
+	\boxed{
+	\frac{m_W}{m_Z} = \frac{g (\frac{v}{2})}{\sqrt{g^2 + g^{\prime 2}} \qty(\frac{v}{2})} = \cos \theta_W
+	} \,.
+\end{equation}
+
+
+
+
+%-----------------------------------------------------------
+\section{Acoplamiento a fermiones}
+
+La derivada covariante \eqref{eq:codv_fermiones_simplif} determina de forma única los acoplamientos de los campos $W$ y $Z^0$ a los fermiones, una vez que los números cuánticos de los campos fermiónicos se especifican. Para determinar estos números cuánticos debemos tener en cuenta el hecho de que los bosones $W$ sólo se acoplan a los estados de helicidad izquierdos de los quarks y los leptones. Definimos entonces, los dobletes izquierdos del ME como:
+%
+\begin{equation}
+	\varPsi = \pmqty{\varPsi_1 \\ \varPsi_2} = \pmqty{\nu_e \\ e} \,, \quad \pmqty{u \\ d} \,, \cdots
+\end{equation}
+
+\noindent y de igual forma para las componentes izquierdas de las demás partículas. Las componentes derechas no forman dobletes, pues ellas no se mezclan bajo ningún grupo. Tenemos componentes derechas para todas las partículas, excepto para el neutrino, pues nunca se ha detectado un neutrino con helicidad derecha. No es claro si tal componente existe en la naturaleza, sin embargo para la fenomenología este hecho es irrelevante. Las oscilaciones de neutrinos son una evidencia que sugiere la existencia de tales componentes, pero aún no hay un consenso claro a este respecto y para efectos del ME actual, la componente derecha de los neutrinos es inerte.
+
+Vamos a determinar las diferentes cantidades covariantes:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\sum_i \overline{\varPsi}_i \gamma^\mu \codv_\mu \varPsi_i &=& \sum_i 
+	 \overline{\varPsi}_i \gamma^\mu \partial_\mu \varPsi_i 
+	 - \ii \frac{g}{\sqrt{2}} \qty(W^+ \overline{\varPsi} \gamma^\mu T^+ \varPsi + W^- \overline{\varPsi} \gamma^\mu T^- \varPsi) \\
+	 %
+	 && -\> \ii \frac{g}{\cos \theta_W} Z_\mu \overline{\varPsi}_i \gamma^\mu \qty(T^3 - \sin^2 \theta_W\> Q)\varPsi_i
+	 - \ii e A_\mu \overline{\varPsi}_i \gamma^\mu Q \varPsi_i \,. \label{eq:acoplamiento_fermionesME1} \label{eq:sanwich_codvFermionesME} \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Definimos las corrientes:
+%
+\begin{IEEEeqnarray}{lCl}
+	J_W^{\mu\> \pm} &\equiv& \frac{1}{\sqrt{2}} \sum_i \overline{\varPsi}_i \gamma^\mu T^{\pm} \varPsi \,, \IEEEyesnumber \IEEEyessubnumber* \slj
+	%%
+	J_Z^\mu &\equiv& \frac{1}{\cos \theta_W} \sum_i \overline{\varPsi}_i \gamma^\mu \qty(T^3 - \sin^2 \theta_W\> Q)\varPsi_i \,, \slj
+	%%
+	J_{\text{EM}}^\mu &\equiv& \sum_i \overline{\Psi}_i \gamma^\mu Q \varPsi_i \,,
+\end{IEEEeqnarray}
+
+\noindent donde el subíndice EM significa ElectroMagnética.
+
+Recordemos, en el capítulo 2 vimos que el "sandwich" de la derivada covariante entre los multipletes fermiónicos o escalares, es invariante gauge. La cantidad que definimos en \eqref{eq:sanwich_codvFermionesME} es precisamente esto. Así, éste es un término permitido en e Lagrangiano, y es de aquí que hemos derivado las corrientes que acabamos de definir.
+
+Sea $\varPsi = \smqty(u \\ d)_L$. Entonces,
+%
+\begin{IEEEeqnarray}{lCl}
+	J_W^+ &=& \frac{1}{\sqrt{2}} \pmqty{\overline{u} & \overline{d}}_L \gamma^\mu \pmqty{0&1\\0&0} \pmqty{u \\ d}_L = \frac{1}{\sqrt{2}} \overline{u}_L \gamma^\mu d_L \,, \IEEEyesnumber \IEEEyessubnumber* \slj
+	%%
+	J_W^- &=& \frac{1}{\sqrt{2}} \pmqty{\overline{u} & \overline{d}}_L \gamma^\mu \pmqty{0&0\\1&0} \pmqty{u \\ d}_L = \frac{1}{\sqrt{2}} \overline{d}_L \gamma^\mu u_L \,.
+\end{IEEEeqnarray}
+
+De igual forma, para el sector leptónico, con $\varPsi = \smqty(\nu_e \\ e)$ podemos definir:
+%
+\begin{IEEEeqnarray}{lCl}
+	J_W^+ &=& \frac{1}{\sqrt{2}} \overline{\nu}_L \gamma^\mu e_L \ \,, \IEEEyesnumber \IEEEyessubnumber* \slj
+	%%
+	J_W^- &=& \frac{1}{\sqrt{2}} \overline{e}_L \gamma^\mu \nu_L \,.
+\end{IEEEeqnarray}
+
+Notemos que el conjugado hermítico de la corriente positiva, es precisamente la corriente negativa y viceversa:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\qty(J_W^+)^\dag &=& \frac{1}{\sqrt{2}} \qty(\overline{\nu}_L \gamma^\mu e_L)^\dag \\
+	%
+	&=& \frac{1}{\sqrt{2}} e_L^\dag \gamma^{\mu \dag} \Big[\underbrace{\nu_L^\dag \gamma^0}_{\overline{\nu}_L}\Big]^\dag \\
+	%
+	&=& \frac{1}{\sqrt{2}} e_L^\dag \overunderbraces{&\br{2}{\gamma^{\mu \dag}} &&}{&\gamma^0 \gamma^\mu &\gamma^0 &\gamma^0}{&&\br{2}{1}} \nu_L \\
+	%
+	&=& \frac{1}{\sqrt{2}} \overline{e}_L \gamma^\mu \nu_L = J_W^- \,. \label{eq:J+daga} \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Ahora, introducimos los índices de familia, que agrupan los quarks en dos vectores de tres componentes como se muestra a continuación:
+%
+\begin{equation}
+	u_i = \pmqty{u \\ c \\ t}\,, \qquad\qquad d_i = \pmqty{d \\ s \\ b} \,,
+\end{equation}
+
+\noindent agrupando los quarks con carga $+2/3$ en un vector y aquellos con carga $-1/3$ en otro. Así, siendo $i$ el índice de familia, podemos generalizar:
+%
+\begin{equation} \label{eq:corriente_indicesFamilia}
+	J_W = \frac{1}{\sqrt{2}} \overline{u}_L^i \gamma^\mu d_L^i \,,
+\end{equation}
+
+\noindent donde se sobreentiende suma sobre $i$.\\
+
+Todo el acoplamiento a fermiones que hemos analizado se ha realizado en espacio de interacción, pero debemos rotarlo al espacio de masa, que nos dará los estados que son observables experimentalmente. Estos estados físicos son combinaciones lineales de los estados de interacción. Para rotar al espacio de masa (que se denotará con los estados primados), introducimos una matriz $U$ de rotación, la cual tendrá índices de familia, mas no índices espinoriales. Así, la rotación de los estados de interacción a los estados de masa será dada por:
+%
+\begin{equation}
+	\begin{IEEEeqnarraybox}[][c]{rCl}
+		d_L^i &=& \qty(U_L^{d})^{ij} d_L^{\prime j} = U_L^d\> d' \slj
+		%%
+		u_L^i &=& \qty(U_L^{u})^{ij} u_L^{\prime j} = U_L^u\> u' \,.
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+Reemplazando esto en \eqref{eq:corriente_indicesFamilia}
+%
+\begin{IEEEeqnarray*}{rCl}
+	J_W &=& \frac{1}{\sqrt{2}}\qty(U_L^{u\> ij} u_L^{\prime j})^\dag \gamma^0 \gamma^\mu U_L^{d\> ik} d_L^{\prime k} \\
+	%%
+	&=& \frac{1}{\sqrt{2}} \qty(u_L^{\prime j})^\dag \qty(U_L^{u *})_{ji}^\intercal \gamma^0 \gamma^\mu U_L^{d\> ik} d_L^{\prime k} \\
+	%%
+	&=& \frac{1}{\sqrt{2}} \overline{u}^{\prime j}_L \gamma^\mu U_{ji}^{u\> *\intercal}\> U_{L\> ik}^d\> d_L^{\prime k} \\
+	%%
+	&=& \frac{q}{\sqrt{2}} \overline{u}_L^{\prime j} \gamma^\mu \underbrace{\qty(U_L^{u\> \dag}\> U_L^{d})}_{V_{jk}^{\text{CKM}}} d_L^{\prime k} \slj
+	%%
+	\IEEEeqnarraymulticol{3}{c}{
+		J^+_W = \frac{1}{\sqrt{2}}\overline{u}^{\prime j}_L \gamma^\mu V_{jk}^{\text{CKM}} d^{\prime k}_L \,, \IEEEyesnumber
+	}
+\end{IEEEeqnarray*}
+
+\noindent donde $V_{jk}^{\text{CKM}}$ es una matriz unitaria denominada matriz de Cabibo-Kobayashi-Maskawa y que se mide experimentalmente. Esta matriz es sumamente importante para la fenomenología de las interacciones débiles y únicamente aparece en corrientes cargadas, no en corrientes neutras.
+
+Para leptones puede definirse una matriz similar que mezcla las diferentes familias. Esta matriz, $V_{ij}^{\text{PMNS}}$ se denomina de Pontecorvo-Maki-Nakagawa-Sakata. Con esto tendríamos que la corriente para leptones, en el espacio de masas, es dada por
+%
+\begin{equation}
+	J^-_W = \frac{1}{\sqrt{2}} \overline{e}'_{L i} \gamma^\mu V_{ij}^{\text{PMNS}} \nu'_j \,.
+\end{equation}
+
+Nótese que la matriz CKM aparece definida en la corriente $J^+_W$, mientras que la PMNS aparece definida en la corriente $J^-_W$. Esto se debe puramente a razones históricas, e implica que la matriz CKM debe aparecer dagada en una corriente $J^+_W$, mientras que la PMNS aparece dagada en $J^-_W$, todo esto en razón de \eqref{eq:J+daga}. \\
+
+Cabe resaltar que sólo en las corrientes cargadas existe cambio de sabor. Esto es, para corrientes neutras, las matrices CKM y PMNS son la matriz identidad. Para comprender mejor a qué nos referimos cuando hablamos de corrientes cargadas y corrientes neutras, consideremos lo siguiente:
+
+Todo término de interacción debe ser invariante bajo la carga. Consideremos por ejemplo, el siguiente término en el espacio de interacción:
+%
+\begin{equation}
+	\bar{u}^i \gamma^\mu d^i \,,
+\end{equation}
+
+\noindent y realicemos el reescalamiento por carga. Esto es, incorporamos la carga de cada componente como una fase. Tenemos entonces:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{u}^i \gamma^\mu d^i &=& \qty(\ee^{\frac{2}{3}\ii e \theta} u^i)^\dag \gamma^\mu \ee^{-\frac{1}{3}\ii e \theta}d^i \\
+	%%
+	&=& u_i^{\dag} \gamma^0 e^{-\frac{2}{3} \ii e \theta} \gamma^\mu e^{-\frac{1}{3} \ii e \theta} d^i \\
+	%%
+	&=& \ee^{-\ii e \theta} \overline{u}_i \gamma^\mu d^i \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent esto es, el término original ha adquirido una fase $e^{-\ii e \theta}$ al hacer el reescalamiento por carga. Para una corriente cargada, esta fase es diferente de cero, como en el caso que hemos ilustrado. Para corriente neutra, por el contrario, esta fase será igual a cero, como en el caso en que los dos quarks presentes en el término fuesen $u$.
+
+Esto significa que si queremos formar un término que sea invariante bajo transformaciones gauge, debemos agregar al término un $W^+$, de forma que cuando se haga el reescalamiento por carga, éste adquiera una fase $\ee^{+\ii e \theta}$, de tal forma que la fase en el término final se haga cero, esto es,
+%
+\begin{equation}
+	\overline{u}^i \gamma^\mu d^i W^+ \,.
+\end{equation}
+
+
+
+%------------------------------------------------------
+\section{Mecanismo de GIM}
+
+El mecanismo de GIM (Glashow--Iliopoulos--Maiani) es un mecanismo que explica por qué algunas interacciones con cambio de extrañeza se suprimen en el ME. Históricamente, el planteamiento de este mecanismo condujo a la predicción de la existencia de un cuarto quark ($c$), en un momento en que sólo los quarks $u,\, d$ y $s$ eran conocidos.
+
+Anteriormente, Cabibo había propuesto la primera versión de una matriz de mezcla (como la CKM, pero en dos dimensiones en lugar de tres) para los quarks $d$ y $s$, que permitía resolver algunos problemas fenomenológicos de la época. Una pregunta natural era si existía un quark equivalente que se mezclara con el quark $u$.
+
+Para la década de 1960, muchos teóricos consideraban la existencia de una simetría $\SU{3}$ del sabor que mezclaba los quarks $u,\, d$ y $s$ dentro de un mismo triplete y que da buenos resultados fenomenológicos. Por esta razón, la existencia de un cuarto quark no fue fácilmente aceptada. Hoy sabemos que esta aparente simetría del sabor no es una simetría fundamental de la naturaleza -- no es una simetría gauge, sino una simetría global --, y que los quarks $u,\, d,\, s$ en realidad pertenecen a dos dobletes, cuyo cuarto miembro es el quark $c$. \\
+
+El proceso cuyo estudio condujo al planteamiento del mecanismo de GIM es el siguiente~\footnote{Aquí hemos usado la notación $\widehat{d}$ para denotar una antipartícula, a fin de no causar confusión con la notación $\overline{d}$ que representa un conjugado de Dirac.}:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{GIM1.eps}
+	\caption{Decaimineto de un kaón $\widehat{K}^0$ a nivel árbol.}
+	\label{fig:GIM1}
+\end{figure}
+
+En principio, este diagrama es permitido en el ME y da una contribución diferente de cero~\footnote{El vértice que cambia $s$ a $u$ existe en virtud de la matriz CKM para corrientes cargadas.}. No obstante, la amplitud calculada para este proceso resulta ser mucho mayor al límite experimental observado. Glashow, Iliopoulos y Maiani propusieron la existencia de las dos primeras familias de quarks que conocemos hoy en día, y postularon que existía unitariedad entre ellas. Sólamente bajo esta suposición, ellos mostraron que la contribución del diagrama que incorpora un quark $c$ en lugar de uno $u$, debería cancelar la contribución del diagrama en la fig.~\ref{fig:GIM1}. Realicemos entonces el cálculo.
+
+La forma genérica de los términos en el Lagrangiano es
+%
+\begin{IEEEeqnarray}{rCl}
+	W^+J^+ &=& -\frac{\ii g}{\sqrt{2}} W^+\> \overline{u}^i_L \gamma^\mu V_{ij}^{\text{CKM}} d_{L}^j \,, \IEEEyesnumber \IEEEyessubnumber* \label{eq:formaGenerica_1} \slj
+	%%
+	W^-J^{-} &=& -\frac{\ii g}{\sqrt{2}} W^-\> \overline{d}_L^j \gamma^\mu \qty(V^{\text{CKM}})^\dag_{ji} u_L^i \,, \label{eq:formaGenerica_2}
+\end{IEEEeqnarray}
+
+\noindent y de ellos podemos leer las reglas de Feynman, teniendo en cuenta la siguiente convención~\footnote{Cabe resaltar que el concepto de "entrar" o "salir" de una partícula sólo aplica para patas externas. Las patas internas del diagrama no entran ni salen.}:
+
+\begin{itemize}
+	\item Cuando entra un $d$ o entra un $\widehat{u}$ utilizamos \eqref{eq:formaGenerica_1},
+	\item cuando entra un $\widehat{d}$ o entra un $u$ utilizamos \eqref{eq:formaGenerica_2},
+\end{itemize} 
+
+\noindent todo esto recordando que existen dos tipos de espinores, que denominaremos $u_u,\, u_d$ para partículas, y $v_u,\, v_d$ para antipartículas. \\
+
+Ahora, antes de seguir con el cálculo, consideremos el acoplamiento de dos multipletes izquierdos:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{\varPsi}_L \gamma^\mu \varPsi_L &=& (P_L \varPsi)^{\dag} \gamma^0 \gamma^\mu P_L \varPsi \\
+	%%
+	&=& \varPsi^\dag P_L^\dag \gamma^0 \gamma^\mu P_L \varPsi \\
+	%%
+	&=& \varPsi^\dag P_L \gamma^0 \gamma^\mu P_L \varPsi \\
+	%%
+	&=& \varPsi^\dag \gamma^0 \gamma^\mu \underbrace{P_L P_L}_{(P_L)^2 = P_L} \varPsi \\
+	%%
+	&=& \varPsi^\dag \gamma^0 \gamma^\mu P_L \varPsi \slj
+	\IEEEeqnarraymulticol{3}{c}{
+			\therefore\> \overline{\varPsi}_L \gamma^\mu \varPsi_L = \overline{\varPsi} \gamma^\mu P_L \varPsi \,, \IEEEyesnumber
+	}
+\end{IEEEeqnarray*}
+
+\noindent donde $P_L = \frac{1}{2}(1 - \gamma^5)$ es el proyector izquierdo, que anticonmuta con todas las matrices $\gamma^\mu$ y es idempotente. Lo que hemos mostrado es que el acoplamiento de dos multipletes izquierdos puede reemplazarse por un factor de vértice con $\gamma^\mu P_L$, que sólo incluye un proyector izquierdo.
+
+Con esto, tenemos las reglas de Feynman:\\
+%
+\begin{center}
+\begin{tabular}{c m{5cm}}
+	\hspace{1cm}
+	\begin{minipage}{.3\textwidth}
+		\includegraphics[scale=0.4]{GIM-reglaF1.eps}
+	\end{minipage} \hspace{1cm}
+	&
+	$-\dfrac{\ii g}{2\sqrt{2}} \gamma^\mu \qty(1-\gamma^5) V_{ij}^{\text{CKM}} \,,$
+	\\
+	\vspace{0.5cm} & \\
+	\hspace{1cm}
+	\begin{minipage}{.3\textwidth}
+		\includegraphics[scale=0.4]{GIM-reglaF2.eps}
+	\end{minipage} \hspace{1cm}
+	&
+	$-\dfrac{\ii g}{2\sqrt{2}} \gamma^\mu \qty(1-\gamma^5) \qty(V_{ij}^{\text{CKM}})^\dag \,.$
+\end{tabular}
+\bigskip
+\end{center}
+
+Con esto, para el diagrama en la fig.~\ref{fig:GIM1} tenemos:
+
+\begin{itemize}
+	\item El vértice
+	
+	\begin{center}
+		\includegraphics[scale=0.35]{GIM1_v1.eps}
+	\end{center}
+	
+	\noindent corresponde a $s = d_L^2$, $u = u_L^1$ y le corresponde la regla
+	%
+	\begin{equation*}
+		-\frac{\ii g}{2\sqrt{2}} \gamma^\mu \qty(1 - \gamma^5) V_{us}^\text{CKM} \,.
+	\end{equation*}
+
+	\item El vértice
+	
+	\begin{center}
+		\includegraphics[scale=0.35]{GIM1_v2.eps}
+	\end{center}
+	
+	\noindent requiere una antipartícula que entra,
+	%
+	\begin{equation*}
+		\overline{v}_d\> \qty(\text{vértice})\> u_u \,,
+	\end{equation*}
+
+	\noindent con un vértice dado por la corriente $J^+$, i.e.
+	%
+	\begin{equation*}
+		-\frac{\ii g}{\sqrt{2}} W^+\> \overline{v}_{Ld}\> \gamma^\mu \qty(V^\text{CKM})_{du}^\dag u_{Lu} \,.
+	\end{equation*}
+\end{itemize}
+
+El elemento clave en este análisis es que, por el quark $s$ entrando aparece una matriz CKM, y por el quark $\widehat{d}$ entrando aparece el adjunto hermítico de una matriz CKM, es decir, al calcular la amplitud del diagrama aparecerá el producto
+
+\begin{equation*}
+	V^\text{CKM}_{us} \big(V^\text{CKM}\big)^\dag_{du} \,.
+\end{equation*}
+
+Si este factor es diferente de cero, entonces el diagrama tiene una amplitud diferente de cero, y el proceo $\widehat{K}^0 \rightarrow \mu^+ \mu^-$ debe presentarse a nivel árbol en la naturaleza, no obstante, como ya se ha mencionado, éste es un proceso bastante suprimido. Por supuesto, resulta ser que el producto en cuestión es diferente de cero, y la forma para eliminar esto es adicionando un término de la siguiente forma:
+
+\begin{equation}
+	\big( V^\text{CKM} \big)^\dag_{du} V^\text{CKM}_{us} + \big( V^\text{CKM} \big)^\dag_{dc}  V^\text{CKM}_{cs} = \sum_i 	\big( V^\text{CKM} \big)^\dag_{di} V^\text{CKM}_{is} = \delta_{ds} = 0  \,,
+\end{equation}
+
+\noindent donde, el segundo término considera un quark charm en lugar de un up entre los dos nodos de partículas entrantes. Para que esta suma sea igual a una delta de Kronecker, basta con asumir que la matriz CKM es unitaria. Así, el proceso tendría una amplitud igual a cero.
+
+Resumiendo, si $V$ es una matriz unitaria de dimensión $2 \times 2$, tal que
+%
+\begin{equation*}
+	V^\dag_{di} V^{\phantom{\dag}}_{is} = \delta_{ds} \,,
+\end{equation*}
+
+\noindent esto equivale a adicionar el proceso
+%
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{GIM1_suma.eps}
+\end{figure}
+
+\noindent de tal forma que este proceso se anula ya que
+%
+\begin{equation*}
+	\delta_{ds} = 0
+\end{equation*}
+
+\noindent y por lo tanto no hay contribuciones a nivel árbol.\\
+
+Para el año de 1970, cuando fue planteado, el mecanismo de GIM parecía algo extravagante -- introducir un nuevo quark para corregir un detalle técnico más bien esotérico en una teoría ampliamente entendida. Sin embargo, los escépticos fueron silenciados por el descubrimiento del mesón $\psi (c\hat{c})$ en 1974. Entre tanto, Kobayashi y Maskawa habían propuesto la tercera generación de quarks, incluso antes de que la segunda estuviera completa. Su motivación fue tratar de explicar la violación $CP$ en el esquema de Cabibo-GIM, pero esta es una historia para más tarde.
+
+\textcolor{red}{Revisar libro de Lahiri, cap. 10 para la discusión sobre si la antipartícula es el conjugado de carga o el conjugado CPT}

@@ -1,0 +1,830 @@
+\chapterimage{chapterHeaders/particles1.png}
+\chapter{Cancelación de anomalías}
+\label{ch:anomalias}
+% Basado en Greiner. Gauge Theory of Weak Interactions
+
+\footnote{Crédito de la imagen del encabezado: kjpargeter en Freepik}Por anomalía entendemos la invalidez de una simetría de la acción clásica debida al proceso de cuantización. Si la simetría clásica no se preserva en este proceso, se dice entonces que \emph{la teoría tiene una anomalía}. Como consecuencia, la corriente asociada a la teoría, cuya conservación está asegurada por el teorema de Noehter, deja de ser conservada tras la cuantización. Llamamos a ésta \emph{corriente anómala}. Existen varios tipos de anomalías y cada una depende de la simetría en consideración. Entre ellas se encuentran la anomalía quiral, anomalías abelianas y no abelianas, anomalías supersimétricas, anomalías gravitacionales, entre otras.
+
+Las anomalías presentan una doble característica. Por un lado, se requieren para explicar resultados experimentales como el decaimiento $\pi^0 \rightarrow \gamma \gamma$ y por otra parte -- y de gran importancia en la teoría cuántica de campos --, las anomalías de la teoría deben ser canceladas para asegurar su renormalización. Este requerimiento tiene consecuencias importantes. En el caso del modelo electrodébil, la simetría está unificada en la forma $\SU{2}_L \otimes \SU{1}_Y$, que es potencialmente anómala, e impone el balance entre el número de quarks y el número de leptones para que exista cancelación de anomalías y la teoría sea renormalizable.
+
+Las corriente anómalas representan contribuciones que se obtienen de cierto tipo de topologías que no pueden existir en el Lagrangiano de la teoría, lo que implica términos divergentes. A nivel árbol, los procesos permitidos están dados por los términos del Lagrangiano y proporcionan los vértices de interacción posibles.A nivel de correcciones cuánticas (loops) se espera que no existan procesos con patas externas que no estén en el Lagrangiano de la teoría, pues de existir, tales términos conducirían a divergencias.
+
+Consideremos el siguiente proceso a un loop:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{anomalias1.eps}
+\end{figure}
+
+Si este proceso fuese posible a nivel árbol, esperaríamos tener un término en el Lagrangiano de la forma
+%
+\begin{equation*}
+	g A^\mu \partial_\nu A_\mu Z^\nu \,,
+\end{equation*}
+
+\noindent y de ser un término divergente, el infinito resultante puede ser absorbido por la constante de acoplamiento mediante el proceso de renormalización~\footnote{La renormalización es tratada en el Capítulo~\ref{ch:renormalizacion}}\,. Este proceso redefine las constantes de acoplamiento de tal forma que la teoría se vuelva coherente, consistente y no contenga infinitos. 
+
+Ahora, si la amplitud del diagrama es infinita, pero el término con las patas externas consideradas no existe en el Lagrangiano, no es posible redefinir la teoría para hacerla coherente, i.e., existe una anomalía. Para que la teoría sea consistente, y no tenga infinitos sin cancelar, la única forma es que las contribuciones de cada fermión en el diagrama pueda ser cancelada. \\
+
+\begin{definition}
+	
+	Definiremos una teoría que admite los siguientes vértices:
+	%
+	\begin{center}
+		\begin{tabular}{m{3.5cm} m{2cm} c}
+			\textbf{Vértices axiales}
+			&
+			$\ii g \frac{\lambda^a}{2} \gamma_\mu \gamma_5 a_f$
+			&
+			\begin{minipage}{.1\textwidth}
+				\includegraphics[scale=0.2]{vertice_anomalias1.eps}
+			\end{minipage}
+			\\
+			\vspace{0.5cm} & & \\
+			\textbf{Vértices vectoriales}
+			&
+			$- \ii g \frac{\lambda^a}{2} \gamma_\mu v_f$
+			&
+			\begin{minipage}{.1\textwidth}
+				\includegraphics[scale=0.2]{vertice_anomalias1.eps}
+			\end{minipage}
+		\end{tabular}
+		\bigskip
+	\end{center}
+
+\noindent donde $g$ son constantes de acoplamiento. Tanto éstas como los generadores $\lambda^a$ aparecen en los términos por efecto de ser vértices de un grupo gauge. El signo menos de los vértices vectoriales es puramente convencional. Las corrientes representadas por estos diagramas pueden ser neutras o cargadas. 
+
+En términos del proyector de quiralidad izquierdo, ambas estructuras pueden ser representadas en el Lagrangiano como
+%
+\begin{equation*}
+	- g \overline{\varPsi} \gamma^\mu P_L \frac{\lambda^a}{2} \varPsi Z_\mu \,,
+\end{equation*}
+
+\noindent donde $P_L = \frac{1}{2} \qty(1 - \gamma_5)$ es el proyector izquierdo y da origen a un término axial y a uno vectorial.
+\end{definition}
+ 
+
+Las anomalías en teorías gauge aparecen en el cálculo de diagramas triángulo, como el que se muestra en la Figura~\ref{fig:anomalias_diag} \footnote{En estos diagramas las flechas son empleadas como una herramienta para llevar cuenta de la conservación del momentum en cada vértice, no para identificar partículas y antipartículas.}, cuyo aspecto principal es un número impar de acoplamientos axiales~\cite{greiner_weak}.
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{anomalias_diag1}
+	\end{subfigure}
+	\qquad\qquad 
+	\begin{subfigure}[t]{0.4\textwidth}
+		\centering
+		\centering
+		\includegraphics[scale=0.4]{anomalias_diag1cruzado.eps}
+	\end{subfigure}
+	\caption{Diagrama triángulo, donde aparecen las anomalías en teorías gauge (izquierda), y su correspondiente diagrama cruzado (derecha).}
+	\label{fig:anomalias_diag}
+\end{figure}
+
+Iniciaremos considerando corrientes neutras, de tal forma que no hay cambio de sabor en los vértices y, por tanto, el fermión en el loop es el mismo. Arbitrariamente, hemos elegido que el vértice de la derecha sea axial y los vértices de la izquierda sean vectoriales.
+
+Nótese que el índice $c$ de los generadores del grupo gauge permanece asociado al bosón con momento $k_2$, mientras que el índice $b$ permanece asociado al bosón con momento $k_1$.
+
+Sean $\epsilon^\mu,\, \quad \epsilon^{*\nu}\,, \quad \epsilon^{*\xi}$ las funciones de onda de los bosones involucrados. La amplitud invariante del diagrama directo puede denotarse siguiendo las reglas de Feynman: \textcolor{red}{******Verificar si los generadores no van dentro de una traza también******}
+%
+\begin{IEEEeqnarray*}{rCl}
+	\epsilon^\mu \epsilon^{*\nu} \epsilon^{*\xi} T^{abc}_{\mu \nu \xi} &=& \int \frac{\dd[4]{p}}{(2\pi)^4}
+	\Tr \bigg[
+	  \frac{\ii}{\slashed{p} - \slashed{k}_2 - m}
+	  \qty(-\ii g \frac{\lambda^c}{2} \gamma_\xi v_f )
+	  \epsilon^{*\xi}_{k_2} \frac{\ii}{\slashed{p} - m}
+	  \bigg. \\
+	  %
+	  && \bigg. \times\> \qty(- \ii g \frac{\lambda^b}{2}\gamma_\nu v_f )
+	  \epsilon^{*\nu}_{k_1} \frac{\ii}{\slashed{p} + \slashed{k}_1 - m}
+	  \qty(\ii g \frac{\lambda^a}{2}\gamma_\mu \gamma_5 a_f ) \epsilon^\mu_{k_1 + k_2}
+	\bigg] \slj
+	%%
+	&=& (-\ii g)^3
+	v_f^2 a_f \epsilon^\mu_{k_1+k_2} \epsilon^{*\nu}_{k_1} \epsilon^{*\xi}_{k_2}
+	(\ii)^3 \frac{\lambda^c}{2} \frac{\lambda^b}{2} \frac{\lambda^a}{2} \\
+	%%
+	&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4}
+	\Tr \qty[
+	  \frac{1}{\slashed{p} - \slashed{k}_2 - m} \gamma_\xi
+	  \frac{1}{\slashed{p} - m} \gamma_\nu
+	  \frac{1}{\slashed{p} + \slashed{k}_1 - m} \gamma_\mu \gamma_5
+	] \,. \IEEEyesnumber \label{eq:anomalias1}
+\end{IEEEeqnarray*}
+
+En el último paso, debemos tener en cuenta que las matrices $\lambda^i$ y las matrices $\gamma$ actúan en espacios diferentes, y por ello la traza puede descomponerse en el producto de las trazas sobre los generadores y sobre los términos que involucran matries $\gamma$.
+
+De igual forma procedemos para el término cruzado:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\epsilon^\mu \epsilon^{*\nu} \epsilon^{*\xi} T^{abc}_{\mu \nu \xi} &=& \int \frac{\dd[4]{p}}{(2\pi)^4}
+	\Tr \bigg[
+	\frac{\ii}{\slashed{p} - \slashed{k}_1 - m}
+	\qty(-\ii g \frac{\lambda^b}{2} \gamma_\nu v_f )
+	\epsilon^{*\nu}_{k_1} \frac{\ii}{\slashed{p} - m}
+	\bigg. \\
+	%
+	&& \bigg. \times\> \qty(- \ii g \frac{\lambda^c}{2}\gamma_\xi v_f )
+	\epsilon^{*\xi}_{k_2} \frac{\ii}{\slashed{p} + \slashed{k}_2 - m}
+	\qty(\ii g \frac{\lambda^a}{2}\gamma_\mu \gamma_5 a_f ) \epsilon^\mu_{k_1 + k_2}
+	\bigg] \slj
+	%%
+	&=& (-\ii g)^3
+	v_f^2 a_f \epsilon^{*\nu}_{k_1} \epsilon^{*\xi}_{k_2} \epsilon^\mu_{k_1+k_2}
+	(\ii)^3 \frac{\lambda^b}{2} \frac{\lambda^c}{2} \frac{\lambda^a}{2} \\
+	%%
+	&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4}
+	\Tr \qty[
+	\frac{1}{\slashed{p} - \slashed{k}_1 - m} \gamma_\nu
+	\frac{1}{\slashed{p} - m} \gamma_\xi
+	\frac{1}{\slashed{p} + \slashed{k}_2 - m} \gamma_\mu \gamma_5
+	] \,. \IEEEyesnumber \label{eq:anomalias1Cruzado}
+\end{IEEEeqnarray*}
+
+Notemos que los términos exteriores a las integrales en \eqref{eq:anomalias1} y \eqref{eq:anomalias1Cruzado} son casi iguales, excepto por el orden en la multiplicación de los generadores $\lambda^i$. También existe un intercambio en los signos que acompañan a $k_1$ y a $k_2$ en el término cruzado, respecto al directo.
+
+No vamos a resolver completamente estas integrales, pero bástenos con saber que son divergentes.
+
+Vamos a manipular la traza en la integral del término directo.
+
+\begin{profnoside}
+	 Tomemos el caso del segundo término en la traza y multipliquemos y dividamos por $(\slashed{p} +m)$:
+	%
+	\begin{IEEEeqnarray*}{rCl}
+		\frac{1}{\slashed{p} - m} \frac{\slashed{p} + m}{\slashed{p} + m} &=& \frac{\slashed{p} + m}{\slashed{p}^2 - m^2} \,,
+	\end{IEEEeqnarray*}
+	
+	\noindent pero adicionalmente
+	%
+	\begin{IEEEeqnarray*}{rCl}
+		\slashed{p}^2 &=& p_\mu \gamma^\mu \gamma^\nu p_\nu \\
+		%%
+		&=& p_\mu \qty(2g\indices{^\mu^\nu} - \gamma^\nu \gamma^\mu)p_\nu \\
+		%%
+		&=& 2p_\mu p^\mu - \slashed{p}^2 \\
+		%%
+		\Rightarrow 2 \slashed{p}^2 &=& 2p \vdot p 
+	\end{IEEEeqnarray*}
+	%
+	\begin{equation*}
+		\therefore \slashed{p}^2 = p^2 \,,
+	\end{equation*}
+
+	\noindent con lo cual
+	%
+	\begin{equation*}
+		\frac{1}{\slashed{p} - m} = \frac{\slashed{p} + m}{p^2 - m^2} \,.
+	\end{equation*}
+\end{profnoside}
+
+	Realizando un procedimiento análogo con los otros términos en la traza llegamos a la expresión
+	%
+	\begin{equation}
+		\Tr \qty[\frac{\slashed{p} - \slashed{k}_2 + m}{(p - k_2)^2 - m^2}
+		\gamma_\xi \frac{\slashed{p} + m}{p^2 - m^2}
+		\gamma_\nu \frac{\slashed{p} + \slashed{k}_1 + m}{(p + k_1)^2 - m^2} \gamma_\mu \gamma_5] \equiv \bigstar \,.
+		\label{eq:anomalias_trazaDirecta}
+	\end{equation}
+
+
+En particular, en el límite superior, los momentos son muy grandes en comparación con las masas de las partículas y, para cualquier efecto práctico, se pueden hacer iguales a cero, $m=0$. Ahora, los denominadores en \eqref{eq:anomalias_trazaDirecta} son escalares y pueden salir de la traza, mientras que los numeradores pueden ser descompuestos en productos de los momentos y matrices gamma, así
+%
+\begin{equation}
+	\bigstar = \frac{1}{P} (p - k_2)^\alpha p^\beta (p + k_1)^\sigma \Tr[\gamma_\alpha \gamma_\xi \gamma_\beta \gamma_\nu \gamma_\sigma \gamma_\mu \gamma_5] \,,
+\end{equation}
+
+\noindent donde
+%
+\begin{equation*}
+	P \equiv (p - k_2)^2 p^2 (p+k_1)^2 \,.
+\end{equation*}
+
+\begin{profnoside}
+	Ahora, si realizamos el cambio de variables $p \rightarrow -p'$, tendremos que las integrales sobre los momentos son invariantes, i.e.,
+	%
+	\begin{equation*}
+		\int_{-\infty}^\infty \int_{-\infty}^\infty \int_{-\infty}^\infty \dd[3]{p} = \int_{-\infty}^\infty \int_{-\infty}^\infty \int_{-\infty}^\infty \dd[3]{p'} \,,
+	\end{equation*}
+	
+	\noindent puesto que el cambio de signo en el diferencial se compensa con el signo proveniente de la inversión de los límites de integración:
+	%
+	\begin{equation*}
+		\int_{-a}^a \dd{p} \quad\rightarrow\quad \int_a^{-a}-\dd{p'} = \int_{-a}^a \dd{p'} \,.
+	\end{equation*}
+	
+	En el integrando, con $p \rightarrow -p$ tenemos:
+	%
+	\begin{equation*}
+		p - k_2 \rightarrow -(p + k_2) \qquad\text{y}\qquad p + k_1 \rightarrow -p + k_1 \,.
+	\end{equation*}
+\end{profnoside}
+
+Con este cambio de variable, la traza $\bigstar$ queda como
+%
+\begin{equation}
+	\bigstar = \frac{-(p + k_2)^\alpha p^\beta (p-k_1)^\gamma}{\tilde{P}} \Tr[\gamma_\alpha \gamma_\xi \gamma_\nu \gamma_\sigma \gamma_\mu \gamma_5] \,,
+\end{equation}
+
+\noindent donde
+%
+\begin{equation*}
+	\tilde{P} = (p + k_2)^2 p^2 (p-k_1)^2 \,.
+\end{equation*}
+
+Para manipular estas expresiones, introducimos el operador conjugación de carga.\\
+
+\begin{definition}
+	El \emph{operador conjugación de carga}, $C$, se define como
+	%
+	\begin{equation}
+		\begin{IEEEeqnarraybox}[][c]{c}
+			C^{-1} \gamma^\mu C = C \gamma^\mu C^{-1} = -\gamma^{\mu \intercal}\,, \slj
+			%%
+			C \gamma_5 C^{-1} = +\gamma_5^{\intercal} \,.
+		\end{IEEEeqnarraybox}
+		\label{eq:def_opConjCarga_anomalias}
+	\end{equation}
+\end{definition}
+
+Teniendo en cuenta que
+%
+\begin{IEEEeqnarray*}{rCl}
+	\Tr[M] &=& \sum_i M_{ii} = \sum_i M_{ii}^\intercal = \Tr[M^\intercal] \,, 
+\end{IEEEeqnarray*}
+
+\noindent entonces
+%
+\begin{IEEEeqnarray*}{rCl}
+	\Tr[\gamma_\alpha \gamma_\xi \gamma_\nu \gamma_\sigma \gamma_\mu \gamma_5] &=& \Tr[(\gamma_\alpha \gamma_\xi \gamma_\nu \gamma_\sigma \gamma_\mu \gamma_5)^\intercal] \\
+	%%
+	&=& \Tr[\gamma_5^\intercal \gamma_\mu^\intercal \gamma_\sigma^\intercal \gamma_\nu^\intercal \gamma_\beta^\intercal \gamma_\xi^\intercal \gamma_\alpha^\intercal] \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Usando el operador conjugación de carga tenemos:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\Tr \Big[\gamma_\alpha \gamma_\xi \gamma_\nu \gamma_\sigma \gamma_\mu \gamma_5 \Big] &=& \Tr[C \gamma_5 C^{-1} (-1) C \gamma_\mu C^{-1} \cdots (-1) C \gamma_\alpha C^{-1}] \\
+	%%
+	&=& \Tr \Big[C \gamma_5 \underbrace{C^{-1} C}_{\idnt} \gamma_\mu \underbrace{C^{-1} C}_{\idnt} \cdots \underbrace{C^{-1} C}_{\idnt} \gamma_\alpha C^{-1} \Big] (-1)^6 \\
+	%%
+	&=& \Tr \Big[\gamma_5 \gamma_\mu \cdots \gamma_\alpha \underbrace{C^{-1}C}_{\idnt} \Big] \qquad \text{\footnotesize (Prop. cíclica de las trazas)} \\
+	%%
+	&=& \Tr[\gamma_\sigma \gamma_\nu \gamma_\beta \gamma_\xi \gamma_\alpha \gamma_5 \gamma_\mu] \\
+	%%
+	&=& - \Tr[\gamma_\sigma \gamma_\nu \gamma_\beta \gamma_\xi \gamma_\alpha \gamma_\mu \gamma_5] \,. \qquad \footnotesize \text{(}\gamma_5 \text{ anticonmuta)}\IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Reemplazando estos resultados en \eqref{eq:anomalias1} tenemos:
+%
+\begin{IEEEeqnarray*}{rCl}
+		\epsilon^\mu \epsilon^{*\nu} \epsilon^{*\xi} T^{abc}_{\mu \nu \xi} &=& (-\ii g)^3 v_f^2 a_f \epsilon^\mu_{k_1 + k_2} \epsilon^{*\nu}_{k_1} \epsilon^{* \xi}_{k_1} (\ii)^3 \frac{\lambda^c}{2} \frac{\lambda^b}{2} \frac{\lambda^a}{2} \\
+		%
+		&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \frac{(p + k_2)^\alpha p^\beta (p-k_1)^\sigma (-1)^2}{(p + k_2)^2 p^2 (p - k_1)^2} \\
+		%
+		&& \times\> \Tr[\gamma_\sigma \gamma_\nu \gamma_\beta \gamma_\xi \gamma_\alpha \gamma_\mu \gamma_5] \slj
+		%%
+		&=& (-\ii g)^3 v_f^2 a_f \epsilon^\mu_{k_1 + k_2} \epsilon^{*\nu}_{k_1} \epsilon^{* \xi}_{k_1} (\ii)^3 \frac{\lambda^c}{2} \frac{\lambda^b}{2} \frac{\lambda^a}{2} \\
+		%
+		&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \frac{(p + k_2)^\alpha p^\beta (p-k_1)^\sigma (-1)^2}{(p + k_2)^2 p^2 (p - k_1)^2} \\
+		%%
+		&& \times\> \Tr \bigg\{ \Big[(p - k_1)^\sigma \gamma_\sigma \Big]  \gamma_\nu \Big[p^\beta \gamma_\beta \Big] \gamma_\xi \Big[(p + k_2)^\alpha \gamma_\alpha \Big] \gamma_\mu \gamma_5 \bigg\} \slj
+		%%
+		&=& (-\ii g)^3 v_f^2 a_f \epsilon^\mu_{k_1 + k_2} \epsilon^{*\nu}_{k_1} \epsilon^{* \xi}_{k_1} (\ii)^3 \frac{\lambda^c}{2} \frac{\lambda^b}{2} \frac{\lambda^a}{2} \\
+		%
+		&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \Tr[\frac{(\slashed{p} - \slashed{k}_1)}{(\slashed{p} - \slashed{k}_1)^2} \gamma_\nu \frac{\slashed{p}}{\slashed{p}^2} \gamma_\xi \frac{(\slashed{p} + \slashed{k}_2)}{(\slashed{p} + \slashed{k}_2)^2} \gamma_\mu \gamma_5] \slj
+		%%
+		&=& (-\ii g)^3 v_f^2 a_f \epsilon^\mu_{k_1 + k_2} \epsilon^{*\nu}_{k_1} \epsilon^{* \xi}_{k_1} (\ii)^3 \frac{\lambda^c}{2} \frac{\lambda^b}{2} \frac{\lambda^a}{2} \\
+		%
+		&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \Tr[\frac{1}{(\slashed{p} - \slashed{k}_1)^2} \gamma_\nu \frac{1}{\slashed{p}^2} \gamma_\xi \frac{1}{(\slashed{p} + \slashed{k}_2)^2} \gamma_\mu \gamma_5] \,, \IEEEyesnumber \label{eq:anomalias_1_manipulado}
+\end{IEEEeqnarray*}
+
+\noindent donde, en el penúltimo paso, hemos usado el hecho de que:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\qty(\slashed{p} \pm \slashed{k})^2 &=& \slashed{p}^2 \pm \slashed{p}\slashed{k} \pm \slashed{k}\slashed{p} + \slashed{k}^2 \\
+	%
+	&=& p^2 \pm p_\mu \underbrace{{\qty(\gamma^\mu\gamma^\nu + \gamma^\nu\gamma^\nu)}}_{2g^{\mu\nu}} k_\nu + k^2 \\
+	%
+	&=& p^2 \pm 2p_\mu k^\mu + k^2 \\
+	%
+	&=& p^2 \pm 2p\vdot k + k^2
+\end{IEEEeqnarray*}
+%
+\begin{equation}
+	\therefore \qty(\slashed{p} \pm \slashed{k})^2 = \qty(p \pm k)^2 \,.
+\end{equation}
+
+Podemos ver que \eqref{eq:anomalias_1_manipulado} resulta siendo igual que la integral \eqref{eq:anomalias1Cruzado} para el término cruzado una vez que las masas se hacen cero, excepto por el producto de los generadores $\lambda$, que en el término cruzado tiene un orden diferente, $\lambda^b \lambda^c \lambda^a$. Sumando las expresiones para el término directo y para el término cruzado tenemos, entonces:
+%
+\begin{IEEEeqnarray*}{rCl}
+	\IEEEeqnarraymulticol{3}{l}{
+		\epsilon^\mu \epsilon^{*\nu} \epsilon^{*\xi} \qty(T_{1 \mu\nu\xi}^{\phantom{1} abc} + T_{2 \mu\nu\xi}^{\phantom{2} abc})
+	} \\
+	%
+	\hspace{4em} &=& (-\ii g)^3 v_f^2 a_f \epsilon^\mu_{k_1 + k_2} \epsilon^{*\nu}_{k_1} \epsilon^{* \xi}_{k_1} (\ii)^3 \qty(\frac{\lambda^c}{2} \frac{\lambda^b}{2} \frac{\lambda^a}{2} + \frac{\lambda^b}{2} \frac{\lambda^c}{2} \frac{\lambda^a}{2}) \\
+	%
+	&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \Tr[\frac{1}{(\slashed{p} - \slashed{k}_1)^2} \gamma_\nu \frac{1}{\slashed{p}^2} \gamma_\xi \frac{1}{(\slashed{p} + \slashed{k}_2)^2} \gamma_\mu \gamma_5] \slj
+	%
+	&=& (-\ii g)^3 v_f^2 a_f \epsilon^\mu_{k_1 + k_2} \epsilon^{*\nu}_{k_1} \epsilon^{* \xi}_{k_1} (\ii)^3 \acomm{\frac{\lambda^c}{2}}{\frac{\lambda^b}{2}}\frac{\lambda^a}{2} \\
+	%%
+	&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \Tr[\frac{1}{(\slashed{p} - \slashed{k}_1)^2} \gamma_\nu \frac{1}{\slashed{p}^2} \gamma_\xi \frac{1}{(\slashed{p} + \slashed{k}_2)^2} \gamma_\mu \gamma_5] \,.
+\end{IEEEeqnarray*}
+
+\textcolor{red}{la traza no está ya dada desde el inicio????}
+Los generadores $\lambda^i$ en la expresión están asociados a la forma en que los fermiones en el loop acoplan a los campos gauge de las patas externas. Supongamos que el fermión que circula en el loop es un quark, que tiene un índice de color con tres posibles valores, $1,\, 2,\, 3$ representando $r,\, g,\, b$ respectivamente. En este caso, los bosones serían gluones. En cada vértice podría entrar un quark con índice $1$ y salir otro con índice $2$ o $3$. Estos índices son los que corresponden a las matrices $\lambda$, que en la representación fundamental tienen dos índices matriciales asociados a la simetría gauge, $\lambda_{ij}$. Sin embargo, notemos que todos los índices en el producto de las tres matrices deben estar contraídos, pues el índice del fermión que sale en uno de los vértices, debe ser el mismo que el índice que entra en el siguiente vértice, y como el diagrama cierra, tenemos una situación como
+%
+\begin{equation*}
+	\lambda^a_{ij} \lambda^b_{jk} \lambda^c_{ki} \,,
+\end{equation*}
+
+\noindent por lo que el producto de generadores, para el diagrama que estamos estudiando, se reduce a una traza.
+
+En general, debemos sumar sobre todos los diagramas que tengan estados iniciales y finales iguales, por lo que debemos sumar sobre todos los fermiones que sienten la interacción. Debe aparecer entonces, un factor global
+%
+\begin{equation}
+	\sum_f v_f^2 a_f \Tr[\acomm{T^c}{T^b}T^a] = \sum_f v_f^2 a_f \Tr[T^a \acomm{T^b}{T^c}] \,,
+\end{equation}
+
+\noindent donde $T^i = \frac{1}{2}\lambda^i$.
+
+En el caso de QCD, $a_f = 0$, es decir, sólo hay acoplamientos vectoriales y por lo tanto esta suma es automáticamente cero.
+
+Si los tres acoplamientos son axiales se puede obtener una expresión análoga, excepto que proporcional a
+%
+\begin{equation}
+	\sum_f a_f^3 \Tr[T^a \acomm{T^b}{T^c}] \,.
+\end{equation}
+
+En todos los casos es necesario que $a_f \neq 0$. \\
+
+En general tenemos que para una partícula con acoplamiento izquierdo, la regla de Feynman está dada por
+%
+\begin{equation}
+	- \ii g \frac{\lambda^a}{2} \gamma_\mu \frac{(1 - \gamma_5)}{2} \,,
+\end{equation}
+
+\noindent mientras que las interacciones que acoplan a la parte derecha tendrán la regla de Feynman
+%
+\begin{equation}
+	- \ii g \frac{\lambda^a}{2} \gamma_\mu \frac{(1 + \gamma_5)}{2} \,.
+\end{equation}
+
+Vemos que los acoplamientos izquierdos y derechos entran con diferente signo en la parte axial (proporcional a $\gamma_5$), por lo que la contribución de las partes izquierdas, típicamente, se cancela con la contribución de las partes derechas, tal como ocurre en el caso de QCD y QED, que acoplan con igual intensidad a las partes derechas e izquierdas de todas las partículas. Sin embargo, la interacción débil únicamente acopla a la parte izquierda de los fermiones y por lo tanto, no hay cancelación automática de anomalías. Para que la teoría sea consistente, hay que asegurarse de que se cancelen mediante algún mecanismo.
+
+En general,
+%
+\begin{equation}
+	- \ii g \frac{\lambda^a}{2}\gamma_\mu (v_f - \gamma_5 a_f) \,.
+\end{equation}
+
+\begin{tabular}{lll}
+	Para partículas izquierdas,$\quad$ & $v_f = \sfrac{1}{2} \qquad$ & $a_f = + \sfrac{1}{2}$. \\
+	Para partículas derechas,& $v_f = \sfrac{1}{2}$, & $a_f = - \sfrac{1}{2}$. \\
+\end{tabular}\\
+
+Si la parte derecha e izquierda están en la misma representación del grupo tendremos
+%
+\begin{equation}
+	\sum_f \Tr[T^a_L \acomm{T^b_L}{T^c_L} - T^a_R \acomm{T^b_R}{T^c_R}] \,,
+\end{equation}
+
+\noindent donde $L$ o $R$ representa la quiralidad de los campos sobre los que actúa la representación.
+
+Definimos la anomalía asociada a cada parte como
+%
+\begin{equation}
+	\begin{IEEEeqnarraybox}[][c]{rCl}
+		A_L &=& \sum_f \Tr[T_L^a \acomm{T_L^b}{T_L^c}] \,, \slj
+		%%
+		A_R &=& \sum_f \Tr[T_R^a \acomm{T_R^b}{T_R^c}] \,,
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+\noindent y la anomalía total será
+%
+\begin{equation}
+	A_{(L,R)} = A_L - A_R \,.
+\end{equation}
+
+Para obtener una representación apropiada, expresamos el operador $\hat{T}^a_L \acomm{\hat{T}_R^b}{\hat{T}_R^c}$ como un conjunto de transformaciones lineales actuando sobre una base de kets $f$ que representan los fermiones del modelo. En general,
+%
+\begin{equation}
+	\Tr[\hat{T}^a_L \acomm{\hat{T}_L^b}{\hat{T}_L^c}] = \sum_\psi \mel{\psi}{\hat{T}^a_L \acomm{\hat{T}_L^b}{\hat{T}_L^c}}{\psi} \,,
+\end{equation}
+
+\noindent con $\psi$ un fermión del ME. El operador conecta el mismo fermión en el estado inicial y final.
+
+Podemos expresar el conjunto de fermiones del ME por $\{\varPsi_i\}$ como la suma de los fermiones en los multipletes $\varPsi$ así
+%
+\begin{equation}
+	\varPsi = \pmqty{\psi_1 \\ \psi_2 \\ \vdots \\ \psi_n}\,,
+\end{equation}
+
+\noindent de tal forma que
+%
+\begin{equation}
+	\qty{ \varPsi } = \cup_j \varPsi_j \,,
+\end{equation}
+
+\noindent así que la suma sobre todos los fermiones la podemos expresar como una suma sobre todos los multipletes:
+%
+\begin{equation}
+	\sum_{\psi_i} = \sum_{\varPsi}\sum_{\psi_i \in \varPsi} \,.
+\end{equation}
+
+Con esta definición,
+%
+\begin{equation}
+	\Tr[\hat{T}^a \acomm{\hat{T}^b}{\hat{T}^c}] = \sum_{\varPsi}\sum_{\psi_i \in \varPsi} \mel{\psi_i}{\hat{T}^a \acomm{\hat{T}^b}{\hat{T}^c}}{\psi_i} \,.
+\end{equation}
+
+Podemos definir el operador identidad dentro de cada multiplete como
+%
+\begin{equation}
+	\idnt_{d_\varPsi \times d_\varPsi} = \sum_j \dyad{\psi_j} \,,
+\end{equation}
+
+\noindent donde $d_\varPsi$ es la dimensión del multiplete $\varPsi$. Si introducimos este operador identidad en la expresión anterior tenemos
+%
+\begin{IEEEeqnarray}{rCl}
+	\Tr[\hat{T}^a \acomm{\hat{T}^b}{\hat{T}^c}] &=& \sum_\varPsi \sum_{\psi_i, \psi_j \in \varPsi} \bra{\psi_i} \hat{T}^a \textcolor{blue}{\dyad{\psi_j}} \acomm{\hat{T}^b}{\hat{T}^c} \ket{\psi_i} \IEEEnonumber \\
+	%%
+	&\equiv& \sum_{\varPsi} \sum_{i,j} T^a_{ij} \acomm{\hat{T}^b}{\hat{T}^c}_{ji} \,, \label{eq:anomalias_TrSumaMultipletes}
+\end{IEEEeqnarray}
+
+\noindent donde hemos logrado incorporar la suma sobre los multipletes $\sum_\varPsi$ a la expresión. Esto será fundamental para el análisis completo de las anomalías.
+
+Consideremos un caso que resulta ser muy común: si $T^a_{ij}$ es diagonal, i.e., $T^a_{ij} = Q_\varPsi^a \delta_{ij}$, proporcional a la identidad con carga única $Q_\varPsi$ para todo el multiplete $\varPsi$, \eqref{eq:anomalias_TrSumaMultipletes} se reduce a
+%
+\begin{IEEEeqnarray*}{rCl}
+	\Tr[\hat{T}^a \acomm{\hat{T}^b}{\hat{T}^c}] &=& \sum_{i,j} Q_\varPsi \delta_{ij} \acomm{\hat{T}^b}{\hat{T}^c}_{ji} \\
+	%
+	&=& \sum_{\varPsi} Q_\varPsi \sum_i \acomm{\hat{T}^b}{\hat{T}^c}_{ii} \\
+	%%
+	&=& \sum_{\varPsi} Q_\varPsi \Tr_{\varPsi}\acomm{\hat{T}^b}{\hat{T}^c} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Consideremos el caso en que todos los generadores cumplen con la misma característica, i.e., son diagonales y proporcionales a la identidad, y además
+%
+\begin{equation*}
+	Q_{ij}^a = Q_{\varPsi}^b \delta_{ij} = Q_{ij}^c \,,
+\end{equation*}
+
+\noindent de modo que
+%
+\begin{IEEEeqnarray*}{rCl}
+	\Tr[\hat{T}^a \acomm{\hat{T}^b}{\hat{T}^c}] &=& \sum_{\varPsi} \Tr[\acomm{Q_\varPsi^b}{Q_\varPsi^b}_{ij}] \\
+	%%
+	&=& \sum_\varPsi Q_\varPsi^a (Q_\varPsi^b)^2 2 \Tr[\mathbbm{1}_{d_\varPsi \times d_\varPsi}] \\
+	%%
+	&=& 2 \sum_\varPsi Q_\varPsi^a (Q_\varPsi^b)^2 d_\varPsi \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Este es un caso común para grupos de la forma $\U{1}_a \otimes (\U{1}_b)^2$. \\
+
+
+Por ejemplo, consideremos la primera familia del ME. Tenemos los dobletes
+%
+\begin{equation*}
+	\pmqty{u \\ d}_L \,, \qquad \pmqty{\nu \\ e}_L \,, \quad \text{con cargas }q \text{ y } e \,,
+\end{equation*}
+
+\noindent y tres singletes
+%
+\begin{equation*}
+	u_R \qc d_R, \qc e_R \qc \text{con cargas } u,\, d,\, e \,. 
+\end{equation*}
+
+Cada quark es un triplete de color, de modo que el doblete $\smqty(u \\ d)_L$ viene en tres colores diferentes
+%
+\begin{equation}
+	\pmqty{u_1 & u_2 & u_3 \\ d_1 & d_2 & d_3} \,,
+\end{equation}
+
+\noindent así que realmente es un sextete del grupo $\SU{3}_C \otimes \SU{2}_L$. Así, nuestra lista de multipletes es
+
+\begin{equation*}
+	\mqty{
+		\varPsi: \quad & 6 & 3 & 3 & 2 & 1 \\
+		& \quad \pmqty{u \\ d}_L & u_R & d_R & \quad \pmqty{\nu \\e}_L & e_R
+	} \,.
+\end{equation*}
+
+
+
+%-------------------------------------------------
+\section{Ejemplos de cancelación de anomalías}
+
+\subsection{Anomalía de sabor $\SU{2}$}
+
+Consideremos el caso de dos bosones de $\SU{2}$ y el bosón asociado a la hipercarga, i.e., $B_\mu$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{anomalias_ejm1.eps}
+\end{figure}
+
+La anomalía asociada a este diagrama será
+%
+\begin{equation}
+	A_L = \sum_\varPsi Y_\varPsi \Tr_\varPsi \qty[\acomm{T_L^a}{T_L^b}] \,,
+	\label{eq:anomalia_SU2-hipercarga}
+\end{equation}
+
+\noindent donde $T_L^a ,\, T_L^b$ son las formas de la matriz en la representación $\varPsi$, y $Y_\varPsi$ es la hipercarga de la representación. Para las componentes derechas, i.e., $u_r ,\, d_R ,\, e_R$ la representación de $T^a$ y $T^b$ es la matriz $\mathbb{0}_{1 \times 1}$, ya que la carga de isoespín bajo $\SU{2}_L$ es cero para estos fermiones.
+
+Para el doblete leptónico $\smqty(\nu \\ e)_L$ los generadores $T^a$ corresponden a las matrices de Pauli, $T^a = \sfrac{\sigma^a}{2}$. El sextete $\varPsi_{i \alpha}^q = \smqty(u_i \\ d_i)_L$ tiene dos índices, $i$ es de clor y $\alpha$ es de $\SU{2}_L$. Tenemos que $\varPsi^q_{i 1} = u_{Li}$ y $\varPsi^q_{i 2} = d_{Li}$. Los generadores que aplican sobre el índice $\alpha$ son las matrices de Pauli, i.e., $T^a = \sfrac{\sigma^a}{2}$. Si fijamos $i$, $\varPsi_{i\alpha}^q$ se comporta como un doblete, así que para efectos prácticos, como $i=1,\,2,\,3$, los tres colores, podemos considerar al sextete como equivalente a tres tripletes de $\SU{2}$. \\
+
+Para los dobletes de $\SU{2}$ tenemos las relaciones de anticonmutación
+%
+\begin{equation}
+	\acomm{T^a}{T^b} = \frac{\delta^{ab}}{2} \idnt_{2 \times 2} \,.
+\end{equation}
+
+En general para $\SU{n},\, n \geq 3$
+%
+\begin{equation}
+	\acomm{T^a}{T^b} = \frac{\delta^{ab}}{n} \idnt_{2 \times 2} + \underbrace{d^{abc}T^c}_{\text{suma sobre }c} \,,
+\label{eq:acomm_SU(n)}
+\end{equation}
+
+\noindent donde los coeficientes $d^{abc}$ son números reales.
+
+Con esto en \eqref{eq:anomalia_SU2-hipercarga} tenemos
+%
+\begin{IEEEeqnarray*}{rCl}
+	A_L &=& \sum_\varPsi Y_\varPsi \Tr[\frac{\mathbbm{1}_{2\times 2}}{2}] \delta^{ab} \\
+	%%
+	&=& \sum_\varPsi Y_\varPsi \times 1\delta^{ab} = \delta^{ab} \sum_\varPsi Y_\varPsi \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde $\varPsi : \varPsi_{i\alpha}^d = \smqty(u_L \\ d_L) ;\, \varPsi^\ell_\alpha = \smqty(\nu \\ e)$, en total cuatro dobletes con hipercargas
+%
+\begin{equation*}
+	Y_q = \frac{\sfrac{2}{3} - \sfrac{1}{3}}{2} = \frac{1}{6} \qc\quad Y_\ell = \frac{0 - 1}{2} = -\frac{1}{2} \,,
+\end{equation*}
+
+\noindent de manera que la anomalía
+%
+\begin{equation}
+	\Rightarrow A_L = \delta^{ab} \qty(\frac{1}{6} + \frac{1}{6} + \frac{1}{6} - \frac{1}{2}) = \delta^{ab} \qty(\frac{3}{6} - \frac{1}{2}) = 0 \,.
+\end{equation}
+
+$A_R$ es automáticamente cero.
+
+Esto es sorprendente, resulta ser que la anomalía proveniente de los quarks se cancela exactamente con la anomalía proveniente de los leptones. Esto es completamente accidental. En principio, en el planteamiento teórico del ME no hay nada que nos garantice esta cancelación. Es por ello que cuando 't Hooft notó por primera vez este fenómeno en 1971, el ME se consolidó como una descripción excepcional del universo en su escala fundamental. \\
+
+
+\subsection{Anomalía de color $\SU{3}$}
+
+
+Vamos a considerar ahora el caso
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{anomalias_ejm2.eps}
+\end{figure}
+
+Debemos, primero, identificar los tripletes de color:
+%
+\begin{equation*}
+	\varPsi : \pmqty{u \\ d}_L \qc d_R \qc u_R \,.
+\end{equation*}
+
+El sextete $\varPsi^q_{i\alpha}$ para un $\alpha$ fijo puede considerarse como un triplete, de modo que el sextete puede considerarse equivalente a dos tripletes:
+%
+\begin{equation*}
+	\varPsi^q_{i1} \qc \varPsi^q_{i2} \,.
+\end{equation*}
+
+En total tenemos cuatro tripletes por familia, así, teniendo en cuenta \eqref{eq:acomm_SU(n)} tenemos:
+%
+\begin{IEEEeqnarray*}{rCl}
+	A &=& \sum_\varPsi Y_\varPsi \Tr[\frac{\mathbbm{1}_{3\times 3}}{3} + d^{abc} T^c] \\
+	%%
+	&=& \sum_\varPsi T_\varPsi \cdot 1 \delta^{ab} \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent ya que $\Tr[T^c] = 0$ por ser generador de $\SU{3}$, que impone esta condición como consecuencia de que el determinante de las matrices de este grupo debe ser igual a la unidad.
+
+Para desarrollar la suma consideremos primero las partes izquierdas:
+%
+\begin{equation}
+	A_L = \delta^{ab} \qty(\frac{1}{6} + \frac{1}{6}) \,.
+\end{equation}
+
+La anomalía de las partes derechas requiere de la hipercarga de $u_R$ y $d_R$:
+%
+\begin{IEEEeqnarray*}{rCl}
+	Q &=& T^3_2 + Y_u \\
+	%%
+	\Rightarrow \frac{2}{3} &=& 0 + Y_u \quad \therefore\> Y_u = \frac{2}{3} \,,
+\end{IEEEeqnarray*}
+
+\noindent y de igual forma, $Y_d = -\sfrac{1}{3}$. Así,
+%
+\begin{IEEEeqnarray*}{rCl}
+	A_R &=& \sum_{\varPsi_R} Y_{\varPsi_R} \delta^{ab} \\
+	%%
+	&=& \delta^{ab} \qty(\frac{2}{3} - \frac{1}{3}) \\
+	%%
+	&=& \delta^{ab} \frac{1}{3} \,,
+\end{IEEEeqnarray*}
+
+\noindent de modo que
+%
+\begin{equation}
+	A = A_L - A_R = \delta^{ab} \qty(\frac{1}{6} + \frac{1}{6} - \frac{1}{3}) = 0 \,.
+\end{equation}
+
+Esto demuestra que la anomalía con dos gluones y un $B_\mu$ también se cancela.
+
+
+
+
+%--------------------------------------------------
+\subsection{Anomalía de hipercarga $\U{1}$}
+
+La siguiente anomalía es
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{anomalias_ejm3.eps}
+\end{figure}
+
+Bajo el grupo $\U{1}$ cada componente de los multipletes de sabor o de color corresponde a un singlete de $\U{1}_Y$, es decir, este grupo sólo tiene singletes como representaciones fundamentales.
+
+Esto corresponde al caso en que los tres generadores son diagonales, y anteriormente ya habíamos calculado una expresión general para este caso.
+%
+\begin{equation}
+	A_L = 2\sum_{\varPsi_L} Q^a_{\varPsi_L} \qty(Q^b_{\varPsi_L})^2 d_\varPsi \,.
+\end{equation}
+
+En una sola familia del ME tenemos
+%
+\begin{equation*}
+	\mqty{
+		\varPsi_L : \quad & 6_L & 2_L \\ 
+		 & \>\varPsi^q_{i\alpha} & \>\varPsi^{\ell}_\alpha 
+	} \,.
+\end{equation*}
+
+La hipercarga de $\varPsi^q_{i\alpha}$ es $\sfrac{1}{6}$ y la de $\varPsi^{\ell}_\alpha$ es $-\sfrac{1}{2}$. Entonces
+%
+\begin{IEEEeqnarray*}{rCl}
+	A_L &=& 2 \qty[\qty(\frac{1}{6}) \qty(\frac{1}{6})^2 \cdot 6 + \qty(-\frac{1}{2}) \qty(-\frac{1}{2})^2 \cdot 2] \\
+	%%
+	&=& 2 \qty[ \frac{1}{36} - \frac{1}{4}] = 2 \qty[\frac{1-9}{36}] = 2 \frac{(-8)}{36} = -\frac{4}{9} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+De manera similar, para las partes derechas tenemos
+%
+\begin{equation}
+	A_R = 2\sum_{\varPsi_R} Y_{\varPsi_R} (Y_{\varPsi_R})^2 d_{\varPsi_R} \,,
+\end{equation}
+
+\noindent con
+%
+\begin{equation*}
+	\mqty{
+		\varPsi_R : \quad & 3_R & 3_R & 1 \\ 
+		& d_R & u_R & e_R 
+	} \,.
+\end{equation*}
+
+La anomalía derecha será dada por
+%
+\begin{IEEEeqnarray*}{rCl}
+	A_R &=& 2 \qty[\qty(-\frac{1}{3}) \qty(-\frac{1}{3})^2 \cdot 3 \qty(\frac{2}{3}) \qty(\frac{2}{3})^2 \cdot 3 + (-1)(-1)^2 \cdot 1] \\
+	%%
+	&=& 2 \qty[ -\frac{1}{9} + 2 \frac{4}{9} - 1] = \frac{2[-1 - 1]}{9} = -\frac{4}{9} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+La diferencia de los dos resultados es cero
+%
+\begin{equation}
+	A = A_L - A_R = 0 \,.
+\end{equation}
+
+
+
+
+%-------------------------------------------------
+\subsection{Anomalía con tres gluones}
+
+Finalmente consideremos
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{anomalias_ejm4.eps}
+\end{figure}
+
+En este caso los tres vértices tienen generadores de $\SU{3}$, entonces consideraremos únicamente los multipletes de color. Sabemos que si una interacción acopla de igual forma a sus partes derechas e izquierdas, automáticamente la anomalía se cancela, pues es igual para las dos quiralidades. En el ME el asunto es no-trivial debido a que $\SU{2}$ acopla de forma diferente. No obstante, la interacción fuerte sí acopla igual a las partes derechas e izquierdas, por lo que la anomalía con tres gluones se cancela automáticamente. Veamos:
+%
+\begin{IEEEeqnarray*}{rCl}
+	A &=& \sum_\varPsi T_{ij}^a \acomm{T^b}{T^c}_{ji} \\
+	%%
+	&=& \sum_\varPsi \Tr[T^a \acomm{T^b}{T^c}] \\
+	%%
+	&=& \sum_\varPsi \Tr[T^a \qty(\frac{\mathbbm{1}_{n\times n}}{n} \delta^{ab} + d^{bcd} T^d)] \\
+	%%
+	&=& \sum_{\varPsi} d^{bcd} \Tr[T^a T^d] = \sum_\varPsi d^{bcd}\delta^{ab} \\
+	%%
+	&=& \sum_\varPsi d^{bca} = \sum_\varPsi d^{abc} \,. \IEEEyesnumber \label{eq:sumaTrazas_3gluones}
+\end{IEEEeqnarray*}
+
+Esta cantidad se obtiene independientemente de si los multipletes son derechos o izquierdos, por lo tanto su diferencia da cero y la anomalía se cancela. Cuando una interacción acopla igual a los multipletes derechos y a los izquierdos se dice que hay \emph{simetría vectorial}, de lo contrario es una \emph{simetría quiral}.
+
+\begin{cabox}
+	Las simetrías vectoriales cancelan automáticamente anomalías.	
+\end{cabox}
+
+Este caso no es particularmente interesante en el ME, pero existe un modelo denominado 3-3-1, que es muy importante para la fenomenología y que tiene un grupo $\SU{3}_L$. En este caso, el acoplamiento a las partes derechas no necesariamente es el mismo, por lo que no está garantizada la cancelación de anomalía. \\
+
+
+Para $n \geq 3$, cuando no existen partes derechas (o izquierdas), las anomalías se cancelan gracias a las representaciones conjugadas. Para un álgebra dada
+%
+\begin{equation}
+	\comm{T^a}{T^b} = \ii f^{abc} T^C
+	\label{eq:anom_algebra}
+\end{equation}
+
+\noindent es posible construir una representación no equivalente para los generadores definidos como $\tilde{T}^a = -T^{a*}$ que también satisfacen el álgebra, i.e.,
+%
+\begin{equation}
+	\comm{-T^{a*}}{-T^{b*}} = +\ii f^{abc} (-T^{c*}) \,.
+	\label{eq:anom_algebra-conj}
+\end{equation}
+
+Tomando el conjugado de \eqref{eq:anom_algebra} se puede demostrar \eqref{eq:anom_algebra-conj}. Es fácil ver que la representación conjugada contribuye con un signo opuesto a la anomalía:
+
+Partimos del siguiente resultado, que había sido encontrado en \eqref{eq:sumaTrazas_3gluones}
+%
+\begin{IEEEeqnarray*}{rCl}
+	A = \sum_{\varPsi} \Tr[T^a \acomm{T^b}{T^c}] &=& \sum_\varPsi d^{abc} \\
+	%%
+	\Rightarrow \qty(\sum_{\varPsi} \Tr[T^a \acomm{T^b}{T^c}])^* &=& \qty(\sum_\varPsi d^{abc})^* \\
+	%%
+	\sum_{\varPsi} \Tr[T^{a*} \acomm{T^{b*}}{T^{c*}}] &=& \sum_\varPsi d^{abc} \,,
+\end{IEEEeqnarray*}
+
+\noindent puesto que $d^{abc}$ es real. Ahora, si multiplicamos por $(-1)^3$ a ambos lados tenemos
+%
+\begin{IEEEeqnarray*}{rCl}
+	(-1)^3 \sum_{\varPsi} \Tr[T^{a*} \acomm{T^{b*}}{T^{c*}}] &=& (-1)^3 \sum_\varPsi d^{abc} \\
+	%
+	\sum_{\varPsi} \Tr[-T^{a*} \acomm{-T^{b*}}{-T^{c*}}] &=& - \sum_\varPsi d^{abc} \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent que es la anomalía de la representación conjugada,
+%
+\begin{equation}
+	A^{\text{conj}} = - \sum_\varPsi d^{abc} \,.
+\end{equation}
+
+Esta anomalía se cancela con la original.
+%
+\begin{equation}
+	A + A^{\text{conj}} = 0 \,,
+\end{equation}
+
+\noindent donde, en este caso, las dos anomalías deben sumarse, puesto que el signo menos en los ejemplos anteriores provenía del hecho de que los proyectores derecho e izquierdo introducen un signo opuesto en la componente axial. En este caso, como estamos considerando únicamente acoplamiento a una de las partes, las contribuciones de las anomalías entran a la suma con signo positivo, pero el signo menos aparece naturalmente en la representación conjugada.
+
+En este tipo de teorías quirales, que únicamente acoplan a una de las partes, debemos tener igual número de fermiones en representaciones normales que fermiones en representaciones conjugadas, para que las anomalías de esta clase se cancelen.
+
+
+
+
+%--------------------------------------------------
+\subsection{Anomalía gravitacional}
+
+Enunciamos, sin demostración, la acción de un fermión en presencia de un campo gravitacional, i.e., el acoplamiento de los fermiones a la métrica:
+%
+\begin{equation}
+	S = \int \dd[4]{x} \sqrt{-g} \psi \qty(\gamma^\mu \codv_\mu)\psi \,,
+\end{equation}
+
+\noindent donde $g$ es el determinante de la métrica (que es negativo), y
+%
+\begin{equation}
+	\codv_\mu = \partial_\mu \psi + \frac{1}{4} \omega\indices{_\mu^{ab}} \gamma_{ab} \psi \,,
+\end{equation}
+
+\noindent es la derivada covariante bajo transformación de espinores, con $\omega\indices{_\mu^{ab}}$ son parámetros que dependen ángulos y las velocidades, y
+%
+\begin{equation}
+	\gamma_{ab} = \frac{1}{2} \qty(\gamma_a \gamma_b- \gamma_b \gamma_a) \,.
+\end{equation}
+
+Esta es la interacción de un gravitón con un fermión. El gravitón está relacionado con la métrica $g^{\mu \nu}$, que es un tensor de rango dos. Su determinante es una función de este tensor. La métrica está relacionada con la presencia de masa y la curvatura del espacio-tiempo, por lo que esta interacción tiene naturaleza gravitacional y es independiente del sabor. Podemos considerar de manera genérica, que todos los fermiones tienen la misma carga bajo la interacción gravitacional.
+
+Así pues, en analogía con el caso de la anomalía con tres bosones de hipercarga, para tres gravitones las anomalías serán dadas por:
+%
+\begin{IEEEeqnarray}{rCl}
+	A_L &=& \underbrace{(1)(1)^2 \cdot 6}_{\substack{\text{sextete izq.}\\ \smqty(u \\ d)_L}} + \underbrace{(1)(1)^2 \cdot 2}_{\substack{\text{doblete lept.}\\ \smqty(\nu \\ e)_L}} = 8 \,, \slj
+	%%
+	A_R &=& \underbrace{(1)(1)^2 \cdot 3}_{\substack{\text{triplete up}\\ u_R}} + \underbrace{(1)(1)^2 \cdot 3}_{\substack{\text{triplete down}\\ d_R}} + \underbrace{(1)(1)^2 \cdot 1}_{\substack{\text{singlete der.}\\ e_R}} = 7 \,.
+\end{IEEEeqnarray}
+
+La cancelación de la anomalía gravitacional requiere de la existencia del \textbf{neutrino derecho}, puesto que sólo en este caso $A_R = 8$. Este es uno de los argumentos fuertes a favor de la existencia de los neutrinos derechos

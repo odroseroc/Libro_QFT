@@ -1,0 +1,432 @@
+\chapter{Teorías gauge}
+\label{ch:gauge}
+
+En este capítulo se expone el formalismo de teorías gauge de manera general. Partimos de la definición del álgebra de un grupo gauge para construir la derivada covariante que operará dentro del mismo. Posteriormente estudiamos las propiedades del conmutador de derivadas covariantes y lo utilizamos para construir cantidades gauge-invariantes.
+
+
+
+
+
+\section{Simetrías}
+
+Algunos Lagrangianos se conocen de la física básica, pero en general, un sistema no suele estar bien entendido y se debe construir un Lagrangiano que, se espera, describa el sistema. En tales condiciones resultan útiles las simetrías, i.e., transformaciones que dejan el sistema invariante. El teorema de Noether postula que existe una cantidad conservada asociada a cada simetría, de modo que si conocemos algunas cantidades conservadas de un sistema es posible trabajar en reversa para encontrar las simetrías del sistema y a partir de ellas inferir la forma de un Lagrangiano conveniente.
+
+
+%---------------------
+\subsection{Clasificación de simetrías}
+
+Las simetrías de un sistema pueden ser espacio-temporales o simetrías internas. En el primer caso, las transformaciones de simetría conectan los campos en diferentes puntos del espacio-tiempo, como por ejemplo en el caso de las transformaciones de Lorentz. En el segundo caso, las transformaciones conectan diferentes campos, o diferentes componentes del mismo campo, en un mismo punto del espacio-tiempo. Ejemplo de esto son las transformaciones gauge.
+
+A su vez, las simetrías pueden ser discretas, donde el parámetro para la transformación de simetría puede tomar únicamente valores discretos. Ejemplos de tales simetrías son la paridad, la inversión del tiempo o la conjugación de carga. Por otra parte, las simetrías también pueden ser continuas, donde los parámetros relevantes pueden tomar valores continuos. Ejemplo de éstas son las invariancias de varios Lagrangianos libres bajo rotaciones de fase de los campos involucrados.
+
+Las simetrías continuas también pueden ser de dos clases. Son globales cuando los parámetros de transformación son independientes del espacio-tiempo, tales como las simetrías de fase mencionadas anteriormente. Por el contrario, cuando los parámetros dependen del espacio-tiempo las simetrías se denominan locales o simetrías gauge. Como veremos, éstas requieren la presencia de nuevas partículas en la teoría, denominadas bosones gauge en general.
+
+
+
+%--------------------
+\subsection{Grupos y simetrías}
+
+Asociado a cada simetría existe un objeto matemático conocido como \emph{grupo de simetría}. Un grupo es un conjunto de `elementos' en el cual dos de ellos pueden ser combinados mediante alguna operación que satisfaga las cuatro propiedades listadas abajo. La operacion, en general es denominada \emph{multiplicación del grupo}. Denotaremos esta operación por un pequeño círculo ($\circ$) y los elementos del grupo por $x,\, y$, etc. La operación debe satisfacer las siguientes propiedades:
+
+\begin{enumerate}
+	\item El `producto' $x \circ y$ debe pertenecer al grupo, para todos los elementos $x,\, y$.
+	
+	\item Debe existir un elemento $e$ en el grupo tal que $e \circ x = x \circ e = x$ para todo elemento $x$. Este $e$ se denomina \emph{identidad}.
+	
+	\item Todo elemento $x$ debe tener un inverso en el grupo, i.e., debe existir otro elemento $x^{-1}$ tal que $x \circ x^{-1} = x^{-1} \circ x = e$.
+	
+	\item La multiplicación del grupo debe ser \emph{asociativa}, i.e., $x \circ (y \circ z) = (x \circ y) \circ z$ para todos los elementos $x,\, y,\, z$.
+\end{enumerate}
+
+Como ya lo mencionamos, la simetrías de un sistema físico proveen restricciones útiles sobre la posible forma de su Lagrangiano. Una operación de simetría es aquella que deja la acción invariante. Todas las operaciones de simetría constituyen un grupo. Dicho grupo se denomina el \emph{grupo de simetría} de la teoría. El grupo de simetría incluye al grupo de Poincaré en una teoría covariante relativista. Tal invariancia conduce a la conservación del cuadrimomento y del momento angular. Adicionalmente, el grupo de simetría puede incluir simetrías internas, en las que nos enfocaremos ahora.
+
+
+
+
+%--------------------
+\subsection{Ejemplos de grupos de simetrías continuas}
+
+Consiedermos las transformaciones de fase. Estas operaciones son dadas por
+%
+\begin{equation}
+	\psi(x) \rightarrow \ee^{-\ii q \theta} \psi(x) \,,
+\end{equation}
+
+\noindent donde, en este caso, $\psi(x)$ son campos de Dirac. Los elementos del gr4upo de simetría en este caso son números complejos de la forma $\ee^{\ii q \theta}$, y dos de estos elementos se combinan por medio de la ley de multiplicación de números complejos. Alternativamente, estos elementos pueden ser vistos como matrices unidimensionales unitarias, que se combinan mediante la ley de multiplicación de matrices. Por esta razón el grupo de simetría se denota por $\U{1}$, la letra U indicando matrices unitarias, y el número entre paréntesis indicando la dimensión de las mismas. Para el Lagrangiano de Dirac libre,
+%
+\begin{equation}
+	\lagdn_{\text{Dirac}} = \overline{\psi} \qty(\ii \gamma^\mu \partial_\mu - m)\psi \,,
+\end{equation}
+
+\noindent esta es una simetría interna global. Podemos decir entonces, que el Lagrangiano de Dirac libre es invariante bajo una simetría $\U{1}$ global.
+
+En electrodinámica cuántica se tiene la misma simetría, excepto que los parámetros $\theta$ pueden depender el espacio-tiempo. Se dice entonces que el Lagrangiano de la electrodinámica cuántica tiene una simetría $\U{1}$ local. \\
+
+
+Consideremos ahora el Lagrangiano libre para dos campos de Dirac:
+%
+\begin{equation}
+	\lagdn = \overline{\psi}_1 \qty(\ii \slashed{\partial} - m_1)\psi_1 + \overline{\psi}_2 \qty(\ii \slashed{\partial} - m_2)\psi_2 \,,
+\label{eq:LagnDiracLibre_dosCampos}
+\end{equation}
+
+\noindent donde hemos empleado la notación slash de Dirac, $\slashed{\partial} \equiv \gamma^\mu \partial_\mu$.
+
+Por supuesto este Lagrangiano es invariante bajo rotaciones de fase independientes de los dos campos, i.e., dos transformaciones $\U{1}$ independientes. Esta simetría se denomina $\U{1} \otimes \U{1}$. No obstante, en el caso especial en que $m_1 = m_2$, la simetría es aún mayor. Esto se ilustra mejor construyendo el objeto
+%
+\begin{equation}
+	\varPsi = \pmqty{\psi_1 \\ \psi_2}\,.
+\end{equation}
+
+Aquí, $\psi_1$ y $\psi_2$ son espinores independientes, lo que quiere decir que las componentes de $\psi_1$ no se mezclan con aquellas de $\psi_2$ bajo transformaciones de Lorentz. Sin embargo, en este caso consideraremos una simetría \emph{interna} en la que las componentes de los dos espinores diferentes se mezclarán entre ellas. Para este propósito basta con suprimir la estructura de las componentes de cada espinor y tratar a cada uno de ellos como un objeto individual. El objeto $\varPsi$ puede ser entonces llamado un \emph{doblete}. Usando este doblete, podemos expresar el Lagrangiano en \eqref{eq:LagnDiracLibre_dosCampos} en la forma
+%
+\begin{equation}
+	\lagdn = \overline{\varPsi} \qty(\ii \slashed{\partial} - m) \varPsi \,,
+\label{eq:LagnDiracLibre_doblete}
+\end{equation}
+
+\noindent donde el término entre paréntesis debe ser entendido como un múltiplo de una matriz $2 \times 2$, y $m = m_1 = m_2$.
+
+Ahora, consideremos la siguiente transformación sobre $\varPsi$, que lleva $\varPsi$ a $\varPsi'$, dada por
+%
+\begin{equation}
+	\varPsi' = U \varPsi \,,
+\end{equation}
+
+\noindent donde $U$ es una matriz unitaria $2 \times 2$. Esto mantiene invariante al Lagrangiano de \eqref{eq:LagnDiracLibre_doblete}. Similarmente a como hicimos para el grupo de matrices unitarias $1 \times 1$ anteriormente, un grupo de matrices unitarias $n \times n$ se denomina $\U{n}$. El Lagrangiano en \eqref{eq:LagnDiracLibre_doblete} tiene, entonces, una simetría $\U{2}$ global.
+
+Es conveniente pensar en el grupo $\U{2}$ como un producto de dos subgrupos. Toda matriz unitaria puede ser escrita como el producto de dos objetos, una matriz unitaria con determinante 1 y una fase global. Cada una de estas partes forma un grupo en sí mismo. La segunda parte es el grupo de transformaciones de fase discutido anteriormente y que hemos denominado $\U{1}$. El primer grupo es llamado $\SU{2}$, donde la `S' se refiere a `special', indicando que las matrices tienen determinante 1. Entonces el grupo $\U{2}$ pude ser escrito como $\SU{2} \otimes \U{1}$, y en general, $\U{n}$ como $\SU{n} \otimes \U{1}$.
+
+
+
+
+%--------------------
+\subsection{Generadores de grupos continuos}
+
+El número de elementos en cualquier grupo continuo es infinito, sin embargo, pueden representarse mediante un número finito de parámetros continuos. Por ejemplo, en las transformaciones $\U{1}$ mencionadas anteriormente, el parámetro es $\theta$.
+
+Para cualquier grupo $G$ podemos escribir un elemento general como $U(\beta_1,\, \beta_2,\, \cdots,\, \beta_r)$, donde $r$ es el número total de parámetros para especificar un elemento general del grupo. En general, siempre pueden escogerse estos parámetros de tal forma que todos sean cero para el elemento identidad del grupo. Los generadores del grupo son definidos por
+%
+\begin{equation}
+	T_a = \ii \pdv{U}{\beta_a} \eval_{\beta=0} \,.
+\end{equation}
+
+Esto quiere decir que los elementos infinitesimales del grupo pueden ser escritos como
+%
+\begin{equation}
+	1 - \ii \beta_\alpha T_a \,,
+\end{equation}
+
+\noindent usando la convención de suma para el índice $a$. Para cierta clase de grupos, denominados \emph{grupos de Lie} -- que inclute los grupos unitarios que hemos venido discutiendo --, esto implica que un elemento general del grupo es dado por
+%
+\begin{equation}
+	U = \exp{(- \ii\beta_a T_a)} \,,
+\end{equation}
+
+\noindent donde los $\beta_a$ no necesariamente son pequeños. Obviamente, la elección de los $T_a$ no es única. Siempre se puede difinir alguna combinación linealmente independientes de los $\beta_a$ como parámetros independientes, en cuyo caso los generadores también serán combinaciones lineales de los $T_a$ dados arriba.
+
+Un grupo se define por la multiplicación de todos los pares de elementos. Así, a fin de reproducir la multiplicación correcta, los generadores $t_a$ deben satisfacer ciertas propiedades. Para $\SU{2}$, por ejemplo, los $T_a$ no conmutan, y la multiplicación de dos elementos del grupo es dada por la fórmula de Baker-Campbell-Hausdorff:
+%
+\begin{equation}
+	\ee^A \ee^B = \exp \qty(A + B + \frac{1}{2} \comm{A}{B} + \frac{1}{12} \qty(\comm{A}{\comm{A}{B}} - \comm{B}{\comm{A}{B}}) + \cdots) \,.
+\end{equation}
+
+De aquí es claro que, una vez que el conmutador de los generadores es conocido, es posible evaluar la multiplicación de cualquier par de elementos del grupo. Para el grupo $\SU{2}$ los generadores pueden ser escogidos de tal forma que los conmutadores son dados por
+%
+\begin{equation}
+	\comm{T_a}{T_b} = \ii \epsilon_{abc} T_c \,,
+\end{equation}
+
+\noindent donde $\epsilon^{abc}$ denota el símbolo de Levi-Civita.
+
+En general, para cualquier grupo $\SU{n}$, el número de generadores es $n^2 - 1$ y el conmutador de éstos toma una forma más general dada por
+%
+\begin{equation}
+	\comm{T_a}{T_b} = \ii f_{abc} T_c \,,
+\end{equation}
+
+\noindent donde $f_{abc}$ se denominan las \emph{constantes de estructura} del grupo. Claramente $f_{abc} = - f_{bac}$. La colección de todas las relaciones de conmutación de los generaodres se denomina el \emph{álgebra} del grupo. Si todas las constantes de estructura son cero, esto implica que la multiplicación del grupo es conmutativa. En tal caso el grupo se denomina conmutativo o \emph{abeliano}.
+
+
+
+%---------------------------------------------------------------------------------
+\section{Derivada covariante de un grupo gauge}
+\label{sec:dvCovariante}
+
+Consideremos un grupo gauge que satisface
+%
+\begin{equation}
+    \comm{T^a}{T^b} = \ii f^{abc} T^c \,.
+\end{equation}
+
+Las relaciones de conmutación de esta forma se denominan el \emph{álgebra del grupo}~\footnote{Esta denominación no es inequívoca pues, en ciertos contextos, "álgebra del grupo" puede hacer referencia únicamente a los generadores del mismo.}, donde $\ii$ es la unidad imaginaria, $T^{a},\, T^{b},\,  T^{c}$ son los generadores del grupo, y $f^{abc}$ son las \emph{constantes de estructura} del mismo.
+
+Para un campo $\psi$ que pertenece a una representación del grupo en cuestión, sus propiedades de transformación bajo éste son dadas por~\footnote{Los índices $i,\, j$ de estas expresiones no hacen referencia a índices espaciales de las cantidades en cuestión, sino que son índices internos asociados al grupo gauge en el que estamos trabajando y las propiedades de transformación de los objetos matemáticos respecto a este último.}
+%
+\begin{equation}
+    \psi'_i = U_{ij} \psi_j \,,
+\end{equation}
+
+\noindent donde
+%
+\begin{equation}
+    U_{ij} = \qty(\ee^{-\ii \theta^{a}(x) T^a})_{ij}\,.
+\end{equation}
+
+La \emph{derivada covariante}~\footnote{En este caso, el índice $\mu$ de la derivada covariante sí se refiere a un índice espacial.}:
+%
+\begin{equation}
+    \boxed{\codv_{\mu} = \partial_\mu - \ii g A_\mu}
+\end{equation}
+
+\noindent se define como un tensor de rango 1, i.e.
+%
+\begin{equation} \label{eq:trnsfD_muPsi}
+    (\codv_{\mu} \psi)' = \codv_{\mu}' \psi' = U \codv_{\mu} \psi\,,
+\end{equation}
+
+\noindent transformando igual que el campo $\psi$, donde~\footnote{El campo $A_\mu$ será escogido de una forma conveniente para que se cumpla la definición. Por ello se le denomina \emph{campo de calibración} (gauge field).}
+%
+\begin{IEEEeqnarray*}{rCl}
+    \codv_{\mu}' \psi' &=& \qty(\partial_\mu - \ii g A'_\mu)\psi' = \qty(\partial_\mu - \ii g A'_\mu)U\psi \\
+    %
+    &=& \qty(\partial_\mu U)\psi + U \partial_\mu \psi - \ii g A'_\mu U \psi \,,
+\end{IEEEeqnarray*}
+
+\noindent que por definición debe ser igual a $U\codv_{\mu} \psi$ :
+%
+\begin{equation}
+    \codv_{\mu}' \psi' = U\qty[U^{\dag} (\partial_\mu U) + \partial_\mu - \ii g U^{\dag} A'_\mu U] \psi \mustb U \qty[\partial_\mu - \ii g A_\mu] \psi\,.
+\end{equation}
+
+Comparando las expresiones tenemos que:
+%
+\begin{IEEEeqnarray*}{c}
+    -\ii g U^{\dag}A'_\mu U + U^{\dag} \partial_\mu U = -\ii g A_\mu \\
+    %
+    -\cancel{\ii g} \qty[U^{\dag}A'_\mu U + \frac{\ii}{g} U^{\dag} \partial_\mu U ] = - \cancel{\ii g}A_\mu \\
+    %
+    U^\dag A'_\mu U = A_\mu - \frac{\ii}{g} (\partial_\mu U) U^\dag \slj
+    %
+    \label{eq:trnsf_Amu_1}
+    \therefore\> \boxed{A'_\mu = U A_\mu U^\dag - \frac{\ii}{g} (\partial_\mu U) U^\dag} \,. \IEEEyesnumber \\
+\end{IEEEeqnarray*}
+
+
+Para desarrollar este resultado, consideremos transformaciones infinitesimales en el grupo gauge. Éstas estarán dadas por una $U$ pequeña. Estudiemos el comportamiento del segundo término en RHS bajo este tipo de transformaciones
+%
+\begin{equation} \label{eq:trPartial_muU-Inf_1}
+    \partial_\mu U = \partial_\mu \ee^{-\ii \theta^a T^a} = -\ii \qty(\partial_\mu \theta^a) T^a \ee^{-\ii \theta^a T^a} \,,
+\end{equation}
+
+Nótese que el hecho de que $U$ sea pequeño implica que los parámetros $\theta^a$ en la exponencial sean también pequeños. Podemos expandir la exponencial en series de Taylor:
+%
+\begin{equation} \label{eq:U_expTaylor}
+    \ee^{-\ii \theta^a T^a} \approx 1 - \ii \theta^a T^a \,,
+\end{equation}
+
+\noindent donde hemos despreciado los términos de orden superior en los $\theta^a$. Con este resultado en \eqref{eq:trPartial_muU-Inf_1} podemos escribir
+%
+\begin{IEEEeqnarray*}{c}
+    \partial_\mu U \approx -\ii \qty(\partial_\mu \theta^a) T^a - \cancelto{0}{\qty(\partial_\mu \theta^a)\theta^a T^a} \lj
+    %
+    \label{eq:trPartial_muU_resultado}
+    \partial_\mu U \approx -\ii \qty(\partial_\mu \theta^a) T^a \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde se desprecia el segundo término por ser de orden $2$ en $\theta^a$.
+
+Consideremos ahora el primer término en RHS de \eqref{eq:trnsf_Amu_1}:
+%
+\begin{IEEEeqnarray*}{rCl}
+    U A_\mu U^\dag &=& \ee^{-\ii \theta^a T^a} A_\mu \ee^{+\ii \theta^b T^b} \\
+    %
+    &\approx& (1 - \ii \theta^a T^a) A_\mu (1 + \ii \theta^b T^b) \\
+    %
+    &=& A_\mu - \ii \theta^a T^aA_\mu + \underbrace{A_\mu \ii \theta^b T^b}_{b \rightarrow a} + \cancelto{0}{\theta^aT^a A_\mu \theta^bT^b} \\
+    %
+    \label{eq:UAmuUdag-1}
+    &=& A_\mu - \ii \theta^a \comm{T^a}{A_\mu} \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde en el tercer paso hemos despreciado el último término por ser de orden cuadrático en $\theta^a$ y hemos renombrado el índice $b$, en virtud de que éste está contraído y por ende es un índice mudo.
+
+Ahora, el campo $A_\mu$ puede ser expresado en términos de los generadores del grupo~\footnote{En general esto es cierto para un grupo gauge cuyos operadores sean matrices unitarias puesto que sus generadores constituyen una base completa. En casos como los grupos de matrices especiales, que imponen la condición de traza cero sobre sus generadores, éstos no son una base completa. No obstante es posible mostrar que el conjunto de los generadores del grupo junto con la identidad sí lo son. El argumento que sigue es idéntico para casos como el anterior, pues al tomar el conmutador de la identidad con $A^bT^b$ el término desaparece.}
+%
+\begin{equation}
+    A_\mu = A_\mu^bT^b \,,
+\end{equation}
+
+\noindent donde $A^b_\mu$ representa un coeficiente escalar. Entonces, \eqref{eq:UAmuUdag-1} puede expresarse como:
+%
+\begin{IEEEeqnarray*}{rCl}
+    U A_\mu U^\dag &\approx& A_\mu - \ii\theta^a \comm{T^a}{A^b_\mu T^b} \\
+    %
+    &=& A_\mu - \ii \theta^a A^b_\mu \underbrace{\comm{T^a}{T^b}}_{\ii f^{abc} T^c} \slj
+    %
+    \IEEEeqnarraymulticol{3}{c}{ \label{eq:UAmuUdag-resultado}
+        \therefore\> U A_\mu U^\dag \approx A_\mu + \theta^a A^b_\mu f^{abc} T^c
+    } \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Retornando a la Ecuación~\eqref{eq:trnsf_Amu_1}, introduciendo los resultados hallados en (\ref{eq:trPartial_muU_resultado},~\ref{eq:UAmuUdag-resultado}) tenemos que el campo de calibración $A'$ transformará infinitesimalmente según:
+%
+\begin{equation} \label{eq:trnsfA_mu-inftsm}
+    \boxed{A'_\mu \approx A_\mu + f^{abc} \theta^a A^a_\mu T^c - \frac{1}{g} \qty(\partial_\mu \theta^a) T^a } \,.
+\end{equation} \\
+
+
+Ya hemos visto que la derivada covariante $\codv_{\mu}\psi$ del campo transforma multiplicativamente. Veamos ahora las propiedades de transformación del operador $\codv_{\mu}$. Partiendo de \eqref{eq:trnsfD_muPsi} tenemos que:
+%
+\begin{IEEEeqnarray*}{rCl}
+    \codv_{\mu}' \psi' &=& U \codv_{\mu} \psi \\
+    %
+    &=& U \codv_{\mu} \> U^\dag \underbrace{U \> \psi}_{\psi'} \\
+    %
+    &=& (U \codv_{\mu} U^\dag) \psi' \,,
+\end{IEEEeqnarray*}
+
+\noindent donde, en el segundo paso hemos introducido una matriz identidad en la forma de $\mathbbm{1} = U U^\dag$. Por lo tanto, el operador de derivada covariante $\codv_{\mu}$ transformará según:
+%
+\begin{equation} \label{eq:trnsfOperadorCodv}
+    \boxed{\codv_{\mu}' = U \codv_{\mu} U^\dag} \,.
+\end{equation}
+
+Nótese, el operador $\codv_{\mu}$ no transforma multiplicativamente, únicamente el operador aplicado sobre el campo $\codv_{\mu}\psi$ lo hace.\\
+
+
+
+\section{Conmutador de derivadas covariantes}
+
+Definamos un tensor $F_{\mu\nu}$ como:
+%
+\begin{equation} \label{eq:def:Fmunu}
+    \boxed{F_{\mu\nu} \equiv \frac{\ii}{g} \comm{\codv_{\mu}}{\codv_{\nu}}} \,.
+\end{equation}
+
+Siendo que este tensor es un producto de operadores, vamos a aplicarlo a una función arbitraria $\phi$ para determinar la forma en que puede expresarse. Tenemos entonces:
+%
+\begin{IEEEeqnarray*}{rCl}
+    F_{\mu\nu} \phi &=& \frac{\ii}{g} \comm{\codv_{\mu}}{\codv_{\nu}} \phi \\
+    %%
+    &=& \frac{\ii}{g} \comm{(\partial_\mu - \ii g A_\mu)}{(\partial_\nu - \ii g A_\nu)} \phi \\
+    %%
+    &=& \frac{\ii}{g} \qty[ (\partial_\mu - \ii g A_\mu)(\partial_\nu - \ii g A_\nu) - (\partial_\nu - \ii g A_\nu)(\partial_\mu - \ii g A_\mu) ] \phi \\
+    %%
+    &=& \frac{\ii}{g} \qty[ (\partial_\mu - \ii g A_\mu)(\partial_\nu \phi - \ii g A_\nu \phi) - (\partial_\nu - \ii g A_\nu)(\partial_\mu \phi - \ii g A_\mu \phi) ] \\
+    %%
+    &=& \frac{\ii}{g} \Big[
+        \cancel{\partial_\mu \partial_\nu \phi}
+        - \ii g \partial_\mu (A_\nu \phi)
+        - \ii g A_\mu \partial_\nu \phi
+        + (\ii g)^2 A_\mu A_\nu \phi \Big. \\
+        %
+     && \Big. -\> \qty(
+        \cancel{\partial_\nu \partial_\mu \phi}
+        - \ii g \partial_\nu (A_\mu \phi)
+        - \ii g A_\nu \partial_\mu \phi
+        + (\ii g)^2 A_\nu A_\mu \phi
+        ) \Big] \slj
+    %%
+    &=& \frac{\ii}{g} \Big[
+        - \ii g (\partial_\mu A_\nu) \phi
+        - \cancel{\ii g A_\nu \partial \phi}
+        - \bcancel{\ii g A_\mu \partial_\nu \phi}
+        + (\ii g)^2 A_\mu A_\nu \phi
+        \Big. \\
+    %
+     && \Big.
+        +\> \ii g (\partial_\nu A_\mu) \phi
+        + \bcancel{\ii g A_\mu \partial_\nu \phi}
+        + \cancel{\ii g A_\nu \partial_\mu \phi}
+        - (\ii g)^2 A_\nu A_\mu \phi
+        \Big] \slj
+    %%
+    &=& \frac{\ii}{g} (-\ii g) \Big[ (\partial_\nu A_\mu) \phi - (\partial_\mu A_\nu) \phi +  \ii g A_\mu A_\nu \phi - \ii g A_\nu A_\mu \phi \Big] \\
+    %%
+    &=& \Big[ \partial_\nu A_\mu - \partial_\mu A_\nu + \ii g \comm{A_\mu}{A_\nu} \Big] \phi
+\end{IEEEeqnarray*}
+
+Si expresamos los campos $A$ en términos de los generadores del grupo, como ya se había hecho anteriormente, con $A_\mu = A^a_\mu T^a$ y $A_\nu = A^b_\nu T^b$, tenemos que
+%
+\begin{equation}
+    \comm{A_\nu}{A_\mu} = A^a_\mu A^b_\nu \comm{T^b}{T^a} = A^a_\mu A^b_\nu \qty(\ii f^{bac} T^c) \,,
+\end{equation}
+
+\noindent así, dado que~\footnote{Esto es consecuencia directa de la definición del álgebra del grupo: $\ii f^{abc}T^c = \comm{T^a}{T^b} = -\comm{T^b}{T^a} = - \ii f^{bac} T^c$} $f^{bac} = -f^{abc}$ tenemos:
+%
+\begin{IEEEeqnarray*}{rCl}
+    F_{\mu\nu} \phi = \frac{\ii}{g} \comm{\codv_{\mu}}{\codv_{\nu}} \phi &=& \qty[ \partial_\nu A^c_\nu T^c - \partial_\mu A^c_\mu T^c + \ii g A^a_\mu A^b_\nu \qty(-\ii f^{abc} T^c) ] \phi \\
+    %%
+    &=& \qty[\partial_\mu A^c_\mu - \partial_\nu A^c_\nu + g A^a_\mu A^b_\nu f^{abc}] T^c \phi \,,
+\end{IEEEeqnarray*}
+
+\noindent o de manera equivalente:
+%
+\begin{equation} \label{eq:Fmunu_proporcionalaTc}
+    \boxed{ F_{\mu\nu} = \qty[\partial_\mu A^c_\mu - \partial_\nu A^c_\nu + g A^a_\mu A^b_\nu f^{abc}] T^c } \,.
+\end{equation}
+
+Puesto que $\codv_{\mu}$ es genuinamente covariante, es de esperar que $F_{\mu\nu}$ sea también covariante. Veamos:
+%
+\begin{IEEEeqnarray*}{rCl}
+    F'_{\mu\nu} &=& \frac{\ii}{g} \comm{U \codv_{\mu} U^\dag}{U \codv_{\nu} U^\dag} \\
+    %%
+    &=& \frac{\ii}{g} \Big[ U \codv_{\mu} \underbrace{U^\dag U}_{\mathbbm{1}} \codv_{\nu} U^\dag - U \codv_{\nu} \underbrace{U^\dag U}_{\mathbbm{1}} \codv_{\mu} U^\dag \Big] \\
+    %%
+    &=& \frac{\ii}{g} U \qty[ \codv_{\mu} \codv_{\nu} - \codv_{\nu} \codv_{\mu} ] U^\dag \\
+    %%
+    &=& \frac{\ii}{g} U \comm{\codv_{\mu}}{\codv_{\nu}} U^\dag \slj
+    %%
+    \IEEEeqnarraymulticol{3}{c}{
+        \therefore\> F'_{\mu\nu} = U F_{\mu\nu} U^\dag \,.
+    } \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Esto es, $F_{\mu\nu}$ transforma de manera idéntica que el operador de derivada covariante. Esta característica será importante para la construcción de invariantes gauge, como veremos a continuación. Consideremos:
+%
+\begin{IEEEeqnarray*}{rCl}
+    \Tr[F'_{\mu\nu} F^{\prime\mu\nu}] &=& \Tr \big[ U F_{\mu\nu} \underbrace{U^\dag U}_{\mathbbm{1}} F^{\mu\nu} U^\dag \big] \\
+    %%
+    &=& \Tr \big[ F_{\mu\nu} F^{\mu\nu} \underbrace{U^\dag U}_{\mathbbm{1}} \big] \\
+    %%
+    &=& \Tr[F_{\mu\nu} F^{\mu\nu}] \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde, en el penúltimo paso hemos hecho uso de la propiedad cíclica de las trazas.
+
+Teniendo en cuenta esto, definamos la Lagrangiana~\footnote{Nótese aquí que los índices $\mu\nu$ están contraídos, de modo que la cantidad que hemos definido es un invariante de Lorentz. No obstante, este hecho no implica que esta lagrangiana sea invariante del grupo gauge; los índices que su comportamiento bajo el grupo de Lorentz no determinan su comportamiento bajo el grupo gauge.}:
+%
+\begin{equation}
+    \lagdn = - \frac{1}{2} \Tr[F_{\mu\nu} F^{\mu\nu}]\,.
+\end{equation}
+
+Ahora, habíamos visto que $F_{\mu\nu}$ resulta ser proporcional a los generadores $T^a$ del grupo gauge (cf. Ecuación~\eqref{eq:Fmunu_proporcionalaTc}), por lo que es posible escribirlos como $F^a_{\mu\nu}T^a$, con lo cual la lagrangiana es dada por:
+%
+\begin{equation*}
+    \lagdn = - \frac{1}{2} \Tr[(F_{\mu\nu}^a T^a) (F^{b \mu\nu}T^b)] = -\frac{1}{2} F^a_{\mu\nu} F^{b \mu\nu} \underbrace{\Tr[T^a T^b]}_{\frac{1}{2} \delta^{ab}}
+\end{equation*}
+
+\begin{equation}
+    \therefore \lagdn = -\frac{1}{4} F_{\mu\nu}^a F^{a \mu\nu} \,.
+\end{equation}
+
+Aquí, el factor $\frac{1}{2}\delta^{ab}$ originado de la traza de los generadores es simplemente la normalización que se escoge para estos últimos. \\
+
+
+
+La derivada covariante es fundamental para la construcción de los Lagrangianos invariantes en teoría cuántica de campos. Por ejemplo, en el caso del Lagrangiano para fermiones, es posible ver que la invariancia de la ecuación de Dirac con acople mínimo~\footnote{Acople mínimo significa que se ha reemplazado la derivada parcial original por la derivada covariante} es inmediata, veamos:
+
+\begin{IEEEeqnarray*}{rCl}
+    \lagdn'_{\text{Dirac}} &=& \Bar{\psi}' \qty( \ii \gamma^\mu \codv_{\mu}' - m ) \psi' \\
+    %%
+    &=& (U \psi)^\dag \gamma^0 \qty( \ii \gamma^\mu U \codv_{\mu} U^\dag - m U U^\dag ) U \psi \\
+    %%
+    &=& \psi^\dag \gamma^0 U^\dag U \qty( \ii \gamma^\mu \codv_{\mu} - m ) U^\dag U \psi \\
+    %%
+    &=& \bar{\psi} \qty( \ii \gamma^\mu \codv_{\mu} - m ) \psi = \lagdn_{\text{Dirac}} \,.
+\end{IEEEeqnarray*}
+
+Nótese que las matrices $U$ son libres de saltar a las matrices $\gamma$ presentes, puesto que las primeras operan bajo índices de la simetría interna del grupo gauge, mientras que las segundas incorporan índices fermiónicos. estos índices son independientes entre sí. Veremos más adelante que el acople mínimo implica que la ecuación de Dirac no sea igualada a cero, sino igualada a una fuente.
+
+******Ejercicio: demostrar que la traza de cualquier contracción de la forma $F^{\mu_1 \mu_2} F_{\mu_2 \nu_3} F^{\mu_3 \mu_4} \cdots F^{\mu_{n} \mu_{n+1}}$ es invariante gauge

@@ -1,0 +1,677 @@
+\chapter{Simetrías rotas en la naturaleza}
+\label{ch:simetriasRotas}
+
+En este capítulo exploramos la ruptura espontánea de la simetría, denominada así ya que es producto de la estructura misma del Lagrangiano de un sistema físico. Veremos que este fenómeno implica la aparición de partículas sin masa denominadas bosones de Nambu-Goldstone, primero para un caso específico y luego postularemos el teorema del mismo nombre, que generaliza este resultado a todos los Lagrangianos que presentan ruptura espontánea de la simetría. Estas partículas no-masivas nunca han sido observadas, lo cual constituye un serio dilema para la física de partículas, cuya resolución se da por medio del mecanismo de Higgs, que ubica el escondite de estos elusivos bosones en la estructura misma de los campos gauge masivos.
+
+
+
+
+\section{Ruptura espontánea de la simetría}
+
+En teorías de campos, para describir un sistema físico, se plantea un Lagrangiano. Éste debe tener todas las simetrías que se imponen sobre el sistema. El estado de menor energía de los campos en el Lagrangiano es lo que denominamos el \emph{vacío}. En general esperaríamos que los estados mínimos de estos campos tengan un valor mínimo igual a cero, pero esto no siempre es así. Cuando los campos tienen un valor mínimo diferente de cero se presentan rompimientos de las simetrías bajo las que inicialmente se construye el Lagrangiano. Este fenómeno se denomina \emph{ruptura espontánea de la simetría}, pues la semilla de esta ruptura está implícita en el Lagrangiano.
+
+El caso más simple de ruptura espontánea de simetría se tiene para un campo escalar. Consideremos el Lagrangiano:
+%
+\begin{equation} \label{eq:lagrangianoEscalar_paraRuptura}
+    \lagdn = \frac{1}{2} \partial_\mu \phi \partial^\mu \phi - \frac{1}{2} m^2 \phi^2 - \frac{\lambda}{4!} \phi^4 \,.
+\end{equation}
+
+Consideraremos la configuración para el campo escalar que tiene mínima energía. La mínima energía que puede tener un potencial es cuando el campo es constante (no cambia en el tiempo) y uniforme (el valor del campo en dos puntos cualesquiera es el mismo). Bajo esta premisa, el término que involucra las derivadas desaparece, puesto que $\partial_\mu \phi = 0$ para $\phi$ constante. Identificamos este término con la energía cinética del sistema, y recordando que el Lagrangiano es la diferencia de la energía cinética y la potencial, identificamos
+%
+\begin{equation}
+    V = (- \frac{1}{2} m^2 \phi^2 - \frac{\lambda}{4!} \phi^4)
+\end{equation}
+
+\noindent con la energía potencial. En la mínima configuración, el sistema no posee energía cinética, únicamente potencial.\\
+
+Un campo siempre tiene sus interacciones. Las interacciones de un campo dependen de los términos que son permitidos por la simetría. En este caso podríamos considerar la existencia de una simetría: si el campo es real, al cambiar $\phi \longrightarrow -\phi$, el Lagrangiano es invariante. Esto es lo que se denomina simetría $Z_2$. Vamos a ver que ésta se va a romper al considerar ciertos aspectos básicos de este Lagrangiano.
+
+Como lo dijimos antes, la configuración de mínima energía del sistema involucra únicamente el término de energía potencial $V$ en el Lagrangiano. Así pues, la energía potencial debe ser estacionaria respecto a cambios pequeños en el potencial cuando el sistema está en la configuración de mínima energía, i.e., en la configuración de mínima energía:
+%
+\begin{IEEEeqnarray*}{rCl}
+    \pdv{V}{\phi} &\mustb& 0 \\
+    %%
+    \Rightarrow\> \pdv{\phi} \qty[\frac{1}{2} m^2 \phi^2 + \frac{\lambda}{4!} \phi^4] &=& 0 \\
+    %%
+    m^2 \phi + \frac{4 \lambda \phi^3}{4!} \phi^4 &=& 0 \\
+    %%
+    \label{eq:condicion_minimaE_escalar}
+    \phi \qty(m^2 + \frac{4\lambda \phi^2}{4!}) &=& 0 \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Existen dos posibilidades que satisfacen esta condición: la primera es la condición trivial de que el campo $\phi = 0$. La segunda posibilidad es que el término entre paréntesis se haga cero.
+
+Notemos en primer lugar, que el coeficiente $\lambda$ debe ser necesariamente positivo, pues de esta forma, cuando $\phi$ tiende a infinito, el potencial también tiende a infinito, lo cual es consistente con las condiciones físicas. Si por el contrario $\lambda$ fuese negativo, tendríamos que cuando $\phi$ tiende a infinito, el potencial tiende al infinito negativo y la configuración de mínima energía del sistema estaría en $-\infty$, lo cual no tiene sentido físico. Esta es una situación general para todos los sistemas físicos, por lo que:
+
+\begin{cabox}
+    En un Lagrangiano, el coeficiente acompañando a la potencia más grande del campo, debe ser positivo, y la potencia más grande del campo debe ser par.
+\end{cabox}
+
+
+Sabiendo esto, vemos que si $m^2 > 0$, el término entre paréntesis en \eqref{eq:condicion_minimaE_escalar} no puede hacerse cero, y por lo tanto la única forma de satisfacer la condición es la situación trivial $\phi = 0$. No obstante si admitimos $m^2 < 0$ tenemos que:
+%
+\begin{IEEEeqnarray*}{c}
+    m^2 + \frac{4\lambda \phi^2}{4!} = 0 \\
+    %%
+    \Rightarrow \> m^2 = -\frac{\lambda}{3!} \phi^2 \slj
+    %%
+    \therefore \> \phi = \pm \sqrt{\frac{-6 m ^2}{\lambda}} ,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent en la configuración de mínima energía de este Lagrangiano, el campo $\phi$ no es cero sino una constante, i.e. el valor esperado en el vacío (VEV) del campo está dado por:
+%
+\begin{equation}
+  \label{eq:vevPhiRompimiento}
+    \mel{0}{\phi}{0} = \sqrt{\frac{-6m^2}{\lambda}} \equiv{v}
+\end{equation}
+
+Una forma usual de ilustrar el comportamiento de estos potenciales es graficar en el isoespacio, que está dado por la magnitud del campo $\phi$ en las abscisas y la magnitud del potencial $V$ en las ordenadas. En la fig.~\ref{fig:potencialEnIsoespacio} se muestra el potencial en el isoespacio para las dos situaciones anteriormente discutidas.
+%
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[scale=0.25]{parbPot.png}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.25]{mexHatPot.png}
+    \end{subfigure}
+    \caption{Potencial en el isoespacio para $m^2$ positivo (izquierda) y negativo (derecha).}
+    \label{fig:potencialEnIsoespacio}
+\end{figure}
+
+Para el caso $m < 0$ existen dos nuevos mínimos del potencial en valores del campo diferente de cero, y el VEV que hemos encontrado yace en el máximo local que se presenta en $\phi = 0$ del "\emph{potencial sombrero mexicano}"~\footnote{Esta es una traducción literal del nombre común dado en ingles a esta forma de potencial, "mexican-hat potential" y suele ser el término usado en América Latina. En España, sin embargo, el nombre común para este potencial suele ser "potencial culo de botella".}. Es decir, hemos escogido mal el vacío cuando consideramos que éste yacía en la configuración en que el campo tiene una magnitud cero.
+
+A fin de obtener un VEV igual a cero para el campo debemos correr el valor de $\phi$ definiendo:
+%
+\begin{equation}
+  \label{eq:phiTilde}
+    \tilde{\phi} \equiv \phi - v \,,
+\end{equation}
+
+\noindent con $v$ dado por \eqref{eq:vevPhiRompimiento}. Así, vemos que:
+%
+\begin{equation}
+    \mel{0}{\tilde{\phi}}{0} = \mel{0}{\phi}{0} - v = 0\,.
+\end{equation}
+
+Por supuesto esto implica que el potencial ya no es simétrico respecto al valor mínimo del campo, puesto que al hacer esto hemos decidido realizar nuestra expansión en torno a uno solo de los mínimos del potencial sombrero mexicano, y por lo tanto la simetría del Lagrangiano se romperá. Veamos cómo:
+
+Con la definición \eqref{eq:phiTilde} tenemos que la derivada del campo $\phi$ presente en \eqref{eq:lagrangianoEscalar_paraRuptura}, en términos de $\tilde{\phi}$ es dada por:
+
+\begin{equation*}
+    \partial_\mu \phi = \partial_\mu \qty(\tilde{\phi} + v) = \partial_\mu \tilde{\phi} \,.
+\end{equation*}
+
+Es decir, el término cinético en el Lagrangiano no se verá afectado, lo cual es de esperar, ya que el vacío en torno al cual interpretaremos el sistema únicamente depende del término de energía potencial. Ahora, las potencias de $\phi$ quedarán dadas por:
+%
+\begin{IEEEeqnarray}{rCl}
+    \phi^2 &=& \qty(\tilde{\phi} + v)^2 = \tilde{\phi}^2 + 2\tilde{\phi}v + v^2 \,, \slj
+    %%
+    \phi^4 &=& \qty(\tilde{\phi} + v)^4 = \tilde{\phi}^4 + 4\tilde{\phi}^3v + 6\tilde{\phi}^2v^2 + 4\tilde{\phi}v^3 + v^4 \,,
+\end{IEEEeqnarray}
+
+\noindent de modo que el Lagrangiano en términos del nuevo campo $\tilde{\phi}$  queda dado por:
+%
+\begin{IEEEeqnarray*}{rCl}
+    \lagdn &=& \frac{1}{2}\partial_\mu\tilde{\phi}\partial^\mu\tilde{\phi}
+     - \frac{1}{2} m^2 \qty[\tilde{\phi}^2 + 2\tilde{\phi}v + v^2]
+     - \frac{\lambda}{4!} \qty[\tilde{\phi}^4 + 4\tilde{\phi}^3v + 6\tilde{\phi}^2v^2 + 4\tilde{\phi}v^3 + v^4] \\
+    %%
+    &=& \frac{1}{2}\partial_\mu\tilde{\phi}\partial^\mu\tilde{\phi}
+      - \frac{1}{2}m^2\tilde{\phi}^2
+      - m^2\tilde{\phi} v
+      - \frac{1}{2}m^2 \qty(\frac{-6m^2}{\lambda})
+      - \frac{\lambda}{4!}\tilde{\phi}^4
+      - \frac{\lambda}{3!} \tilde{\phi}^3v
+      - \frac{\lambda}{4} \phi^2\qty(\frac{-6m^2}{\lambda}) \\
+      %
+      && -\> \frac{\lambda}{3!}\tilde{\phi}v\qty(\frac{-6m^2}{\lambda})
+      + \frac{\lambda}{4!}\qty(\frac{-6m^2}{\lambda})^2 \slj
+    %%
+    &=& \frac{1}{2}\partial_\mu\tilde{\phi}\partial^\mu\tilde{\phi}
+      - \frac{1}{2}m^2\tilde{\phi}^2
+      - \cancel{m^2v\tilde\phi}
+      + 3\frac{m^4}{\lambda}
+      - \frac{\lambda}{4!} \tilde{\phi}^4
+      - \frac{\lambda v}{3!} \tilde{\phi}^3
+      + \frac{3}{2} m^2 \tilde{\phi}^2
+      + \cancel{m^2v\tilde{\phi}}
+      - \frac{3m^4}{2\lambda} \slj
+    %%
+    \IEEEeqnarraymulticol{3}{c}{
+        \boxed{ \lagdn = \frac{1}{2}\partial_\mu\tilde{\phi}\partial^\mu\tilde{\phi} + m^2\tilde{\phi}^2 - \frac{\lambda v}{6}\tilde{\phi}^3 - \frac{\lambda}{4!}\tilde{\phi}^4} \,. \IEEEyesnumber \label{eq:LagrSimRota_escalar}
+    }
+\end{IEEEeqnarray*}
+
+Este nuevo Lagrangiano\footnote{Las operaciones realizadas conllevan a que el Lagrangiano también involucre un término adicional $+ (3m^2/2\lambda)$, pero los términos constantes como este son irrelevantes, puesto que al introducir el Lagrangiano en las ecuaciones de Euler-Lagrange, el proceso de diferenciación hará que desaparezcan. Por ello, como el término adicional no contribuye a las ecuaciones de movimiento, lo hemos despreciado en la expresión final \eqref{eq:LagrSimRota_escalar}.} en términos del campo $\tilde{\phi}$ involucra un término proporcional a $\tilde{\phi}^3$ que hace que ya no sea invariante respecto a un cambio $\tilde{\phi} \rightarrow -\tilde{\phi}$; \emph{la simetría se ha roto}. Nótese que el término cuadrático ha cambiado de signo respecto al Lagrangiano original (cf. ecuación~\eqref{eq:lagrangianoEscalar_paraRuptura}). No obstante, como $m^2 < 0$, tenemos que la cantidad proporcional a $\tilde{\phi}^2$ sigue siendo negativa, y se conserva el signo negativo convencional que acompaña a la masa en los Lagrangianos.
+
+
+
+
+%----------------------------------------------------
+\section{Teorema de Nambu-Goldstone}
+
+Hacia la década de 1960, Yoichiro Nambu y Jeffrey Goldstone la ruptura espontánea de la simetría. Como veremos, el teorema que lleva su nombre postula que este fenómeno conlleva a la aparición en el Lagrangiano, de un campo no masivo denominado bosón de Nambu-Goldstone.
+
+Para desarrollar el formalismo que conlleva al planteamiento de este teorema, notemos primero que la ruptura espontánea de la simetría se da debido a que el vacío no es invariante bajo alguna simetría, aunque la acción sí lo es. Es decir, si partimos de una simetría y de su corriente conservada $J^\mu$, el teorema de Noether postula que su carga conservada será dada por
+%
+\begin{equation}
+    Q = \int_V \dd[3]{x} J^0(x, t) \,,
+\end{equation}
+
+\noindent donde la componente cero de la cuadricorriente $J^0$ es la densidad de carga. Vamos a demostrar que, si la carga $Q$ se conserva, debe cumplirse que
+
+\begin{equation}
+    \boxed{\lim_{V \rightarrow \infty} \dv{t} \comm{Q(t)}{A} = 0} \,,
+\end{equation}
+
+\noindent para algún campo escalar $A$.
+
+\begin{proof}
+Partimos del hecho de que la conservación de la corriente implica que su divergencia es cero, i.e
+%
+\begin{equation*}
+    \partial_\mu J^\mu = 0\,.
+\end{equation*}
+
+\noindent En consecuencia, podemos escribir:
+%
+\begin{IEEEeqnarray*}{rCl}
+    0 &=& \int_V \dd[3]{x} \comm{\partial_\mu}{A} \\
+    %%
+    &=& \int_V \dd[3]{x} \comm{\partial_0 J^0 + \partial_i J^i}{A} \\
+    %%
+    &=& \dv{t} \int_V \dd[3]{x} \comm{J^0}{A} + \comm{\int_V \dd[3]{x} \div{}\vb*{J}}{A} \\
+    %%
+    &=& \dv{t} \int_V \dd[3]{x} \comm{J^0}{A} + \comm{\int_S \dd{\vb*S} \vdot \vb*{J}}{A} \,.
+\end{IEEEeqnarray*}
+
+En la tercera linea hemos sacado la derivada con respecto al tiempo de la integral, puesto que se está integrando únicamente sobre las variables espaciales. Por supuesto, la derivada parcial dentro de la derivada debe salir como una derivada total. Por su parte, nótese que para la parte espacial, hemos introducido la integral dentro del conmutador, y en el proceso hemos sacado el campo $A$ de la integral. Esto se debe a que este campo se asume uniforme y constante~\footnote{El operador de campo $A$ -- que puede representar, por ejemplo, un observable -- siempre puede, en general, hacerse independiente del tiempo y la posición. Esto se debe a que, lo que estamos buscando en esta instancia, es un campo que afectará a toda la teoría. Como estamos investigando las propiedades fundamentales del modelo, es correcto asumir que el valor del campo $A$ debe ser igual en cualquier punto del espacio-tiempo. Así, este campo puede expresarse de una manera que sea invariante bajo traslaciones.}. En el último paso hemos empleado el teorema de la divergencia.
+
+Ahora, como hemos convertido la integral espacial en una integral de superficie, podemos asumir que escogemos la superficie de integración como siendo lo suficientemente lejana de la fuente, haciendo que el segundo término en la última expresión se haga cero, de manera que:
+%
+\begin{IEEEeqnarray*}{rCl}
+    \dv{t} \int_V \dd[3]{x} \comm{J^0}{A} &=& 0 \\
+    %%
+    \dv{t} \comm{\int \dd[3]{x} J^0}{A} &=& 0 \\
+    %%
+    \dv{t} \comm{Q}{A} &=& 0\,.
+\end{IEEEeqnarray*}
+
+Este resultado es importante puesto que nos está indicando que, pese a que la simetría se ha roto, las cargas conservadas del sistema siguen siendo las mismas.\\
+\end{proof}
+
+
+Ahora discutiremos las consecuencias de que el vacío en el modelo no sea único, sino que sea degenerado. Consideremos el VEV $\mel{0}{A}{0} \neq 0$ y hagamos una transformación sobre el vacío con la carga conservada:
+%
+\begin{equation}
+   \label{eq:trf:vacio}
+    \ket{\tilde{0}} = \ee^{-\ii Q} \ket{0} \qc\quad \bra{\tilde{0}} = \bra{0} \ee^{\ii Q}\,.
+\end{equation}
+
+Si el vacío no es único, como ocurrió cuando analizamos la ruptura espontánea de la simetría con el potencial sombrero mexicano, se dice que el vacío no es invariante y está degenerado. En el caso que estudiamos previamente ocurrían dos vacíos posibles para el campo escalar y relacionamos los dos candidatos a vacío por medio de una simetría discreta.
+
+En la mayoría de los casos, no obstante, ocurre que no existen dos, sino un infinito continuo de posibles mínimos. Éstos pueden estar relacionados entre sí por medio de una simetría de la forma \eqref{eq:trf:vacio} de transformaciones en el isoespacio. En el nuevo vacío,
+%
+\begin{equation}
+    \mel{\tilde{0}}{A}{\tilde{0}} = \mel{0}{\ee^{\ii Q \epsilon} A \ee^{-\ii Q \epsilon}}{0} \,,
+\end{equation}
+
+\noindent pero:
+%
+\begin{IEEEeqnarray*}{rCl}
+    \ee^{\ii Q \epsilon} A \ee^{-\ii Q \epsilon} &=& \qty(1 + \ii Q \epsilon + \mathscr{O}(\epsilon^3)) A \qty(1 - \ii Q \epsilon + \mathscr{O}(\epsilon^3)) \\
+    %%
+    &=& A + \ii Q A \epsilon - \ii A Q \epsilon + \mathscr{O}(\epsilon^3) \\
+    %%
+    &\approx& A + \ii \epsilon \comm{Q}{A} \IEEEyesnumber
+\end{IEEEeqnarray*}
+%
+\begin{IEEEeqnarray*}{rCl}
+    \Rightarrow \mel{\tilde{0}}{A}{\tilde{0}} &\approx& \mel{0}{A + \ii \epsilon \comm{Q}{A}}{0} \\
+    &=& \mel{0}{A}{0} + \ii \epsilon \mel{0}{\comm{Q}{A}}{0} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Nótese que, en el caso en que el operador $A$ no conmuta con $Q$, el VEV se modificará por una cantidad $+ \qty(\ii \epsilon \mel{0}{\comm{Q}{A}}{0})$. En general, estamos viendo que el vacío en esta teoría, puede no ser invariante bajo las ciertas transformaciones.
+Pese a esto, hemos visto que la derivada del conmutador involucrado sí se hace cero, asegurándose que las corrientes se conservan.
+
+Supongamos entonces, que $\comm{Q}{A} \neq 0$. Entonces,
+
+\begin{IEEEeqnarray}{rCl}
+    \lim_{V \rightarrow \infty} \mel**{0\,}{\comm{\int_V \dd[3]{x} J^0(x)}{A}}{\,0} &=& \mel**{0\,}{\comm{\int_V \dd[3]{x} \ee^{\ii\hat{P}\vdot x}\> J^0(0)\> \ee^{-\ii\hat{P}\vdot x}}{A}}{\,0} \,, \label{eq:limvevcomQA1}
+\end{IEEEeqnarray}
+
+\noindent donde hemos escrito $J^0(x)$ en términos del generador de traslaciones $\hat{P}$ -- operador momentum -- como
+%
+\begin{equation*}
+    J^0(x) = \ee^{\ii\hat{P}\vdot x}\> J^0(0)\> \ee^{-\ii\hat{P}\vdot x}
+\end{equation*}
+
+\noindent via expansión de Baker-Campbell-Hausdorff~\footnote{Ver el Apéndice al final de este capítulo.}, con
+%
+\begin{equation*}
+    \comm{\hat{P}_i}{J^0} = \dv{J^0}{x^i} \,.
+\end{equation*}
+
+Ahora, una traslación espacial en el vacío, deja a éste invariante, i.e.
+%
+\begin{equation*}
+    \ee^{-\ii \hat{P}\vdot x}\ket{0} = \ket{0} \,, \qquad y \qquad \bra{0}\ee^{\ii \hat{P}\vdot x} = \bra{0} \,.
+\end{equation*}
+
+Con esto, continuando en \eqref{eq:limvevcomQA1} tenemos:
+%
+\allowdisplaybreaks[0]
+\begin{IEEEeqnarray*}{rCl}
+    \lim_{V \rightarrow \infty} \mel**{0\,}{\comm{\int_V \dd[3]{x} J^0(x)}{A}}{\,0} &=& \int_V \dd[3]{x} \left[ \qty(\bra{0} \ee^{\ii \hat{P}\vdot x}) J^0 \ee^{-\ii \hat{P} \vdot x} A \ket{0} \right. \\
+     %
+     && \left. -\> \bra{0} A \ee^{\ii \hat{P}\vdot x} J^0 \qty(\ee^{-\ii \hat{P} \vdot x} \ket{0}) \right] \slj
+    %%
+    &=& \int_V \dd[3]{x} \qty[ \mel{0}{J^0 \ee^{-\ii \hat{P} \vdot x} A - A \ee^{\ii \hat{P}\vdot x} J^0 }{0} ] \neq 0\,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+\allowdisplaybreaks[1]
+
+Ahora, vamos a introducir autoestados de energía. Supongamos que $\{\ket{n}\}$ es la base de autoestados del Hamiltoniano -- sea cual sea -- del sistema, por lo tanto,
+%
+\begin{equation}
+   \label{eq:completez_goldstone}
+    \mathbbm{1} = \sum_n \dyad{n} \,,
+\end{equation}
+
+\noindent tal que
+%
+\begin{equation}
+    \ee^{-\ii \hat{P}_0 t} = \ee^{-\ii E_n t} \,,
+\end{equation}
+
+\noindent ya que la componente cero del cuadrimomento es precisamente la energía, por lo que al aplicar la componente cero del operador momentum sobre autoestado, obtendremos su energía $E_n$. Entonces, introduciendo dos identidades en forma de \eqref{eq:completez_goldstone} tenemos:
+%
+\begin{IEEEeqnarray*}{rCl}
+    \underbrace{\lim_{V \rightarrow \infty} \mel**{0\,}{\comm{\int_V \dd[3]{x} J^0(x)}{A}}{\,0}}_{\equiv \bigstar} &=& \sum_n \int_V \dd[3]{x} \Big[ \mel{0}{J^0 \ee^{-\ii \hat{P} \vdot x} \overbrace{\dyad{n}}^{\mathbbm{1}} A}{0} \Big. \\
+     %
+     && \Big. -\> \mel{0}{A \underbrace{\dyad{n}}_{\mathbbm{1}} \ee^{\ii \hat{P}\vdot x} J^0 }{0} \Big] \,,
+\end{IEEEeqnarray*}
+
+\noindent pero
+%
+\begin{equation*}
+    \ee^{-\ii \hat{P} \vdot x} \ket{n} = \ee^{-\ii p \vdot x} \ket{n} = \ee^{-\ii E_n t} \ee^{\ii \vb*{p} \vdot \vb*{x}} \ket{n} \,,
+\end{equation*}
+
+\noindent donde $p,\, x$ son el cuadrimomentum y la cuadriposición, respectivamente. Así,
+%
+\begin{IEEEeqnarray*}{rCl}
+    \bigstar &=& \sum_n \bigg[ \overbrace{\qty(\int_V \dd[3]{x} \ee^{\ii \vb*{p}\vdot\vb*{x}})}^{(2 \cpi)^3 \delta(\vb*{p})} \ee^{-\ii E_n t} \mel{0}{J^0(0)}{n}\mel{n}{A}{0} \bigg. \\
+     %
+     && \bigg. -\> \underbrace{\qty(\int_V \dd[3]{x} \ee^{-\ii \vb*{p}\vdot\vb*{x}})}_{(2 \cpi)^3 \delta(\vb*{p})} \ee^{\ii E_n t} \mel{0}{A}{n} \mel{n}{J^0(0)}{0} \bigg] \slj
+    %%
+    &=& \sum_n (2 \cpi)^3 \delta(\vb*{p}) \bigg[\mel{0}{J^0(0)}{n}\mel{n}{A}{0} \ee^{-\ii E_n t} \bigg. \\
+    %
+    && \bigg. -\> \mel{0}{A}{n} \mel{n}{J^0(0)}{0} \ee^{\ii E_n t} \bigg] \neq 0 \,. \IEEEyesnumber \label{eq:vevcommQA_2}
+\end{IEEEeqnarray*}
+
+Habíamos partido de la premisa de que el VEV del conmutador $\comm{Q}{A} \neq 0$ era diferente de cero, lo cual nos condujo a esta expresión. Esto implica que, cuanto menos para uno de los autoestados de energía, los valores esperados que aparecen en \eqref{eq:vevcommQA_2} deben ser diferentes de cero, puesto que éstos son los coeficientes de una combinación lineal de funciones exponenciales en el tiempo, que son linealmente independientes entre ellas.
+
+Habíamos demostrado que la derivada temporal del conmutador en consideración debe ser igual a cero, como consecuencia de la conservación de la carga en el sistema. Entonces,
+%
+\begin{IEEEeqnarray*}{rCl}
+    \dv{\bigstar}{t} &=& -\ii \sum_n (2 \cpi)^3 \delta(\vb*{p}) \bigg[\mel{0}{J^0(0)}{n}\mel{n}{A}{0} E_n\ee^{-\ii E_n t} \bigg. \\
+    %
+    && \bigg. +\> \mel{0}{A}{n} \mel{n}{J^0(0)}{0} E_n\ee^{\ii E_n t} \bigg] = 0 \,. \IEEEyesnumber \label{eq:dvtvevcommQA}
+\end{IEEEeqnarray*}
+
+Ahora, ya mostramos que los VEVs involucrados en la expresión deben ser diferentes de cero, al menos para uno de los autoestados del sistema. Por esta razón, la única forma de que \eqref{eq:dvtvevcommQA} se satisfaga para todo $t$ es que
+%
+\begin{equation}
+    E_n = 0 \,,
+\end{equation}
+
+\noindent cuanto menos para aquellos posibles autoestados en los que los VEVs sean diferentes de cero. Como en relatividad especial, $E_n = \gamma m$ (en unidades naturales), esto implica que:
+
+\begin{cabox}
+    Para un sistema en el cual el vacío sea degenerado como consecuencia de una ruptura espontánea de simetría, existe al menos un autoestado del Hamiltoniano con masa $m=0$\,.
+\end{cabox}
+
+Este autoestado con masa nula es la partícula que se denominan \emph{bosón de Nambu-Goldstone}.
+
+
+
+\subsection{Teorema de Nambu-Goldstone y generadores del grupo de simetría}
+
+Veamos qué implica el teorema de Nambu-Goldstone desde la perspectiva de los generadores del grupo de simetría. Consideremos un potencial escalar $V$ en un Lagrangiano:
+%
+\begin{equation}
+    \lagdn = \frac{1}{2}\partial_\mu \phi^i \partial^\mu \phi^i - V(\phi) \,.
+\end{equation}
+
+Procedemos como lo hicimos anteriormente, determinando el VEV del campo $\phi$, cuya configuración de mínima energía ha de corresponder a un campo uniforme y constante, i.e.
+%
+\begin{equation}
+    \pdv{V}{\phi_i} \eval_{\phi_{\text{min}} = v_j} = 0 \,.
+\end{equation}
+
+Si hay $M$ generadores $\bar{L}^a_{ij}$ que dejen el vacío invariante. Estos generadores son aquellos que, al aplicarse sobre el vector $v_j$ que representa el mínimo, dan como resultado cero:
+%
+\begin{equation}
+    \bar{L}^a_{ij} v_j = 0 \,.
+\end{equation}
+
+De los $N$ generadores del grupo, habrán $N-M$ generadores $\tilde{L}^a_{ij}$ que no dejarán invariante el vacío, por lo tanto
+%
+\begin{equation}
+    \tilde{L}^a_{ij} v_j \neq 0 \,.
+\end{equation}
+
+Una transformación del campo en su grupo de simetría es dada por
+%
+\begin{equation}
+    \phi' = \ee^{-\ii \theta^a L^a} \phi \approx \qty(1 - \ii \theta^a L^a) \phi \,;
+\end{equation}
+
+\noindent por ejemplo, para el caso de una simetría $\mathrm{SU}(2)$, los generadores son las matrices de Pauli $\sigma_{ij}^a$, y un vector del campo $\phi$ en este grupo de simetría sería dado por un vector columna con dos elementos
+%
+\begin{equation}
+    \phi = \pmqty{\phi_1 \\ \phi_2} \quad \xrightarrow{\substack{\text{en el} \\ \text{mínimo}}} \quad \phi_{\text{min}} = \pmqty{v_1 \\ v_2} \,.
+\end{equation}
+
+Una transformación sobre este campo, en el mínimo, estaría dada por
+%
+\begin{equation}
+    \phi' = \ee^{-\ii \sigma^a \theta^a} \phi_{\text{min}} \approx \qty(\mathbbm{1}_{2 \times 2} - \ii \sigma^a \theta^a) \pmqty{v_1 \\ v_2} = \pmqty{v_1 \\ v_2} - \ii \sigma^a \theta^a \pmqty{v_1 \\ v_2} \,.
+\end{equation}
+
+Si el vacío es invariante, debe darse que $\sigma^a \phi = 0$. Por ejemplo, supongamos que $\phi_{\text{min}} = (0,\, v)$. Con el generador $\sigma^3$ y con $\theta^3 = 1/2$, tendríamos:
+%
+\begin{equation}
+    \theta^3 \sigma^3 \phi = \frac{1}{2} \mqty(\pmat{3}) \pmqty{0 \\ v} = \pmqty{0 \\ -\tfrac{1}{2}v_2} \,,
+\end{equation}
+
+\noindent de modo que $\sigma^3$ no deja invariante este vacío. Es posible verificar que la otras dos matrices de Pauli tampoco dejan este vacío invariante. No obstante, puede existir alguna combinación de generadores que sí dejen el vacío invariante, por ejemplo:
+%
+\begin{equation}
+    \pmqty{1 & 0 \\ 0 & 0} \pmqty{0 \\ v} = \pmqty{0 \\ 0} \,.
+\end{equation}
+
+Como la contribución del generador es cero al multiplicarse por el vacío, entonces el vacío sí es invariante respecto a este hipotético generador.
+
+\begin{cabox}
+    Los generadores del grupo de simetría que dejan invariante el vacío deben aniquilar el estado mínimo del campo.
+\end{cabox}
+
+
+Veamos ahora qué ocurre a nivel del potencial. Esperamos que el potencial sea invariante bajo transformaciones del grupo de simetría, i.e.
+
+\begin{IEEEeqnarray*}{rCl}
+    \delta V &=& \pdv{V}{\phi_i} \delta \phi_i \overset{!}{=} 0 \\
+    %%
+    &=& \pdv{V}{\phi_i} \qty(-\ii \theta^a L^a_{ij} \phi_j) \overset{!}{=} 0 \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Como los $\theta^a$ son arbitrarios, debe cumplirse que
+
+\begin{equation}
+    \pdv{V}{\phi_i} L^a_{ij} \phi_j = 0 \,,
+\end{equation}
+
+\noindent que representa un grupo de $N$ ecuaciones, una para cada generador. Derivando estas ecuaciones con respecto al potencial obtenemos
+
+\begin{IEEEeqnarray*}{rCl}
+    \pdv{\phi_k} \qty(\pdv{V}{\phi_i} L^a_{ij} \phi_j) &=& \pdv[2]{V}{\phi_i}{\phi_k} L^a_{ij} \phi_j + \pdv{V}{\phi_i} L^a_{ij} \underbrace{\pdv{\phi_j}{\phi_k}}_{\delta_{jk}} \\
+    &=& \pdv[2]{V}{\phi_i}{\phi_k} L^a_{ij} \phi_j + \pdv{V}{\phi_i} L^a_{ik} = 0 \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Ahora, en el mínimo del potencial debe satisfacerse que
+
+\begin{equation}
+    \label{eq:pdvVphiMin}
+    \pdv{V}{\phi_i} \eval_{\phi = v} = 0 \,,
+\end{equation}
+
+\noindent de modo que
+
+\begin{equation}
+    \label{eq:pdv[2]Vphi=0}
+    \pdv[2]{V}{\phi_i}{\phi_k} L^a_{ij} v_j = 0 \,.
+\end{equation}
+
+Para interpretar esta segunda derivada, vamos a expandir el potencial $V$ en series de Taylor alrededor del mínimo, así:
+
+\begin{equation}
+    V(\phi) = V_{\text{min}} - \frac{1}{2} (M_{ij})^2 (\phi - v)_i (\phi - v)_j + \cdots \,,
+\end{equation}
+
+\noindent donde el término lineal es cero, como mostramos en \eqref{eq:pdvVphiMin}. Identificamos $M_{ij}$ como la matriz de masa, debido a que es el coeficiente acompañando al término cuadrático en los campos. En un Lagrangiano, el término de masa es aquel que es cuadrático en los campos,
+
+\begin{equation}
+    \pdv[2]{V}{\phi_i}{\phi_j} = - (M_{ij})^2 \,.
+\end{equation}
+
+Con esta interpretación de la derivada segunda como la matriz de masa, reemplazando en \eqref{eq:pdv[2]Vphi=0} tenemos que
+
+\begin{equation}
+    \label{eq:MkiLa}
+    (M_{ki})^2 (L^a_{ij}v_j) = 0 \,.
+\end{equation}
+
+Si $L^a$ aniquila el vacío este resultado es trivial, pero si esto no ocurre, tenemos que $(\tilde{L}^a_{ij}v_j) \equiv u_j$ es un vector columna no-nulo, de modo que \eqref{eq:MkiLa} es una ecuación de autovalores para la matriz de masa:
+
+\begin{equation}
+    (M^2)_{ij} u_j = 0 \,.
+\end{equation}
+
+Para los generadores $\tilde{L}^a$ que no aniquilan el vacío, $u$ es un autovector no-trivial de la matriz de masa, es decir, para que el potencial sea invariante, debe existir un estado con masa cero. Este estado es un bosón de Nambu-Goldstone.
+
+\begin{cabox}
+     Existirá un bosón de Nambu-Goldstone por cada generador que no aniquila el vacío.
+\end{cabox}
+
+
+
+
+
+%-----------------------------------------------------------
+\section{Mecanismo de Higgs}
+
+El teorema de Nambu-Goldstone supuso un problema significativo para la física de partículas de la época. Es difícil pensar que una partícula sin masa haya escapado la detección. Con partículas pesadas esto es siempre una posibilidad, ya que es probable que no se haya alcanzado el umbral de energía necesario para producirla, pero una partícula con masa nula debería ser fácil de detectar, cuanto menos en forma de una pérdida de energía y momentum, pero nunca, en ningún experimento de física de partículas se ha observado un bosón de Nambu-Goldstone.
+
+Quien resolvió este dilema fue Peter Higgs, mediante la introducción del mecanismo que lleva su nombre, postulado en artículos de 1963 -- 1964, y que conduce a la aparición de una partícula pesada en el Lagrangiano. Por supuesto éste es el célebre bosón de Higgs, que eludió detección hasta que fue observada por primera vez en el LHC en 2012.\\
+
+
+Consideremos un Lagrangiano para un campo complejo~\footnote{Notemos que, en el caso de un campo real, teníamos un factor $\frac{1}{2}$ acompañando al término cinético, mientras que en este Lagrangiano no aparece. Los campos complejos pueden expresarse como una suma de una parte real y una parte compleja, donde cada parte está caracterizada por un campo real. Al hacer este reemplazo, tendremos dos campos reales y va a aparecer naturalmente el $\frac{1}{2}$.}:
+%
+\begin{equation}
+    \lagdn = (\codv_{\mu} \phi)^{*}\> \codv^\mu \phi - m^2 \phi^{*} \phi - \lambda (\phi^{*} \phi)^2 - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} \,,
+\end{equation}
+
+\noindent donde $\codv$ es la derivada covariante del grupo (o grupos) de simetría. Como esta derivada covariante lleva un campo eléctrico, aparece un término $\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$ involucrando al campo eléctrico en el Lagrangiano. Veremos después, que los campos complejos son susceptibles de tener carga eléctrica, mientras que los campos reales tienen siempre carga eléctrica cero.
+
+
+
+Este sistema es invariante bajo los siguientes cambios de variables:
+
+\begin{IEEEeqnarray}{rCl}
+    \phi &\longrightarrow& \phi' = \ee^{-\ii \theta} \phi \,, \slj
+    %%
+    A_\mu &\longrightarrow& A'_\mu = A_\mu - \frac{1}{\epsilon} \partial_\mu \theta \,.
+\end{IEEEeqnarray}
+
+No es difícil demostrar esto. Consideremos la transformación del campo conjugado:
+%
+\begin{equation*}
+    \phi^{*} \longrightarrow \qty(\phi')^{*} = \qty(\ee^{-\ii \theta}\phi)^{*} = \ee^{+\ii\theta}\phi^{*} \,,
+\end{equation*}
+
+\noindent entonces
+%
+\begin{equation}
+    \phi'\phi^{\prime *} = \ee^{-\ii \theta} \phi \ee^{+\ii\theta}\phi^{*} = \phi \phi^* \,,
+\end{equation}
+
+\noindent con lo cual mostramos que tanto el término de masa como el término con coeficiente $\lambda$ son invariantes bajo el cambio de variables propuesto. El término cinético también involucrará un producto de esta forma, por lo que este término también es invariante. Ahora, para el término de campo eléctrico, como $F_{\mu \nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$, tenemos que
+%
+\begin{IEEEeqnarray*}{rCl}
+    F'_{\mu \nu} &=& \partial_\mu A'_\nu - \partial_\nu A'_\mu = \partial_\mu \qty(A_\nu + \frac{1}{\epsilon}\partial_\nu \theta) - \partial_\nu \qty(A_\mu + \frac{1}{\epsilon}\partial_\mu \theta) \\
+    %%
+    &=& \partial_\mu A_\nu - \partial_\nu A_\mu + \frac{1}{\epsilon}\cancelto{0}{\qty(\partial_\mu\partial_\nu \theta - \partial_\nu\partial_\mu \theta)} = F_{\mu\nu} \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent de modo que el término de campo eléctrico también es invariante bajo el cambio de variables.
+
+Vamos a asumir que en el mínimo , el valor esperado del campo es
+%
+\begin{equation}
+    \ev{\phi}_{\text{min}} = \frac{v}{\sqrt{2}} \,,
+\end{equation}
+
+\noindent donde $\sqrt{2}$ es un factor de normalización puramente convencional. Recordemos que hemos considerado a $\phi$ un campo escalar (complejo), por lo que su VEV tiene una sola componente. Este es el caso más simple.
+
+Vamos a reescribir $\phi$ en términos de dos campos así:
+%
+\begin{equation}
+    \phi = \frac{1}{\sqrt{2}} \ee^{-\ii \xi/v} \qty(v + \sigma) \,,
+\end{equation}
+
+\noindent donde lo hemos parametrizado en términos de dos nuevos campos, $\xi$, denominado el \emph{campo axial}~\footnote{Mediante análisis dimensional es posible mostrar que, en unidades naturales, los campos escalares tienen unidades de masa. El VEV de $\phi$, que se caracteriza por el valor $v$ también tiene unidades de masa. Nótese que en la exponencial, el campo axial aparece dividido entre $v$, obteniéndose así una cantidad adimensional para el exponente.}, y $\sigma$, denominado el \emph{campo radial} y que representa una excitación sobre el VEV.
+
+Ahora, vemos que es posible remover el campo axial multiplicación por una fase $\ee^{-\ii \theta}$, escogiendo un valor adecuado para $\theta$. En particular, vamos a escoger $\theta = \xi/v$, de modo que realizando la rotación
+%
+\begin{equation}
+    \phi \longrightarrow \phi' = \ee^{-\ii \xi/v} \phi \,,
+\end{equation}
+
+\noindent desaparece la fase compleja y el campo resultante es real:
+%
+\begin{equation}
+    \phi' = \ee^{-\ii \xi/v} \qty(\frac{1}{\sqrt{2}}\ee^{\ii \xi/v} (v + \sigma))  = \frac{1}{\sqrt{2}} (v + \sigma) \,.
+\end{equation}
+
+En primera instancia, parecería que la escogencia de la parametrización de $\xi$ fuese arbitraria y que, en principio, podría ser cualquier función, no obstante, existen restricciones debido a la presencia de la derivada covariante en el Lagrangiano. Recordemos que la derivada covariante debe transformar de la misma forma como lo hace $\phi$, y si el campo no transformase como lo hemos propuesto, la derivada covariante no funcionaría.
+
+Como hemos elegido el gauge $\theta = \xi/2$, la transformación para el campo $A$ será dada por
+%
+\begin{equation}
+    A'_\mu = A_\mu - \frac{1}{\epsilon v} \partial_\mu \xi \,.
+\end{equation}
+
+Ahora, la derivada covariante de $\phi^*$ es
+%
+\begin{IEEEeqnarray*}{rCl}
+    \codv^*_\mu \phi^{\prime *} &=& \qty(\partial_\mu + \ii e A'_\mu)\phi' \\
+    &=& \qty(\partial_\mu + \ii e \qty[A_\mu - \frac{1}{\epsilon v} \partial_\mu \xi])\frac{(v+ \sigma)}{\sqrt{2}} \,,
+\end{IEEEeqnarray*}
+
+\noindent donde $e$ es la constante de acoplamiento de esta teoría. Así, el término cinético, con la nueva parametrización, será dado por:
+%
+\begin{IEEEeqnarray*}{rCl}
+    (\codv_\mu \phi)^* (\codv^\mu \phi) &=&
+     \qty(\partial_\mu + \ii e \qty[A_\mu - \frac{1}{\epsilon v} \partial_\mu \xi])\frac{(v+ \sigma)}{\sqrt{2}} \\
+     %
+     && \times \qty(\partial^\mu - \ii e \qty[A^\mu - \frac{1}{\epsilon v} \partial^\mu \xi])\frac{(v+ \sigma)}{\sqrt{2}} \slj
+     %%
+     &=& \qty(\partial_\mu + \ii e A'_\mu)\frac{(v+ \sigma)}{\sqrt{2}} \times \qty(\partial^\mu - \ii e A^{\prime \mu})\frac{(v+ \sigma)}{\sqrt{2}} \\
+     %%
+     &=& \qty(\frac{\partial_\mu \sigma}{\sqrt{2}} + \ii e \frac{(v+ \sigma)}{\sqrt{2}} A'_\mu) \times \qty(\frac{\partial^\mu \sigma}{\sqrt{2}} - \ii e \frac{(v+ \sigma)}{\sqrt{2}} A^{\prime \mu}) \\
+     &=& \frac{1}{2}\partial_\mu \sigma\> \partial^\mu \sigma + \frac{e^2}{2} (v + \sigma)^2 A'_\mu A^{\prime \mu} \,, \IEEEyesnumber \label{eq:higgs_tCineticoParam}
+\end{IEEEeqnarray*}
+
+\noindent donde el último paso se tiene directamente del hecho de que el producto es de la forma $(A + \ii B)(A - \ii B) = A^2 - (\ii B)^2 = A^2 + B^2$.
+
+El segundo término en esta ecuación es cuadrático en $A'$, y por lo tanto es un término de masa. El campo $A$ se ha vuelto masivo y su masa es proporcional a $v$. ¿Qué es lo que está en juego aquí? En primer lugar, se rompió la simetría debido al VEV de $\phi$, el campo $A'$ ha adquirido masa, pero además este campo contiene al campo axial dentro de sí. Identificaremos el campo axial con el bosón de Nambu-Goldstone, pero notemos que en nuestra expresión \eqref{eq:higgs_tCineticoParam} este campo axial no aparece de forma explícita, únicamente dentro de la estructura de $A'$. Este es el \emph{mecanismo de Higgs}.
+
+Los términos restantes en el Lagrangiano pueden ser obtenidos fácilmente:
+%
+\begin{IEEEeqnarray}{rCl}
+    -m^2 \phi^{\prime *} \phi' &=& -\frac{m^2}{2} (v + \sigma)^2\,, \lj
+    %%
+    -\lambda^2 (\phi^* \phi)^2 &=& -\frac{\lambda^2}{4}(v + \sigma)^4 \,, \lj
+    %%
+    -\frac{1}{4} F'_{\mu\nu} F^{\prime \mu\nu} &=& -\frac{1}{4} F_{\mu\nu} F^{\mu\nu}\,, \text{ ya que es invariante gauge.} \\
+    \IEEEnonumber
+\end{IEEEeqnarray}
+
+Como vemos, el mecanismo de Higgs ha resuelto por fin el dilema que supuso el teorema de Nambu-Goldstone (N-G): en primer lugar, desaparece el campo axial del Lagrangiano. Es por esto que el bosón de N-G no se detecta en el experimento, pero además, el campo axial está implícito en el campo $A'$, que sí es detectable.
+
+Una de las teorías que presentan ruptura espontánea de la simetría es la de interacciones débiles. En esta teoría aparecieron los bosones $W^{\pm}$ y $Z$, que son masivos, como mediadores de la interacción. El mecanismo de Higgs mostró que, de alguna forma, el descubrimiento de estos bosones implicaba la existencia de los bosones de N-G y que las interacciones débiles llevan información de estos últimos. Este elusivo bosón no masivo se encontraba oculto en la estructura de las interacciones débiles porque estaba mezclado con su campo gauge. Esta genialidad, que reveló el escondite de una partícula que, según toda predicción teórica debería existir, pero que nunca pudo ser detectada, le valió el Premio Nobel a Peter Higgs.\\
+
+
+
+
+%-----------------------------------------------------------
+\section*{Apéndice: Expansión de Baker-Campbell-Hausdorff}
+\addcontentsline{toc}{section}{Ap\'endice: Expansi\'on de Baker-Campbell-Hasudorff}
+
+Consideremos el conmutador del operador posición con el operador momento, que en unidades naturales es
+
+\begin{equation}
+    \comm{\hat{X}}{\hat{P}} = \ii \,.
+\end{equation}
+
+Determinemos los conmutadores de algunas potencias de $\hat{X}$ con $\hat{P}$:
+
+\begin{IEEEeqnarray*}{rCl}
+    \comm{\hat{X}^2}{\hat{P}} &=& \comm{\hat{X}}{\hat{P}}\hat{X} + \hat{X}\comm{\hat{X}}{\hat{P}} = 2 \ii \hat{X} \,, \slj
+    %%
+    \comm{\hat{X}^3}{\hat{P}} &=& \comm{\hat{X}^2}{\hat{P}}\hat{X} + \hat{X}^2\comm{\hat{X}}{\hat{P}} = 2 \ii \hat{X}^2 + \ii \hat{X}^2 = 3 \ii \hat{X}^2 \,. \slj
+\end{IEEEeqnarray*}
+
+Continuando este proceso es posible mostrar que:
+
+\begin{equation}
+    \comm{\hat{X}^n}{\hat{P}} = \ii n \hat{X}^{n-1} = \ii \dv{\hat{X}} (\hat{X}^n) \,.
+\end{equation}
+
+Así pues, si tomamos una función de $\hat{X}$ definida por
+
+\begin{equation}
+    f(\hat{X}) = \sum_n a_n \hat{X}^n \,,
+\end{equation}
+
+\noindent su conmutador con el operador momento será
+
+\begin{IEEEeqnarray*}{rCl}
+    \comm{f(\hat{X})}{\hat{P}} &=& \comm{\sum_n a_n \hat{X}^n}{\hat{P}} \\
+    %%
+    &=& \sum_n a_n \comm{\hat{X}^n}{\hat{P}} \\
+    %%
+    &=& \sum_n a_n \ii \dv{(\hat{X}^n)}{\hat{X}} \\
+    %%
+    &=& \ii \dv{\hat{X}} \sum_n a_n \hat{X}^n \slj
+    %%
+    \IEEEeqnarraymulticol{3}{c}{
+        \therefore\> \boxed{\comm{f(\hat{X})}{\hat{P}} = \ii \dv{\hat{X}} f(\hat{X})} \,.
+    } \IEEEyesnumber \\
+\end{IEEEeqnarray*}
+
+
+Ahora, consideremos la transformación
+
+\begin{equation}
+    \ee^{\ii \hat{P} \vdot \vb*{a}}\> f(\hat{X})\> \ee^{-\ii \hat{P} \vdot \vb*{a}} \,.
+\end{equation}
+
+A nivel lineal, esta transformación es dada por
+
+\begin{equation}
+    (\mathbbm{1} + \ii a \hat{P}) f(\hat{X}) (\mathbbm{1} - \ii a \hat{P}) \approx f(\hat{X}) + a \comm{f(\hat{X})}{\hat{P}} = f(\hat{X}) + a \dv{\hat{X}} f(\hat{X}) \,.
+\end{equation}
+
+Ahora, a nivel lineal, la expansión en series de Taylor de $f(\hat{X} + a)$ es dada por
+
+\begin{equation}
+    f(\hat{X} + a) = f(\hat{X}) + a\dv{\hat{X}} f(\hat{X})\,,
+\end{equation}
+
+\noindent que corresponde a la transformación propuesta anteriormente. Hemos mostrado aquí que una transformación de una función de la posición, que involucre al operador momentum como generador, tiene el efecto de evaluar dicha función en una posición dada por el coeficiente que acompaña al operador momentum. Es por ello que este operador se identifica, en mecánica cuántica, con el generador de traslaciones. En consecuencia, tenemos que
+
+\begin{equation}
+    \ee^{\ii \hat{P} \vdot \vb*{a}}\> f(\hat{X})\> \ee^{-\ii \hat{P} \vdot \vb*{a}} = f(\hat{X} + \vb*{a}) \,.
+\end{equation}
+
+
+
+
+
+

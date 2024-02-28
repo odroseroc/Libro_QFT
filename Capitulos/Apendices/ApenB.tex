@@ -1,0 +1,154 @@
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+\label{Apendice B}
+
+\chapter{Ecuaciones de Campo E-L}
+
+En este apéndice se da a conocer una manera alternativa de derivar las ecuaciones de Euler-Lagrange.
+Se considera un conjunto uniparam\'{e}trico de funciones variadas que se reducen al valor correcto de $\phi
+_{r}\left( x \right) $ cuando $\alpha $ va a cero. Una familia de estas funciones se puede constru\'{\i}r como:
+
+\begin{equation*}
+\phi_{r}\left( x,\alpha \right) =\phi_{r}\left( x,0\right) +\alpha \zeta _{r}\left( x\right) ~,
+\end{equation*}
+
+las funciones $\zeta_{r}\left(x\right)$ son funciones de clase $C^{2}$ en todos los par\'{a}metros. Dichas funciones se deben anular sobre la hipersuperficie $\Sigma$ que delimita a la regi\'{o}n de integraci\'{o}n. La anulaci\'{o}n del variacional de $S$, es equivalente a establecer
+que la derivada de $S$ con respecto a $\alpha $ sea cero.
+
+\begin{equation}
+\frac{dS}{d\alpha }=\frac{d}{d\alpha }\int d^{4}x\ \mathcal{L}\left(\phi_{r},\partial_{\mu }\phi_{r},x\right) =\int d^{4}x\
+\left\{ \frac{\partial \mathcal{L}}{\partial \phi_{r}}\frac{\partial \phi _{r}}{\partial \alpha }\mathcal{+}\frac{\partial \mathcal{L}}{\partial \left( \partial _{\mu }\phi_{r}\right) }\frac{\partial \left(\partial _{\mu }\phi _{r}\right) }{\partial \alpha }\right\} ~.
+\label{2.19}
+\end{equation}
+integrando por partes se obtiene,
+\begin{equation}
+\frac{dS}{d\alpha }=\int d^{4}x\ \frac{\partial \phi_{r}}{\partial \alpha }\left\{ \frac{\partial \mathcal{L}}{\partial \phi_{r}}-\partial
+_{\mu}\left( \frac{\partial \mathcal{L}}{\partial \left( \partial _{\mu }\phi_{r}\right) }\right) \right\} +\int d^{4}x\partial_{\mu}\left(\frac{\partial \mathcal{L}}{\partial \left( \partial _{\mu }\phi_{r}\right) }\frac{\partial \phi_{r}}{\partial \alpha }\right)
+~.  \label{2.19a}
+\end{equation}
+
+La segunda integral se elimina cuando $\alpha $ tiende a cero, lo cual se
+puede ver de varias formas:
+\vspace{0.5cm}
+
+\begin{itemize}
+\item Si se observa t\'{e}rmino a t\'{e}rmino, al realizar la integraci\'{o}n sobre un parámetro $x$ en particular para cada t\'{e}rmino de la derivada, se v\'{e} que estos t\'{e}rminos se tienen que desaparecer porque la derivada con respecto a $\alpha $ de los campos es cero en los extremos.\\
+
+
+\item La integral se puede transformar por medio de un teorema de la
+divergencia en 4 dimensiones en una integral sobre la hipersuperficie que
+delimita la regi\'{o}n de integraci\'{o}n en el cuadriespacio (\textbf{euclidiano})\footnote{Procedimiento realizado en el desarrollo teórico en la variación de la acción}. La integral de superficie tambi\'{e}n se anula porque la variaci\'{o}n de $\phi_{r}$ en la vecindad de la funci\'{o}n de campo correcta es cero sobre la superficie. Para ver esto se calcula la segunda integral a la derecha en (\ref{2.19a}), as\'{\i}
+\end{itemize}
+
+\begin{eqnarray}
+\int d^{4}x~\partial _{\mu }\left( \frac{\partial \mathcal{L}}{\partial
+\left( \partial _{\mu }\phi _{r}\right) }\frac{\partial \phi _{r}}{\partial
+\alpha }\right)  &=&\int d^{4}x~\left[ \partial _{0}\left( \frac{\partial 
+\mathcal{L}}{\partial \left( \partial _{0}\phi _{r}\right) }\frac{\partial
+\phi _{r}}{\partial \alpha }\right) +\partial _{i}\left( \frac{\partial 
+\mathcal{L}}{\partial \left( \partial _{i}\phi _{r}\right) }\frac{\partial
+\phi _{r}}{\partial \alpha }\right) \right]   \notag \\
+&=&\int d^{4}x\partial _{0}\left( \frac{\partial \mathcal{L}}{\partial
+\left( \partial _{0}\phi _{r}\right) }\frac{\partial \phi _{r}}{\partial
+\alpha }\right) +\int d^{4}x\partial _{i}\left( \frac{\partial \mathcal{L}}{%
+\partial \left( \partial _{i}\phi _{r}\right) }\frac{\partial \phi _{r}}{%
+\partial \alpha }\right)   \notag \\
+&=&\int d^{3}x\int_{t_{1}}^{t_{2}}dt~\partial _{0}\left( \frac{\partial 
+\mathcal{L}}{\partial \left( \partial _{\mu }\phi _{r}\right) }\frac{%
+\partial \phi _{r}}{\partial \alpha }\right)   \notag \\
+&&+\int_{t_{1}}^{t_{2}}dt~\int d^{3}x~\partial _{i}\left( \frac{\partial 
+\mathcal{L}}{\partial \left( \partial _{i}\phi _{r}\right) }\frac{\partial
+\phi _{r}}{\partial \alpha }\right)   \notag \\
+&=&\int d^{3}x~\left. \left( \frac{\partial \mathcal{L}}{\partial \left(
+\partial _{\mu }\phi _{r}\right) }\frac{\partial \phi _{r}}{\partial \alpha }%
+\right) \right\vert _{t_{1}}^{t_{2}}  \notag \\
+&&+\int_{t_{1}}^{t_{2}}dt~\int d^{3}x~\partial _{i}\left( \frac{\partial 
+\mathcal{L}}{\partial \left( \partial _{i}\phi _{r}\right) }\frac{\partial
+\phi _{r}}{\partial \alpha }\right) ~.
+\end{eqnarray}
+
+De este resultado se establece que la primera integral se anula por la
+condici\'{o}n de frontera $\left. \frac{\partial \phi_{r}}{\partial
+\alpha }\right\vert _{t=t_{1}}=\left. \frac{\partial \phi_{r}}{\partial
+\alpha }\right\vert _{t=t_{2}}=0$. De igual manera, en la segunda integral
+el integrando esta siendo evaluado en la superficie que encierra el volumen en el cual est\'{a} siendo considerados los campos. Si este volumen se extiende en todo el espacio, la superficie que lo limita tiende a infinito y del comportamiento asint\'{o}tico de los campos hace que esta integral de superficie tienda a cero, es decir
+
+\begin{equation*}
+\int_{t_{1}}^{t_{2}}dt\int d^{3}x~\partial _{i}\left( \frac{\partial \mathcal{L}}{\partial \left( \partial _{i}\phi_{r}\right) }\frac{\partial\phi_{r}}{\partial \alpha }\right)=\int_{t_{1}}^{t_{2}}dt\oint_{S}ds_{i}\left(\frac{\partial \mathcal{L}}{\partial \left( \partial _{i}\phi_{r}\right) }\zeta_{r}\right) =0~\  .
+\end{equation*}
+
+\noindent
+De esta manera, se deduce que la variaci\'{o}n 
+
+\begin{equation}
+\delta \int d^{4}x\ \partial _{\mu }\left( \frac{\partial \mathcal{L}}{%
+\partial \left( \partial _{\mu }\phi_{r}\right) }\frac{\partial \phi
+_{r}}{\partial \alpha }\right) =\delta \int d^{4}x\ \partial _{\mu
+}\left( \frac{\partial \mathcal{L}}{\partial \left( \partial _{\mu }\phi
+_{r}\right) }\zeta _{r}\right) =0 ~.  \label{2.21}
+\end{equation}
+
+\noindent
+Por lo anterior, en el l\'{\i}mite cuando $\alpha \rightarrow 0$, la ecuaci\'{o}n (\ref{2.19a}) se reduce a,
+
+\begin{equation}
+\left( \frac{dS}{d\alpha }\right) _{\alpha =0}=\int d^{4}x\ \left( \frac{\partial \phi_{r}}{\partial \alpha }\right) _{\alpha =0}\left\{ \frac{\partial \mathcal{L}}{\partial \phi _{r}}-\partial _{\mu }\left( \frac{\partial \mathcal{L}}{\partial \left( \partial _{\mu }\phi_{r}\right) }\right) \right\} =0~,  \label{2.21a}
+\end{equation}
+y de la naturaleza arbitraria de la variaci\'{o}n de cada campo $\phi_{r}$, la ecuaci\'{o}n (\ref{2.21a}) se satisface s\'{o}lo si se anula el t\'{e}rmino entre llaves, entonces del lema fundamental del c\'{a}lculo de variaciones se determina,
+
+\begin{equation}
+\frac{\partial \mathcal{L}}{\partial \phi_{r}}-\partial _{\mu }\left(\frac{\partial \mathcal{L}}{\partial \left( \partial _{\mu }\phi _{r}\right) }\right) =0~.  \label{2.22}
+\end{equation}
+
+La relaci\'{o}n (\ref{2.22}) es conocida como ecuaci\'{o} de
+Euler-Lagrange, y representa un conjunto de ecuaciones diferenciales
+parciales para las variables de campo, el n\'{u}mero de ecuaciones est\'{a} determinado por los valores posibles de $r$. Vale la pena enfatizar de nuevo que dado que cada $x$ corresponde a un \'{\i}ndice continuo para las variables de campo. Cada una de las ecuaciones (\ref{2.22}) para $r$ fijo, corresponde a un conjunto completo de ecuaciones diferenciales de movimiento de Lagrange en el caso discreto.
+
+\begin{exercise}
+Utilizar integraci\'{o}n por partes para demostrar la ecuaci\'{o}n (\ref%
+{2.19a}).
+\end{exercise}
+
+\begin{solution}
+Al utilizar la integraci\'{o}n por partes%
+\begin{eqnarray*}
+\int dx^{\mu }\partial _{\nu }\left( \frac{\partial \mathcal{L}}{\partial
+\eta _{\rho ,\nu }}\frac{\partial \eta _{\rho }}{\partial \alpha }\right)
+&=&\int dx^{\mu }\partial _{\nu }\left( \frac{\partial \mathcal{L}}{\partial
+\left( \partial _{\nu }\eta _{\rho }\right) }\right) \frac{\partial \eta
+_{\rho }}{\partial \alpha }+\int dx^{\mu }\frac{\partial \mathcal{L}}{%
+\partial \left( \partial _{\nu }\eta _{\rho }\right) }\partial _{\nu }\left( 
+\frac{\partial \eta _{\rho }}{\partial \alpha }\right) \\
+&=&\int dx^{\mu }\partial _{\nu }\left( \frac{\partial \mathcal{L}}{\partial
+\left( \partial _{\nu }\eta _{\rho }\right) }\right) \frac{\partial \eta
+_{\rho }}{\partial \alpha }+\int dx^{\mu }\frac{\partial \mathcal{L}}{%
+\partial \eta \left( \partial _{\nu }\eta _{\rho }\right) }\frac{\partial
+\left( \partial _{\nu }\eta _{\rho }\right) }{\partial \alpha }~~~~~,
+\end{eqnarray*}%
+de manera que:%
+\begin{equation*}
+\int dx^{\mu }\frac{\partial \mathcal{L}}{\partial \left( \partial _{\nu
+}\eta _{\rho }\right) }\frac{\partial \left( \partial _{\nu }\eta _{\rho
+}\right) }{\partial \alpha }=\int dx^{\mu }\left[ \partial _{\nu }\left( 
+\frac{\partial \mathcal{L}}{\partial \left( \partial _{\nu }\eta _{\rho
+}\right) }\frac{\partial \eta _{\rho }}{\partial \alpha }\right) -\partial
+_{\nu }\left( \frac{\partial \mathcal{L}}{\partial \left( \partial _{\nu
+}\eta _{\rho }\right) }\right) \frac{\partial \eta _{\rho }}{\partial \alpha 
+}\right] ~~~~~,
+\end{equation*}%
+lo que implica en (\ref{2.19})%
+\begin{eqnarray}
+\frac{dS}{d\alpha } &=&\int dx^{\mu }\ \left\{ \frac{\partial \mathcal{L}}{%
+\partial \eta _{\rho }}\frac{\partial \eta _{\rho }}{\partial \alpha }%
+\mathcal{+}\partial _{\nu }\left( \frac{\partial \mathcal{L}}{\partial
+\left( \partial _{\nu }\eta _{\rho }\right) }\frac{\partial \eta _{\rho }}{%
+\partial \alpha }\right) -\partial _{\nu }\left( \frac{\partial \mathcal{L}}{%
+\partial \left( \partial _{\nu }\eta _{\rho }\right) }\right) \frac{\partial
+\eta _{\rho }}{\partial \alpha }\right\}  \notag \\
+&=&\int dx^{\mu }\ \frac{\partial \eta _{\rho }}{\partial \alpha }\left\{ 
+\frac{\partial \mathcal{L}}{\partial \eta _{\rho }}-\partial _{\nu }\left( 
+\frac{\partial \mathcal{L}}{\partial \left( \partial _{\nu }\eta _{\rho
+}\right) }\right) \right\} +\int dx^{\mu }\partial _{\nu }\left( \frac{%
+\partial \mathcal{L}}{\partial \left( \partial _{\nu }\eta _{\rho }\right) }%
+\frac{\partial \eta _{\rho }}{\partial \alpha }\right) ~~~~~.  \label{2.20}
+\end{eqnarray}
+\end{solution}

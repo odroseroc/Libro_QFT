@@ -1,0 +1,125 @@
+%----------------------------------------------------------------------------------------
+%	CHAPTER 5
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_5.pdf}
+
+\chapter{Teorías interactuantes, la matriz S}
+
+\label{capitulo_5}
+
+En los capítulos \ref{capitulo_3} y \ref{capitulo_4} se estudio la cuantización de teorías asociadas a campos libres, en la cuales \emph{\textcolor{blue}{su lagrangiano era una suma de términos bilineales en los campos}}. Dichos Lagrangianos tenían términos cinéticos como
+
+\begin{equation}
+	\frac{1}{2} \partial^\mu \phi \partial_\mu \phi \, , \qquad   \ii \bpsi \gamma^\mu \partial _\mu \psi \, , 
+\end{equation}
+y \emph{términos de masa}, tales como 
+
+\begin{equation}
+	-\frac{1}{2} m^2 \phi^2 \, , \qquad -m\bpsi \psi \, .
+\end{equation}
+
+Tanto los términos cinéticos como los de masa son bilineales en los campos. \emph{Una teoría es interactuante si en el Lagrangiano aparecen términos con tres o más campos}.\\
+
+\section{Ejemplos de Interacciones} 
+
+Las interacciones dependen de la naturaleza de los campos. Por ejemplo si tratamos con un campo escalar $\phi$, el Lagrangiano de interacción puede ser descrito como
+
+\begin{equation}
+	\lagdn_{int} = -\mu \phi^3 - \lambda \phi^4 - \sum_{n \neq 5} \lambda_{\qty(n)} \phi^n \, .
+\end{equation}
+
+El signo de $\lambda \phi^4$ se considera así para garantizar estabilidad en el potencial. Además el signo de la mayor potencia debe ser positivo en la energía potencial para que el potencial sea estable. Términos que van hasta la potencia $\phi^4$ son \textcolor{blue}{renormalizables}, en tanto que los de potencias superiores son \textcolor{blue}{no renormalizables}. Cabe resaltar que $\mu, \, \lambda, \ldots$ se denominan \textcolor{blue}{constantes de acoplamiento} de las teorías. Las teorías no renormalizables se caracterizan porque las constantes de acoplamiento tienes unidades de masa negativa.\\
+
+Cuando se estudio el campo escalar complejo, vimos que su Lagrangiano era invariante una simetría interna $\U{1}$ (multiplicación por una fase). Si se desea que los términos de interacción se mantengan invariantes ante esta simetría, la forma más general del Lagrangiano de interacción será:
+
+\begin{equation}
+	\lagdn_{int} = - \sum_{n \neq 2} \lambda_{\qty(2n)} \qty(\phi^\dag \phi)^n \, .
+\end{equation}
+
+Este concepto también lo podemos extender a campos fermiónicos, tenemos que tener cuidado dado que la forma en como se transforman ellos está definida en el espacio espinorial, y no en el espacio tiempo como el campo escalar. Por lo tanto el producto de un número impar de campos fermiónicos no es invariante bajo Lorentz. El Lagrangiano de interacción debe tener al menos cuatro campos fermiónicos. \\
+
+Para entender porque algunas teorías son no renormalizables, vemos en unidades naturales las potencias en unidades de masa para el campo bosónico y fermiónico.
+
+\begin{prof}
+	Partimos del hecho que en unidades naturales $\qty[\lagdn] = (\text{masa})^4$. Si consideramos para campo escalar el Lagrangiano (\ref{eq_3.5}), se debe cumplir que
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\qty[m^2 \phi^2] &=& (\text{masa})^4 \Rightarrow (\text{masa})^2 \qty[\phi^2] = (\text{masa})^4 \Rightarrow \qty[\phi^2] = (\text{masa})^2  \slj   
+		\IEEEeqnarraymulticol{3}{c}{ \therefore \qty[\phi] = (\text{masa}) \, . }
+	\end{IEEEeqnarray*}
+
+	Ahora si empleamos el Lagrangiano (\ref{eq_lagrangiano de Dirac}) para campo fermiónico
+	
+	\begin{IEEEeqnarray*}{rCl}
+		\qty[m \bpsi \psi ] &=& (\text{masa})^4 \Rightarrow (\text{masa}) \qty[\bpsi \psi] = (\text{masa})^4 \Rightarrow \qty[\bpsi \psi] = (\text{masa})^3  \slj   
+		\IEEEeqnarraymulticol{3}{c}{ \therefore \qty[\bpsi] = \qty[\psi] = (\text{masa})^{3/2}  \, . } 
+	\end{IEEEeqnarray*}
+	
+	Por lo tanto las unidades naturales del campo bosónico son diferentes de campo fermiónico.
+	
+\end{prof}
+
+Algunos ejemplos de Lagrangianos de interacción no renormalizables para campo fermiónico son:
+
+\begin{equation}
+	\lagdn_{int} = G \bpsi \psi \bpsi \psi\, , \Rightarrow \quad \qty[G ] = \qty(\text{masa})^{-2}  \, .
+\end{equation}
+\begin{IEEEeqnarray}{rCl}
+	\lagdn_{int} &=& G \bpsi \gamma_\mu \psi \bpsi \gamma^\mu \psi \, , \\
+	\lagdn_{int} &=& G \qty( \bpsi \sigma_{\mu \nu} \psi ) \qty( \bpsi \sigma^{\mu \nu } \psi  ) \, ,\\
+	\lagdn_{int} &=& G \qty( \bpsi \gamma_\mu \psi  )  \qty(\bpsi \gamma^\mu \gamma^5 \psi ) \, .
+\end{IEEEeqnarray}
+
+Un Lagrangiano importante en el desarrollo de interacciones débiles es
+
+\begin{equation}
+	\lagdn_{int} = G \psi \gamma^\mu  \qty( 1-\gamma_5 ) \psi \bpsi  \qty( 1- \gamma_5 ) \psi \, ,
+\end{equation}
+
+ donde $\psi$ no necesariamente representa el mismo fermión. Por ejemplo si se quiere describir el decaimiento beta en el que \emph{un neutrón se desintegra en un protón, un electrón y un anti-neutrino electrónico}. Entonces el Lagrangiano de interacción que explica este decaimiento se conoce como Lagrangiano efectivo
+ 
+ \begin{equation}
+ 	\lagdn_{int} = \frac{G_\beta}{ 2 } \bpsi_e \gamma^\mu \qty(1 - \gamma_5) \psi_{ \nu_e } \bpsi_p \gamma_\mu \qty(1 - \gamma_5) \psi_n \, ,
+ \end{equation} 
+donde $G_\beta$ es la constante de acoplamiento del decaimiento beta. El lagrangiano efectivo no es hermítico, para asegurar que este sea hermítico se le adiciona su hermítico conjugado.\\
+
+Es posible construir modelos que involucren campos fermiónicos y campos bosónicos, su importancia radica en la descripción de interacciones entre nucleones (protones y neutrones) con piones. Por ejemplo podemos tener un Lagrangiano de interacción de la forma 
+
+\begin{IEEEeqnarray}{rCl}
+	\lagdn_{int} &=& - h \bpsi \psi \phi \, , \label{eq_lag_yukawa}\\
+	\lagdn_{int} &=& - h^\prime \bpsi \gamma_5 \psi \phi \, . \label{eq_lag_yukawa1}
+\end{IEEEeqnarray}
+
+El Lagrangiano dado en (\ref{eq_lag_yukawa1}) fue propuesto inicialmente por Yukawa, sin embargo, en la literatura moderna (\ref{eq_lag_yukawa}) y (\ref{eq_lag_yukawa1}) definen el conjunto de interacciones de Yukawa. También pueden existir interacciones con cuatro campos fermiónicos, las cuales se denominan interacciones de Fermi. Por último, para el campo escalar es posible establecer interacciones con el término $\lambda \phi^4$. Todas estas teorías serán estudiadas en detalle en la siguiente parte del curso.
+
+\begin{prof}
+	El Lagrangiano de interacción (\ref{eq_lag_yukawa}) es hermítico si la constante de acoplamiento es un número real. Veamos esto,
+	
+	\begin{IEEEeqnarray*}{rCll}
+		\lagdn_{int}^\dag &=& \qty (-h \bpsi \psi \phi)^\dag = -h^{*} \phi^\dag \qty( \psi^\dag \gamma^0 \psi )^\dag\\
+		&=& -h^{*} \phi^\dag \qty( \psi^\dag \gamma^{0 \dag} \psi ) = -h^{*} \phi^\dag \psi^\dag \gamma^{0} \psi \\
+		&=& -h^{*} \phi \bpsi \psi  & \text{ \scriptsize{$ \leftarrow  $ $\phi$ es un campo escalar real, por lo tanto $\phi^\dag = \phi$.}}\\
+		&=& -h^{*} \bpsi \psi \phi &   \text{ \scriptsize{$ \leftarrow  $  El campo escalar conmuta con el campo fermiónico.} }\\
+		&=& -h \bpsi \psi \phi = \lagdn_{int}. & \text{ \scriptsize{$ \leftarrow  $ condición de hermiticidad.} } \slj
+		\IEEEeqnarraymulticol{4}{c}{\therefore h = h^{*} \, . }
+	\end{IEEEeqnarray*}
+\end{prof}
+
+\section{Evolución de un operador}
+
+\begin{equation}
+	\ii \dv{t} \ket{\varPsi(t)} = \OH \ket{\varPsi(t)} \, .
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+

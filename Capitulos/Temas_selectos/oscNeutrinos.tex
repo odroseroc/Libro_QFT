@@ -1,0 +1,662 @@
+\chapter{Masas de neutrinos, mezclas y oscilaciones}
+
+
+\section{Oscilaciones de neutrinos}
+
+Como hemos visto, los neutrinos pueden venir en tres diferentes sabores, $\nu_\alpha = \nu_e,\, \nu_\mu,\, \nu_\tau$. estos son autoestados débiles. Si llega a suceder, como sabemos que en efecto ocurre, que los neutrinos tienen masa, la base en la que el operador de masa es diagonal (base de masa) no es exactamente la misma base en que se definen los estados de sabor (base débil). Tendremos entonces los autoestados de masa $\nu_i = \nu_1,\, \nu_2,\, \nu_3$ que satisfacen
+%
+\begin{equation}
+	\nu_\alpha = \sum_i U_{\alpha i} \nu_i \,,
+\end{equation}
+
+\noindent donde $U$ es la matriz que rota a autoestados de masa.
+
+Es importante distinguir los estados en las diferentes bases, ya que dependiendo de la clase de interacciones se van a tener neutrinos en estados de sabor o neutrinos en estados de masa. Por ejemplo, en un proceso donde decae un $W$ en un par electrón-neutrino, este último tiene sabor definido -- es un neutrino electrónico -- pero no necesariamente tiene una masa definida.\\
+
+Supongamos que se tiene una corriente de la forma
+%
+\begin{equation}
+	\lagdn \supset g W^- \overline{e}_{Li} \gamma^\mu \nu_{Li} \,,
+\label{eq:mneutr_corr1}
+\end{equation}
+
+\noindent dado en esta forma para el estado de interacción, con los subíndices $i$ para el electrón y el neutrino izquierdos.
+
+Ahora, en el estado de masas tenemos que
+%
+\begin{equation}
+	\nu_{Li} = U^N_{ij} \nu'_{Lj} \,,
+\end{equation}
+
+\noindent donde los estados primados son autoestados de masa. De forma análoga para la parte del electrón
+%
+\begin{IEEEeqnarray*}{c}
+	e_Li = U^E_{ik} e'_{Lk} \slj
+	%%
+	\Rightarrow \overline{e}_{Li} = \qty(U^E_{ik} e'_{Lk})^* \gamma^0 = U^{E*}_{ik} e^{\prime *}_{Lk} \gamma^0 = \overline{e}'_{Lk} U^{E*\intercal}_{ki} \gamma^0 \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Con estos resultados en \eqref{eq:mneutr_corr1} tenemos
+%
+\begin{equation}
+	\lagdn \supset g W^{-} \overline{e}'_{Lk} U^{E*\intercal}_{ki} \gamma^\mu U^N_{ij} \nu'_j = gW^{-} \overline{e}_L \gamma^\mu \underbrace{U^{E\dag} U^N}_{U^{\text{PMNS}}} \nu'_L \,,
+\end{equation}
+
+\noindent donde $U^{\text{PMNS}}$ es la matriz de Pontecorvo, que ya habíamos encontrado en el capítulo~\ref{ch:ME},
+%
+\begin{equation}
+	U^\text{PMNS} = U^{E\dag} U^N \,.
+\end{equation}
+
+Es necesario conocer las matrices $U^E$ y $U^N$, que permiten ir de la base de interacción a la base de masas, para los leptones cargados y neutros respectivamente. En general, no es conocido cómo rotan estas partículas y para modelos específicos, como el ME, no es posible determinar estas matrices a partir de primeros principios. Por esta razón, para facilitar el trabajo con estas matrices, es conveniente adoptar la siguiente convención:
+%
+\begin{equation}
+	\boxed{
+	U^{E \dag} = \idnt \qc \quad U^N = U^\text{PMNS} \,.
+	}
+\end{equation}
+
+En este esquema de trabajo, $U^\text{PMNS}$ es la matriz de rotación para neutrinos. Los leptones cargados no rotan, por lo que sus autoestados de interacción son idénticos a sus autoestados de masa. La matriz $U^\text{PMNS}$ es conocida experimentalmente y es dada por
+%
+\begin{equation}
+	U^{\text{PMNS}} = \pmqty{
+		c_1 & s_1 c_3 & s_1 s_3 \\
+		-s_1 c_2 & c_1 c_2 c_3 - s_2 s_3 \ee^{\ii \delta} & c_1 c_2 s_3 + s_2 c_3 \ee^{\ii \delta} \\
+		-s_1 s_2 & c_1 s_2 s_3 + c_2 s_3 \ee^{\ii \delta} & c_1 s_2 s_3 - c_2 s_3 \ee^{\ii \delta}
+	} \,,
+\end{equation}
+
+\noindent donde
+%
+\begin{equation}
+	c_i = \cos \theta_i \qc s_i = \sin \theta_i \,,
+\end{equation}
+
+\noindent y $\ee^{\ii \delta}$ es conocida como la fase de violación CP. Así, la matriz PMNS queda determinada por cuatro parámetros. \\
+
+A manera de ejemplo, consideremos el siguiente decaimiento:
+%
+\begin{equation}
+	\pi^+ (u \widehat{d}) \longrightarrow e^+ \nu_e \,,
+\end{equation}
+
+\noindent representado por el diagrama
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{neutrinos_diag1.eps}
+\end{figure}
+
+Este es un proceso permitido en el ME y es una interacción cargada, por lo que presenta cambio de sabor.
+
+Al ser éste un decaimiento a dos cuerpos, la energía de las partículas salientes está completamente definida. Como la masa del electrón es fija, esto implica que el momentum del neutrino está completamente definido. En particular, en el sistema CM del $W$, el electrón y el neutrino salen \emph{"back-to-back"} con momentos definidos, así:
+%
+\begin{equation}
+	E_i^2 = p_i^2 + m_i^2\,, \qquad \text{con } \qquad p_i = \abs{\vb*{p}_i} \equiv p \,.
+\end{equation}
+
+No obstante, debe tenerse en cuenta que el neutrino en este proceso es un autoestado de sabor, y por lo tanto, una superposición de tres estados de masa, cada uno con una masa diferente -- y en consecuencia una energía particular $E_i$  --, y que evolucionará de manera independiente, i.e.,
+%
+\begin{equation}
+	\ket{\nu_e (0)} = c_1\ket{\nu_1} + s_1c_3\ket{\nu_2} + s_1s_3\ket{\nu_3}
+\end{equation}
+
+Es la superposición de estados de masa a que corresponde el autoestao de sabor del neutrino electrónico. Cada autoestado de masa evolucionará de manera diferente, no obstante podemos suponer, correctamente, que el momentum de las tres componentes es el mismo. Esto es justificado por diferentes razones. Un aspecto a tener en cuenta es que los neutrinos viajan casi a la velocidad de la luz. El momentum lineal de estas partículas ultrarrelativistas puede ser mucho mayor que su masa, de modo que la energía de las mismas estará casi completamente determinada por su velocidad. La diferencia en la energía de cada una provendrá de la pequeña contribución de sus masas distintas. Con esto, siendo el netrino electrónico una superposición de los tres estados de masa, podemos suponer que la energía del primero se distribuye de forma casi equitativa entre los tres modos. Esta relativa igualdad hace que los momentos sean iguales. \textcolor{red}{*****revisar este argumento*****}
+
+Esta suposición sobre la igualdad de los momentos lineales de los tres autoestados de masa es crucial para el análisis que realizaremos
+
+Tenemos entonces, que para un tiempo $t$
+%
+\begin{IEEEeqnarray*}{rCl}
+	\ket{\nu_e(t)} &=& \sum_i U_{ei} \ket{\nu_i(t)} \\
+	&=& \sum_i U_{ei} \ee^{-\ii E_i t} \ket{\nu_i(0)} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+La probabilidad de encontrar un $\nu_e$ para un tiempo dado es
+%
+\begin{equation}
+	\abs{\braket{\nu_\alpha}{\nu_{\alpha'}(t)}}^2 \,.
+\end{equation}
+
+Supongamos que tenemos un estado, inicialmente, electrónico. Determinemos la probabilidad de que, después de un tiempo, encontremos la partícula nuevamente en un estado electrónico
+%
+\begin{IEEEeqnarray*}{rCl}
+	\abs{\braket{\nu_e(0)}{\nu_e(t)}}^2 &=& \left| \Big(c_1 \bra{\nu_1} + s_1c_3 \bra{\nu_2} + s_1s_3 \bra{\nu_3}\Big) \right. \\
+	%
+	&& \left. \cdot \qty(c_1 \ee^{-\ii E_1 t}\ket{\nu_1} + s_1c_3 \ee^{-\ii E_2 t}\ket{\nu_2} + s_1s_3 \ee^{-\ii E_3 t} \ket{\nu_3}) \right|^2 \slj
+	%%
+	&=& \abs{c_1^2 \ee^{-\ii E_1 t} + s_1^2c_3^2 \ee^{-\ii E_2 t} + s_1^2s_3^2 \ee^{-\ii E_3 t}}^2 \slj
+	%%
+	&=& \qty[c_1^2 \ee^{-\ii E_1 t} + s_1^2c_3^2 \ee^{-\ii E_2 t} + s_1^2s_3^2 \ee^{-\ii E_3 t}] \\
+	%
+	&& \times \qty[c_1^2 \ee^{+\ii E_1 t} + s_1^2c_3^2 \ee^{+\ii E_2 t} + s_1^2s_3^2 \ee^{+\ii E_3 t}] \slj
+	%%%%
+	&=& \textcolor{blue}{c_1^4}
+	+ \textcolor{orange}{c_1^2s_1^2c_3^2 \ee^{-\ii (E_1 - E_2)t}}
+	+ \textcolor{purple}{c_1^2s_1^2s_3^2 \ee^{-\ii (E_1 - E_3)t}} \\
+	%
+	&& + \textcolor{orange}{s_1^2c_3^2c_1^2 \ee^{-\ii(E_2 - E_1)t}}
+	+ \textcolor{blue}{s_1^4c_3^4}
+	+ s_1^4c_3^2s_3^2 \ee^{-\ii(E_2 - E_3)t} \\
+	%
+	&& + \textcolor{purple}{s_1^2s_3^2c_1^2 \ee^{-\ii(E_3-E_1)t}}
+	+ s_1^4s_3^2c_3^2 \ee^{-\ii(E_3-E_2)t}
+	+ \textcolor{blue}{s_1^4s_3^4} \slj
+	%%%%
+	&=& \textcolor{blue}{c_1^4 + s_1^4\qty(c_3^4 + s_3^4)}
+	+ \textcolor{orange}{2c_1^2s_1^2c_3^2 \cos[(E_1-E_2)t]} \\
+	%
+	&& +\> \textcolor{purple}{2c_1^2s_1^2s_3^2 \cos[(E_3-E_1)t]} + 2s_1^4s_3^2c_3^2\cos[(E_2 - E_3)t] \slj
+	%%%%
+	&=& c_1^4 + s_1^4\qty(c_3^4 + s_3^4) + \textcolor{olive}{2c_1^2s_1^2c_3^2}
+	+\textcolor{teal}{2c_1^2s_1^2s_3^2}
+	+ \textcolor{cyan}{2s_1^4s_3^2c_3^2} \\
+	%
+	&& - 2c_1^2s_1^2c_3^2 \qty[\textcolor{olive}{1} - \cos[(E_1-E_2)t]] \\
+	%
+	&& - 2c_1^2s_1^2s_3^2 \qty[\textcolor{teal}{1} - \cos[(E_3-E_1)t]] \\
+	%
+	&& - 2s_1^4s_3^2c_3^2 \qty[\textcolor{cyan}{1} - \cos[(E_2 - E_3)t]] \label{eq:neutrinos_antesDelTruco} \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde el segundo paso se debe a que los estados de masa son ortonormales, y en el último paso hemos sumado y restado los términos en colores. Ahora, notemos que
+%
+\begin{equation*}
+	c_1^2 + s_1^2 \qty(c_3^2 + s_3^2) = 1\,,
+\end{equation*}
+
+\noindent de modo que podemos escribir
+%
+\begin{IEEEeqnarray*}{rCl}
+	1^2 &=& \qty[c_1^2 + s_1^2 \qty(c_3^2 + s_3^2)]^2 \\
+	%%%%
+	&=& c_1^4
+	+ s_1^4 \qty(c_3^2 + s_3^2)^2
+	+ 2c_1^2s_1^2 \qty(c_3^2 + s_3^2) \\
+	%%%%
+	&=& c_1^4
+	+ s_1^4c_3^4
+	+ 2s_1^4c_3^2s_3^2
+	+ s_1^4s_3^4
+	+ 2c_1^2s_1^2c_3^2
+	+ 2c_1^2s_1^2s_3^2\,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Este término corresponde al término independiente de $t$ en \eqref{eq:neutrinos_antesDelTruco}, así
+%
+\begin{IEEEeqnarray*}{rCl}
+	P_{\nu_e \rightarrow \nu_e}(t) \equiv \abs{\braket{\nu_e(0)}{\nu_e(t)}}^2 &=& 1 - 2c_1^2s_1^2c_3^2 \qty[1 - \cos[(E_1-E_2)t]] \\
+	%
+	&& - 2c_1^2s_1^2s_3^2 \qty[1 - \cos[(E_3-E_1)t]] \\
+	%
+	&& - 2s_1^4s_3^2c_3^2 \qty[1 - \cos[(E_2 - E_3)t]]\,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Ahora, habíamos mencionado que para los neutrinos, $p \gg m_i$, de modo que
+%
+\begin{IEEEeqnarray*}{rCl}
+	E_i = \sqrt{p^2 + m_i^2} &=& p \qty[1 + \qty(\frac{m_i}{p})^2]^{1/2} \\
+	%%%%
+	&\approx& p \qty[1 + \frac{1}{2} \qty(\frac{m_i}{p})^2] \\
+	%%%%
+	&=& p + \frac{m_i^2}{2p} \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent de modo que la diferencia entre las energías será proporcional a la diferencia entre los cuadrados las masas,
+%
+\begin{equation}
+	E_i - E_j = \frac{1}{2p} \qty(m_i^2 - m_j^2) \,.
+\end{equation}
+
+Si definimos
+%
+\begin{equation}
+	\ell_{ij} \equiv \frac{2 \pi}{E_i - E_j} = \frac{2 \pi}{(m_i^2 - m_j^2)} \cdot 2p \,.
+\end{equation}
+
+Esta cantidad está asociada a la distancia que tiene que recorrer un haz de partículas para oscilar. Si la distancia es lo suficientemente grande el efecto puede ser observable, pero si la distancia es muy pequeña, será muy improbable observar el efecto. Aquí vemos por qué con leptones cargados no se espera observar el efecto, ya que la diferencia de masas entre diferentes sabores de los leptones cargados es, típicamente, mucho mayor que su momentum, incluso para velocidades ultrarrelativistas, de modo que $\ell_{ij}$ tiene un valor muy pequeño.
+
+Ahora, despejando tenemos que
+%
+\begin{equation}
+	E_i - E_j = \frac{2\pi}{\ell_{ij}} \,.
+\end{equation}
+
+La velocidad de los neutrinos es, esencialmente, la velocidad de la luz. Con $c=1$ y para velocidad constante,
+%
+\begin{equation*}
+	x = vt = ct = t \,,
+\end{equation*}
+
+\noindent de modo que
+%
+\begin{IEEEeqnarray}{rCl}
+	\cos(E_i - E_j) &=& \cos\qty(\frac{2\pi x}{\ell_{ij}}) \,.
+\end{IEEEeqnarray}
+
+Es claro que si uno quiere ver una oscilación completa, $x$ debe variar en un factor entero de $\ell_{ij}$.
+
+Ahora, determinaremos el promedio de esta función, asumiendo que la distancia recorrida es mucho mayor que un periodo de oscilación. Sea $X$ la distancia total recorrida. Entonces tenemos
+%
+\begin{IEEEeqnarray*}{rCl}
+	\expval{\cos\qty(\frac{2\pi x}{\ell_{ij}})} &\equiv& \frac{1}{X} \int_0^x \cos\qty(\frac{2\pi x}{\ell_{ij}}) \dd{x} \\
+	%%%%
+	&=& \frac{1}{X} \sin\qty(\frac{2\pi x}{\ell_{ij}}) \times \frac{\ell_{ij}}{2\pi} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+En el límite en que la distancia recorrida es muy grande,
+%
+\begin{equation}
+	\lim_{X \rightarrow \infty} \expval{\cos\qty(\frac{2\pi x}{\ell_{ij}})} = \lim_{X \rightarrow \infty} \frac{\ell_{ij}}{X} \frac{\sin\qty(\frac{2\pi x}{\ell_{ij}})}{2\pi} = 0 \,.
+\end{equation}
+
+Es decir, para grandes distancias recorridas, el promedio de la función coseno es igual a cero. De esta forma, para distancias recorridas muy grandes tenemos
+%
+\begin{IEEEeqnarray*}{rCl}
+	\expval{P_{\nu_e \rightarrow \nu_e}(t)} &=& 1 - 2c_1^2s_1^2c_3^2 - 2c_1^2s_1^2s_3^2 - 2s_1^4c_3^2s_2^2 \\
+	%%%
+	&=& 1 - c_1^2s_1^2 \underbrace{\qty(c_3^2 + s_3^2)}_{=1} - 2s_1^4c_3^2s_2^2 \\
+	%%%%
+	&=& 1 - c_1^2s_1^2 - 2s_1^4c_3^2s_2^2 \,.
+\end{IEEEeqnarray*}
+
+Este promedio es la cantidad que es susceptible de ser observada en un experimento de partículas. Tomemos, por ejemplo, $s_1^2 = \sfrac{2}{3},\, s_3^2 = \sfrac{1}{2}$, entonces $\expval{P_{\nu_e \rightarrow \nu_e}(t)} = \sfrac{1}{3}$. Este es el resultado que encontró el experimento de Homestake, que le valió el premio Nobel de física de 2002 a Davis, Koshiba y otros científicos que contribuyeron al descubrimiento de las oscilaciones de neutrinos a partir de una discrepancia en que sólo un tercio de los neutrinos solares que se querían medir fueron detectados.\\
+
+En general, un neutrino de algún sabor es una combinación lineal de los neutrinos que son autoestados de masa,
+%
+\begin{equation}
+	\ket{\nu_\alpha(t)} = \sum_i U_{\alpha i} \ee^{-\ii E_i t} \ket{\nu_i} \,.
+\end{equation}
+
+Ahora, cada uno de estos modos evoluciona de forma diferente en el tiempo. Si se calcula la proyección de algún sabor, la probabilidad de que, en el futuro se vuelva a encontrar el mismo sabor de neutrino es dada por
+%
+\begin{IEEEeqnarray*}{rCl}
+	\abs{\braket{\nu_\beta}{\nu_\alpha(t)}} &=& \abs{\sum_j U^*_{\beta j} \mel{\nu_j}{\sum_i U_{\alpha i} \ee^{-\ii E_i t}}{\nu_i}}^2 \\
+	%%%%
+	&=& \abs{\sum_{j,i} U^*_{\beta j} U_{\alpha i} \ee^{-\ii E_i t} \delta_{ji}}^2 \\
+	%%%%
+	&=& \qty(\sum_{i} U_{\beta j} U^*_{\alpha i} \ee^{+\ii E_i t}) \qty(\sum_{j} U^*_{\beta j} U_{\alpha i} \ee^{-\ii E_i t}) \\
+	%%%%
+	&=& \sum_{i,j} U_{\beta i} U^*_{\alpha i} U^*_{\beta j} U_{\alpha j} \ee^{+\ii (E_i - E_j)t} \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Para el caso en que $i=j$, el término en la suma se reduce a
+%
+\begin{equation}
+	\abs{U_{\beta i}}^2 \abs{U_{\alpha i}}^2 \,.
+\end{equation}
+
+Para $i \neq j$ puedo expresar la suma como
+%
+\begin{IEEEeqnarray*}{rCl}
+	\sum_{i \neq j} &=& \frac{1}{2} \sum_{i\neq j} U_{\beta i} U^*_{\alpha i} U^*_{\beta j} U_{\alpha j} \ee^{+\ii (E_i - E_j)t} \\
+	%
+	&& +\> \frac{1}{2}\sum_{i\neq j} U_{\beta j} U^*_{\alpha j} U^*_{\beta i} U_{\alpha i} \ee^{+\ii (E_j - E_i)t} \slj
+	%%%%
+	&=& \sum_{i \neq j} \Re \qty[U_{\beta i} U^*_{\alpha i} U^*_{\beta j} U_{\alpha j} \ee^{+\ii (E_i - E_j)t}] \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent donde
+%
+\begin{equation}
+	(E_i - E_j)t = \frac{2\pi}{\ell_{ij}}x \,.
+\end{equation}
+
+
+
+
+%---------------------------------------------------------
+\section{Masas de neutrinos}
+
+\subsection{Conjugado de carga}
+
+Recordemos que para un fermión $\psi$, su conjugado de carga está dado por
+%
+\begin{equation}
+	\psi^C = C \gamma^0 \psi^* = \ii \gamma^2 \psi^*\,.
+\end{equation}
+
+Comparando las expresiones tenemos que
+%
+\begin{IEEEeqnarray*}{rCl}
+	C\gamma^0 &=& \ii \gamma^2 \\
+	%%%%
+	\Rightarrow C\underbrace{\qty(\gamma^0)^2}_{=1} &=& \ii \gamma^2 \gamma^0 \slj
+	%%%%
+	\IEEEeqnarraymulticol{3}{c}{\therefore \boxed{C = \ii \gamma^2\gamma^0} \,.} \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Este es el operador de conjugación de carga definido en la base de Dirac. La definición general puede depender de la base. En general, lo que se pretende es que las corrientes que se tenga cambien de signo al aplicar la conjugación.
+
+Con la definición que hemos dado, el conjugado de Dirac del conjugado de carga es
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{\psi^C} &=& \qty(\psi^C)^{* \intercal} \gamma^0 \\
+	%%%%
+	&=& \qty(\ii \gamma^2 \psi^*)^\dag \gamma^0 \\
+	%%%%
+	&=& \psi^{*\dag} \qty(\gamma^2)^\dag \qty(-\ii) \gamma^0 \\
+	%%%%
+	&=& \qty(\psi^{*})^{*\intercal} \qty(\gamma^0\gamma^2\gamma^0)\gamma^0 (-\ii) \\
+	%%%%
+	&=& \psi^\intercal \gamma^0 \gamma^2 (-\ii) \\
+	%%%%
+	&=& \psi^\intercal \underbrace{\gamma^2 \gamma^0 \ii}_{=C} \slj
+	%%%%
+	\IEEEeqnarraymulticol{3}{c}{\boxed{\overline{\psi^C} = \psi^\intercal C}\,.} \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+Recordemos las definiciones de las partes derechas e izquierdas de un espinor,
+%
+\begin{equation}
+	\begin{IEEEeqnarraybox}[][c]{rCl}
+		\psi_L &=& \frac{1}{2} \qty(1 - \gamma^5) \psi\,, \slj
+		%%%%
+		\psi_R &=& \frac{1}{2} \qty(1 + \gamma^5) \psi \,,
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+\noindent y veamos lo que ocurre con la quiralidad de un espinor bajo la conjugación de carga. Primero definimos~\footnote{Nótese que el conjugado complejo $*$ es equivalente a $* = \dag \intercal$, de modo que $\psi^* = \qty(\psi)^{\intercal * \intercal} = \qty(\psi)^{* \intercal \intercal} = \psi^*$. De aquí se sigue la sustitución que se hizo en la tercera linea en la Ecuación~\eqref{eq:conjugadoizq}.}
+%
+\begin{IEEEeqnarray*}{rCl}
+	\psi^C_L &=& \qty[P_L \psi]^C \\
+	%%%%
+	&=& \ii \gamma^2 \qty[\qty(\frac{1 - \gamma^5}{2}) \psi]^* \\
+	%%%%
+	&=& \ii \gamma^2 \qty[\qty(\frac{1 - \gamma^5}{2})\psi]^{\dag \intercal} \\
+	%%%%
+	&=& \ii \gamma^2 \qty[\psi^\dag \qty(\frac{1 - \gamma^5}{2})^\dag]^\intercal \\
+	%%%%
+	&=& \ii \gamma^2 \qty[\psi^\dag \qty(\frac{1-\gamma^5}{2})]^\intercal\,, \quad \substack{\text{ya que } \gamma_5^\dag = \gamma^5,\, 1^\dag = 1} \\
+	%%%%
+	&=& \ii \gamma^2 \qty[\qty(\frac{1-\gamma^5}{2}) \psi^{\dag \intercal}] \,, \quad \substack{\text{ya que } \gamma_5^\intercal = \gamma^5,\, 1^\intercal = 1} \\
+	%%%%
+	&=& \ii \qty[\qty(\frac{1 - \gamma^5}{2}) \psi^*] \\
+	%%%%
+	&=& \frac{\qty(1 + \gamma^5)}{2} \ii \gamma^2 \psi^* \,, \quad \substack{\gamma^5 \text{ adquiere un } (-) \\ \text{ al conmutar con }\gamma^2} \slj
+	\IEEEeqnarraymulticol{3}{c}{\boxed{\psi^C_L = P_R \psi^C}\,,  \label{eq:conjugadoizq} \IEEEyesnumber}
+\end{IEEEeqnarray*}
+
+\noindent es decir, el conjugado de carga de una cantidad izquierda es una cantidad derecha. Debe tenerse en cuenta aquí que $\psi^C_L$ es únicamente una notación, pues esta cantidad no es izquierda. Similarmente,
+
+\begin{equation}
+	\boxed{\psi^C_R = P_L \psi^C} \,.
+\end{equation}
+
+
+
+
+%----------//----------
+\subsection{Término de masa de Dirac}
+
+Los términos de masa de Dirac van a acoplar cantidades derechas con izquierdas y viceversa. La forma de un término de masa de Dirac, típicamente es
+%
+\begin{equation}
+	D\overline{\psi}\psi\,,
+\end{equation}
+
+\noindent donde $D$ es la masa de Dirac y $\psi = \qty(P_L + P_R)\psi$. Tenemos entonces que
+%
+\begin{equation}
+	D \overline{\psi}\psi = D \qty(\overline{\psi}_L + \overline{\psi}_R) \qty(\psi_L + \psi_R) \,.
+\end{equation}
+
+Tomemos un término en particular, por ejemplo
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{\psi}_L \psi_L &=& \overline{\qty(P_L \psi)} \psi_L \\
+	%%%%
+	&=& \qty[\frac{\qty(1 - \gamma^5)}{2} \psi]^\dag \gamma^0 P_L \psi \\
+	%%%%
+	&=& \psi^\dag \frac{\qty(1 - \gamma^5)}{2} \gamma^0 \frac{\qty(1 - \gamma^5)}{2} \psi \\
+	%%%%
+	&=& \psi^\dag \gamma^0 \underbrace{P_R P_L}_{=0} \psi \,,
+\end{IEEEeqnarray*}
+
+\noindent donde el proyector derecho ha aparecido debido a que, al conmutar $\gamma^5$ con $\gamma^0$ adquirimos un signo negativo adicional, de modo que
+%
+\begin{equation}
+	\overline{\psi}_L \psi_L = 0 \,.
+\end{equation}
+
+El mismo análisis es válido para componentes derechas, de modo que
+%
+\begin{equation}
+	\overline{\psi_R}\psi_R = 0
+\end{equation}
+
+\noindent y únicamente van a sobrevivir los términos que acoplen quiralidades diferentes, es decir
+%
+\begin{equation}
+	D\overline{\psi}\psi = D\qty(\overline{\psi}_R\psi_L + \overline{\psi}_L \psi_R) \,.
+\end{equation}
+
+Estas son las masas de Dirac. En estos términos empleamos la conjugación de Dirac para formar el invariante de Lorentz. Esta no es la única manera de formar invariantes de Lorentz, también es posible hacerlo con el conjugado complejo. \textcolor{red}{Esto se demuestra en el ejercicio ********}. Así, también es posible obtener invariantes de Lorentz utilizando conjugación de carga. En este último caso, el término de masa se denomina masa de Majorana, que estudiaremos a continuación.
+
+
+
+
+%----------//----------
+\subsection{Término de masa de Majorana}
+
+El físico italiano Ettore Majorana, alumno de Enrico Fermi fue el primero en notar que pueden construirse cantidades que sean invariantes de Lorentz de la forma
+%
+\begin{equation}
+	\overline{\psi^C_L} \psi_L
+\end{equation}
+
+\noindent que permiten acoplar términos con la misma quiralidad. Verifiquemos que estos términos no se hacen cero, como en el caso de la masa de Dirac
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{\psi^C_L} \psi_L &=& \overline{\qty[\frac{\qty(1 + \gamma^5)}{2} \psi^C]} \psi_L \\
+	%%%%
+	&=& \qty[\frac{(1 - \gamma^5)}{2} \psi^C]^\dag \gamma^0 P_L \psi \\
+	%%%%
+	&=& \qty[\psi_{C \dag} \qty{(1 + \gamma^5)}{2}] \gamma^0 P_L \psi \\
+	%%%%
+	&=& \psi^{C \dag} \gamma^0 \underbrace{P_L^2}_{=P_L} \psi \\
+	%%%%
+	&=& \overline{\psi^C}P_L \psi \neq 0 \,. \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+La clave de esto es que el conjugado de carga $\psi^C_L$ es una cantidad derecha, no una izquierda. Esto desde el punto de vista estrictamente matemático. Sin embargo, desde el punto de vista físico se justifica la notación que hemos usado, puesto que este término lleva la información de la componente izquierda de $\psi$. Es decir, si la componente izquierda es la que interactuaba con la interacción débil, esa es la información relevante. Es por ello que dejamos el rótulo $L$, pese a que, matemáticamente, la cantidad tenga quiralidad derecha. La conjugación de carga es estrictamente una operación matemática, pero no altera el contenido físico de los objetos que estamos estudiando. Por este motivo podemos aún decir que los términos de Majorana acoplan izquierdo con izquierdo, porque el conjugado de carga aún contiene la información de la parte izquierda de la partícula. Esto es, son las partes que interactúan mediante la interacción débil las que están presentes en el término.
+
+\begin{cabox}
+	Lo importante no es la quiralidad intrínseca del espinor, sino de dónde proviene; es decir, si contiene información sobre la parte derecha o sobre la parte izquierda de la partícula en cuestión.
+\end{cabox}
+
+Evidentente, adicional a la relación que hemos analizado, tendremos que
+%
+\begin{equation}
+	\begin{IEEEeqnarraybox}[][c]{rCl}
+		\overline{\psi^C_R} \psi_L &=& 0 \,, \slj
+		%%%%
+		\overline{\psi^C_L} \psi_R &=& 0 \,, \slj
+		%%%%
+		\overline{\psi^C_R} \psi_R &\neq& 0 \,.
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+
+
+
+%----------//----------
+\subsection{Autoestados del operador conjugación de carga}
+
+Consideremos el estado
+%
+\begin{equation}
+	\chi = \psi_L + \psi_L^C \,.
+\end{equation}
+
+Nótese que los dos sumandos tienen información de la parte izquierda del espinor, no obstante el segundo término tiene quiralidad derecha, i.e., el segundo término no suministra información adicional. Si tenemos el conjugado de este estado,
+%
+\begin{equation}
+	\chi^C = \psi_L^C + \psi_L^{CC} = \psi_L^C + \psi_L \,.
+\end{equation}
+
+De igual forma, con las partes derechas, definimos
+%
+\begin{equation}
+	\omega = \psi_R + \psi_R^C \,.
+\end{equation}
+
+Como
+%
+\begin{equation}
+	\chi^C = \chi \qc \omega^C = \omega^C \,,
+\end{equation}
+
+estos son autoestados del operador conjugación de carga.\\
+
+En general, podemos escribir el término de masa como
+%
+\begin{equation}
+	\lagdn = D \qty(\overline{\psi}_L \psi_R + \overline{\psi}_R \psi_L) + A\overline{\psi^C_L} \psi_L + B\overline{\psi^C_R} \,.
+\end{equation}
+
+Este es el término de masa más general posible, y es de suma importancia para física de neutrinos, pues sólo para éstos, el término $A\overline{\psi^C_L} \psi_L$ es permitido. Para partículas con carga diferente de cero, este término no es posible debido a la invariancia de carga. Veamos por qué.\\
+
+
+
+%----------
+\paragraph{Invarianza bajo una fase}
+
+Consideremos el espinor $\psi$ que transforma según
+%
+\begin{equation}
+	\psi \rightarrow \ee^{-\ii \theta}\psi = \psi' \,.
+\end{equation}
+
+Así,
+%
+\begin{equation}
+	\psi_R \rightarrow \ee^{-\ii \theta} \psi_R \qc \psi_L \rightarrow \ee^{-\ii \theta} \psi_L \,.
+\end{equation}
+
+Entonces
+%
+\begin{IEEEeqnarray}{rCl}
+	\overline{\psi}_R \psi_L \rightarrow \qty(\ee^{-\ii \theta} \psi_R)^\dag \gamma^0 \ee^{-\ii \theta} \psi_L &=& \psi_R^\dag \gamma^0 \underbrace{\ee^{\ii \theta} \ee^{-\ii \theta}}_{=1} \psi_L = \overline{\psi}_R \psi_L \,,
+\end{IEEEeqnarray}
+
+\noindent es decir, el término de Dirac es invariante bajo una transformación de fase. ¿Qué ocurre, entonces, con el término de Majorana?
+
+Recordemos que, en una teoría en general, las transformaciones de fase serán determinadas por $\ee^{-\ii q \theta}$, donde $q$ es la carga de la partícula. Si la carga de las partículas es cero, con en el caso de los neutrinos, la transformación de fase simplemente dará la identidad. Observemos que la cantidad $\overline{\psi^C_L}$ implica dos transformaciones, veamos
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{\psi^C_L}{\psi_L} &\rightarrow& \overline{\ii \gamma^2 \psi_L^* \ee^{+\ii q \theta}} \cdot \ee^{-\ii q \theta} \theta_L \\
+	%%%%
+	&=& \qty(\ii \gamma^2 \psi_L^* \ee^{+\ii q \theta})^{* \intercal} \gamma^0 \ee^{-\ii q \theta} \psi_L \\
+	%%%%
+	&=& \overline{\psi^C_L} \ee^{-\ii q \theta} \ee^{- \ii q \theta} \psi_L \\
+	%%%%
+	&=& \ee^{-2\ii q \theta} \overline{\psi^C_L} \psi_L \,, \IEEEyesnumber
+\end{IEEEeqnarray*}
+
+\noindent esto es, el término de masa de Majorana no es invariante bajo transformaciones de fase. No obstante, si la carga de la partícula es cero, $\ee^{-2\ii q\theta} = 1$ y se conserva la invarianza para el término de Majorana. Es por ello que estos términos son sólo posibles en física de neutrinos. \\
+
+
+
+
+
+%----------
+\subsection{Mecanismo de sube y baja}
+
+Formemos ahora algunos productos con las funciones de onda de Majorana
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{\chi} \omega &=& \qty(\overline{\psi}_L + \overline{\psi^C_L}) \qty(\psi_r + \psi^C_R) \\
+	%%%%
+	&=& \overline{\psi}_L \psi_R
+	+ \cancelto{0}{\overline{\psi}_L\psi^C_R}
+	+ \cancelto{0}{\overline{\psi^C_L}\psi_R}
+	+ \overline{\psi^C_L} \psi^C_R \slj
+	%%%%
+	\IEEEeqnarraymulticol{3}{c}{\overline{\chi} \omega = \overline{\psi}_L \psi_R + \overline{\psi^C_L} \psi^C_R \,.  \IEEEyesnumber}
+\end{IEEEeqnarray*}
+
+Notemos que la información que lleva el último término es la misma información que lleva el primero. El segundo término es el mismo término de Dirac, pero con sus conjugados, i.e. si la teoría es invariante bajo conjugación (como en el caso de QED), los dos términos son iguales. \\
+
+Es conveniente desarrollar un criterio para evaluar rápidamente los productos que serán cero en este tipo de cantidades. Notemos que
+%
+\begin{IEEEeqnarray*}{rCl}
+	\overline{\psi}_L \psi^C_R &=& \overline{\psi} P_R \qty(P_L \psi) = 0 \,.
+\end{IEEEeqnarray*}
+
+Similarmente para el término $\overline{\psi^C_L}\psi_R = 0$. En general
+%
+\begin{equation}
+	\begin{IEEEeqnarraybox}[][c]{rCl}
+		\overline{\psi^C_L} &=& \overline{\psi^C} P_L \,, \\
+		%%%%
+		\overline{\psi_L} &=& \overline{\psi} P_R \,,
+	\end{IEEEeqnarraybox}
+\end{equation}
+
+\noindent es decir, 
+\begin{cabox}
+	cuando hay doble conjugado, el proyector que obtenemos a la derecha del espinor tiene la misma quiralidad. Cuando hay una sola conjugación (e.g., sólo conjugación de Dirac), la quiralidad del proyector a la derecha del espinor será opuesta.
+\end{cabox} 
+
+Así es fácil ver por qué los términos que se hacen cero resultan incluyen productos $P_LP_R = 0$ o $P_rP_L = 0$. \\
+
+
+De manera similar podemos construir
+%
+\begin{equation}
+	\overline{\omega} \chi = \overline{\psi}_R \psi_L + \overline{\psi^C_R} \psi^C_L \,.
+\end{equation}
+
+Entonces
+%
+\begin{equation}
+	\qty(\overline{\chi}\omega + \overline{\omega}\chi) = \overline{\psi}_L \psi_R + \overline{\psi}_R \psi_L + \text{ conjugado de carga} \,.
+\end{equation}
+
+Estos términos son simplemente el conjugado de Dirac.
+
+Con esto, podemos formar un término general de masa en términos de los autoestados del operador conjugación de carga de la siguiente forma
+%
+\begin{equation}
+	\lagdn = \frac{1}{2} D \qty(\overline{\chi}\omega + \overline{\omega}\chi) + A\overline{\chi}\chi + B \overline{\omega}\omega \,.
+\end{equation}
+
+Esto puede escribirse en forma matricial como
+%
+\begin{equation}
+	\lagdn = \pmqty{\overline{\chi} & \overline{\omega}} \pmqty{A & \frac{1}{2}D \\ \frac{1}{2}D & B} \pmqty{\chi \\ \omega} \,,
+\end{equation}
+
+\noindent donde la matriz de masa tiene como valores propios
+%
+\begin{equation}
+	M_{1,2} = \frac{1}{2} \qty[A + B \pm \sqrt{\qty(A - B)^2 + D^2}] \,.
+\end{equation}
+
+Supongamos que la parte izquierda no existe, i.e. $A=0$. En este caso,
+%
+\begin{IEEEeqnarray*}{rCl}
+	M_{1,2} &=& \frac{1}{2} \qty[B \pm \sqrt{B^2 + D^2}] \\
+	%%%%
+	&=& \frac{1}{2} \qty[B \pm B \sqrt{1 + \qty(\frac{D}{B})^2}] \,.
+\end{IEEEeqnarray*}
+
+Si la masa de Dirac es mucho más pequeña que la masa de Majorana, tenemos
+%
+\begin{equation}
+	M_{1,2} \approx \frac{1}{2} \qty[B \pm B \qty(1 + \frac{1}{2} \qty(\frac{D}{B})^2)] = \left\{ \begin{IEEEeqnarraybox}[][c]{l}
+		\IEEEstrut
+		B \slj 
+		\frac{1}{4} \frac{D^2}{B}
+		\IEEEstrut
+	\end{IEEEeqnarraybox} \right. \,,
+\end{equation}
+
+\noindent donde, para el primer autovalor, despreciamos el término adicional, puesto que es muy pequeño comparado con $B$. Tenemos entonces dos autovalores, uno con una masa $B$ muy grande, y uno con masa 
+%
+\begin{equation}
+	M_2 = \frac{1}{4} D\qty(\frac{D}{B}) \,.
+\end{equation}
+
+Entonces, si $D$ es la masa típica de una partícula a la escala electrodébil, tendremos dos clases de neutrinos, uno con una masa muy grande $B$ y otro con la masa típica de los fermiones, que es $D$, multiplicada por una cantidad que es tanto más pequeña, cuanto $B$ sea grande. Esto es conocido como el \emph{mecanismo de sube y baja} (see-saw). \textcolor{blue}{(Cheng \& Lee)}
