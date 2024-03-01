@@ -339,7 +339,7 @@ Podemos ver que \eqref{eq:anomalias_1_manipulado} resulta siendo igual que la in
 	&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \Tr[\frac{1}{(\slashed{p} - \slashed{k}_1)^2} \gamma_\nu \frac{1}{\slashed{p}^2} \gamma_\xi \frac{1}{(\slashed{p} + \slashed{k}_2)^2} \gamma_\mu \gamma_5] \,.
 \end{IEEEeqnarray*}
 
-En este punto, debemos recordar que los fermiones en el loop contienen, tanto índices fermiónicos, como índices internos del grupo de simetría al que corresponden. Por ejemplo, suponiendo que el fermión es un quark (los bosones de las patas externas serían gluones), tendría un índice de color asociado a la simetría $\SU{3}$, que puede tomar el valor 1, 2 ó 3 y representan la carga de color (rojo, azul y verde) de un quark.
+En este punto, debemos recordar que los fermiones en el loop contienen, tanto índices fermiónicos, como índices internos del grupo de simetría al que corresponden. Por ejemplo, suponiendo que el fermión es un quark (up) (los bosones de las patas externas serían gluones), tendría un índice de color asociado a la simetría $\SU{3}$, que puede tomar el valor 1, 2 ó 3 y representan la carga de color (rojo, azul y verde) de un quark.
 
 En la representación fundamental del grupo de simetría, los generadores $\lambda^a$ son matrices, y por lo tanto, tienen dos índices $\lambda^a_{ij}$ de color que acoplan con aquellos del fermión. En el ejemplo que estamos considerando, si a un vértice entra un quark con índice 1 (rojo) y sale uno con índice 3 (verde), el generador que origina esta transición tendría la forma (salvo por un factor de normalización)
 %
@@ -350,11 +350,11 @@ En la representación fundamental del grupo de simetría, los generadores $\lamb
 Así, el término en el lagrangiano para la trancisión de los quarks tendría la forma (salvo por un factor de normalización)
 
 \begin{IEEEeqnarray*}{rCl}
-	g\overline{q} \lambda^a q \gamma^\mu G_\mu &=& g \gamma^\mu \pmqty{q_1 & q_2 & q_3} \pmqty{0 & 0 & 1 \\ 0 & 0 & 0 \\ 1 & 0 & 0} \pmqty{q_1 \\ q_2 \\ q_3}G_\mu \slj
+	g\overline{u} \lambda^a u \gamma^\mu G_\mu &=& g \gamma^\mu \pmqty{u_1 & u_2 & u_3} \pmqty{0 & 0 & 1 \\ 0 & 0 & 0 \\ 1 & 0 & 0} \pmqty{u_1 \\ u_2 \\ u_3}G_\mu \slj
 	%%
-	&=& g \gamma^\mu G_\mu q_1 q_3 + \text{h. c.} \slj
+	&=& g \gamma^\mu G_\mu u_1 u_3 + \text{h. c.} \slj
 	%%
-	&=& g \gamma^\mu G_\mu q_1\lambda^a_{13}q_3 + \text{h. c.} \,,
+	&=& g \gamma^\mu G_\mu u_1\lambda^a_{13}u_3 + \text{h. c.} \,,
 \end{IEEEeqnarray*}
 
 \noindent que es la transición requerida con su gluón correspondiente.
