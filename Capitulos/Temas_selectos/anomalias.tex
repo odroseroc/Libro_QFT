@@ -3,32 +3,37 @@
 \label{ch:anomalias}
 % Basado en Greiner. Gauge Theory of Weak Interactions
 
-\footnote{Crédito de la imagen del encabezado: kjpargeter en Freepik}Por anomalía entendemos la invalidez de una simetría de la acción clásica debida al proceso de cuantización. Si la simetría clásica no se preserva en este proceso, se dice entonces que \emph{la teoría tiene una anomalía}. Como consecuencia, la corriente asociada a la teoría, cuya conservación está asegurada por el teorema de Noehter, deja de ser conservada tras la cuantización. Llamamos a ésta \emph{corriente anómala}. Existen varios tipos de anomalías y cada una depende de la simetría en consideración. Entre ellas se encuentran la anomalía quiral, anomalías abelianas y no abelianas, anomalías supersimétricas, anomalías gravitacionales, entre otras.
+\footnote{Crédito de la imagen del encabezado: kjpargeter en Freepik}Las anomalías cuánticas son contribuciones que se obtienen en cierto tipo de topologías (diagramas), que no se pueden dar en el Lagrangiano y que son problemáticas para la consistencia de una teoría.
 
-Las anomalías presentan una doble característica. Por un lado, se requieren para explicar resultados experimentales como el decaimiento $\pi^0 \rightarrow \gamma \gamma$ y por otra parte -- y de gran importancia en la teoría cuántica de campos --, las anomalías de la teoría deben ser canceladas para asegurar su renormalización. Este requerimiento tiene consecuencias importantes. En el caso del modelo electrodébil, la simetría está unificada en la forma $\SU{2}_L \otimes \SU{1}_Y$, que es potencialmente anómala, e impone el balance entre el número de quarks y el número de leptones para que exista cancelación de anomalías y la teoría sea renormalizable.
+A tree-level, los procesos permitidos en una teoría son dados por los vértices, es decir, términos que aparecen en el Lagrangiano. Es de esperar que los diagramas a un loop (como el de la Figura~\ref{fig:proceso1loop}) permitan exactamente los mismos procesos que admite el Lagrangiano. De no ser así, la teoría no sería consistente y existiría una anomalía. Para comprender esto, consideremos como ejemplo cierta teoría que admite el proceso a un loop de la Figura~\ref{fig:proceso1loop}.
 
-Las corriente anómalas representan contribuciones que se obtienen de cierto tipo de topologías que no pueden existir en el Lagrangiano de la teoría, lo que implica términos divergentes. A nivel árbol, los procesos permitidos están dados por los términos del Lagrangiano y proporcionan los vértices de interacción posibles.A nivel de correcciones cuánticas (loops) se espera que no existan procesos con patas externas que no estén en el Lagrangiano de la teoría, pues de existir, tales términos conducirían a divergencias.
 
-Consideremos el siguiente proceso a un loop:
+% Por anomalía entendemos la invalidez de una simetría de la acción clásica debida al proceso de cuantización. Si la simetría clásica no se preserva en este proceso, se dice entonces que \emph{la teoría tiene una anomalía}. Como consecuencia, la corriente asociada a la teoría, cuya conservación está asegurada por el teorema de Noehter, deja de ser conservada tras la cuantización. Llamamos a ésta \emph{corriente anómala}. Existen varios tipos de anomalías y cada una depende de la simetría en consideración. Entre ellas se encuentran la anomalía quiral, anomalías abelianas y no abelianas, anomalías supersimétricas, anomalías gravitacionales, entre otras.
+
+% Las anomalías presentan una doble característica. Por un lado, se requieren para explicar resultados experimentales como el decaimiento $\pi^0 \rightarrow \gamma \gamma$ y por otra parte -- y de gran importancia en la teoría cuántica de campos --, las anomalías de la teoría deben ser canceladas para asegurar su renormalización. Este requerimiento tiene consecuencias importantes. En el caso del modelo electrodébil, la simetría está unificada en la forma $\SU{2}_L \otimes \SU{1}_Y$, que es potencialmente anómala, e impone el balance entre el número de quarks y el número de leptones para que exista cancelación de anomalías y la teoría sea renormalizable.
+
+% Las corriente anómalas representan contribuciones que se obtienen de cierto tipo de topologías que no pueden existir en el Lagrangiano de la teoría, lo que implica términos divergentes. A nivel árbol, los procesos permitidos están dados por los términos del Lagrangiano y proporcionan los vértices de interacción posibles.A nivel de correcciones cuánticas (loops) se espera que no existan procesos con patas externas que no estén en el Lagrangiano de la teoría, pues de existir, tales términos conducirían a divergencias.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.35]{anomalias1.eps}
+	\caption{Ejemplo de proceso a un loop cuyas patas externas son bosones.}
+	\label{fig:proceso1loop}
 \end{figure}
 
-Si este proceso fuese posible a nivel árbol, esperaríamos tener un término en el Lagrangiano de la forma
+Si este proceso fuese posible a nivel árbol, existiría en el Lagrangiano un término de la forma
 %
 \begin{equation*}
-	g A^\mu \partial_\nu A_\mu Z^\nu \,,
+	g A^\mu \partial_\nu A_\mu Z^\nu \,.
 \end{equation*}
 
-\noindent y de ser un término divergente, el infinito resultante puede ser absorbido por la constante de acoplamiento mediante el proceso de renormalización~\footnote{La renormalización es tratada en el Capítulo~\ref{ch:renormalizacion}}\,. Este proceso redefine las constantes de acoplamiento de tal forma que la teoría se vuelva coherente, consistente y no contenga infinitos. 
+Si este diagrama fuese divergente, el infinito resultante puede ser absorbido por la constante de acoplamiento $g$ mediante el proceso de renormalización~\footnote{La renormalización es tratada en el Capítulo~\ref{ch:renormalizacion}}, el cual consiste en redefinir las constantes de acoplamiento, de tal forma que éstas absorban los infinitos resultantes y la teoría se vuelva coherente, consistente y no contenga infinitos. 
 
-Ahora, si la amplitud del diagrama es infinita, pero el término con las patas externas consideradas no existe en el Lagrangiano, no es posible redefinir la teoría para hacerla coherente, i.e., existe una anomalía. Para que la teoría sea consistente, y no tenga infinitos sin cancelar, la única forma es que las contribuciones de cada fermión en el diagrama pueda ser cancelada. \\
+Ahora, si la amplitud del diagrama diverge, pero no existe en el Lagrangiano un término con las mismas patas externas, la renormalización no es posible y por ello existe una anomalía. Para que la teoría sea consistente y no tenga infinitos sin cancelar, la única posibilidad es que las contribuciones de cada fermión en el diagrama pueda ser cancelada, haciendo que su amplitud sea cero. \\
 
 \begin{definition}
 	
-	Definiremos una teoría que admite los siguientes vértices:
+	Para estudiar el mecanismo por el cual las anomalías se cancelan en teorías gauge, definiremos una teoría que admite los siguientes vértices:
 	%
 	\begin{center}
 		\begin{tabular}{m{3.5cm} m{2cm} c}
@@ -64,7 +69,7 @@ En términos del proyector de quiralidad izquierdo, ambas estructuras pueden ser
 \end{definition}
  
 
-Las anomalías en teorías gauge aparecen en el cálculo de diagramas triángulo, como el que se muestra en la Figura~\ref{fig:anomalias_diag} \footnote{En estos diagramas las flechas son empleadas como una herramienta para llevar cuenta de la conservación del momentum en cada vértice, no para identificar partículas y antipartículas.}, cuyo aspecto principal es un número impar de acoplamientos axiales~\cite{greiner_weak}.
+Ahora, con estos vértices construimos los diagramas triángulo anómalos de la Figura~\ref{fig:anomalias_diag} \footnote{En estos diagramas las flechas son empleadas como una herramienta para llevar cuenta de la conservación del momentum en cada vértice, no para identificar partículas y antipartículas.}, cuyo aspecto principal es un número impar de acoplamientos axiales~\cite{greiner_weak}.
 
 \begin{figure}[ht]
 	\centering
@@ -82,11 +87,14 @@ Las anomalías en teorías gauge aparecen en el cálculo de diagramas triángulo
 	\label{fig:anomalias_diag}
 \end{figure}
 
-Iniciaremos considerando corrientes neutras, de tal forma que no hay cambio de sabor en los vértices y, por tanto, el fermión en el loop es el mismo. Arbitrariamente, hemos elegido que el vértice de la derecha sea axial y los vértices de la izquierda sean vectoriales.
+\begin{profor}
+	Iniciaremos considerando corrientes neutras, de tal forma que no hay cambio de sabor en los vértices y, por tanto, el fermión en el loop es uno solo. Arbitrariamente hemos elegido que el vértice de la derecha sea axial y los vértices de la izquierda sean vectoriales.
+\end{profor}
 
-Nótese que el índice $c$ de los generadores del grupo gauge permanece asociado al bosón con momento $k_2$, mientras que el índice $b$ permanece asociado al bosón con momento $k_1$.
 
-Sean $\epsilon^\mu,\, \quad \epsilon^{*\nu}\,, \quad \epsilon^{*\xi}$ las funciones de onda de los bosones involucrados. La amplitud invariante del diagrama directo puede denotarse siguiendo las reglas de Feynman: \textcolor{red}{******Verificar si los generadores no van dentro de una traza también******}
+Para los cálculos que siguen, debe tenerse en cuenta que el índice $c$ de los generadores del grupo gauge permanece asociado al bosón con momento $k_2$, mientras que el índice $b$ permanece asociado al bosón con momento $k_1$.
+
+Sean $\epsilon^\mu,\, \epsilon^{*\nu}\,, \epsilon^{*\xi}$ las funciones de onda de los bosones involucrados. La amplitud invariante del diagrama directo se obtiene de las reglas de Feynman y es dada por 
 %
 \begin{IEEEeqnarray*}{rCl}
 	\epsilon^\mu \epsilon^{*\nu} \epsilon^{*\xi} T^{abc}_{\mu \nu \xi} &=& \int \frac{\dd[4]{p}}{(2\pi)^4}
@@ -113,9 +121,9 @@ Sean $\epsilon^\mu,\, \quad \epsilon^{*\nu}\,, \quad \epsilon^{*\xi}$ las funcio
 	] \,. \IEEEyesnumber \label{eq:anomalias1}
 \end{IEEEeqnarray*}
 
-En el último paso, debemos tener en cuenta que las matrices $\lambda^i$ y las matrices $\gamma$ actúan en espacios diferentes, y por ello la traza puede descomponerse en el producto de las trazas sobre los generadores y sobre los términos que involucran matries $\gamma$.
+En el último paso, debemos tener en cuenta que las matrices $\lambda^i$ y las matrices $\gamma$ actúan en espacios diferentes, y por ello el producto de los generadores puede salir de la traza, que sólo se toma sobre los términos que contienen a las matrices $\gamma$.
 
-De igual forma procedemos para el término cruzado:
+Para el término cruzado, la amplitud invariante es dada por
 %
 \begin{IEEEeqnarray*}{rCl}
 	\epsilon^\mu \epsilon^{*\nu} \epsilon^{*\xi} T^{abc}_{\mu \nu \xi} &=& \int \frac{\dd[4]{p}}{(2\pi)^4}
@@ -142,20 +150,20 @@ De igual forma procedemos para el término cruzado:
 	] \,. \IEEEyesnumber \label{eq:anomalias1Cruzado}
 \end{IEEEeqnarray*}
 
-Notemos que los términos exteriores a las integrales en \eqref{eq:anomalias1} y \eqref{eq:anomalias1Cruzado} son casi iguales, excepto por el orden en la multiplicación de los generadores $\lambda^i$. También existe un intercambio en los signos que acompañan a $k_1$ y a $k_2$ en el término cruzado, respecto al directo.
+Comparando los términos exteriores a las integrales en \eqref{eq:anomalias1} y \eqref{eq:anomalias1Cruzado} notamos que sólo se diferencian por el orden en el producto de los generadores $\lambda^i$. Por su parte, dentro de la traza, existe un intercambio en los signos que acompañan a $k_1$ y a $k_2$.
 
-No vamos a resolver completamente estas integrales, pero bástenos con saber que son divergentes.
+La solución de estas integrales no es relevante para la discusión en curso, pero es sabido que éstas son divergentes.
 
 Vamos a manipular la traza en la integral del término directo.
 
 \begin{profnoside}
-	 Tomemos el caso del segundo término en la traza y multipliquemos y dividamos por $(\slashed{p} +m)$:
+	 Tomamos el segundo término en la traza y multiplicamos por $(\slashed{p} +m)/(\slashed{p} +m)$:
 	%
 	\begin{IEEEeqnarray*}{rCl}
-		\frac{1}{\slashed{p} - m} \frac{\slashed{p} + m}{\slashed{p} + m} &=& \frac{\slashed{p} + m}{\slashed{p}^2 - m^2} \,,
+		\frac{1}{\slashed{p} - m} \frac{\slashed{p} + m}{\slashed{p} + m} &=& \frac{\slashed{p} + m}{\slashed{p}^2 - m^2} \,.
 	\end{IEEEeqnarray*}
 	
-	\noindent pero adicionalmente
+	Ahora,
 	%
 	\begin{IEEEeqnarray*}{rCl}
 		\slashed{p}^2 &=& p_\mu \gamma^\mu \gamma^\nu p_\nu \\
@@ -331,8 +339,30 @@ Podemos ver que \eqref{eq:anomalias_1_manipulado} resulta siendo igual que la in
 	&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \Tr[\frac{1}{(\slashed{p} - \slashed{k}_1)^2} \gamma_\nu \frac{1}{\slashed{p}^2} \gamma_\xi \frac{1}{(\slashed{p} + \slashed{k}_2)^2} \gamma_\mu \gamma_5] \,.
 \end{IEEEeqnarray*}
 
-\textcolor{red}{la traza no está ya dada desde el inicio????}
-Los generadores $\lambda^i$ en la expresión están asociados a la forma en que los fermiones en el loop acoplan a los campos gauge de las patas externas. Supongamos que el fermión que circula en el loop es un quark, que tiene un índice de color con tres posibles valores, $1,\, 2,\, 3$ representando $r,\, g,\, b$ respectivamente. En este caso, los bosones serían gluones. En cada vértice podría entrar un quark con índice $1$ y salir otro con índice $2$ o $3$. Estos índices son los que corresponden a las matrices $\lambda$, que en la representación fundamental tienen dos índices matriciales asociados a la simetría gauge, $\lambda_{ij}$. Sin embargo, notemos que todos los índices en el producto de las tres matrices deben estar contraídos, pues el índice del fermión que sale en uno de los vértices, debe ser el mismo que el índice que entra en el siguiente vértice, y como el diagrama cierra, tenemos una situación como
+En este punto, debemos recordar que los fermiones en el loop contienen, tanto índices fermiónicos, como índices internos del grupo de simetría al que corresponden. Por ejemplo, suponiendo que el fermión es un quark (los bosones de las patas externas serían gluones), tendría un índice de color asociado a la simetría $\SU{3}$, que puede tomar el valor 1, 2 ó 3 y representan la carga de color (rojo, azul y verde) de un quark.
+
+En la representación fundamental del grupo de simetría, los generadores $\lambda^a$ son matrices, y por lo tanto, tienen dos índices $\lambda^a_{ij}$ de color que acoplan con aquellos del fermión. En el ejemplo que estamos considerando, si a un vértice entra un quark con índice 1 (rojo) y sale uno con índice 3 (verde), el generador que origina esta transición tendría la forma (salvo por un factor de normalización)
+%
+\begin{equation*}
+	\lambda^a = \pmqty{0 & 0 & 1 \\ 0 & 0 & 0 \\ 1 & 0 & 0} \,.
+\end{equation*}
+
+Así, el término en el lagrangiano para la trancisión de los quarks tendría la forma (salvo por un factor de normalización)
+
+\begin{IEEEeqnarray*}{rCl}
+	g\overline{q} \lambda^a q \gamma^\mu G_\mu &=& g \gamma^\mu \pmqty{q_1 & q_2 & q_3} \pmqty{0 & 0 & 1 \\ 0 & 0 & 0 \\ 1 & 0 & 0} \pmqty{q_1 \\ q_2 \\ q_3}G_\mu \slj
+	%%
+	&=& g \gamma^\mu G_\mu q_1 q_3 + \text{h. c.} \slj
+	%%
+	&=& g \gamma^\mu G_\mu q_1\lambda^a_{13}q_3 + \text{h. c.} \,,
+\end{IEEEeqnarray*}
+
+\noindent que es la transición requerida con su gluón correspondiente.
+
+Si esta es la transición en, por ejemplo, el vértice izquierdo, en el vértice superior debe aparecer el generador de la transición entre $q_3$ y el siguiente quark. En cada caso, el quark que sale del vértice anterior es el quark que entra al siguiente. Así, el segundo índice del gnerador del vértice anterior, debe ser igual al primer índice del generador del vértice siguiente, eso es:
+
+% \textcolor{red}{la traza no está ya dada desde el inicio????}
+% Los generadores $\lambda^i$ en la expresión están asociados a la forma en que los fermiones en el loop acoplan a los campos gauge de las patas externas. Supongamos que el fermión que circula en el loop es un quark, que tiene un índice de color con tres posibles valores, $1,\, 2,\, 3$ representando $r,\, g,\, b$ respectivamente. En este caso, los bosones serían gluones. En cada vértice podría entrar un quark con índice $1$ y salir otro con índice $2$ o $3$. Estos índices son los que corresponden a las matrices $\lambda$, que en la representación fundamental tienen dos índices matriciales asociados a la simetría gauge, $\lambda_{ij}$. Sin embargo, notemos que todos los índices en el producto de las tres matrices deben estar contraídos, pues el índice del fermión que sale en uno de los vértices, debe ser el mismo que el índice que entra en el siguiente vértice, y como el diagrama cierra, tenemos una situación como
 %
 \begin{equation*}
 	\lambda^a_{ij} \lambda^b_{jk} \lambda^c_{ki} \,,

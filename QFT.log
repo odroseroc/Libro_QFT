@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.9)  28 FEB 2024 12:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.9)  29 FEB 2024 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3742,26 +3742,23 @@ Package epstopdf Info: Source file: <Pictures//anomalias1.eps>
 (epstopdf)                    size: 31574 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//anomalias1-eps-c
 onverted-to.pdf Pictures//anomalias1.eps>
-(epstopdf)             \includegraphics on input line 16.
+(epstopdf)             \includegraphics on input line 19.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//anomalias1-eps-converted-to.pdf, id=2865, 379.4175pt x 143.53625pt>
+<Pictures//anomalias1-eps-converted-to.pdf, id=2867, 379.4175pt x 143.53625pt>
 File: Pictures//anomalias1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//anomalias1-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//anomalias1-eps-converted-to.pdf  used on inp
-ut line 16.
+ut line 19.
 (pdftex.def)             Requested size: 132.79811pt x 50.23843pt.
-[193
 
- <./Pictures//chapterHeaders/particles1.png> <./Pictures//anomalias1-eps-conver
-ted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 29.
+Package mdframed Info: mdframed works in twoside mode on input line 34.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 29.
+(mdframed)              on input line 34.
 Package epstopdf Info: Source file: <Pictures//vertice_anomalias1.eps>
 (epstopdf)                    date: 2023-10-15 19:09:18
 (epstopdf)                    size: 15090 bytes
@@ -3771,18 +3768,18 @@ Package epstopdf Info: Source file: <Pictures//vertice_anomalias1.eps>
 (epstopdf)                    size: 14767 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//vertice_anomalia
 s1-eps-converted-to.pdf Pictures//vertice_anomalias1.eps>
-(epstopdf)             \includegraphics on input line 40.
+(epstopdf)             \includegraphics on input line 45.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//vertice_anomalias1-eps-converted-to.pdf, id=2879, 224.84pt x 174.652
+<Pictures//vertice_anomalias1-eps-converted-to.pdf, id=2870, 224.84pt x 174.652
 5pt>
 File: Pictures//vertice_anomalias1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures//vertice_anomalias1-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//vertice_anomalias1-eps-converted-to.pdf  use
-d on input line 40.
+d on input line 45.
 (pdftex.def)             Requested size: 44.9672pt x 34.92987pt.
 
-Overfull \hbox (3.68555pt too wide) in paragraph at lines 40--41
+Overfull \hbox (3.68555pt too wide) in paragraph at lines 45--46
 [][] 
  []
 
@@ -3795,19 +3792,24 @@ Package epstopdf Info: Source file: <Pictures//vertice_anomalias1.eps>
 (epstopdf)                    size: 14767 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//vertice_anomalia
 s1-eps-converted-to.pdf Pictures//vertice_anomalias1.eps>
-(epstopdf)             \includegraphics on input line 49.
+(epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 File: Pictures//vertice_anomalias1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures//vertice_anomalias1-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//vertice_anomalias1-eps-converted-to.pdf  use
-d on input line 49.
+d on input line 54.
 (pdftex.def)             Requested size: 44.9672pt x 34.92987pt.
 
-Overfull \hbox (3.68555pt too wide) in paragraph at lines 49--50
+Overfull \hbox (3.68555pt too wide) in paragraph at lines 54--55
 [][] 
  []
 
+[193
+
+ <./Pictures//chapterHeaders/particles1.png> <./Pictures//anomalias1-eps-conver
+ted-to.pdf>]
+Package mdframed Info: Not enough space on this page on input line 69.
 Package epstopdf Info: Source file: <Pictures//anomalias_diag1.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
 (epstopdf)                    size: 63723 bytes
@@ -3817,14 +3819,14 @@ Package epstopdf Info: Source file: <Pictures//anomalias_diag1.eps>
 (epstopdf)                    size: 59857 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//anomalias_diag1-
 eps-converted-to.pdf Pictures//anomalias_diag1.eps>
-(epstopdf)             \includegraphics on input line 73.
+(epstopdf)             \includegraphics on input line 78.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//anomalias_diag1-eps-converted-to.pdf, id=2883, 343.2825pt x 236.885p
+<Pictures//anomalias_diag1-eps-converted-to.pdf, id=2887, 343.2825pt x 236.885p
 t>
 File: Pictures//anomalias_diag1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//anomalias_diag1-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//anomalias_diag1-eps-converted-to.pdf  used o
-n input line 73.
+n input line 78.
 (pdftex.def)             Requested size: 137.31056pt x 94.75232pt.
 Package epstopdf Info: Source file: <Pictures//anomalias_diag1cruzado.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -3835,77 +3837,74 @@ rted-to.pdf>
 (epstopdf)                    size: 63379 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//anomalias_diag1c
 ruzado-eps-converted-to.pdf Pictures//anomalias_diag1cruzado.eps>
-(epstopdf)             \includegraphics on input line 79.
+(epstopdf)             \includegraphics on input line 84.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//anomalias_diag1cruzado-eps-converted-to.pdf, id=2884, 353.32pt x 242
+<Pictures//anomalias_diag1cruzado-eps-converted-to.pdf, id=2888, 353.32pt x 242
 .9075pt>
 File: Pictures//anomalias_diag1cruzado-eps-converted-to.pdf Graphic file (type 
 pdf)
 <use Pictures//anomalias_diag1cruzado-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//anomalias_diag1cruzado-eps-converted-to.pdf 
- used on input line 79.
+ used on input line 84.
 (pdftex.def)             Requested size: 141.32549pt x 97.16127pt.
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
-[194 <./Pictures//vertice_anomalias1-eps-converted-to.pdf> <./Pictures//anomali
-as_diag1-eps-converted-to.pdf> <./Pictures//anomalias_diag1cruzado-eps-converte
-d-to.pdf>]
-Package mdframed Info: mdframed works in twoside mode on input line 151.
+Package mdframed Info: mdframed works in twoside mode on input line 90.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 151.
-
-
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 179.
-
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 179.
-[195]
-Package mdframed Info: mdframed works in twoside mode on input line 203.
+(mdframed)              on input line 90.
+LaTeX Info: Redefining \. on input line 122.
+LaTeX Info: Redefining \% on input line 122.
+ [194 <./Pictures//vertice_anomalias1-eps-converted-to.pdf> <./Pictures//anomal
+ias_diag1-eps-converted-to.pdf> <./Pictures//anomalias_diag1cruzado-eps-convert
+ed-to.pdf>]
+Package mdframed Info: mdframed works in twoside mode on input line 159.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 203.
+(mdframed)              on input line 159.
+ [195]
+Package mdframed Info: mdframed works in twoside mode on input line 211.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 211.
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 237.
+Package mdframed Info: mdframed works in twoside mode on input line 245.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 237.
-LaTeX Info: Redefining \. on input line 262.
-LaTeX Info: Redefining \% on input line 262.
+(mdframed)              on input line 245.
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
+3.
+
+LaTeX Info: Redefining \. on input line 284.
+LaTeX Info: Redefining \% on input line 284.
 [196]
+Underfull \vbox (badness 1546) has occurred while \output is active []
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 27
-5.
+ [197]
+LaTeX Info: Redefining \. on input line 381.
+LaTeX Info: Redefining \% on input line 381.
 
-[197]
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+[198]
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
-LaTeX Info: Redefining \. on input line 371.
-LaTeX Info: Redefining \% on input line 371.
-[198]
-Underfull \hbox (badness 10000) in paragraph at lines 381--385
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--415
 
  []
 
 [199]
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
+LaTeX Info: Redefining \. on input line 512.
+LaTeX Info: Redefining \% on input line 512.
+ [200]
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
-LaTeX Info: Redefining \. on input line 503.
-LaTeX Info: Redefining \% on input line 503.
-[200]
 Package epstopdf Info: Source file: <Pictures//anomalias_ejm1.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
 (epstopdf)                    size: 11835 bytes
@@ -3915,23 +3914,23 @@ pdf>
 (epstopdf)                    size: 5979 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//anomalias_ejm1-e
 ps-converted-to.pdf Pictures//anomalias_ejm1.eps>
-(epstopdf)             \includegraphics on input line 525.
+(epstopdf)             \includegraphics on input line 555.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//anomalias_ejm1-eps-converted-to.pdf, id=2964, 538.01pt x 180.675pt>
+<Pictures//anomalias_ejm1-eps-converted-to.pdf, id=2965, 538.01pt x 180.675pt>
 File: Pictures//anomalias_ejm1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//anomalias_ejm1-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//anomalias_ejm1-eps-converted-to.pdf  used on
- input line 525.
+ input line 555.
 (pdftex.def)             Requested size: 134.50217pt x 45.16862pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 537--538
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
 
  []
 
-LaTeX Info: Redefining \. on input line 566.
-LaTeX Info: Redefining \% on input line 566.
+LaTeX Info: Redefining \. on input line 573.
+LaTeX Info: Redefining \% on input line 573.
 [201 <./Pictures//anomalias_ejm1-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 576--577
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 
  []
 
@@ -3944,17 +3943,17 @@ pdf>
 (epstopdf)                    size: 10011 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//anomalias_ejm2-e
 ps-converted-to.pdf Pictures//anomalias_ejm2.eps>
-(epstopdf)             \includegraphics on input line 586.
+(epstopdf)             \includegraphics on input line 616.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//anomalias_ejm2-eps-converted-to.pdf, id=2978, 528.97626pt x 181.6787
+<Pictures//anomalias_ejm2-eps-converted-to.pdf, id=2977, 528.97626pt x 181.6787
 6pt>
 File: Pictures//anomalias_ejm2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//anomalias_ejm2-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//anomalias_ejm2-eps-converted-to.pdf  used on
- input line 586.
+ input line 616.
 (pdftex.def)             Requested size: 132.24373pt x 45.41957pt.
-LaTeX Info: Redefining \. on input line 633.
-LaTeX Info: Redefining \% on input line 633.
+LaTeX Info: Redefining \. on input line 637.
+LaTeX Info: Redefining \% on input line 637.
 [202 <./Pictures//anomalias_ejm2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Pictures//anomalias_ejm3.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -3965,17 +3964,17 @@ pdf>
 (epstopdf)                    size: 6609 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//anomalias_ejm3-e
 ps-converted-to.pdf Pictures//anomalias_ejm3.eps>
-(epstopdf)             \includegraphics on input line 653.
+(epstopdf)             \includegraphics on input line 683.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//anomalias_ejm3-eps-converted-to.pdf, id=2990, 461.725pt x 182.6825pt
 >
 File: Pictures//anomalias_ejm3-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//anomalias_ejm3-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//anomalias_ejm3-eps-converted-to.pdf  used on
- input line 653.
+ input line 683.
 (pdftex.def)             Requested size: 115.43097pt x 45.6705pt.
-LaTeX Info: Redefining \. on input line 708.
-LaTeX Info: Redefining \% on input line 708.
+LaTeX Info: Redefining \. on input line 709.
+LaTeX Info: Redefining \% on input line 709.
  [203 <./Pictures//anomalias_ejm3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Pictures//anomalias_ejm4.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -3986,31 +3985,31 @@ pdf>
 (epstopdf)                    size: 8130 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//anomalias_ejm4-e
 ps-converted-to.pdf Pictures//anomalias_ejm4.eps>
-(epstopdf)             \includegraphics on input line 720.
+(epstopdf)             \includegraphics on input line 750.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//anomalias_ejm4-eps-converted-to.pdf, id=3004, 411.5375pt x 166.6225p
+<Pictures//anomalias_ejm4-eps-converted-to.pdf, id=3003, 411.5375pt x 166.6225p
 t>
 File: Pictures//anomalias_ejm4-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//anomalias_ejm4-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//anomalias_ejm4-eps-converted-to.pdf  used on
- input line 720.
+ input line 750.
 (pdftex.def)             Requested size: 102.88412pt x 41.65552pt.
-Package mdframed Info: mdframed works in twoside mode on input line 739.
+Package mdframed Info: mdframed works in twoside mode on input line 769.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 739.
+(mdframed)              on input line 769.
+LaTeX Info: Redefining \. on input line 771.
+LaTeX Info: Redefining \% on input line 771.
+ [204 <./Pictures//anomalias_ejm4-eps-converted-to.pdf>]
+Package mdframed Info: Not enough space on this page on input line 771.
 
-Underfull \hbox (badness 10000) in paragraph at lines 743--744
+Underfull \hbox (badness 10000) in paragraph at lines 773--774
 
  []
 
-LaTeX Info: Redefining \. on input line 770.
-LaTeX Info: Redefining \% on input line 770.
-[204 <./Pictures//anomalias_ejm4-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 828.
-LaTeX Info: Redefining \% on input line 828.
- [205])
-(./Capitulos/Temas_selectos/oscNeutrinos.tex
+LaTeX Info: Redefining \. on input line 836.
+LaTeX Info: Redefining \% on input line 836.
+[205]) (./Capitulos/Temas_selectos/oscNeutrinos.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [206]
@@ -4043,7 +4042,7 @@ Package epstopdf Info: Source file: <Pictures//neutrinos_diag1.eps>
 eps-converted-to.pdf Pictures//neutrinos_diag1.eps>
 (epstopdf)             \includegraphics on input line 87.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//neutrinos_diag1-eps-converted-to.pdf, id=3047, 435.6275pt x 155.5812
+<Pictures//neutrinos_diag1-eps-converted-to.pdf, id=3049, 435.6275pt x 155.5812
 5pt>
 File: Pictures//neutrinos_diag1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//neutrinos_diag1-eps-converted-to.pdf>
@@ -4141,7 +4140,7 @@ Package epstopdf Info: Source file: <Pictures/1partRedu_ladder.eps>
 eps-converted-to.pdf Pictures/1partRedu_ladder.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures/1partRedu_ladder-eps-converted-to.pdf, id=3170, 354.32375pt x 279.042
+<Pictures/1partRedu_ladder-eps-converted-to.pdf, id=3172, 354.32375pt x 279.042
 5pt>
 File: Pictures/1partRedu_ladder-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures/1partRedu_ladder-eps-converted-to.pdf>
@@ -4159,7 +4158,7 @@ o.pdf>
 -eps-converted-to.pdf Pictures//1partIrred_mount.eps>
 (epstopdf)             \includegraphics on input line 52.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//1partIrred_mount-eps-converted-to.pdf, id=3172, 507.8975pt x 349.305
+<Pictures//1partIrred_mount-eps-converted-to.pdf, id=3174, 507.8975pt x 349.305
 pt>
 File: Pictures//1partIrred_mount-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//1partIrred_mount-eps-converted-to.pdf>
@@ -4213,7 +4212,7 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm1.eps>
 eps-converted-to.pdf Pictures//RFeynmanRenorm1.eps>
 (epstopdf)             \includegraphics on input line 325.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//RFeynmanRenorm1-eps-converted-to.pdf, id=3221, 174.6525pt x 49.18375
+<Pictures//RFeynmanRenorm1-eps-converted-to.pdf, id=3223, 174.6525pt x 49.18375
 pt>
 File: Pictures//RFeynmanRenorm1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm1-eps-converted-to.pdf>
@@ -4231,7 +4230,7 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm2.eps>
 eps-converted-to.pdf Pictures//RFeynmanRenorm2.eps>
 (epstopdf)             \includegraphics on input line 331.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//RFeynmanRenorm2-eps-converted-to.pdf, id=3222, 124.465pt x 124.465pt
+<Pictures//RFeynmanRenorm2-eps-converted-to.pdf, id=3224, 124.465pt x 124.465pt
 >
 File: Pictures//RFeynmanRenorm2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm2-eps-converted-to.pdf>
@@ -4249,7 +4248,7 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm3.eps>
 eps-converted-to.pdf Pictures//RFeynmanRenorm3.eps>
 (epstopdf)             \includegraphics on input line 337.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//RFeynmanRenorm3-eps-converted-to.pdf, id=3223, 174.6525pt x 36.135pt
+<Pictures//RFeynmanRenorm3-eps-converted-to.pdf, id=3225, 174.6525pt x 36.135pt
 >
 File: Pictures//RFeynmanRenorm3-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm3-eps-converted-to.pdf>
@@ -4267,7 +4266,7 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm4.eps>
 eps-converted-to.pdf Pictures//RFeynmanRenorm4.eps>
 (epstopdf)             \includegraphics on input line 343.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//RFeynmanRenorm4-eps-converted-to.pdf, id=3224, 124.465pt x 124.465pt
+<Pictures//RFeynmanRenorm4-eps-converted-to.pdf, id=3226, 124.465pt x 124.465pt
 >
 File: Pictures//RFeynmanRenorm4-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm4-eps-converted-to.pdf>
@@ -4301,7 +4300,7 @@ df>
 s-converted-to.pdf Pictures//renorm_1linea.eps>
 (epstopdf)             \includegraphics on input line 401.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_1linea-eps-converted-to.pdf, id=3253, 174.6525pt x 71.26625pt
+<Pictures//renorm_1linea-eps-converted-to.pdf, id=3255, 174.6525pt x 71.26625pt
 >
 File: Pictures//renorm_1linea-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_1linea-eps-converted-to.pdf>
@@ -4319,7 +4318,7 @@ pdf>
 ps-converted-to.pdf Pictures//renorm_4lineas.eps>
 (epstopdf)             \includegraphics on input line 411.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_4lineas-eps-converted-to.pdf, id=3254, 155.58125pt x 116.435p
+<Pictures//renorm_4lineas-eps-converted-to.pdf, id=3256, 155.58125pt x 116.435p
 t>
 File: Pictures//renorm_4lineas-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_4lineas-eps-converted-to.pdf>
@@ -4346,7 +4345,7 @@ o.pdf>
 -eps-converted-to.pdf Pictures//renorm_2a2_1loop.eps>
 (epstopdf)             \includegraphics on input line 460.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_2a2_1loop-eps-converted-to.pdf, id=3273, 191.71625pt x 140.52
+<Pictures//renorm_2a2_1loop-eps-converted-to.pdf, id=3275, 191.71625pt x 140.52
 5pt>
 File: Pictures//renorm_2a2_1loop-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_2a2_1loop-eps-converted-to.pdf>
@@ -4363,7 +4362,7 @@ Package epstopdf Info: Source file: <Pictures//renorm_X.eps>
 verted-to.pdf Pictures//renorm_X.eps>
 (epstopdf)             \includegraphics on input line 465.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_X-eps-converted-to.pdf, id=3274, 62.2325pt x 62.2325pt>
+<Pictures//renorm_X-eps-converted-to.pdf, id=3276, 62.2325pt x 62.2325pt>
 File: Pictures//renorm_X-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_X-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_X-eps-converted-to.pdf  used on input
@@ -4380,7 +4379,7 @@ Package epstopdf Info: Source file: <Pictures//renorm_xox.eps>
 onverted-to.pdf Pictures//renorm_xox.eps>
 (epstopdf)             \includegraphics on input line 468.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_xox-eps-converted-to.pdf, id=3275, 77.28876pt x 92.345pt>
+<Pictures//renorm_xox-eps-converted-to.pdf, id=3277, 77.28876pt x 92.345pt>
 File: Pictures//renorm_xox-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_xox-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_xox-eps-converted-to.pdf  used on inp
@@ -4397,7 +4396,7 @@ Package epstopdf Info: Source file: <Pictures//renorm_oxx.eps>
 onverted-to.pdf Pictures//renorm_oxx.eps>
 (epstopdf)             \includegraphics on input line 471.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_oxx-eps-converted-to.pdf, id=3276, 92.345pt x 77.28876pt>
+<Pictures//renorm_oxx-eps-converted-to.pdf, id=3278, 92.345pt x 77.28876pt>
 File: Pictures//renorm_oxx-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_oxx-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_oxx-eps-converted-to.pdf  used on inp
@@ -4414,7 +4413,7 @@ Package epstopdf Info: Source file: <Pictures//renorm_oxx_cruzado.eps>
 do-eps-converted-to.pdf Pictures//renorm_oxx_cruzado.eps>
 (epstopdf)             \includegraphics on input line 474.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_oxx_cruzado-eps-converted-to.pdf, id=3277, 111.41624pt x 93.3
+<Pictures//renorm_oxx_cruzado-eps-converted-to.pdf, id=3279, 111.41624pt x 93.3
 4875pt>
 File: Pictures//renorm_oxx_cruzado-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -4433,7 +4432,7 @@ f>
 -converted-to.pdf Pictures//renorm_loop1.eps>
 (epstopdf)             \includegraphics on input line 484.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_loop1-eps-converted-to.pdf, id=3278, 177.66376pt x 169.63374p
+<Pictures//renorm_loop1-eps-converted-to.pdf, id=3280, 177.66376pt x 169.63374p
 t>
 File: Pictures//renorm_loop1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_loop1-eps-converted-to.pdf>
@@ -4451,7 +4450,7 @@ f>
 -converted-to.pdf Pictures//renorm_loop2.eps>
 (epstopdf)             \includegraphics on input line 498.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_loop2-eps-converted-to.pdf, id=3279, 200.75pt x 136.51pt>
+<Pictures//renorm_loop2-eps-converted-to.pdf, id=3281, 200.75pt x 136.51pt>
 File: Pictures//renorm_loop2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_loop2-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_loop2-eps-converted-to.pdf  used on i
@@ -4468,7 +4467,7 @@ o.pdf>
 -eps-converted-to.pdf Pictures//renorm_loop2_rot.eps>
 (epstopdf)             \includegraphics on input line 501.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_loop2_rot-eps-converted-to.pdf, id=3280, 159.59625pt x 173.64
+<Pictures//renorm_loop2_rot-eps-converted-to.pdf, id=3282, 159.59625pt x 173.64
 874pt>
 File: Pictures//renorm_loop2_rot-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_loop2_rot-eps-converted-to.pdf>
@@ -4504,7 +4503,7 @@ Package epstopdf Info: Source file: <Pictures//renorm_complejo.eps>
 eps-converted-to.pdf Pictures//renorm_complejo.eps>
 (epstopdf)             \includegraphics on input line 688.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_complejo-eps-converted-to.pdf, id=3334, 383.4325pt x 383.4325
+<Pictures//renorm_complejo-eps-converted-to.pdf, id=3336, 383.4325pt x 383.4325
 pt>
 File: Pictures//renorm_complejo-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_complejo-eps-converted-to.pdf>
@@ -4549,7 +4548,7 @@ Package epstopdf Info: Source file: <Pictures//autoenergia.eps>
 converted-to.pdf Pictures//autoenergia.eps>
 (epstopdf)             \includegraphics on input line 1028.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia-eps-converted-to.pdf, id=3410, 174.6525pt x 71.26625pt>
+<Pictures//autoenergia-eps-converted-to.pdf, id=3412, 174.6525pt x 71.26625pt>
 File: Pictures//autoenergia-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//autoenergia-eps-converted-to.pdf  used on in
@@ -4566,7 +4565,7 @@ o.pdf>
 -eps-converted-to.pdf Pictures//autoenergia_prop.eps>
 (epstopdf)             \includegraphics on input line 1031.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_prop-eps-converted-to.pdf, id=3411, 174.6525pt x 71.2662
+<Pictures//autoenergia_prop-eps-converted-to.pdf, id=3413, 174.6525pt x 71.2662
 5pt>
 File: Pictures//autoenergia_prop-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_prop-eps-converted-to.pdf>
@@ -4584,7 +4583,7 @@ Package epstopdf Info: Source file: <Pictures//autoenergia_1PI.eps>
 eps-converted-to.pdf Pictures//autoenergia_1PI.eps>
 (epstopdf)             \includegraphics on input line 1034.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_1PI-eps-converted-to.pdf, id=3412, 174.6525pt x 71.26625
+<Pictures//autoenergia_1PI-eps-converted-to.pdf, id=3414, 174.6525pt x 71.26625
 pt>
 File: Pictures//autoenergia_1PI-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_1PI-eps-converted-to.pdf>
@@ -4602,7 +4601,7 @@ o.pdf>
 -eps-converted-to.pdf Pictures//autoenergia_1PI2.eps>
 (epstopdf)             \includegraphics on input line 1037.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_1PI2-eps-converted-to.pdf, id=3413, 296.10625pt x 71.266
+<Pictures//autoenergia_1PI2-eps-converted-to.pdf, id=3415, 296.10625pt x 71.266
 25pt>
 File: Pictures//autoenergia_1PI2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_1PI2-eps-converted-to.pdf>
@@ -4620,7 +4619,7 @@ o.pdf>
 -eps-converted-to.pdf Pictures//autoenergia_1PI3.eps>
 (epstopdf)             \includegraphics on input line 1042.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_1PI3-eps-converted-to.pdf, id=3414, 417.56pt x 71.26625p
+<Pictures//autoenergia_1PI3-eps-converted-to.pdf, id=3416, 417.56pt x 71.26625p
 t>
 File: Pictures//autoenergia_1PI3-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_1PI3-eps-converted-to.pdf>
@@ -4668,7 +4667,7 @@ df>
 s-converted-to.pdf Pictures//loop_amputado.eps>
 (epstopdf)             \includegraphics on input line 1117.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//loop_amputado-eps-converted-to.pdf, id=3449, 127.47626pt x 71.26625p
+<Pictures//loop_amputado-eps-converted-to.pdf, id=3451, 127.47626pt x 71.26625p
 t>
 File: Pictures//loop_amputado-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//loop_amputado-eps-converted-to.pdf>
@@ -4686,7 +4685,7 @@ rted-to.pdf>
 putado-eps-converted-to.pdf Pictures//contratermino_amputado.eps>
 (epstopdf)             \includegraphics on input line 1121.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//contratermino_amputado-eps-converted-to.pdf, id=3450, 54.2025pt x 54
+<Pictures//contratermino_amputado-eps-converted-to.pdf, id=3452, 54.2025pt x 54
 .2025pt>
 File: Pictures//contratermino_amputado-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -4758,7 +4757,7 @@ to.pdf>
 r-eps-converted-to.pdf Pictures//noPert_propagador.eps>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//noPert_propagador-eps-converted-to.pdf, id=3474, 127.47626pt x 3.011
+<Pictures//noPert_propagador-eps-converted-to.pdf, id=3476, 127.47626pt x 3.011
 25pt>
 File: Pictures//noPert_propagador-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//noPert_propagador-eps-converted-to.pdf>
@@ -4776,7 +4775,7 @@ df>
 s-converted-to.pdf Pictures//autoenergiaV4.eps>
 (epstopdf)             \includegraphics on input line 36.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergiaV4-eps-converted-to.pdf, id=3475, 127.47626pt x 74.2775pt
+<Pictures//autoenergiaV4-eps-converted-to.pdf, id=3477, 127.47626pt x 74.2775pt
 >
 File: Pictures//autoenergiaV4-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergiaV4-eps-converted-to.pdf>
@@ -4794,7 +4793,7 @@ df>
 s-converted-to.pdf Pictures//autoenergiaV3.eps>
 (epstopdf)             \includegraphics on input line 41.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergiaV3-eps-converted-to.pdf, id=3476, 127.47626pt x 59.22125p
+<Pictures//autoenergiaV3-eps-converted-to.pdf, id=3478, 127.47626pt x 59.22125p
 t>
 File: Pictures//autoenergiaV3-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergiaV3-eps-converted-to.pdf>
@@ -4828,7 +4827,7 @@ o.pdf>
 -eps-converted-to.pdf Pictures//autoenergia_pata.eps>
 (epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_pata-eps-converted-to.pdf, id=3477, 50.1875pt x 3.01125p
+<Pictures//autoenergia_pata-eps-converted-to.pdf, id=3479, 50.1875pt x 3.01125p
 t>
 File: Pictures//autoenergia_pata-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_pata-eps-converted-to.pdf>
@@ -4846,7 +4845,7 @@ rted-to.pdf>
 putado-eps-converted-to.pdf Pictures//autoenergiaV4_amputado.eps>
 (epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergiaV4_amputado-eps-converted-to.pdf, id=3478, 123.46124pt x 
+<Pictures//autoenergiaV4_amputado-eps-converted-to.pdf, id=3480, 123.46124pt x 
 74.2775pt>
 File: Pictures//autoenergiaV4_amputado-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -4865,7 +4864,7 @@ rted-to.pdf>
 putado-eps-converted-to.pdf Pictures//autoenergiaV3_amputado.eps>
 (epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergiaV3_amputado-eps-converted-to.pdf, id=3479, 125.46875pt x 
+<Pictures//autoenergiaV3_amputado-eps-converted-to.pdf, id=3481, 125.46875pt x 
 58.2175pt>
 File: Pictures//autoenergiaV3_amputado-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -4902,7 +4901,7 @@ rted-to.pdf>
 mpleto-eps-converted-to.pdf Pictures//noPert_propQEDcompleto.eps>
 (epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//noPert_propQEDcompleto-eps-converted-to.pdf, id=3493, 153.57375pt x 
+<Pictures//noPert_propQEDcompleto-eps-converted-to.pdf, id=3495, 153.57375pt x 
 56.21pt>
 File: Pictures//noPert_propQEDcompleto-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -4921,7 +4920,7 @@ d-to.pdf>
 bre-eps-converted-to.pdf Pictures//noPert_propQEDlibre.eps>
 (epstopdf)             \includegraphics on input line 96.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//noPert_propQEDlibre-eps-converted-to.pdf, id=3494, 153.57375pt x 3.0
+<Pictures//noPert_propQEDlibre-eps-converted-to.pdf, id=3496, 153.57375pt x 3.0
 1125pt>
 File: Pictures//noPert_propQEDlibre-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -4940,7 +4939,7 @@ Package epstopdf Info: Source file: <Pictures//noPert_propQED1.eps>
 eps-converted-to.pdf Pictures//noPert_propQED1.eps>
 (epstopdf)             \includegraphics on input line 101.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//noPert_propQED1-eps-converted-to.pdf, id=3495, 153.57375pt x 56.21pt
+<Pictures//noPert_propQED1-eps-converted-to.pdf, id=3497, 153.57375pt x 56.21pt
 >
 File: Pictures//noPert_propQED1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//noPert_propQED1-eps-converted-to.pdf>
@@ -4958,7 +4957,7 @@ Package epstopdf Info: Source file: <Pictures//noPert_propQED2.eps>
 eps-converted-to.pdf Pictures//noPert_propQED2.eps>
 (epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//noPert_propQED2-eps-converted-to.pdf, id=3496, 307.1475pt x 55.20625
+<Pictures//noPert_propQED2-eps-converted-to.pdf, id=3498, 307.1475pt x 55.20625
 pt>
 File: Pictures//noPert_propQED2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//noPert_propQED2-eps-converted-to.pdf>
@@ -5034,7 +5033,7 @@ ed-to.pdf>
 ntos-eps-converted-to.pdf Pictures//autoenergia_momentos.eps>
 (epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_momentos-eps-converted-to.pdf, id=3527, 205.76875pt x 91
+<Pictures//autoenergia_momentos-eps-converted-to.pdf, id=3529, 205.76875pt x 91
 .34125pt>
 File: Pictures//autoenergia_momentos-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -5064,7 +5063,7 @@ ed-to.pdf>
 las1-eps-converted-to.pdf Pictures//noPert/BS_paralelas1.eps>
 (epstopdf)             \includegraphics on input line 325.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//noPert/BS_paralelas1-eps-converted-to.pdf, id=3556, 300.12125pt x 16
+<Pictures//noPert/BS_paralelas1-eps-converted-to.pdf, id=3558, 300.12125pt x 16
 9.63374pt>
 File: Pictures//noPert/BS_paralelas1-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -5089,7 +5088,7 @@ LaTeX Info: Redefining \% on input line 7.
 
 ]
 Ap\'{e}ndice A.
-<Pictures//chapter_head_3.pdf, id=3572, 845.1575pt x 597.23125pt>
+<Pictures//chapter_head_3.pdf, id=3574, 845.1575pt x 597.23125pt>
 File: Pictures//chapter_head_3.pdf Graphic file (type pdf)
 <use Pictures//chapter_head_3.pdf>
 Package pdftex.def Info: Pictures//chapter_head_3.pdf  used on input line 7.
@@ -5325,7 +5324,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 668--669
 
  []
 
-<Capitulos/Apendices/Ap_A3.png, id=3703, 2541.495pt x 1192.455pt>
+<Capitulos/Apendices/Ap_A3.png, id=3705, 2541.495pt x 1192.455pt>
 File: Capitulos/Apendices/Ap_A3.png Graphic file (type png)
 <use Capitulos/Apendices/Ap_A3.png>
 Package pdftex.def Info: Capitulos/Apendices/Ap_A3.png  used on input line 672.
@@ -5348,7 +5347,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 775--776
 
  []
 
-<Capitulos/Apendices/Ap_A.png, id=3715, 539.76656pt x 486.31688pt>
+<Capitulos/Apendices/Ap_A.png, id=3717, 539.76656pt x 486.31688pt>
 File: Capitulos/Apendices/Ap_A.png Graphic file (type png)
 <use Capitulos/Apendices/Ap_A.png>
 Package pdftex.def Info: Capitulos/Apendices/Ap_A.png  used on input line 788.
@@ -5505,17 +5504,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1404--1405
  []
 
 Package epstopdf Info: Source file: <Capitulos/Apendices/paridad.eps>
-(epstopdf)                    date: 2022-11-10 12:14:56
+(epstopdf)                    date: 2024-02-28 15:39:46
 (epstopdf)                    size: 12922 bytes
 (epstopdf)             Output file: <Capitulos/Apendices/paridad-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2022-11-10 12:19:04
+(epstopdf)                    date: 2024-02-28 15:39:46
 (epstopdf)                    size: 6227 bytes
 (epstopdf)             Command: <repstopdf --outfile=Capitulos/Apendices/parida
 d-eps-converted-to.pdf Capitulos/Apendices/paridad.eps>
 (epstopdf)             \includegraphics on input line 1408.
 Package epstopdf Info: Output file is already uptodate.
-<Capitulos/Apendices/paridad-eps-converted-to.pdf, id=3855, 586.19pt x 287.0725
+<Capitulos/Apendices/paridad-eps-converted-to.pdf, id=3857, 586.19pt x 287.0725
 pt>
 File: Capitulos/Apendices/paridad-eps-converted-to.pdf Graphic file (type pdf)
 <use Capitulos/Apendices/paridad-eps-converted-to.pdf>
@@ -5586,11 +5585,11 @@ Package logreq Info: Writing requests to 'QFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49894 strings out of 478287
- 968489 string characters out of 5849290
- 1801607 words of memory out of 5000000
- 64664 multiletter control sequences out of 15000+600000
- 591709 words of font info for 538 fonts, out of 8000000 for 9000
+ 49898 strings out of 478287
+ 968534 string characters out of 5849290
+ 1801706 words of memory out of 5000000
+ 64665 multiletter control sequences out of 15000+600000
+ 591900 words of font info for 540 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,26n,92p,1591b,3087s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.0@greiner_weak} has been referenced but does
@@ -5654,10 +5653,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/zapfding/uzdr.pfb>
-Output written on QFT.pdf (274 pages, 25285540 bytes).
+Output written on QFT.pdf (274 pages, 25285964 bytes).
 PDF statistics:
- 4748 PDF objects out of 5155 (max. 8388607)
- 4028 compressed objects within 41 object streams
+ 4750 PDF objects out of 5155 (max. 8388607)
+ 4030 compressed objects within 41 object streams
  1740 named destinations out of 2073 (max. 500000)
  172879 words of extra memory for PDF output out of 184870 (max. 10000000)
 
