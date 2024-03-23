@@ -98,35 +98,30 @@
 \contentsline {paragraph}{Invarianza bajo una fase}{215}{section*.22}%
 \contentsline {subsection}{\numberline {13.2.5}Mecanismo de sube y baja}{215}{subsection.13.2.5}%
 \contentsline {chapter}{\numberline {14}Renormalización}{219}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Sistemática de la renormalización}{219}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}Grado superficial de divergencia}{219}{subsection.14.1.1}%
+\contentsline {section}{\numberline {14.1}Grado superficial de divergencia}{219}{section.14.1}%
 \contentsline {section}{\numberline {14.2}Teoría de perturbación renormalizada}{224}{section.14.2}%
 \contentsline {subsection}{\numberline {14.2.1}Divergencias originadas de la dispersión dos-a-dos}{227}{subsection.14.2.1}%
 \contentsline {subsection}{\numberline {14.2.2}Parámetros de Feynman y rotación de Wick}{228}{subsection.14.2.2}%
 \contentsline {subsection}{\numberline {14.2.3}Regularización dimensional}{232}{subsection.14.2.3}%
 \contentsline {subsection}{\numberline {14.2.4}Divergencias originadas de la autoenergía}{235}{subsection.14.2.4}%
-\contentsline {chapter}{\numberline {15}Teoría cuántica de campos no-perturbativa}{239}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Ecuaciones de Schwinger-Dyson}{239}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}Autoenergía}{239}{subsection.15.1.1}%
-\contentsline {section}{\numberline {15.2}Ecuación de Bethe-Salpeter}{242}{section.15.2}%
-\contentsline {chapter}{\numberline {A}Introducción a teoría de grupos}{245}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Teoría de grupos}{245}{section.Alph1.1}%
-\contentsline {subsection}{\numberline {A.1.1}Grupos de Lie}{247}{subsection.Alph1.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Representaciones de grupos}{247}{subsection.Alph1.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Álgebra de Lie asociada a un grupo}{251}{subsection.Alph1.1.3}%
-\contentsline {subsubsection}{Grupo Euclideo}{255}{section*.31}%
-\contentsline {section}{\numberline {A.2}Representaciones Irreducibles}{255}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Grupo de Lorentz}{256}{section.Alph1.3}%
-\contentsline {subsubsection}{Transformaciones de Lorentz}{256}{section*.32}%
-\contentsline {subsubsection}{Componentes del grupo de Lorentz}{258}{section*.34}%
-\contentsline {subsection}{\numberline {A.3.1}Álgebra del grupo de Lorentz}{259}{subsection.Alph1.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}Representaciones Tensoriales}{263}{subsection.Alph1.3.2}%
-\contentsline {subsection}{\numberline {A.3.3}Representaciones Espinoriales}{266}{subsection.Alph1.3.3}%
-\contentsline {section}{\numberline {A.4}Representaciones sobre campos}{268}{section.Alph1.4}%
-\contentsline {subsection}{\numberline {A.4.1}Campos Escalares}{268}{subsection.Alph1.4.1}%
-\contentsline {subsection}{\numberline {A.4.2}Campos de Weyl, Dirac y Majorana}{268}{subsection.Alph1.4.2}%
-\contentsline {subsection}{\numberline {A.4.3}Campos vectoriales}{270}{subsection.Alph1.4.3}%
-\contentsline {section}{\numberline {A.5}Grupo de Poincare}{271}{section.Alph1.5}%
-\contentsline {subsection}{\numberline {A.5.1}Representaciones sobre los campos}{271}{subsection.Alph1.5.1}%
-\contentsline {subsection}{\numberline {A.5.2}Representaciones sobre estados de una partícula}{272}{subsection.Alph1.5.2}%
+\contentsline {chapter}{\numberline {A}Introducción a teoría de grupos}{239}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Teoría de grupos}{239}{section.Alph1.1}%
+\contentsline {subsection}{\numberline {A.1.1}Grupos de Lie}{241}{subsection.Alph1.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Representaciones de grupos}{241}{subsection.Alph1.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Álgebra de Lie asociada a un grupo}{245}{subsection.Alph1.1.3}%
+\contentsline {subsubsection}{Grupo Euclideo}{249}{section*.31}%
+\contentsline {section}{\numberline {A.2}Representaciones Irreducibles}{249}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Grupo de Lorentz}{250}{section.Alph1.3}%
+\contentsline {subsubsection}{Transformaciones de Lorentz}{250}{section*.32}%
+\contentsline {subsubsection}{Componentes del grupo de Lorentz}{252}{section*.34}%
+\contentsline {subsection}{\numberline {A.3.1}Álgebra del grupo de Lorentz}{253}{subsection.Alph1.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Representaciones Tensoriales}{257}{subsection.Alph1.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}Representaciones Espinoriales}{260}{subsection.Alph1.3.3}%
+\contentsline {section}{\numberline {A.4}Representaciones sobre campos}{262}{section.Alph1.4}%
+\contentsline {subsection}{\numberline {A.4.1}Campos Escalares}{262}{subsection.Alph1.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Campos de Weyl, Dirac y Majorana}{262}{subsection.Alph1.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}Campos vectoriales}{264}{subsection.Alph1.4.3}%
+\contentsline {section}{\numberline {A.5}Grupo de Poincare}{265}{section.Alph1.5}%
+\contentsline {subsection}{\numberline {A.5.1}Representaciones sobre los campos}{265}{subsection.Alph1.5.1}%
+\contentsline {subsection}{\numberline {A.5.2}Representaciones sobre estados de una partícula}{266}{subsection.Alph1.5.2}%
 \contentsfinish 

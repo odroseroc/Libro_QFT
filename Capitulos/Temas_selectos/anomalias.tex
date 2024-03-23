@@ -339,9 +339,9 @@ Podemos ver que \eqref{eq:anomalias_1_manipulado} resulta siendo igual que la in
 	&& \times\> \int \frac{\dd[4]{p}}{(2 \pi)^4} \Tr[\frac{1}{(\slashed{p} - \slashed{k}_1)^2} \gamma_\nu \frac{1}{\slashed{p}^2} \gamma_\xi \frac{1}{(\slashed{p} + \slashed{k}_2)^2} \gamma_\mu \gamma_5] \,.
 \end{IEEEeqnarray*}
 
-En este punto, debemos recordar que los fermiones en el loop contienen, tanto índices fermiónicos, como índices internos del grupo de simetría al que corresponden. Por ejemplo, suponiendo que el fermión es un quark (up) (los bosones de las patas externas serían gluones), tendría un índice de color asociado a la simetría $\SU{3}$, que puede tomar el valor 1, 2 ó 3 y representan la carga de color (rojo, azul y verde) de un quark.
+En este punto, debemos recordar que los fermiones en el loop contienen, tanto índices fermiónicos, como índices internos de los grupos de simetría. Por ejemplo, suponiendo que el fermión es un quark (up) (los bosones de las patas externas serían gluones), tendría un índice de color asociado a la simetría $\SU{3}$ que, en la representación fundamental, puede tomar el valor 1, 2 ó 3 y representan la carga de color (rojo, azul y verde) de un quark.
 
-En la representación fundamental del grupo de simetría, los generadores $\lambda^a$ son matrices, y por lo tanto, tienen dos índices $\lambda^a_{ij}$ de color que acoplan con aquellos del fermión. En el ejemplo que estamos considerando, si a un vértice entra un quark con índice 1 (rojo) y sale uno con índice 3 (verde), el generador que origina esta transición tendría la forma (salvo por un factor de normalización)
+En la representación fundamental del grupo de generadores $\lambda^a_{ij}$ son matrices y por lo tanto, tienen dos índices $ij$ de color que se contraen con aquellos del fermión. En el ejemplo que estamos considerando, si a un vértice entra un quark con índice 1 (rojo) y sale otro quark con índice 3 (verde), el generador que origina esta transición tendría la forma (salvo por un factor de normalización)
 %
 \begin{equation*}
 	\lambda^a = \pmqty{0 & 0 & 1 \\ 0 & 0 & 0 \\ 1 & 0 & 0} \,.
@@ -350,16 +350,16 @@ En la representación fundamental del grupo de simetría, los generadores $\lamb
 Así, el término en el lagrangiano para la trancisión de los quarks tendría la forma (salvo por un factor de normalización)
 
 \begin{IEEEeqnarray*}{rCl}
-	g\overline{u} \lambda^a u \gamma^\mu G_\mu &=& g \gamma^\mu \pmqty{u_1 & u_2 & u_3} \pmqty{0 & 0 & 1 \\ 0 & 0 & 0 \\ 1 & 0 & 0} \pmqty{u_1 \\ u_2 \\ u_3}G_\mu \slj
+	g\overline{u} \lambda^a u \gamma^\mu G_\mu &=& g \gamma^\mu_{\alpha \beta} \pmqty{\overline{u}_1 & \overline{u}_2 & \overline{u}_3}_\alpha \pmqty{0 & 0 & 1 \\ 0 & 0 & 0 \\ 1 & 0 & 0} \pmqty{u_1 \\ u_2 \\ u_3}_\beta G_\mu \slj
 	%%
-	&=& g \gamma^\mu G_\mu u_1 u_3 + \text{h. c.} \slj
+	&=& g \gamma^\mu_{\alpha\beta} G_\mu \overline{u}_{1\alpha} u_{3\beta} + \text{h. c.} \slj
 	%%
-	&=& g \gamma^\mu G_\mu u_1\lambda^a_{13}u_3 + \text{h. c.} \,,
+	&=& g G_\mu \overline{u}_1 \gamma^\mu u_3 + \text{h. c.} \,,
 \end{IEEEeqnarray*}
 
-\noindent que es la transición requerida con su gluón correspondiente.
+\noindent que es el acoplamiento requerido con su gluón correspondiente.
 
-Si esta es la transición en, por ejemplo, el vértice izquierdo, en el vértice superior debe aparecer el generador de la transición entre $q_3$ y el siguiente quark. En cada caso, el quark que sale del vértice anterior es el quark que entra al siguiente. Así, el segundo índice del gnerador del vértice anterior, debe ser igual al primer índice del generador del vértice siguiente, eso es:
+Si este es el acoplamiento en, por ejemplo, el vértice izquierdo, en el vértice superior debe aparecer el generador de la transición entre $q_3$ y el siguiente quark. En cada caso, el quark que sale del vértice anterior es el quark que entra al siguiente. Así, el segundo índice del generador del vértice anterior, debe ser igual al primer índice del generador del vértice siguiente, eso es:
 
 % \textcolor{red}{la traza no está ya dada desde el inicio????}
 % Los generadores $\lambda^i$ en la expresión están asociados a la forma en que los fermiones en el loop acoplan a los campos gauge de las patas externas. Supongamos que el fermión que circula en el loop es un quark, que tiene un índice de color con tres posibles valores, $1,\, 2,\, 3$ representando $r,\, g,\, b$ respectivamente. En este caso, los bosones serían gluones. En cada vértice podría entrar un quark con índice $1$ y salir otro con índice $2$ o $3$. Estos índices son los que corresponden a las matrices $\lambda$, que en la representación fundamental tienen dos índices matriciales asociados a la simetría gauge, $\lambda_{ij}$. Sin embargo, notemos que todos los índices en el producto de las tres matrices deben estar contraídos, pues el índice del fermión que sale en uno de los vértices, debe ser el mismo que el índice que entra en el siguiente vértice, y como el diagrama cierra, tenemos una situación como
@@ -368,7 +368,7 @@ Si esta es la transición en, por ejemplo, el vértice izquierdo, en el vértice
 	\lambda^a_{ij} \lambda^b_{jk} \lambda^c_{ki} \,,
 \end{equation*}
 
-\noindent por lo que el producto de generadores, para el diagrama que estamos estudiando, se reduce a una traza.
+\noindent por lo que el producto de generadores, para el diagrama que estamos estudiando, se reduce a una traza para un loop.
 
 En general, debemos sumar sobre todos los diagramas que tengan estados iniciales y finales iguales, por lo que debemos sumar sobre todos los fermiones que sienten la interacción. Debe aparecer entonces, un factor global
 %

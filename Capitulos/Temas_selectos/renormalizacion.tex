@@ -1,20 +1,21 @@
 \chapter{Renormalización}
 \label{ch:renormalizacion}
 
-La renormalización de las teorías de campos resulta siempre necesaria por una simple razón. Cuando se escribe un Lagrangiano, los parámetros que se tienen no necesariamente se corresponden con las cantidades física. Es necesario aplicar todo el formalismo que hemos desarrollado para calcular cantidades que sean medibles y observables en el laboratorio.
+El propósito de toda teoría física es calcular cantidades medibles y observables en el mundo real. En el formalismo de las teorías de campos aparecen elementos matemáticos que representan cantidades física, pero también otros que no tienen un paralelo directo en el mundo real, sino que son cantidades puramente abstractas que sólo existen como parte del aparato matemático.
 
-En este proceso de pasar de algo abstracto -- como lo es un Lagrangiano -- a calcular observables es necesario tener en cuenta que existen cantidades física y otras cantidades puramente teóricas. Un ejemplo de ello es lo que llamaremos más adelante la \emph{masa desnuda} y su contraparte, la masa física. Es necesario conectar los dos conceptos porque, en general, no siempre coinciden. Ya hemos visto que en el Lagrangiano tenemos un término de masa que es proporcional al campo al cuadrado. Este término aparece aún para los quarks. Sin embargo, hay un inconveniente aquí: los quarks no tienen masa física, aún cuando tienen un término en el Lagrangiano que denominamos masa.
+Ejemplo de ello es la denominada \emph{masa desnuda}, una cantidad teórica asociada al parámetro de masa en el Lagrangiano. Dicho término de masa siempre es proporcional al campo al cuadrado y aparece para todas las partículas de la teoría. En el caso del modelo estándar, dicho parámetro de masa aparece incluso en el caso de los quarks, aún cuando éstos no tienen masa física.
 
-El proceso de conectar los parámetros en la teoría, que llamaremos \emph{parámetros desnudos} (bare parameters) es lo que llamaremos renormalización. En general, toda teoría, bien sea clásica o cuántica, requiere una renormalización. Sin embargo, el proceso nunca fue tan evidente como cuando, a comienzos de los años 1930 se empiezan a calcular cantidades a un loop y aparecieron infinitos ineludibles. Fue entonces que el proceso de renormalización se volvió crucial para que los cálculos tuvieran sentido físico, pues muchas veces los parámetros desnudos no estaban unívocamente definidos.
+La esencia de la \textbf{renormalización} en teoría cuántica de campos consiste en conectar estas cantidades abstractas -- denominadas prámetros desnudos -- que aparecen en el Lagrangiano, a cantidades medibles y observables. 
 
-\section{Sistemática de la renormalización}
+En general toda teoría, bien sea clásica o bien sea cuántica, requiere de un proceso de renormalización. No obstante, la necesidad de renormalizar una teoría nunca fue tan evidente como en el cálculo de cantidades a un loop en teoría cuántica de campos, realizados por primera vez durante la década de 1930. Como ya mencionamos en el capítulo \ref{ch:anomalias}, las amplitudes de diagramas a un loop suelen resultar en infinitos. Recordemos que cuando dichos diagramas corresponden a procesos que no existen en el Lagrangiano, representan una anomalía cuántica, cuya cancelación hace que la teoría siga siendo consistente.
 
-Para motivar el tema, iniciaremos con un cálculo proveniente de la QED~\footnote{QED: Quantum ElectroDynamics, electrodinámica cuántica} y un concepto que desarrolló Weinberg denominado \emph{grado superficial de divergencia} (superficial degree of divergence).
 
-\subsection{Grado superficial de divergencia}
+No obstante, otros procesos que sí son posibles a nivel árbol resultan en infinitos ineludibles cuando se calculan a un loop. Estos infinitos son denominados \textbf{divergencias ultravioletas}. El proceso de renormalización es crucial para que dichos cálculos tengan sentido físico y permite una definición unívoca de los parámetros desnudos.
 
-Para QED emplearemos las siguientes definiciones en un diagrama
-\clearpage
+\section{Grado superficial de divergencia}
+
+Es importante identificar qué diagramas originan divergencias y en qué teorías tales divergencias pueden ser eliminadas sistemáticamente. En esta sección emplearemos argumetos elementales para determinar, tentativamente, qué diagramas de Feynman contienen una divergencia ultravioleta. Iniciamos analizando el caso de la QED, partiendo de algunas definiciones:
+
 
 \begin{definition}
 \begin{equation*}
