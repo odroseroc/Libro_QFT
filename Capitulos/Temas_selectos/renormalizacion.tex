@@ -37,7 +37,13 @@ Es importante identificar qué diagramas originan divergencias y en qué teoría
 \end{equation*}
 \end{definition}
 
-Este concepto de grado superficial de divergencia no será útil para todos los diagramas, pero será importante, en particular, para una clase de diagramas que denominaremos \emph{diagramas irreducibles de una partícula} (one-particle irreducible).Un \emph{diagrama de $n$ partículas} es aquel en el que entran $n$ partículas y salen $n$ partículas. El diagrama es irreducible si no es posible, mediante $n$ cortes en las líneas internas, reducirlos a otros diagramas de $n$ partículas. Como ejemplo, consideremos el diagrama en la Figura~\ref{fig:1partredu_ladder}, conocido como diagrama escalera (ladder). Si cortamos dos de las lineas internas del diagrama por los puntos indicados, obtenemos dos diagramas que son también de dos partículas. Esto es, el diagrama escalera de dos partículas inicial es reducible.
+Este concepto de grado superficial de divergencia no será útil para todos los diagramas, pero será importante, en particular, para una clase de diagramas que denominaremos \emph{diagramas irreducibles de una partícula} (one-particle irreducible). Para entender este concepto, primero definamos lo que es un diagrama irreducible. \\
+
+\begin{definition}[Diagrama irreducible de $n$ partículas]
+	Un \emph{diagrama de $n$ partículas} es aquel en el que entran $n$ partículas y salen $n$ partículas. El diagrama es \textbf{irreducible} si, mediante $n$ cortes en las líneas internas, no es posible reducirlo a otros diagramas de $n$ partículas.
+\end{definition} 
+
+ Como ejemplo, consideremos el diagrama en la Figura~\ref{fig:1partredu_ladder}, conocido como diagrama escalera (ladder). Si cortamos dos de las lineas internas del diagrama por los puntos indicados, obtenemos dos diagramas que son también de dos partículas. Esto es, el diagrama escalera de dos partículas inicial \emph{es reducible}.
 
 \begin{figure}[ht]
 	\centering
@@ -46,7 +52,7 @@ Este concepto de grado superficial de divergencia no será útil para todos los 
 	\label{fig:1partredu_ladder}
 \end{figure}
 
-Ahora, consideremos el caso en la Figura~\ref{fig:1parirred_mount}, donde tenemos un diagrama de una sola partícula que emite un fotón y lo reabsorbe. Al cortar el diagrama por una linea interna ya no obtenemos un diagrama de una partícula. Incluso podríamos pensar que el diagrama final es de dos partículas, pues tiene dos patas externas. Este diagrama, por consiguiente, es un diagrama irreducible de una partícula.
+Ahora, consideremos el caso en la Figura~\ref{fig:1parirred_mount}, donde tenemos un diagrama de una sola partícula que emite un fotón y lo reabsorbe. Al realizar un solo corte (pues el diagrama es de una partícula) por una linea interna, ya no obtenemos un diagrama de una partícula. Incluso podríamos pensar que el diagrama final es de dos partículas, pues tiene dos patas externas. Este diagrama, por consiguiente, \emph{es un diagrama irreducible de una partícula}.
 
 \begin{figure}[ht]
 	\centering
@@ -55,21 +61,21 @@ Ahora, consideremos el caso en la Figura~\ref{fig:1parirred_mount}, donde tenemo
 	\label{fig:1parirred_mount}
 \end{figure}
 
-La idea general de los diagramas irreducibles es que a partir de ellos se pueden construir diagramas más complejos. Todo diagrama se puede construir a partir de diagramas irreducibles. Son una especie de equivalente de los números primos para el conjunto de los números naturales. Recordemos, 
+La idea general de los diagramas irreducibles es que a partir de ellos se pueden construir diagramas más complejos. Todo diagrama se puede construir a partir de diagramas irreducibles. Son una especie de equivalente de los números primos para el conjunto de los números naturales. Entonces, tengamos en cuenta lo siguiente: 
 
 \begin{cabox}
-	el concepto de grado superficial de divergencia será aplicado únicamente a diagramas irreducibles.
+	El concepto de grado superficial de divergencia será aplicado únicamente a diagramas irreducibles.
 \end{cabox}
 
-Veamos entonces de qué se trata este concepto.
+Con estos fundamentos claros, procedamos ahora a explorar de qué se trata el grado superficial de divergencia.
 
-Supongamos que se tiene una amplitud que involucra ciertas integrales de la forma
+Típicamente, las expresiones correspondientes a un diagrama típico en QED serán de la forma
 %
 \begin{IEEEeqnarray}{rCl}
 	\int \dd[4]{k_1} \dd[4]{k_2} \cdots \dd[4]{k_L} \frac{1}{\underbrace{(\slashed{k}_i - m)}_{\substack{\text{propagadores} \\ \text{de fermiones}}} \cdots \underbrace{k_j^2 \cdots k_n^2}_{\substack{\text{propagadores} \\ \text{de fotones}}}} 
 \end{IEEEeqnarray}
 
-El diagrama que consideramos tendrá tantas integrales en $k$ como loops hayan y definiremos el grado superficial de divergencia como
+El diagrama que consideramos tendrá tantas integrales en $k$ como loops hayan. Definiremos el grado superficial de divergencia como
 %
 \begin{equation}
 \boxed{
@@ -77,35 +83,38 @@ El diagrama que consideramos tendrá tantas integrales en $k$ como loops hayan y
 }
 \end{equation}
 
-La razón de esta definición es la siguiente: sabemos que por cada loop que hay en el diagrama habrá una integral $\dd[4]k_i$. Estamos interesados en la dimensión, en unidades de momento, del integrando. En unidades de momento, cada diferencial tiene dimensión $4$, i.e., cada loop aportará un $4$ a la dimensión del integrando. Ahora, los propagadores fermiónicos son de la forma
+Para comprender la el razonamiento detrás de esta expresión, consideremos lo siguiente: sabemos que por cada loop que hay en el diagrama habrá una integral $\dd[4]k_i$. Estamos interesados en la dimensión, en unidades de momento, del integrando. En unidades de momento, cada diferencial tiene dimensión $4$, i.e., cada loop aportará un $4$ a la dimensión del integrando. Ahora, los propagadores fermiónicos son de la forma
 %
 \begin{equation*}
-	\frac{\ii}{k - m} \,,
+	\frac{\ii}{\slashed{k} - m} \,,
 \end{equation*}
 
-\noindent por lo que por cada propagador fermiónico, la dimensión en unidades de momento, disminuye en una unidad. Por su parte, los propagadores de fotones son de la forma
+\noindent de modo que, por cada propagador fermiónico la dimensión del integrando, en unidades de momento, disminuye en una unidad. Por su parte, los propagadores de fotones son de la forma
 %
 \begin{equation*}
 	\frac{\ii}{k^2} \,,
 \end{equation*}
 
-\noindent haciendo que por cada propagador de fotones la dimensión en unidades de momento disminuya en dos unidades.
+\noindent haciendo que por cada propagador de fotones la dimensión del integrando, en unidades de momento, disminuya en dos unidades.
 
-Considerando el grado de divergencia, usualmente lo que ocurrirá es lo siguiente:
+El grado superficial de divergencia, como podemos ver, es la dimensión del integrando en unidades de momento. Hablando de manera muy general, un diagrama diverge, a menos que hayan más potencias de momento en el denominador que en el numerador.
+
+En general, podríamos esperar que el diagrama tenga una divergencia proporcional a $\Lambda ^D$, donde $\Lambda$ es un límite superior de los momentos, denominado \emph{corte} o \emph{cutoff}. En este escenario, podemos considerar los siguientes casos:
+
 %
 \begin{profor}
     \begin{equation*}
 	\begin{IEEEeqnarraybox}[][c]{ll}
-		\text{Si } D > 0 \qc & \text{tendremos cantidades que divergen de la forma } \Lambda^D\,; \\
+		\text{Si } D > 0 \qc & \text{la divergencia es proporcional a } \Lambda^D\,; \\
 		%%%%
-		\text{si } D = 0 \qc & \text{tendremos cantidades que divergen como} \log \Lambda \,; \\
+		\text{si } D = 0 \qc & \text{la divergencia es proporcional a } \log \Lambda \,; \\
 		%%%%
-		\text{si } D < 0 \qc & \text{las cantidades irań como } \Lambda^{-D} \text{ y son típicamente convergentes,}
+		\text{si } D < 0 \qc & \text{las cantidades irań como } \Lambda^{-D} \text{ y son típicamente convergentes.}
 	\end{IEEEeqnarraybox}
 \end{equation*}
 \end{profor}
 
-\noindent donde $\Lambda$ es el límite superior de los momentos, y $\Lambda \rightarrow \infty$. Esto es lo que se denomina un corte (cutoff) de los momentos. Cabe anotar que esto no es una regla general, existen excepciones a lo que se ha dicho, no obstante, estas condiciones se cumplen en muchos casos para los diagramas irreducibles.
+Cabe anotar que esto no es una regla general. Existen diagramas que pueden contener divergencias no contempladas en este análisis, o diagramas convergentes cuyo grado superficial de divergencia puede ser igual a cero. No obstante, las condiciones dadas arriba se cumplen en muchos casos para los diagramas irreducibles.
 
 Ahora, en QED el número de loops es dado por
 %
