@@ -67,9 +67,9 @@ La idea general de los diagramas irreducibles es que a partir de ellos se pueden
 	El concepto de grado superficial de divergencia será aplicado únicamente a diagramas irreducibles.
 \end{cabox}
 
-Con estos fundamentos claros, procedamos ahora a explorar de qué se trata el grado superficial de divergencia.
+Con estos conceptos claros, procedamos ahora a explorar la idea de grado superficial de divergencia.
 
-Típicamente, las expresiones correspondientes a un diagrama típico en QED serán de la forma
+Típicamente, la integral para la amplitud de un diagrama en QED tiene la forma
 %
 \begin{IEEEeqnarray}{rCl}
 	\int \dd[4]{k_1} \dd[4]{k_2} \cdots \dd[4]{k_L} \frac{1}{\underbrace{(\slashed{k}_i - m)}_{\substack{\text{propagadores} \\ \text{de fermiones}}} \cdots \underbrace{k_j^2 \cdots k_n^2}_{\substack{\text{propagadores} \\ \text{de fotones}}}} 
@@ -99,7 +99,7 @@ Para comprender la el razonamiento detrás de esta expresión, consideremos lo s
 
 El grado superficial de divergencia, como podemos ver, es la dimensión del integrando en unidades de momento. Hablando de manera muy general, un diagrama diverge, a menos que hayan más potencias de momento en el denominador que en el numerador.
 
-En general, podríamos esperar que el diagrama tenga una divergencia proporcional a $\Lambda ^D$, donde $\Lambda$ es un límite superior de los momentos, denominado \emph{corte} o \emph{cutoff}. En este escenario, podemos considerar los siguientes casos:
+En general, podríamos esperar que el diagrama tenga una divergencia proporcional a $\Lambda ^D$, donde $\Lambda$ es un límite superior de los momentos, denominado \emph{corte} o \emph{cutoff}. En este escenario podemos considerar los siguientes casos:
 
 %
 \begin{profor}
@@ -109,34 +109,34 @@ En general, podríamos esperar que el diagrama tenga una divergencia proporciona
 		%%%%
 		\text{si } D = 0 \qc & \text{la divergencia es proporcional a } \log \Lambda \,; \\
 		%%%%
-		\text{si } D < 0 \qc & \text{las cantidades irań como } \Lambda^{-D} \text{ y son típicamente convergentes.}
+		\text{si } D < 0 \qc & \text{las cantidades irań como } \Lambda^{-\abs{D}} \text{ y son típicamente convergentes.}
 	\end{IEEEeqnarraybox}
 \end{equation*}
 \end{profor}
 
 Cabe anotar que esto no es una regla general. Existen diagramas que pueden contener divergencias no contempladas en este análisis, o diagramas convergentes cuyo grado superficial de divergencia puede ser igual a cero. No obstante, las condiciones dadas arriba se cumplen en muchos casos para los diagramas irreducibles.
 
-Ahora, en QED el número de loops es dado por
+Ahora, en QED el número de loops de un diagrama de Feynman es dado por
 %
 \begin{equation}
 	L = P_e + P_\gamma - \qty(V - 1) \,.
 \end{equation}
 
-Esto proviene de las reglas de Feynman, que exigen que por cada propagador debe haber una integral~\footnote{cf. David Griffiths. \emph{Introduction to Elementary Particles}. Second Edition. Wiley-VCH, 2008. Capítulos 6 y 7.}. No obstante, por cada vértice debe haber una delta de Dirac, que eliminará una de las integrales. Ahora, una de las deltas de Dirac expresará la conservación global del momento lineal, y esta delta no se integraba como las demás. A esta delta que no va a eliminar una integral se debe el $-1$ en el paréntesis. Finalmente, el número de loops es el número de integrales de cuatro dimensiones presentes en la expresión.
+Esto proviene de las reglas de Feynman, que exigen que por cada propagador hay una integral en el momento correspondiente~\footnote{cf. David Griffiths. \emph{Introduction to Elementary Particles}. Second Edition. Wiley-VCH, 2008. Capítulos 6 y 7.}. No obstante, por cada vértice existe una delta de Dirac que elimina una de las integrales. Cuando se calcula la amplitud de un diagrama, también aparece una delta de Dirac que expresa la conservación global del momento lineal, la cual no se puede integrar como las demás. A esta delta que no elimina una integral se debe el $-1$ en el paréntesis. Finalmente, el número de loops es el número de integrales de cuatro dimensiones presentes en la expresión.
 
-Para el número de vértices tenemos la expresión
+El número de vértices en un diagrama de QED es dado por
 %
 \begin{equation}
 	V = 2P_\gamma + N_\gamma \,,
 \end{equation}
 
-\noindent que se sigue de la estructura del vértice fundamental de QED, que siempre involucra un fotón. Si el fotón está como línea interna, debe estar asociado a dos vértices, mientras que si es una pata externa, estará asociado a uno solo. También es posible expresar el número de vértices como
+\noindent que se debe a la estructura del vértice fundamental de QED, el cual siempre involucra un fotón. Si el fotón es una linea interna de un diagrama, éste debe estar asociado a dos vértices, mientras que si es una pata externa estará asociado a uno solo. También es posible expresar el número de vértices como
 %
 \begin{equation}
 	V = P_e + \frac{N_e}{2}\,,
 \end{equation}
 
-\noindent lo cual también responde a la estructura del vértice fundamental de QED.
+\noindent que también responde a la estructura del vértice fundamental de QED. \textcolor{red}{[Ver si se pone toda la discusión sobre la forma de los vértices fundamentales de QED, o si se omite o se relega a otra sección del libro]}
 
 Con estas expresiones podemos escribir el grado de divergencia como
 %
@@ -149,60 +149,69 @@ Con estas expresiones podemos escribir el grado de divergencia como
 	%%%
 	&=& 4 + 2P_\gamma - 2N_e - P_e \\
 	%%%%
-	&=& 4 + \cancel{2P_\gamma} - 2N_e - \qty(\cancel{2P_\gamma} + N_\gamma - frac{N_e}{2}) \\
+	&=& 4 + \cancel{2P_\gamma} - 2N_e - \qty(\cancel{2P_\gamma} + N_\gamma - \frac{N_e}{2}) \\
 	%%%%
-	&=& 4 - 2N_e + \frac{N}{2} - N-\gamma \slj
+	&=& 4 - 2N_e + \frac{N_e}{2} - N_\gamma \slj
 	%%%%
 	\IEEEeqnarraymulticol{3}{c}{\boxed{ D = 4 - \frac{3}{2}N_e - N_\gamma }\,. \IEEEyesnumber}
 \end{IEEEeqnarray*}
 
-Notemos que este resultado no depende de los propagadores, sino únicamente de las patas externas. \\
+Es decir, el grado superficial de divergencia depende únicamente del número de patas externas de cada tipo.
+
+\begin{cabox}
+	El grado superficial de divergencia depende únicamente del número de patas externas de cada tipo, no del número de propagadores.
+\end{cabox}
 
 
-Para el caso de una teoría $\lambda \phi^n$, i.e. de la forma
+\paragraph{Aplicación a una teoría escalar}
+\vspace{2ex}
+
+Consideremos una teoría escalar $\lambda \phi^n$, cuyo Lagrangiano tiene la forma
 %
 \begin{equation}
-	\lagdn = \frac{1}{2} (\partial_\mu \phi)(\partial^\mu \phi) - \frac{1}{2} m\phi^2 - \frac{\lambda}{n!} \phi^n \,,
+	\lagdn = \frac{1}{2} (\partial_\mu \phi)(\partial^\mu \phi) - \frac{1}{2} m\phi^2 - \frac{\lambda}{n!} \phi^n \,.
 \end{equation}
 
-\noindent el número de loops será
+En este caso, sólo existe un tipo de campo $\phi$, por lo que no es necesario hacer la distinción entre los propagadores $P_\gamma$ y $P_e$, y tenemos que
 %
 \begin{equation}
-	L = P - V + 1 \qc nV = N + 2P \,,
+	L = P - V + 1 \qc nV = N + 2P \,.
 \end{equation}
 
-\noindent puesto que sólo tenemos una partícula, y por lo tanto sólo tenemos propagadores y patas externas de una misma naturaleza. También se cumple que el grado de divergencia
+Así, el grado superficial de divergencia es
 %
 \begin{equation}
 	D = dL - 2P \,,
 \end{equation}
 
-\noindent donde $d$ es la dimensión de las integrales de momento, que en el caso de QED era 4, pero en este caso es arbitraria. Es posible mostrar que~\footnote{cf. Michael E. Peskin, Daniel V. Schroeder. \emph{An Introduction to Quantum Field Theory}. Addison-Wesley, 1995. Capítulo 10.}
+\noindent donde $d$ es la dimensión de las integrales de momento -- que en el caso de QED es 4, pero en este caso es arbitraria. Es posible mostrar que para una teoría escalar con un término de interacción $\lambda \phi^n$ este grado superficial de divergencia puede expresarse como
 %
 \begin{equation}
 	D = d + \qty[n \qty(\frac{d-2}{2}) - d]V - \frac{d-2}{2}N \,.
 \end{equation} \\
 
+\paragraph{Una nota sobre unidades naturales de ciertas cantidades}
+\vspace{2ex}
 
-Ahora, recordemos un poco las dimensiones que tienen algunas cantidades en unidades naturales. Al definir unidades naturales se tiene que la constante de Planck $h = 1$, es decir tiene dimensión cero en unidades naturales. Como $h$ tiene unidades de acción, esto hace que la acción tenga dimensión cero en unidades naturales, $[S] = 0$, y como
+Recordemos las dimensiones que tienen algunas cantidades en unidades naturales. Al definir unidades naturales, la constante de Planck $h = 1$, es decir tiene dimensión cero en unidades naturales. Como $h$ tiene unidades de acción, esto hace que la acción tenga dimensión cero en unidades naturales, $[S] = 0$, y como
 %
 \begin{equation*}
 	S = \int \dd[4]{x} \lagdn \,,
 \end{equation*}
 
-\noindent la dimensión del Lagrangiano es $-4$,
+\noindent la dimensión del Lagrangiano debe ser $-4$,
 %
 \begin{equation*}
 	[\lagdn] = -4 \,,
 \end{equation*}
 
-Recordemos también cómo se define el momento lineal
+Por su parte, el momentum lineal,
 %
 \begin{equation*}
-	\vb*{p} = m \vb*{v} \,.
+	\vb*{p} = m \vb*{v} 
 \end{equation*}
 
-Las velocidades son adimensionales en unidades naturales, en virtud de que $v = \dd x / \dd t$, y en unidades naturales la distancia y el tiempo tienen las mismas unidades, ya que $c = 1$. Esto implica que $ct = x$ y que el momento tenga unidades de masa.
+\noindent tiene unidades de masa puesto que, en unidades naturales, la velocidad es adimensional en virtud de que $c = 1$. Adicionalmente, como $v = \dd x / \dd t$, esto implica que la distancia y el tiempo tienen las mismas unidades. 
 
 Ahora, el momento angular
 %
@@ -210,13 +219,15 @@ Ahora, el momento angular
 	\vb*{L} = \vb*{x} \cross \vb*{p}
 \end{equation*}
 
-\noindent es adimensional, por lo que las $x$ deben tener unidades de $p^{-1}$. Volviendo a la acción, vemos entonces que el diferencial $\dd[4]x$ tiene magnitud $-4$ en unidades de momento, por lo que la densidad lagrangiana, en unidades de momento tiene magnitud
+\noindent es adimensional, por lo que la posición $x$ tiene unidades de $p^{-1}$.
+
+Volviendo a la acción, vemos entonces que el diferencial $\dd[4]x$ tiene magnitud $-4$ en unidades de momento, por lo que la densidad lagrangiana, en unidades de momento tiene magnitud
 %
 \begin{equation}
 	[\lagdn] = 4 \qc \text{ en unidades de momento.}
 \end{equation}
 
-Consideremos la densidad lagrangiana como la diferencia entre una densidad de energía cinética y una densidad de potencial, $\lagdn = \mathcal{T} - \mathcal{V}$, y consideremos un potencial de la forma
+Siguiendo la definición de mecánica clásica, consideremos la densidad lagrangiana como la diferencia entre una densidad de energía cinética y una densidad de potencial, $\lagdn = \mathcal{T} - \mathcal{V}$ para un potencial de la forma
 %
 \begin{equation}
 	V = \sum_{n = 1}^{\infty} \frac{G_n}{n!} \phi^n \,,
@@ -224,13 +235,13 @@ Consideremos la densidad lagrangiana como la diferencia entre una densidad de en
 
 \noindent donde $G_n$ son constantes de acoplamiento.
 
-Como $[\lagdn] = 4$ y el Lagrangiano contiene el término $-m^2 \phi^2$, cuya magnitud debe ser también 4, considerando que $[m] = 1$, tenemos que $[\phi] = 1$. Así pues, para el término en el potencial 
+Ahora, el Lagrangiano contiene el término cinético $-m^2 \phi^2$, cuya magnitud debe ser 4 -- puesto que $[\lagdn] = 4$ --. Considerando que $[m] = 1$, tenemos que $[\phi] = 1$. Así, para el término en el potencial tenemos
 %
 \begin{equation}
 	\qty[\frac{G_4}{4!} \phi^4] = [G_4]4 = 4\,,
 \end{equation}
 
-\noindent de modo que el acoplamiento $G_4$ debe ser adimensional. Entonces, lo que tenemos para las unidades de los acoplamientos es que
+\noindent de modo que el acoplamiento $G_4$ debe ser adimensional. Entonces, para las magnitud de los acoplamientos tenemos que
 %
 \begin{equation}
 	[G_n] = 4 - n \,.
@@ -252,28 +263,28 @@ Vamos a clasificar los Lagrangianos según el siguiente criterio que enunciamos 
 
 La idea, en general, será que las teorías que incluyen términos con potencias menores o iguales que $4$ tendrán buenas propiedades bajo normalización, mientras que aquellas que incluyan términos con potencias mayores que $4$ presentarán complicaciones para su normalización. 
 
-En el caso de los fermiones, tenemos que en la ecuación de Dirac aparece el término $-m\overline{\psi} \psi$ , que debe tener dimensión 4, de modo que
+En el caso de los fermiones, en la ecuación de Dirac aparece el término $-m\overline{\psi} \psi$ , que debe tener dimensión 4, de modo que
 %
-\begin{IEEEeqnarray}{rCl}
+\begin{IEEEeqnarray*}{rCl}
 	\left[-m \overline{\psi} \psi \right] &=& 4 \\
 	%%%%
 	1 + 2[\psi] &=& 4 \\
 	%%%%
 	\therefore [\psi] &=& \frac{3}{2} \,.
-\end{IEEEeqnarray}
+\end{IEEEeqnarray*}
 
 
 Por ejemplo, consideremos el Lagrangiano de Fermi
 %
-\begin{equation}
+\begin{equation*}
 	\lagdn = G_F J_\mu J^\mu \,,
-\end{equation}
+\end{equation*}
 
 \noindent donde
 %
-\begin{equation}
-	J_\mu = \overline{\psi} \gamma^\mu \psi \quad \therefore \quad [J_\mu] = 3 \,,
-\end{equation}
+\begin{equation*}
+	J_\mu = \overline{\psi} \gamma^\mu \psi, \qquad [J_\mu] = 3 \,,
+\end{equation*}
 
 \noindent de modo que el operador $J_\mu J^\mu$ tiene dimensión 6, con lo cual
 %
@@ -285,6 +296,7 @@ Por ejemplo, consideremos el Lagrangiano de Fermi
 
 
 Estas denominaciones para los Lagrangianos son mencionadas aquí sin más, a manera de definiciones. La justificación para ellas es complicada y la desarrollaremos a medida que veamos los ejemplos particulares en este capítulo.
+\vspace{1cm}
 
 
 
@@ -292,38 +304,41 @@ Estas denominaciones para los Lagrangianos son mencionadas aquí sin más, a man
 %------------------------------------------------------
 \section{Teoría de perturbación renormalizada}
 
-Ahora, para obtener expresiones que resulten en amplitudes finitas, aún cuando tratemos con diagramas divergentes, el Lagrangiano ha de contener una masa desnuda $m_0$ y constante de acoplamiento desnudas $\lambda_0$ que sean consistentes con la teoría hasta un límite superior $\Lambda$ de los momentos. Este Lagrangiano que incorpora tales cantidades se denomina \emph{Lagrangiano desnudo}. Consideremos el Lagrangiano desnudo
+Para obtener expresiones que resulten en amplitudes finitas, aún cuando tratemos con diagramas divergentes, el Lagrangiano ha de contener una masa desnuda $m_0$ y constante de acoplamiento desnudas $\lambda_0$ que sean consistentes con la teoría hasta un límite superior $\Lambda$ de los momentos. Este Lagrangiano que incorpora tales cantidades se denomina \emph{Lagrangiano desnudo}. Consideremos el Lagrangiano desnudo
 %
 \begin{equation}
 	\lagdn = \frac{1}{2} \partial_\mu\phi \partial^\mu\phi - \frac{1}{2}m_0^2 \phi^2 - \frac{\lambda_0}{4!} \phi^4 \,.
 \end{equation}
 
-Para ciertos propósitos es deseable definir el campo $\phi$ como
+El objetivo de la renormalización es absorber todas las constantes infinitas que aparezcan en las amplitudes divergentes dentro de los tres parámetros que no son observables, a saber, la masa desnuda, la constante de acoplamiento desnuda y la intensidad del campo. Para conseguir esto, es conveniente reformular la teoría de perturbación de forma que estas cantidades no-observables no aparezcan explícitamente en las reglas de Feynman. Iniciamos redefiniendo el campo $\phi$ como
 %
 \begin{equation}
 	\phi = \sqrt{Z} \phi_r \,,    
 \end{equation}
 
-\noindent donde $Z$ es un parámetro denominado renormalización de la función de onda, y $\phi_r$ será el campo renormalizable. Con esto tenemos que el Lagrangiano es dado por
+\noindent donde $Z$ es un parámetro denominado renormalización de la función de onda, y $\phi_r$ será el campo renormalizado. Con esto, el Lagrangiano es dado por
 %
 \begin{equation}
 	\lagdn = \frac{1}{2} Z \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r)  - \frac{m_0^2}{2} Z \phi_r^2 - \frac{\lambda_0}{4!} Z^2 \phi_r^4\,.
 \end{equation}
 
-En la teoría renormalizada, buscaremos que el coeficiente acompañando el cuadrado de la derivada parcial sea $\sfrac{1}{2}$, de modo que es deseable redefinir $Z$ como $1$ más un pequeño incremento para dar cuenta de las discrepancias que puedan existir. Además, el término proporcional al cuadrado es el término de masa, por lo que esperaríamos que el coeficiente acompañando a $\phi^2$ sea el cuadrado de la masa física. Por ello redefiniremos el coeficiente en el Lagrangiano como el cuadrado de la masa física $m$ más un pequeño incremento. De la misma forma, el coeficiente del último término debería ser simplemente la constante de acoplamiento renormalizada, y por ello redefinimos el coeficiente también. Las redefiniciones que hemos hecho son
+%En la teoría renormalizada, buscaremos que el coeficiente acompañando el cuadrado de la derivada parcial sea $\sfrac{1}{2}$, de modo que es deseable redefinir $Z$ como $1$ más un pequeño incremento para dar cuenta de las discrepancias que puedan existir. Además, el término proporcional al cuadrado es el término de masa, por lo que esperaríamos que el coeficiente acompañando a $\phi^2$ sea el cuadrado de la masa física. Por ello redefiniremos el coeficiente en el Lagrangiano como el cuadrado de la masa física $m$ más un pequeño incremento. De la misma forma, el coeficiente del último término debería ser simplemente la constante de acoplamiento renormalizada, y por ello redefinimos el coeficiente también. Las redefiniciones que hemos hecho son
+
+La masa y la constante de acoplamiento desnudas aún aparecen en esta expresión para $\lagdn$, pero pueden ser eliminadas definiendo:
+
 %
 \begin{equation}
-	Z = 1 + \delta_Z \qc m_0^2Z = m^2 + \delta_m \qc \lambda_0 Z^2 = \lambda + \delta_\lambda \,.
+	Z = 1 + \delta_Z \qc m_0^2Z = m^2 + \delta_m \qc \lambda_0 Z^2 = \lambda + \delta_\lambda \,,
 	\label{eq:redef_Lag_renorm}
 \end{equation}
 
-Con esto, podemos escribir el Lagrangiano en términos de las cantidades físicas y renormalizadas como
+\noindent donde $m$ y $\lambda$ son la masa y constante de acoplamiento físicas medibles. Con esto el Lagrangiano toma la forma
 %
 \begin{equation}
 	\lagdn = \frac{1}{2} \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) - \frac{1}{2} m^2 \phi_r^2 - \frac{\lambda}{4!} \phi_r^4 + \underbrace{\frac{1}{2} \delta_Z \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) - \frac{1}{2} \delta_m \phi_r^2 - \frac{\delta_\lambda}{4!} \phi_r^4}_{\text{contratérminos}} \,.
 \end{equation}
 
-Tenemos entonces un Lagrangiano que depende de las cantitades físicas y renormalizadas, y que contiene los denominados contratérminos, que nos ayudarán a absorber los infinitos que surjan en las amplitudes como consecuencia de haber sustituído las cantidades desnudas en el Lagrangiano. Es tentador pensar que hemos agregado los contratérminos al Lagrangiano, pero de \eqref{eq:redef_Lag_renorm} vemos que simplemente las cantidades desnudas han sido divididas en dos componentes, una que es la cantidad física, y un incremento que expresa la discrepancia con estas últimas, y que va a contener los infinitos de la teoría.
+Los primeros tres términos de este Lagrangiano tiene la forma de una teoría $\phi^4$, pero dependiente de la masa y el acoplamiento físicos. Los siguientes tres términos, que contienen las $\delta$'s se denominan \emph{contratérminos} y son ellos los que han absorbido las diferencias infinitas y no-observables entre las cantidades desnudas y las cantidades físicas. Es tentador pensar que hemos agregado los contratérminos al Lagrangiano, pero de \eqref{eq:redef_Lag_renorm} vemos que simplemente las cantidades desnudas han sido divididas en dos componentes.
 
 Del nuevo Lagrangiano es posible leer las siguientes reglas de Feynman:
 
@@ -371,9 +386,29 @@ El primer diagrama corresponde al propagador del campo escalar (que fue derivado
 	\end{itemize}
 	
 	Ahora, el factor $1/4!$ desaparece del factor de vértice debido a que hay 4 campos en el término. Cuando se integra la acción, el hecho de tener un número $n$ de campos implicará que aparecerá un factor $n!$, que se va a cancelar exactamente con el denominador.
+	
+	Por su parte, para el propagador del campo escalar nos remitimos a la parte del Lagrangiano que contiene únicamente el campo libre, esto es
+	
+	\begin{equation*}
+		\lagdn_{\text{libre}} = \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{1}{2} m^2 \phi^2 = \frac{1}{2} \phi \qty(\partial_\mu \partial^\mu - m^2)\phi \,.
+	\end{equation*}
+
+	En el espacio de momentos, 
+	
+	\begin{equation*}
+		\qty(\partial_\mu \partial^\mu - m^2) \phi \, \longrightarrow \, \qty(p^2 - m^2)
+	\end{equation*}
+
+	\noindent y el propagador es
+	
+	\begin{equation*}
+		\frac{1}{p^2 - m^2 + \ii \varepsilon} \,.
+	\end{equation*}
 \end{cabox}
 
-Con esta prescripción es posible determinar los otros dos diagramas, que provienen de los contratérminos, hecho que es indicado con el símbolo $\otimes$ en el centro del diagrama. Para el primer diagrama de contratérminos tomamos los dos términos que incorporan dos campos en sus expresiones, i.e. $\frac{1}{2} \delta_Z \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) - \frac{1}{2} \delta_m \phi_r^2$. Estos términos indican un campo entrando y uno saliendo. Para determinar el factor de vértice, no obstante, debemos realizar una modificación al primer término, integrando por partes:
+\textcolor{red}{¿Cómo es esta parte?**************************}
+
+Con esta prescripción es posible determinar los otros dos diagramas, que provienen de los contratérminos, hecho que es indicado con el símbolo $\otimes$ en el centro del diagrama. Para el primer diagrama de contratérminos tomamos los dos términos que incorporan dos campos en sus expresiones, i.e. $\frac{1}{2} \delta_Z \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) - \frac{1}{2} \delta_m \phi_r^2$. Estos términos indican un campo libre. Para determinar el factor de vértice, no obstante, debemos realizar una modificación al primer término integrando por partes:
 %
 \begin{IEEEeqnarray*}{rCl}
 	\int \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) \dd[4]{x} &=& \int \partial_\mu \qty(\phi \partial^\mu \phi) \dd[4]{x} - \int \phi \partial_\mu \partial^\mu \phi \dd[4]{x} \,.
@@ -446,6 +481,7 @@ Estas relaciones se obtienen de la conservación de momentum,
 	p_1 + p_2 = p_3 + p_4 \slj
 	%%%%
 	\therefore p_1 - p_3 = p_4 - p_2 \Rightarrow \qty(p_1 - p_3)^2 = \qty(p_2 - p_4)^2 \,. \IEEEyesnumber
+	\label{eq:mandelstam_renorm}
 \end{IEEEeqnarray*}
 
 Lo que hemos hecho aquí para renormalizar es elegir un momentum en el cual se evalúa la amplitud del diagrama. En este valor específico de momentum, tenemos libertad para elegir cuánto vale la amplitud. 
@@ -529,10 +565,12 @@ De acuerdo con la condición de renormalización \eqref{eq:condRenorm_lambdaphi4
 	\therefore \delta_\lambda = -\lambda^2 \qty[V\qty(4m^2) + 2V(0)] \,. \label{eq:delta_lambda} \IEEEyesnumber
 \end{IEEEeqnarray*}
 
-En este punto vemos la importancia de la elección de los valores de momentum en que definimos las condidicones de renormalización. nótese que de las cantidades $V(p)$ aparecerán infinitos debido a que representan loops. Estos infinitos serán contrarrestados por el contratérmino $\delta_\lambda$. Este contratérmino cancelará los infinitos para esta elección de momentum. Ahora, cuando decido variar $s,\, t,\, u$ a otro valor, los infinitos siguen siendo contrarrestados. Esto es, al exigir que, en un punto del espacio de momentos, la amplitud sea finita, estoy garantizando que cualquier valor arbitrario de los momentos también la amplitud sea finita. Es importante entender el procedimiento que hemos realizado para conseguir la eliminación de los infinitos, de modo que resumimos este proceso a continuación
+Es conveniente hacer una pausa aquí para hacer una retrospectiva y comprender adecuadamente el proceso que hemos llevado a cabo y sus implicaciones:
 
 \begin{cabox}
-	Las cantidades a un loop son las que aportan infinitos, i.e., los $V$'s. Para eliminar estas divergencias, fijamos el valor de la amplitud invariante del diagrama para un valor específico de los momentos. Se presume que la constante de acoplamiento puede ser medida para este valor preciso de momentos, de modo que, bajo estas condiciones, imponemos que la amplitud invariante sea igual a la masa multiplicada por la constante de acoplamiento, haciendo que el término que involucra a los $V$'s sea cero.	Al evaluar la amplitud para otros valores de momentos, el término con los $V$'s ya no es cero, no obstante, el término ya no presenta infinitos, y dará la evolución correcta y el comportamiento correcto de la amplitud $\aminv$ con los momentos para valores arbitrarios de $s,\, t,\, u$.
+	Las cantidades a un loop aportan infinitos, pues resultan en las integrales divergentes que hemos denotado por $V$. Estas divergencias serán contrarrestadas con el valor del contratérmino $\delta_\lambda$ para ciertos valores específicos de los momentos dados en \eqref{eq:mandelstam_renorm}. Para estos mismos valores, hemos fijado el valor de la amplitud como siendo $\ii \lambda$, resultando en que el segundo término en \eqref{eq:renorm_amplitud} sea igual a cero.
+	
+	Para otros valores de los momentos, la amplitud invariante del diagrama a un loop, evidentemente, no será igual a cero. No obstante, el término ya no presenta infinitos y dará la evolución y comportamiento correctos de la amplitud $\aminv$ para valores arbitrarios de $s,\, t,\, u$. Esto es, al exigir que la amplitud sea finita en un punto del espacio de momentos se garantiza la convergencia de esta cantidad para cualesquiera valores arbitrarios de los momentos.
 \end{cabox}
 
 A continuación podremos manipular los $V$'s haciendo uso de los parámetros de Feynman (Feynman parameters)
@@ -554,7 +592,7 @@ Si tenemos una expresión de la forma $\sfrac{1}{AB}$, esto puede escribirse com
 	%
 	\begin{IEEEeqnarray*}{rll}
 		U =& \, xA + (1-x)B \qquad \qquad & \\
-		\Rightarrow \dd{U} = & \, (A-B)\dd{x} & \therefore \dd{x} = \frac{\dd{u}}{A-B} \IEEEyesnumber
+		\Rightarrow \dd{U} = & \, (A-B)\dd{x} & \therefore \dd{x} = \frac{\dd{U}}{A-B} \IEEEyesnumber
 	\end{IEEEeqnarray*}
 
 	Reemplazando en la integral tenemos
@@ -573,7 +611,7 @@ Si tenemos una expresión de la forma $\sfrac{1}{AB}$, esto puede escribirse com
 	\end{IEEEeqnarray*}
 \end{proof}
 
-\hfill $\square \qquad\qquad$
+%\hfill $\square \qquad\qquad$
 
 Adicionalmente, es fácil probar que
 %
@@ -585,7 +623,7 @@ La idea central de los parámetros de Feynman es convertir un producto en el den
 %
 \begin{equation}
 	\boxed{
-	\frac{1}{A_1 A_2 \cdots A_n} = \int \dd{x_1} \dd{x_2} \cdots \dd{x_n} \delta\qty(\sum_i x_i - 1) \frac{(n-1)!}{\qty[x_1A_1 + x_2A_2 + \cdots + x_nA_n]}
+	\frac{1}{A_1 A_2 \cdots A_n} = \int \dd{x_1} \dd{x_2} \cdots \dd{x_n} \delta\qty(\sum_i x_i - 1) \frac{(n-1)!}{\qty[x_1A_1 + x_2A_2 + \cdots + x_nA_n]^n}
 	} \,.
 \end{equation}
 
@@ -594,7 +632,7 @@ Apliquemos entonces, la técnica de los parámetros de Feynman a la expresión q
 \begin{IEEEeqnarray*}{rCl}
 	(-\ii \lambda)^2 \ii V(p^2) &=& - \frac{(-\ii \lambda)^2}{2} \int \frac{\dd[4]{k}}{(2 \cpi)^4} \frac{1}{k^2 - m^2} \frac{1}{(k+ p)^2 - m^2} \\
 	%%%%
-	&=& - \frac{(-\ii \lambda)^2}{2} \int_0^1 \frac{1}{\qty[x (k^2 - m^2) + (1 - x) \big( (k + p)^2 - m^2 \big)]^2} \,. \IEEEyesnumber \label{eq:calculo_FeynmanPar_1}
+	&=& - \frac{(-\ii \lambda)^2}{2} \int \frac{\dd[4]{k}}{(2 \cpi)^4} \int_0^1 \dd x \frac{1}{\qty[x (k^2 - m^2) + (1 - x) \big( (k + p)^2 - m^2 \big)]^2} \,. \IEEEyesnumber \label{eq:calculo_FeynmanPar_1}
 \end{IEEEeqnarray*}
 
 Concentrémonos en el denominador, que llamaremos $D$, y manipulemos un poco la expresión:

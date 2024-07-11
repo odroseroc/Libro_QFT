@@ -102,6 +102,8 @@
 \contentsline {subsection}{\numberline {13.2.5}Mecanismo de sube y baja}{215}{subsection.13.2.5}%
 \contentsline {chapter}{\numberline {14}Renormalización}{219}{chapter.14}%
 \contentsline {section}{\numberline {14.1}Grado superficial de divergencia}{219}{section.14.1}%
+\contentsline {paragraph}{Aplicación a una teoría escalar}{222}{section*.25}%
+\contentsline {paragraph}{Una nota sobre unidades naturales de ciertas cantidades}{223}{section*.26}%
 \contentsline {section}{\numberline {14.2}Teoría de perturbación renormalizada}{224}{section.14.2}%
 \contentsline {subsection}{\numberline {14.2.1}Divergencias originadas de la dispersión dos-a-dos}{227}{subsection.14.2.1}%
 \contentsline {subsection}{\numberline {14.2.2}Parámetros de Feynman y rotación de Wick}{228}{subsection.14.2.2}%
@@ -112,11 +114,11 @@
 \contentsline {subsection}{\numberline {A.1.1}Grupos de Lie}{241}{subsection.Alph1.1.1}%
 \contentsline {subsection}{\numberline {A.1.2}Representaciones de grupos}{241}{subsection.Alph1.1.2}%
 \contentsline {subsection}{\numberline {A.1.3}Álgebra de Lie asociada a un grupo}{245}{subsection.Alph1.1.3}%
-\contentsline {subsubsection}{Grupo Euclideo}{249}{section*.31}%
+\contentsline {subsubsection}{Grupo Euclideo}{249}{section*.33}%
 \contentsline {section}{\numberline {A.2}Representaciones Irreducibles}{249}{section.Alph1.2}%
 \contentsline {section}{\numberline {A.3}Grupo de Lorentz}{250}{section.Alph1.3}%
-\contentsline {subsubsection}{Transformaciones de Lorentz}{250}{section*.32}%
-\contentsline {subsubsection}{Componentes del grupo de Lorentz}{252}{section*.34}%
+\contentsline {subsubsection}{Transformaciones de Lorentz}{250}{section*.34}%
+\contentsline {subsubsection}{Componentes del grupo de Lorentz}{252}{section*.36}%
 \contentsline {subsection}{\numberline {A.3.1}Álgebra del grupo de Lorentz}{253}{subsection.Alph1.3.1}%
 \contentsline {subsection}{\numberline {A.3.2}Representaciones Tensoriales}{257}{subsection.Alph1.3.2}%
 \contentsline {subsection}{\numberline {A.3.3}Representaciones Espinoriales}{260}{subsection.Alph1.3.3}%
