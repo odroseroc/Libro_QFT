@@ -1,16 +1,16 @@
 \chapter{Renormalización}
 \label{ch:renormalizacion}
 
-El propósito de toda teoría física es calcular cantidades medibles y observables en el mundo real. En el formalismo de las teorías de campos aparecen elementos matemáticos que representan cantidades física, pero también otros que no tienen un paralelo directo en el mundo real, sino que son cantidades puramente abstractas que sólo existen como parte del aparato matemático.
+El propósito de toda teoría física es calcular cantidades medibles **** redundante ***. En el formalismo de las teorías de campos aparecen elementos matemáticos que representan cantidades físicas, pero también otros que no son medibles, sino que son cantidades puramente abstractas que sólo existen como parte del aparato matemático. \textcolor{red}{revisar redacción}
 
-Ejemplo de ello es la denominada \emph{masa desnuda}, una cantidad teórica asociada al parámetro de masa en el Lagrangiano. Dicho término de masa siempre es proporcional al campo al cuadrado y aparece para todas las partículas de la teoría. En el caso del modelo estándar, dicho parámetro de masa aparece incluso en el caso de los quarks, aún cuando éstos no tienen masa física.
+Ejemplo de ello es la denominada \emph{masa desnuda}, una cantidad teórica asociada al parámetro de masa en el Lagrangiano. Dicho término siempre es proporcional al campo al cuadrado y aparece para todas las partículas masivas de la teoría. En el caso del modelo estándar, dicho parámetro aparece incluso en el caso de los quarks, aún cuando éstos no tienen masa física.
 
-La esencia de la \textbf{renormalización} en teoría cuántica de campos consiste en conectar estas cantidades abstractas -- denominadas prámetros desnudos -- que aparecen en el Lagrangiano, a cantidades medibles y observables. 
+La esencia de la \textbf{renormalización} en teoría cuántica de campos consiste en conectar estas cantidades abstractas -- los prámetros desnudos -- que aparecen en el Lagrangiano con cantidades medibles. 
 
 En general toda teoría, bien sea clásica o bien sea cuántica, requiere de un proceso de renormalización. No obstante, la necesidad de renormalizar una teoría nunca fue tan evidente como en el cálculo de cantidades a un loop en teoría cuántica de campos, realizados por primera vez durante la década de 1930. Como ya mencionamos en el capítulo \ref{ch:anomalias}, las amplitudes de diagramas a un loop suelen resultar en infinitos. Recordemos que cuando dichos diagramas corresponden a procesos que no existen en el Lagrangiano, representan una anomalía cuántica, cuya cancelación hace que la teoría siga siendo consistente.
 
 
-No obstante, otros procesos que sí son posibles a nivel árbol resultan en infinitos ineludibles cuando se calculan a un loop. Estos infinitos son denominados \textbf{divergencias ultravioletas}. El proceso de renormalización es crucial para que dichos cálculos tengan sentido físico y permite una definición unívoca de los parámetros desnudos.
+No obstante, otros procesos que sí son posibles a nivel árbol resultan en infinitos ineludibles cuando se calculan a un loop. Estos infinitos son denominados \textbf{divergencias ultravioletas}. El proceso de renormalización es crucial para que dichos cálculos tengan sentido físico y permite una definición unívoca -- una vez definido el esquema de renormalización -- de los parámetros desnudos.
 
 \section{Grado superficial de divergencia}
 
@@ -52,7 +52,7 @@ Este concepto de grado superficial de divergencia no será útil para todos los 
 	\label{fig:1partredu_ladder}
 \end{figure}
 
-Ahora, consideremos el caso en la Figura~\ref{fig:1parirred_mount}, donde tenemos un diagrama de una sola partícula que emite un fotón y lo reabsorbe. Al realizar un solo corte (pues el diagrama es de una partícula) por una linea interna, ya no obtenemos un diagrama de una partícula. Incluso podríamos pensar que el diagrama final es de dos partículas, pues tiene dos patas externas. Este diagrama, por consiguiente, \emph{es un diagrama irreducible de una partícula}.
+Ahora, consideremos el caso en la Figura~\ref{fig:1parirred_mount}, donde tenemos un diagrama de una sola partícula que emite un fotón y lo reabsorbe. Al realizar un solo corte (pues el diagrama es de una partícula) por una linea interna, ya no obtenemos un diagrama de una partícula. Incluso podríamos pensar que el diagrama final es de dos partículas, pues tiene cuatro patas externas. Este diagrama, por consiguiente, \emph{es un diagrama irreducible de una partícula}.
 
 \begin{figure}[ht]
 	\centering
@@ -61,7 +61,7 @@ Ahora, consideremos el caso en la Figura~\ref{fig:1parirred_mount}, donde tenemo
 	\label{fig:1parirred_mount}
 \end{figure}
 
-La idea general de los diagramas irreducibles es que a partir de ellos se pueden construir diagramas más complejos. Todo diagrama se puede construir a partir de diagramas irreducibles. Son una especie de equivalente de los números primos para el conjunto de los números naturales. Entonces, tengamos en cuenta lo siguiente: 
+La idea general de los diagramas irreducibles es que a partir de ellos se pueden construir diagramas más complejos. Todo diagrama se puede construir a partir de diagramas irreducibles. Hay una similitud entre lo que son los diagramas irreducibles y los números primos para el conjunto de los naturales. Entonces, tengamos en cuenta lo siguiente: 
 
 \begin{cabox}
 	El concepto de grado superficial de divergencia será aplicado únicamente a diagramas irreducibles.
@@ -83,13 +83,13 @@ El diagrama que consideramos tendrá tantas integrales en $k$ como loops hayan. 
 }
 \end{equation}
 
-Para comprender la el razonamiento detrás de esta expresión, consideremos lo siguiente: sabemos que por cada loop que hay en el diagrama habrá una integral $\dd[4]k_i$. Estamos interesados en la dimensión, en unidades de momento, del integrando. En unidades de momento, cada diferencial tiene dimensión $4$, i.e., cada loop aportará un $4$ a la dimensión del integrando. Ahora, los propagadores fermiónicos son de la forma
+Para comprender el razonamiento detrás de esta expresión, consideremos lo siguiente: sabemos que por cada loop que hay en el diagrama habrá una integral $\dd[4]k_i$. Estamos interesados en la dimensión en unidades de momento del integrando. En unidades de momento, cada diferencial tiene dimensión $4$, i.e., cada loop aportará un $4$ a la dimensión del integrando. Ahora, los propagadores fermiónicos son de la forma
 %
 \begin{equation*}
 	\frac{\ii}{\slashed{k} - m} \,,
 \end{equation*}
 
-\noindent de modo que, por cada propagador fermiónico la dimensión del integrando, en unidades de momento, disminuye en una unidad. Por su parte, los propagadores de fotones son de la forma
+\noindent de modo que, por cada propagador fermiónico la dimensión del integrando, en unidades de momento, disminuye en una unidad. Por otra parte, los propagadores de fotones son de la forma
 %
 \begin{equation*}
 	\frac{\ii}{k^2} \,,
@@ -97,7 +97,7 @@ Para comprender la el razonamiento detrás de esta expresión, consideremos lo s
 
 \noindent haciendo que por cada propagador de fotones la dimensión del integrando, en unidades de momento, disminuya en dos unidades.
 
-El grado superficial de divergencia, como podemos ver, es la dimensión del integrando en unidades de momento. Hablando de manera muy general, un diagrama diverge, a menos que hayan más potencias de momento en el denominador que en el numerador.
+El grado superficial de divergencia, como podemos ver, es la dimensión del integrando en unidades de momento. Hablando de manera muy general, un diagrama diverge en el ultravioleta si hay más potencias de momento en el numerador que en el denominador.
 
 En general, podríamos esperar que el diagrama tenga una divergencia proporcional a $\Lambda ^D$, donde $\Lambda$ es un límite superior de los momentos, denominado \emph{corte} o \emph{cutoff}. En este escenario podemos considerar los siguientes casos:
 
@@ -122,7 +122,7 @@ Ahora, en QED el número de loops de un diagrama de Feynman es dado por
 	L = P_e + P_\gamma - \qty(V - 1) \,.
 \end{equation}
 
-Esto proviene de las reglas de Feynman, que exigen que por cada propagador hay una integral en el momento correspondiente~\footnote{cf. David Griffiths. \emph{Introduction to Elementary Particles}. Second Edition. Wiley-VCH, 2008. Capítulos 6 y 7.}. No obstante, por cada vértice existe una delta de Dirac que elimina una de las integrales. Cuando se calcula la amplitud de un diagrama, también aparece una delta de Dirac que expresa la conservación global del momento lineal, la cual no se puede integrar como las demás. A esta delta que no elimina una integral se debe el $-1$ en el paréntesis. Finalmente, el número de loops es el número de integrales de cuatro dimensiones presentes en la expresión.
+Esto proviene de las reglas de Feynman, que exigen que por cada propagador hay una integral en el momento correspondiente~\footnote{cf. David Griffiths. \emph{Introduction to Elementary Particles}. Second Edition. Wiley-VCH, 2008. Capítulos 6 y 7.}. No obstante, por cada vértice existe una delta de Dirac que elimina una de las integrales. Cuando se calcula la amplitud de un diagrama, también aparece una delta de Dirac que expresa la conservación global del momento lineal, la cual no se puede integrar como las demás. A esta delta, que no elimina una integral, se debe el $-1$ en el paréntesis. Finalmente, el número de loops es el número de integrales de cuatro dimensiones presentes en la expresión.
 
 El número de vértices en un diagrama de QED es dado por
 %
@@ -130,13 +130,13 @@ El número de vértices en un diagrama de QED es dado por
 	V = 2P_\gamma + N_\gamma \,,
 \end{equation}
 
-\noindent que se debe a la estructura del vértice fundamental de QED, el cual siempre involucra un fotón. Si el fotón es una linea interna de un diagrama, éste debe estar asociado a dos vértices, mientras que si es una pata externa estará asociado a uno solo. También es posible expresar el número de vértices como
+\noindent que se debe a la estructura del vértice fundamental de QED, el cual siempre involucra un fotón. Si el fotón es una linea interna de un diagrama éste debe estar asociado a dos vértices, mientras que si es una pata externa estará asociado a uno solo. También es posible expresar el número de vértices como
 %
 \begin{equation}
 	V = P_e + \frac{N_e}{2}\,,
 \end{equation}
 
-\noindent que también responde a la estructura del vértice fundamental de QED. \textcolor{red}{[Ver si se pone toda la discusión sobre la forma de los vértices fundamentales de QED, o si se omite o se relega a otra sección del libro]}
+\noindent que también responde a la estructura del vértice fundamental de QED.
 
 Con estas expresiones podemos escribir el grado de divergencia como
 %
@@ -156,10 +156,10 @@ Con estas expresiones podemos escribir el grado de divergencia como
 	\IEEEeqnarraymulticol{3}{c}{\boxed{ D = 4 - \frac{3}{2}N_e - N_\gamma }\,. \IEEEyesnumber}
 \end{IEEEeqnarray*}
 
-Es decir, el grado superficial de divergencia depende únicamente del número de patas externas de cada tipo.
+Es decir, el grado superficial de divergencia depende únicamente del número de patas externas del diagrama.
 
 \begin{cabox}
-	El grado superficial de divergencia depende únicamente del número de patas externas de cada tipo, no del número de propagadores.
+	El grado superficial de divergencia depende únicamente del número de patas externas del diagrama, no del número de propagadores.
 \end{cabox}
 
 
@@ -172,7 +172,7 @@ Consideremos una teoría escalar $\lambda \phi^n$, cuyo Lagrangiano tiene la for
 	\lagdn = \frac{1}{2} (\partial_\mu \phi)(\partial^\mu \phi) - \frac{1}{2} m\phi^2 - \frac{\lambda}{n!} \phi^n \,.
 \end{equation}
 
-En este caso, sólo existe un tipo de campo $\phi$, por lo que no es necesario hacer la distinción entre los propagadores $P_\gamma$ y $P_e$, y tenemos que
+En este caso sólo existe un tipo de campo $\phi$, por lo que no es necesario hacer la distinción entre los propagadores $P_\gamma$ y $P_e$, y tenemos que
 %
 \begin{equation}
 	L = P - V + 1 \qc nV = N + 2P \,.
@@ -190,16 +190,16 @@ Así, el grado superficial de divergencia es
 	D = d + \qty[n \qty(\frac{d-2}{2}) - d]V - \frac{d-2}{2}N \,.
 \end{equation} \\
 
-\paragraph{Una nota sobre unidades naturales de ciertas cantidades}
+\paragraph{Una nota sobre unidades naturales}
 \vspace{2ex}
 
-Recordemos las dimensiones que tienen algunas cantidades en unidades naturales. Al definir unidades naturales, la constante de Planck $h = 1$, es decir tiene dimensión cero en unidades naturales. Como $h$ tiene unidades de acción, esto hace que la acción tenga dimensión cero en unidades naturales, $[S] = 0$, y como
+Recordemos la dimensión que tienen algunas cantidades en unidades naturales. Al definir unidades naturales, la constante de Planck $\hbar = 1$, es decir tiene dimensión cero en unidades naturales. Como $\hbar$ tiene unidades de acción, esto hace que la acción tenga dimensión cero en unidades naturales, $[S] = 0$, y como
 %
 \begin{equation*}
 	S = \int \dd[4]{x} \lagdn \,,
 \end{equation*}
 
-\noindent la dimensión del Lagrangiano debe ser $-4$,
+\noindent la dimensión del Lagrangiano debe ser $-4$ en unidades de longitud,
 %
 \begin{equation*}
 	[\lagdn] = -4 \,,
@@ -227,7 +227,7 @@ Volviendo a la acción, vemos entonces que el diferencial $\dd[4]x$ tiene magnit
 	[\lagdn] = 4 \qc \text{ en unidades de momento.}
 \end{equation}
 
-Siguiendo la definición de mecánica clásica, consideremos la densidad lagrangiana como la diferencia entre una densidad de energía cinética y una densidad de potencial, $\lagdn = \mathcal{T} - \mathcal{V}$ para un potencial de la forma
+Siguiendo la definición de mecánica clásica, consideremos la densidad lagrangiana como la diferencia entre una densidad de energía cinética y una densidad de potencial $\lagdn = \mathcal{T} - \mathcal{V}$. Consideremos un potencial de la forma \textcolor{red}{***** Unificar convenciones de potencial, con o sin mathcal********}
 %
 \begin{equation}
 	V = \sum_{n = 1}^{\infty} \frac{G_n}{n!} \phi^n \,,
@@ -235,10 +235,10 @@ Siguiendo la definición de mecánica clásica, consideremos la densidad lagrang
 
 \noindent donde $G_n$ son constantes de acoplamiento.
 
-Ahora, el Lagrangiano contiene el término cinético $-m^2 \phi^2$, cuya magnitud debe ser 4 -- puesto que $[\lagdn] = 4$ --. Considerando que $[m] = 1$, tenemos que $[\phi] = 1$. Así, para el término en el potencial tenemos
+Ahora, el Lagrangiano contiene el término $-m^2 \phi^2$, cuya magnitud debe ser 4 -- puesto que $[\lagdn] = 4$ --. Considerando que $[m] = 1$, tenemos que $[\phi] = 1$. Así, para el término en el potencial tenemos
 %
 \begin{equation}
-	\qty[\frac{G_4}{4!} \phi^4] = [G_4]4 = 4\,,
+	\qty[\frac{G_4}{4!} \phi^4] = [G_4] + 4 = 4\,,
 \end{equation}
 
 \noindent de modo que el acoplamiento $G_4$ debe ser adimensional. Entonces, para las magnitud de los acoplamientos tenemos que
@@ -247,7 +247,8 @@ Ahora, el Lagrangiano contiene el término cinético $-m^2 \phi^2$, cuya magnitu
 	[G_n] = 4 - n \,.
 \end{equation}
 
-Vamos a clasificar los Lagrangianos según el siguiente criterio que enunciamos sin explicación, por el momento:
+Vamos a clasificar los Lagrangianos según el siguiente criterio que enunciamos sin explicación por el momento:
+\vspace{0.5cm}
 %
 \begin{profor}
 \begin{equation*}
@@ -261,7 +262,7 @@ Vamos a clasificar los Lagrangianos según el siguiente criterio que enunciamos 
 \end{equation*}
 \end{profor}
 
-La idea, en general, será que las teorías que incluyen términos con potencias menores o iguales que $4$ tendrán buenas propiedades bajo normalización, mientras que aquellas que incluyan términos con potencias mayores que $4$ presentarán complicaciones para su normalización. 
+La idea, en general, será que las teorías que incluyen términos con potencias menores o iguales que $4$ de los campos tendrán buenas propiedades bajo renormalización, mientras que aquellas que incluyan términos con potencias mayores que $4$ presentarán complicaciones para su renormalización. 
 
 En el caso de los fermiones, en la ecuación de Dirac aparece el término $-m\overline{\psi} \psi$ , que debe tener dimensión 4, de modo que
 %
@@ -292,7 +293,7 @@ Por ejemplo, consideremos el Lagrangiano de Fermi
 	[G_F] = -2\,,
 \end{equation}
 
-\noindent la teoría de Fermi es no-renormalizable.
+\noindent entonces la teoría de Fermi es no-renormalizable.
 
 
 Estas denominaciones para los Lagrangianos son mencionadas aquí sin más, a manera de definiciones. La justificación para ellas es complicada y la desarrollaremos a medida que veamos los ejemplos particulares en este capítulo.
@@ -302,15 +303,15 @@ Estas denominaciones para los Lagrangianos son mencionadas aquí sin más, a man
 
 
 %------------------------------------------------------
-\section{Teoría de perturbación renormalizada}
+\section{Renormalización y teoría de perturbaciónes}
 
-Para obtener expresiones que resulten en amplitudes finitas, aún cuando tratemos con diagramas divergentes, el Lagrangiano ha de contener una masa desnuda $m_0$ y constante de acoplamiento desnudas $\lambda_0$ que sean consistentes con la teoría hasta un límite superior $\Lambda$ de los momentos. Este Lagrangiano que incorpora tales cantidades se denomina \emph{Lagrangiano desnudo}. Consideremos el Lagrangiano desnudo
+Para obtener expresiones que resulten en amplitudes finitas, aún cuando tratemos con diagramas divergentes, el Lagrangiano ha de contener una masa desnuda $m_0$ y constantes de acoplamiento desnudas $\lambda_0$ que sean consistentes con la teoría hasta un límite superior $\Lambda$ de los momentos. Este Lagrangiano que incorpora tales cantidades se denomina \emph{Lagrangiano desnudo}. Consideremos el Lagrangiano
 %
 \begin{equation}
 	\lagdn = \frac{1}{2} \partial_\mu\phi \partial^\mu\phi - \frac{1}{2}m_0^2 \phi^2 - \frac{\lambda_0}{4!} \phi^4 \,.
 \end{equation}
 
-El objetivo de la renormalización es absorber todas las constantes infinitas que aparezcan en las amplitudes divergentes dentro de los tres parámetros que no son observables, a saber, la masa desnuda, la constante de acoplamiento desnuda y la intensidad del campo. Para conseguir esto, es conveniente reformular la teoría de perturbación de forma que estas cantidades no-observables no aparezcan explícitamente en las reglas de Feynman. Iniciamos redefiniendo el campo $\phi$ como
+El objetivo de la renormalización es absorber todas las constantes infinitas que aparezcan en las amplitudes divergentes dentro de los tres parámetros que no son observables, a saber, la masa desnuda, la constante de acoplamiento desnuda y la el campo. Para conseguir esto, es conveniente reformular la teoría de perturbación de forma que estas cantidades no-observables no aparezcan explícitamente en las reglas de Feynman. Iniciamos redefiniendo el campo $\phi$ como
 %
 \begin{equation}
 	\phi = \sqrt{Z} \phi_r \,,    
@@ -332,13 +333,13 @@ La masa y la constante de acoplamiento desnudas aún aparecen en esta expresión
 	\label{eq:redef_Lag_renorm}
 \end{equation}
 
-\noindent donde $m$ y $\lambda$ son la masa y constante de acoplamiento físicas medibles. Con esto el Lagrangiano toma la forma
+\noindent donde $m$ y $\lambda$ son la masa y constante de acoplamiento físicas medibles, respectivamente. Con esto el Lagrangiano toma la forma
 %
 \begin{equation}
 	\lagdn = \frac{1}{2} \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) - \frac{1}{2} m^2 \phi_r^2 - \frac{\lambda}{4!} \phi_r^4 + \underbrace{\frac{1}{2} \delta_Z \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) - \frac{1}{2} \delta_m \phi_r^2 - \frac{\delta_\lambda}{4!} \phi_r^4}_{\text{contratérminos}} \,.
 \end{equation}
 
-Los primeros tres términos de este Lagrangiano tiene la forma de una teoría $\phi^4$, pero dependiente de la masa y el acoplamiento físicos. Los siguientes tres términos, que contienen las $\delta$'s se denominan \emph{contratérminos} y son ellos los que han absorbido las diferencias infinitas y no-observables entre las cantidades desnudas y las cantidades físicas. Es tentador pensar que hemos agregado los contratérminos al Lagrangiano, pero de \eqref{eq:redef_Lag_renorm} vemos que simplemente las cantidades desnudas han sido divididas en dos componentes.
+Los primeros tres términos de este Lagrangiano tiene la forma de una teoría $\phi^4$, pero ahora dependen de la masa y el de la constante de acoplamiento físicas. Los siguientes tres términos, que contienen las $\delta$'s se denominan \emph{contratérminos} y son ellas las que absorberán las diferencias infinitas y no-observables entre las cantidades desnudas y las cantidades físicas. Es tentador pensar que hemos agregado los contratérminos al Lagrangiano, pero de \eqref{eq:redef_Lag_renorm} vemos que simplemente las cantidades desnudas han sido divididas en dos componentes.
 
 Del nuevo Lagrangiano es posible leer las siguientes reglas de Feynman:
 
@@ -380,14 +381,14 @@ El primer diagrama corresponde al propagador del campo escalar (que fue derivado
 	Primero, las reglas de Feynman requieren que el Lagrangiano esté multiplicado por $\ii$. Habiendo hecho esto, los diagramas y el factor de vértice se obtienen según:
 	
 	\begin{itemize}
-		\item Los campos que aparezcan en el término dan el grafo del diagrama de Feynman. Así, un término que incorpore, por ejemplo, $A^\mu \phi \phi$ representa un vértice en el que convergen un fotón (campo $A$) y dos campos escalares $\phi$.
+		\item Los campos que aparezcan en el término dan el grafo del diagrama de Feynman. Así, un término que incorpore, por ejemplo, $A^\mu \phi \partial_mu \phi$ representa un vértice en el que convergen un fotón (campo $A^\mu$) y dos campos escalares $\phi$.
 		
 		\item Si quitamos los campos del término, obtenemos la expresión para el factor de vértice. Por ejemplo, el término que consideramos $-\lambda/4! \phi^4$ implica que el factor de vértice sea $-\ii \lambda$.
 	\end{itemize}
 	
-	Ahora, el factor $1/4!$ desaparece del factor de vértice debido a que hay 4 campos en el término. Cuando se integra la acción, el hecho de tener un número $n$ de campos implicará que aparecerá un factor $n!$, que se va a cancelar exactamente con el denominador.
+	Ahora, el factor $1/4!$ desaparece del factor de vértice debido a que hay 4 campos idénticos. Cuando se integra la acción, el hecho de tener un número $n$ de campos idénticos implicará que aparece un factor $n!$, que se va a cancelar exactamente con el denominador.
 	
-	Por su parte, para el propagador del campo escalar nos remitimos a la parte del Lagrangiano que contiene únicamente el campo libre, esto es
+	Por otra parte, para el propagador del campo escalar nos remitimos a la parte del Lagrangiano que contiene únicamente el campo libre, esto es
 	
 	\begin{equation*}
 		\lagdn_{\text{libre}} = \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{1}{2} m^2 \phi^2 = \frac{1}{2} \phi \qty(\partial_\mu \partial^\mu - m^2)\phi \,.
@@ -402,7 +403,7 @@ El primer diagrama corresponde al propagador del campo escalar (que fue derivado
 	\noindent y el propagador es
 	
 	\begin{equation*}
-		\frac{1}{p^2 - m^2 + \ii \varepsilon} \,.
+		\frac{\ii}{p^2 - m^2 + \ii \varepsilon} \,.
 	\end{equation*}
 \end{cabox}
 
@@ -420,13 +421,13 @@ Ahora, usando el teorema de Gauss en cuatro dimensiones podemos escribir
 	\int \qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) \dd[4]{x} &=& \int_{\partial \Omega} \dd{S_\mu} \qty(\phi \partial^\mu \phi) - \int \phi \partial_\mu \partial^\mu \phi \dd[4]{x} \,,
 \end{IEEEeqnarray*}
 
-\noindent donde $\dd{S_\mu}$ es el elemento de volumen que apunta hacia afuera sobre la frontera $\partial \Omega$. En general, esta superficie se considera arbitrariamente grande, y se asume que $\partial^\mu \phi$ debe hacerse cero en esta región, para evitar que la energía del campo sea infinita \textcolor{red}{****revisar este argumento****}, por lo que se asume que la primera integral en el lado derecho se hace cero, obteniendo así
+\noindent donde $\dd{S_\mu}$ es el elemento de volumen que apunta hacia afuera sobre la frontera $\partial \Omega$. En general, esta superficie se considera arbitrariamente grande y se asume que $\partial^\mu \phi$ debe hacerse cero en esta región, para evitar que la energía del campo sea infinita \textcolor{red}{****revisar este argumento****}, por lo que se asume que la primera integral en el lado derecho se hace cero, obteniendo así
 %
 \begin{equation}
 	\qty(\partial_\mu\phi_r)\qty(\partial^\mu\phi_r) \dd[4]{x} = - \int \phi \partial_\mu \partial^\mu \phi \dd[4]{x} \,,
 \end{equation}
 
-\noindent con lo cual los contratérminos en el Lagrangiano que inforporan dos campos son equivalentes a
+\noindent con lo cual los contratérminos en el Lagrangiano que son bilineales en los campos son
 %
 \begin{equation}
 	-\frac{1}{2} \delta_Z \phi_r \partial_\mu \partial^\mu \phi_r - \frac{1}{2} \delta_m \phi_r^2 \,,
@@ -463,7 +464,7 @@ Las definiciones que hemos empleado para la renormalización (Ec.~\eqref{eq:rede
 	\end{tabular}
 \end{center}
 
-El primer diagrama indica la forma que imponemos a la función de Green de dos puntos, para la propagación de un cuerpo. La forma de la expresión indica que la amplitud invariante tendrá un polo en la masa física. El segundo diagrama indica la forma de la amplitud invariante para una dispersión dos-a-dos, con $s,\, t,\,u$ son variables de Mandelstam dadas por
+El primer diagrama indica la forma que imponemos a la función de Green de dos puntos. La forma de la expresión indica que la amplitud invariante tendrá un polo en la masa física. El segundo diagrama indica la forma de la amplitud invariante para una dispersión dos-a-dos, donde $s,\, t,\,u$ son variables de Mandelstam dadas por
 %
 \begin{equation}
 	\begin{IEEEeqnarraybox}[][c]{rCl}
@@ -484,11 +485,21 @@ Estas relaciones se obtienen de la conservación de momentum,
 	\label{eq:mandelstam_renorm}
 \end{IEEEeqnarray*}
 
-Lo que hemos hecho aquí para renormalizar es elegir un momentum en el cual se evalúa la amplitud del diagrama. En este valor específico de momentum, tenemos libertad para elegir cuánto vale la amplitud. 
+Lo que hemos hecho aquí para renormalizar es elegir un momentum $\mu$ (escala de renormalización) en el cual se evalúa la amplitud del diagrama. En este valor específico de momentum, tenemos libertad para elegir cuánto vale la amplitud. 
 
-Ahora podemos usar las nuevas reglas de Feynman para determinar cualquier amplitud en una teoría $\lambda \phi^4$. El procedimiento es el siguiente: Determinar la amplitud deseada como la suma de todos los diagramas posibles creados del propagador y vértices en la Fig.~\ref{fig:rFeynman_contraterminos}. Las integrales de loop en los diagramas, generalmente, serán divergentes, de modo que necesitamos introducir un regulador. El resultado de este cálculo será una función con tres parámetros desconocidos $\delta_Z,\, \delta_m$ y $\delta_\lambda$. Ajustar (o ``renormalizar'') estos tres parámetros según sea necesario para mantener las condiciones de renormalización \eqref{eq:condRenorm_lambdaphi4}. Después de este ajuste, la expresión para la amplitud debe ser finita e independiente del regulador.
+Ahora podemos usar las nuevas reglas de Feynman para determinar cualquier amplitud en una teoría $\lambda \phi^4$. El procedimiento es el siguiente: 
 
-Este procedimiento que emplea diagramas de Feynman con tontratérminos se denomina \emph{teoría de perturbación renormalizada}.
+\begin{enumerate}
+	\item Determinar la amplitud deseada como la suma de todos los diagramas posibles con los diagramas del propagador y de los vértices en la Fig.~\ref{fig:rFeynman_contraterminos}.
+	
+	\item Las integrales asociadas a los loops, generalmente, serán divergentes, de modo que necesitamos introducir un regulador. El resultado de este cálculo será una función con tres parámetros desconocidos $\delta_Z,\, \delta_m$ y $\delta_\lambda$.
+	
+	\item Ajustar (o ``renormalizar'') estos tres parámetros según sea necesario para mantener las condiciones de renormalización \eqref{eq:condRenorm_lambdaphi4}.
+\end{enumerate}
+
+   Después de este ajuste, la expresión para la amplitud debe ser finita e independiente del regulador.
+
+Este procedimiento que emplea diagramas de Feynman con contratérminos se denomina \emph{teoría de perturbación renormalizada}.
 
 
 \textcolor{red}{Agregar discurso sobre los contratérminos siendo de un orden superior a los términos a tree-level}
@@ -640,7 +651,7 @@ Concentrémonos en el denominador, que llamaremos $D$, y manipulemos un poco la 
 \begin{IEEEeqnarray*}{rCl}
 	D &=& x \qty(k^2 - m^2) + (1 - x) \qty(k^2 + 2k \vdot p + p^2 - m^2) \\
 	%%%%
-	&=& k^2\qty(x + 1 -x) + 2k\vdot p \qty(1-x) + (1-x)p^2 + m^2 \qty[-x -(1-x)] \\
+	&=& k^2\qty(x + 1 -x) + 2k\vdot p \qty(1-x) + p^2(1-x) + m^2 \qty[-x -(1-x)] \\
 	%%%%
 	&=& k^2 + 2k\vdot p (1- x) + (1-x)p^2 - m^2 \,. \IEEEyesnumber
 \end{IEEEeqnarray*}

@@ -100,8 +100,8 @@
 \contentsline {chapter}{\numberline {14}Renormalización}{219}{chapter.14}%
 \contentsline {section}{\numberline {14.1}Grado superficial de divergencia}{219}{section.14.1}%
 \contentsline {paragraph}{Aplicación a una teoría escalar}{222}{section*.25}%
-\contentsline {paragraph}{Una nota sobre unidades naturales de ciertas cantidades}{223}{section*.26}%
-\contentsline {section}{\numberline {14.2}Teoría de perturbación renormalizada}{224}{section.14.2}%
+\contentsline {paragraph}{Una nota sobre unidades naturales}{223}{section*.26}%
+\contentsline {section}{\numberline {14.2}Renormalización y teoría de perturbaciónes}{224}{section.14.2}%
 \contentsline {subsection}{\numberline {14.2.1}Divergencias originadas de la dispersión dos-a-dos}{227}{subsection.14.2.1}%
 \contentsline {subsection}{\numberline {14.2.2}Parámetros de Feynman y rotación de Wick}{228}{subsection.14.2.2}%
 \contentsline {subsection}{\numberline {14.2.3}Regularización dimensional}{232}{subsection.14.2.3}%

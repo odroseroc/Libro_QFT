@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  11 JUL 2024 16:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  11 JUL 2024 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4190,24 +4190,25 @@ Package mdframed Info: mdframed works in twoside mode on input line 161.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 161.
-LaTeX Info: Redefining \. on input line 191.
-LaTeX Info: Redefining \% on input line 191.
- [222]
+
 Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 252.
+LaTeX Info: Redefining \. on input line 193.
+LaTeX Info: Redefining \% on input line 193.
+[222]
+Package mdframed Info: mdframed works in twoside mode on input line 253.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 252.
-Package mdframed Info: Not enough space on this page on input line 262.
-LaTeX Info: Redefining \. on input line 262.
-LaTeX Info: Redefining \% on input line 262.
-[223]
-Package mdframed Info: Not enough space on this page on input line 262.
-LaTeX Info: Redefining \. on input line 328.
-LaTeX Info: Redefining \% on input line 328.
+(mdframed)              on input line 253.
+Package mdframed Info: Not enough space on this page on input line 263.
+LaTeX Info: Redefining \. on input line 263.
+LaTeX Info: Redefining \% on input line 263.
+ [223]
+Package mdframed Info: Not enough space on this page on input line 263.
+LaTeX Info: Redefining \. on input line 329.
+LaTeX Info: Redefining \% on input line 329.
  [224]
 Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm1.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4218,14 +4219,14 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm1.eps>
 (epstopdf)                    size: 3489 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//RFeynmanRenorm1-
 eps-converted-to.pdf Pictures//RFeynmanRenorm1.eps>
-(epstopdf)             \includegraphics on input line 350.
+(epstopdf)             \includegraphics on input line 351.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//RFeynmanRenorm1-eps-converted-to.pdf, id=3207, 174.6525pt x 49.18375
 pt>
 File: Pictures//RFeynmanRenorm1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm1-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//RFeynmanRenorm1-eps-converted-to.pdf  used o
-n input line 350.
+n input line 351.
 (pdftex.def)             Requested size: 43.66301pt x 12.2959pt.
 Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm2.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4236,14 +4237,14 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm2.eps>
 (epstopdf)                    size: 2802 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//RFeynmanRenorm2-
 eps-converted-to.pdf Pictures//RFeynmanRenorm2.eps>
-(epstopdf)             \includegraphics on input line 356.
+(epstopdf)             \includegraphics on input line 357.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//RFeynmanRenorm2-eps-converted-to.pdf, id=3208, 124.465pt x 124.465pt
 >
 File: Pictures//RFeynmanRenorm2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm2-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//RFeynmanRenorm2-eps-converted-to.pdf  used o
-n input line 356.
+n input line 357.
 (pdftex.def)             Requested size: 31.11617pt x 31.11617pt.
 Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm3.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4254,14 +4255,14 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm3.eps>
 (epstopdf)                    size: 2809 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//RFeynmanRenorm3-
 eps-converted-to.pdf Pictures//RFeynmanRenorm3.eps>
-(epstopdf)             \includegraphics on input line 362.
+(epstopdf)             \includegraphics on input line 363.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//RFeynmanRenorm3-eps-converted-to.pdf, id=3209, 174.6525pt x 36.135pt
 >
 File: Pictures//RFeynmanRenorm3-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm3-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//RFeynmanRenorm3-eps-converted-to.pdf  used o
-n input line 362.
+n input line 363.
 (pdftex.def)             Requested size: 43.66301pt x 9.03372pt.
 Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm4.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4272,25 +4273,25 @@ Package epstopdf Info: Source file: <Pictures//RFeynmanRenorm4.eps>
 (epstopdf)                    size: 2822 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//RFeynmanRenorm4-
 eps-converted-to.pdf Pictures//RFeynmanRenorm4.eps>
-(epstopdf)             \includegraphics on input line 368.
+(epstopdf)             \includegraphics on input line 369.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//RFeynmanRenorm4-eps-converted-to.pdf, id=3210, 124.465pt x 124.465pt
 >
 File: Pictures//RFeynmanRenorm4-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//RFeynmanRenorm4-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//RFeynmanRenorm4-eps-converted-to.pdf  used o
-n input line 368.
+n input line 369.
 (pdftex.def)             Requested size: 31.11617pt x 31.11617pt.
-Package mdframed Info: mdframed works in twoside mode on input line 379.
+Package mdframed Info: mdframed works in twoside mode on input line 380.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 379.
-LaTeX Info: Redefining \. on input line 407.
-LaTeX Info: Redefining \% on input line 407.
+(mdframed)              on input line 380.
+LaTeX Info: Redefining \. on input line 408.
+LaTeX Info: Redefining \% on input line 408.
  [225 <./Pictures//RFeynmanRenorm1-eps-converted-to.pdf> <./Pictures//RFeynmanR
 enorm2-eps-converted-to.pdf> <./Pictures//RFeynmanRenorm3-eps-converted-to.pdf>
  <./Pictures//RFeynmanRenorm4-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
 
@@ -4303,14 +4304,14 @@ df>
 (epstopdf)                    size: 6056 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_1linea-ep
 s-converted-to.pdf Pictures//renorm_1linea.eps>
-(epstopdf)             \includegraphics on input line 446.
+(epstopdf)             \includegraphics on input line 447.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_1linea-eps-converted-to.pdf, id=3228, 174.6525pt x 71.26625pt
 >
 File: Pictures//renorm_1linea-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_1linea-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_1linea-eps-converted-to.pdf  used on 
-input line 446.
+input line 447.
 (pdftex.def)             Requested size: 87.32603pt x 35.63303pt.
 Package epstopdf Info: Source file: <Pictures//renorm_4lineas.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4321,22 +4322,22 @@ pdf>
 (epstopdf)                    size: 10073 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_4lineas-e
 ps-converted-to.pdf Pictures//renorm_4lineas.eps>
-(epstopdf)             \includegraphics on input line 456.
+(epstopdf)             \includegraphics on input line 457.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_4lineas-eps-converted-to.pdf, id=3229, 155.58125pt x 116.435p
 t>
 File: Pictures//renorm_4lineas-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_4lineas-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_4lineas-eps-converted-to.pdf  used on
- input line 456.
+ input line 457.
 (pdftex.def)             Requested size: 77.79042pt x 58.21735pt.
 
-Overfull \hbox (24.00002pt too wide) in paragraph at lines 443--464
+Overfull \hbox (24.00002pt too wide) in paragraph at lines 444--465
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 468.
-LaTeX Info: Redefining \% on input line 468.
+LaTeX Info: Redefining \. on input line 469.
+LaTeX Info: Redefining \% on input line 469.
 [226 <./Pictures//renorm_1linea-eps-converted-to.pdf> <./Pictures//renorm_4line
 as-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Pictures//renorm_2a2_1loop.eps>
@@ -4348,14 +4349,14 @@ o.pdf>
 (epstopdf)                    size: 10455 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_2a2_1loop
 -eps-converted-to.pdf Pictures//renorm_2a2_1loop.eps>
-(epstopdf)             \includegraphics on input line 506.
+(epstopdf)             \includegraphics on input line 517.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_2a2_1loop-eps-converted-to.pdf, id=3247, 191.71625pt x 140.52
 5pt>
 File: Pictures//renorm_2a2_1loop-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_2a2_1loop-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_2a2_1loop-eps-converted-to.pdf  used 
-on input line 506.
+on input line 517.
 (pdftex.def)             Requested size: 47.92894pt x 35.13115pt.
 Package epstopdf Info: Source file: <Pictures//renorm_X.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4365,13 +4366,13 @@ Package epstopdf Info: Source file: <Pictures//renorm_X.eps>
 (epstopdf)                    size: 2697 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_X-eps-con
 verted-to.pdf Pictures//renorm_X.eps>
-(epstopdf)             \includegraphics on input line 511.
+(epstopdf)             \includegraphics on input line 522.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_X-eps-converted-to.pdf, id=3248, 62.2325pt x 62.2325pt>
 File: Pictures//renorm_X-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_X-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_X-eps-converted-to.pdf  used on input
- line 511.
+ line 522.
 (pdftex.def)             Requested size: 15.55807pt x 15.55807pt.
 Package epstopdf Info: Source file: <Pictures//renorm_xox.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4382,13 +4383,13 @@ Package epstopdf Info: Source file: <Pictures//renorm_xox.eps>
 (epstopdf)                    size: 2850 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_xox-eps-c
 onverted-to.pdf Pictures//renorm_xox.eps>
-(epstopdf)             \includegraphics on input line 514.
+(epstopdf)             \includegraphics on input line 525.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_xox-eps-converted-to.pdf, id=3249, 77.28876pt x 92.345pt>
 File: Pictures//renorm_xox-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_xox-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_xox-eps-converted-to.pdf  used on inp
-ut line 514.
+ut line 525.
 (pdftex.def)             Requested size: 19.32213pt x 23.08618pt.
 Package epstopdf Info: Source file: <Pictures//renorm_oxx.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4399,13 +4400,13 @@ Package epstopdf Info: Source file: <Pictures//renorm_oxx.eps>
 (epstopdf)                    size: 2857 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_oxx-eps-c
 onverted-to.pdf Pictures//renorm_oxx.eps>
-(epstopdf)             \includegraphics on input line 517.
+(epstopdf)             \includegraphics on input line 528.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_oxx-eps-converted-to.pdf, id=3250, 92.345pt x 77.28876pt>
 File: Pictures//renorm_oxx-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_oxx-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_oxx-eps-converted-to.pdf  used on inp
-ut line 517.
+ut line 528.
 (pdftex.def)             Requested size: 23.08618pt x 19.32213pt.
 Package epstopdf Info: Source file: <Pictures//renorm_oxx_cruzado.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4416,7 +4417,7 @@ Package epstopdf Info: Source file: <Pictures//renorm_oxx_cruzado.eps>
 (epstopdf)                    size: 2878 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_oxx_cruza
 do-eps-converted-to.pdf Pictures//renorm_oxx_cruzado.eps>
-(epstopdf)             \includegraphics on input line 520.
+(epstopdf)             \includegraphics on input line 531.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_oxx_cruzado-eps-converted-to.pdf, id=3251, 111.41624pt x 93.3
 4875pt>
@@ -4424,7 +4425,7 @@ File: Pictures//renorm_oxx_cruzado-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures//renorm_oxx_cruzado-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_oxx_cruzado-eps-converted-to.pdf  use
-d on input line 520.
+d on input line 531.
 (pdftex.def)             Requested size: 27.85399pt x 23.33713pt.
 Package epstopdf Info: Source file: <Pictures//renorm_loop1.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4435,17 +4436,17 @@ f>
 (epstopdf)                    size: 10638 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_loop1-eps
 -converted-to.pdf Pictures//renorm_loop1.eps>
-(epstopdf)             \includegraphics on input line 530.
+(epstopdf)             \includegraphics on input line 541.
 Package epstopdf Info: Output file is already uptodate.
 <Pictures//renorm_loop1-eps-converted-to.pdf, id=3252, 177.66376pt x 169.63374p
 t>
 File: Pictures//renorm_loop1-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_loop1-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_loop1-eps-converted-to.pdf  used on i
-nput line 530.
+nput line 541.
 (pdftex.def)             Requested size: 62.18324pt x 59.3727pt.
-LaTeX Info: Redefining \. on input line 538.
-LaTeX Info: Redefining \% on input line 538.
+LaTeX Info: Redefining \. on input line 549.
+LaTeX Info: Redefining \% on input line 549.
  [227 <./Pictures//renorm_2a2_1loop-eps-converted-to.pdf> <./Pictures//renorm_X
 -eps-converted-to.pdf> <./Pictures//renorm_xox-eps-converted-to.pdf> <./Picture
 s//renorm_oxx-eps-converted-to.pdf> <./Pictures//renorm_oxx_cruzado-eps-convert
@@ -4459,13 +4460,13 @@ f>
 (epstopdf)                    size: 7590 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_loop2-eps
 -converted-to.pdf Pictures//renorm_loop2.eps>
-(epstopdf)             \includegraphics on input line 544.
+(epstopdf)             \includegraphics on input line 555.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_loop2-eps-converted-to.pdf, id=3272, 200.75pt x 136.51pt>
+<Pictures//renorm_loop2-eps-converted-to.pdf, id=3275, 200.75pt x 136.51pt>
 File: Pictures//renorm_loop2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_loop2-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_loop2-eps-converted-to.pdf  used on i
-nput line 544.
+nput line 555.
 (pdftex.def)             Requested size: 70.26353pt x 47.7792pt.
 Package epstopdf Info: Source file: <Pictures//renorm_loop2_rot.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4476,25 +4477,25 @@ o.pdf>
 (epstopdf)                    size: 7476 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_loop2_rot
 -eps-converted-to.pdf Pictures//renorm_loop2_rot.eps>
-(epstopdf)             \includegraphics on input line 547.
+(epstopdf)             \includegraphics on input line 558.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_loop2_rot-eps-converted-to.pdf, id=3273, 159.59625pt x 173.64
+<Pictures//renorm_loop2_rot-eps-converted-to.pdf, id=3276, 159.59625pt x 173.64
 874pt>
 File: Pictures//renorm_loop2_rot-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_loop2_rot-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_loop2_rot-eps-converted-to.pdf  used 
-on input line 547.
+on input line 558.
 (pdftex.def)             Requested size: 55.85951pt x 60.77797pt.
-Package mdframed Info: mdframed works in twoside mode on input line 570.
+Package mdframed Info: mdframed works in twoside mode on input line 581.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 570.
-LaTeX Info: Redefining \. on input line 596.
-LaTeX Info: Redefining \% on input line 596.
+(mdframed)              on input line 581.
+LaTeX Info: Redefining \. on input line 607.
+LaTeX Info: Redefining \% on input line 607.
  [228 <./Pictures//renorm_loop1-eps-converted-to.pdf> <./Pictures//renorm_loop2
 -eps-converted-to.pdf> <./Pictures//renorm_loop2_rot-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 666.
-LaTeX Info: Redefining \% on input line 666.
+LaTeX Info: Redefining \. on input line 677.
+LaTeX Info: Redefining \% on input line 677.
  [229]
 Package epstopdf Info: Source file: <Pictures//renorm_complejo.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4505,46 +4506,46 @@ Package epstopdf Info: Source file: <Pictures//renorm_complejo.eps>
 (epstopdf)                    size: 6566 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//renorm_complejo-
 eps-converted-to.pdf Pictures//renorm_complejo.eps>
-(epstopdf)             \includegraphics on input line 736.
+(epstopdf)             \includegraphics on input line 747.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//renorm_complejo-eps-converted-to.pdf, id=3307, 383.4325pt x 383.4325
+<Pictures//renorm_complejo-eps-converted-to.pdf, id=3310, 383.4325pt x 383.4325
 pt>
 File: Pictures//renorm_complejo-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//renorm_complejo-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//renorm_complejo-eps-converted-to.pdf  used o
-n input line 736.
+n input line 747.
 (pdftex.def)             Requested size: 115.03062pt x 115.03062pt.
-LaTeX Info: Redefining \. on input line 743.
-LaTeX Info: Redefining \% on input line 743.
+LaTeX Info: Redefining \. on input line 754.
+LaTeX Info: Redefining \% on input line 754.
  [230]
-Underfull \hbox (badness 10000) in paragraph at lines 790--791
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 
  []
 
-LaTeX Info: Redefining \. on input line 791.
-LaTeX Info: Redefining \% on input line 791.
+LaTeX Info: Redefining \. on input line 802.
+LaTeX Info: Redefining \% on input line 802.
 [231 <./Pictures//renorm_complejo-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 857.
-LaTeX Info: Redefining \% on input line 857.
+LaTeX Info: Redefining \. on input line 868.
+LaTeX Info: Redefining \% on input line 868.
  [232]
-LaTeX Info: Redefining \. on input line 916.
-LaTeX Info: Redefining \% on input line 916.
+LaTeX Info: Redefining \. on input line 927.
+LaTeX Info: Redefining \% on input line 927.
  [233]pdfTeX warning (ext4): destination with the same identifier (name{equatio
 n.14.2.61}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.946 \end{IEEEeqnarray*}
+l.957 \end{IEEEeqnarray*}
                          
-LaTeX Info: Redefining \. on input line 982.
-LaTeX Info: Redefining \% on input line 982.
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
  [234]
-LaTeX Info: Redefining \. on input line 1053.
-LaTeX Info: Redefining \% on input line 1053.
+LaTeX Info: Redefining \. on input line 1064.
+LaTeX Info: Redefining \% on input line 1064.
  [235pdfTeX warning (ext4): destination with the same identifier (name{equation
 .14.2.70}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1053 \end{IEEEeqnarray*}
+l.1064 \end{IEEEeqnarray*}
                           ]
 Package epstopdf Info: Source file: <Pictures//autoenergia.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4555,13 +4556,13 @@ Package epstopdf Info: Source file: <Pictures//autoenergia.eps>
 (epstopdf)                    size: 6056 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//autoenergia-eps-
 converted-to.pdf Pictures//autoenergia.eps>
-(epstopdf)             \includegraphics on input line 1076.
+(epstopdf)             \includegraphics on input line 1087.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia-eps-converted-to.pdf, id=3397, 174.6525pt x 71.26625pt>
+<Pictures//autoenergia-eps-converted-to.pdf, id=3400, 174.6525pt x 71.26625pt>
 File: Pictures//autoenergia-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//autoenergia-eps-converted-to.pdf  used on in
-put line 1076.
+put line 1087.
 (pdftex.def)             Requested size: 43.66301pt x 17.81651pt.
 Package epstopdf Info: Source file: <Pictures//autoenergia_prop.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4572,14 +4573,14 @@ o.pdf>
 (epstopdf)                    size: 2765 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//autoenergia_prop
 -eps-converted-to.pdf Pictures//autoenergia_prop.eps>
-(epstopdf)             \includegraphics on input line 1079.
+(epstopdf)             \includegraphics on input line 1090.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_prop-eps-converted-to.pdf, id=3398, 174.6525pt x 71.2662
+<Pictures//autoenergia_prop-eps-converted-to.pdf, id=3401, 174.6525pt x 71.2662
 5pt>
 File: Pictures//autoenergia_prop-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_prop-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//autoenergia_prop-eps-converted-to.pdf  used 
-on input line 1079.
+on input line 1090.
 (pdftex.def)             Requested size: 43.66301pt x 17.81651pt.
 Package epstopdf Info: Source file: <Pictures//autoenergia_1PI.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4590,14 +4591,14 @@ Package epstopdf Info: Source file: <Pictures//autoenergia_1PI.eps>
 (epstopdf)                    size: 3680 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//autoenergia_1PI-
 eps-converted-to.pdf Pictures//autoenergia_1PI.eps>
-(epstopdf)             \includegraphics on input line 1082.
+(epstopdf)             \includegraphics on input line 1093.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_1PI-eps-converted-to.pdf, id=3399, 174.6525pt x 71.26625
+<Pictures//autoenergia_1PI-eps-converted-to.pdf, id=3402, 174.6525pt x 71.26625
 pt>
 File: Pictures//autoenergia_1PI-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_1PI-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//autoenergia_1PI-eps-converted-to.pdf  used o
-n input line 1082.
+n input line 1093.
 (pdftex.def)             Requested size: 43.66301pt x 17.81651pt.
 Package epstopdf Info: Source file: <Pictures//autoenergia_1PI2.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4608,14 +4609,14 @@ o.pdf>
 (epstopdf)                    size: 4571 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//autoenergia_1PI2
 -eps-converted-to.pdf Pictures//autoenergia_1PI2.eps>
-(epstopdf)             \includegraphics on input line 1085.
+(epstopdf)             \includegraphics on input line 1096.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_1PI2-eps-converted-to.pdf, id=3400, 296.10625pt x 71.266
+<Pictures//autoenergia_1PI2-eps-converted-to.pdf, id=3403, 296.10625pt x 71.266
 25pt>
 File: Pictures//autoenergia_1PI2-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_1PI2-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//autoenergia_1PI2-eps-converted-to.pdf  used 
-on input line 1085.
+on input line 1096.
 (pdftex.def)             Requested size: 74.02637pt x 17.81651pt.
 Package epstopdf Info: Source file: <Pictures//autoenergia_1PI3.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4626,14 +4627,14 @@ o.pdf>
 (epstopdf)                    size: 5418 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//autoenergia_1PI3
 -eps-converted-to.pdf Pictures//autoenergia_1PI3.eps>
-(epstopdf)             \includegraphics on input line 1090.
+(epstopdf)             \includegraphics on input line 1101.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//autoenergia_1PI3-eps-converted-to.pdf, id=3401, 417.56pt x 71.26625p
+<Pictures//autoenergia_1PI3-eps-converted-to.pdf, id=3404, 417.56pt x 71.26625p
 t>
 File: Pictures//autoenergia_1PI3-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia_1PI3-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//autoenergia_1PI3-eps-converted-to.pdf  used 
-on input line 1090.
+on input line 1101.
 (pdftex.def)             Requested size: 104.38974pt x 17.81651pt.
 Package epstopdf Info: Source file: <Pictures//autoenergia.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4644,15 +4645,15 @@ Package epstopdf Info: Source file: <Pictures//autoenergia.eps>
 (epstopdf)                    size: 6056 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//autoenergia-eps-
 converted-to.pdf Pictures//autoenergia.eps>
-(epstopdf)             \includegraphics on input line 1106.
+(epstopdf)             \includegraphics on input line 1117.
 Package epstopdf Info: Output file is already uptodate.
 File: Pictures//autoenergia-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//autoenergia-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//autoenergia-eps-converted-to.pdf  used on in
-put line 1106.
+put line 1117.
 (pdftex.def)             Requested size: 43.66301pt x 17.81651pt.
-LaTeX Info: Redefining \. on input line 1134.
-LaTeX Info: Redefining \% on input line 1134.
+LaTeX Info: Redefining \. on input line 1145.
+LaTeX Info: Redefining \% on input line 1145.
  [236 <./Pictures//autoenergia-eps-converted-to.pdf> <./Pictures//autoenergia_p
 rop-eps-converted-to.pdf> <./Pictures//autoenergia_1PI-eps-converted-to.pdf> <.
 /Pictures//autoenergia_1PI2-eps-converted-to.pdf> <./Pictures//autoenergia_1PI3
@@ -4666,14 +4667,14 @@ df>
 (epstopdf)                    size: 2811 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//loop_amputado-ep
 s-converted-to.pdf Pictures//loop_amputado.eps>
-(epstopdf)             \includegraphics on input line 1165.
+(epstopdf)             \includegraphics on input line 1176.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//loop_amputado-eps-converted-to.pdf, id=3423, 127.47626pt x 71.26625p
+<Pictures//loop_amputado-eps-converted-to.pdf, id=3426, 127.47626pt x 71.26625p
 t>
 File: Pictures//loop_amputado-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//loop_amputado-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//loop_amputado-eps-converted-to.pdf  used on 
-input line 1165.
+input line 1176.
 (pdftex.def)             Requested size: 31.86897pt x 17.81651pt.
 Package epstopdf Info: Source file: <Pictures//contratermino_amputado.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4684,18 +4685,18 @@ rted-to.pdf>
 (epstopdf)                    size: 2782 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//contratermino_am
 putado-eps-converted-to.pdf Pictures//contratermino_amputado.eps>
-(epstopdf)             \includegraphics on input line 1169.
+(epstopdf)             \includegraphics on input line 1180.
 Package epstopdf Info: Output file is already uptodate.
-<Pictures//contratermino_amputado-eps-converted-to.pdf, id=3424, 54.2025pt x 54
+<Pictures//contratermino_amputado-eps-converted-to.pdf, id=3427, 54.2025pt x 54
 .2025pt>
 File: Pictures//contratermino_amputado-eps-converted-to.pdf Graphic file (type 
 pdf)
 <use Pictures//contratermino_amputado-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//contratermino_amputado-eps-converted-to.pdf 
- used on input line 1169.
+ used on input line 1180.
 (pdftex.def)             Requested size: 13.55058pt x 13.55058pt.
-LaTeX Info: Redefining \. on input line 1176.
-LaTeX Info: Redefining \% on input line 1176.
+LaTeX Info: Redefining \. on input line 1187.
+LaTeX Info: Redefining \% on input line 1187.
  [237 <./Pictures//loop_amputado-eps-converted-to.pdf> <./Pictures//contratermi
 no_amputado-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Pictures//loop_amputado.eps>
@@ -4707,12 +4708,12 @@ df>
 (epstopdf)                    size: 2811 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//loop_amputado-ep
 s-converted-to.pdf Pictures//loop_amputado.eps>
-(epstopdf)             \includegraphics on input line 1197.
+(epstopdf)             \includegraphics on input line 1208.
 Package epstopdf Info: Output file is already uptodate.
 File: Pictures//loop_amputado-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures//loop_amputado-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//loop_amputado-eps-converted-to.pdf  used on 
-input line 1197.
+input line 1208.
 (pdftex.def)             Requested size: 31.86897pt x 17.81651pt.
 Package epstopdf Info: Source file: <Pictures//contratermino_amputado.eps>
 (epstopdf)                    date: 2022-11-10 12:14:56
@@ -4723,13 +4724,13 @@ rted-to.pdf>
 (epstopdf)                    size: 2782 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures//contratermino_am
 putado-eps-converted-to.pdf Pictures//contratermino_amputado.eps>
-(epstopdf)             \includegraphics on input line 1201.
+(epstopdf)             \includegraphics on input line 1212.
 Package epstopdf Info: Output file is already uptodate.
 File: Pictures//contratermino_amputado-eps-converted-to.pdf Graphic file (type 
 pdf)
 <use Pictures//contratermino_amputado-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures//contratermino_amputado-eps-converted-to.pdf 
- used on input line 1201.
+ used on input line 1212.
 (pdftex.def)             Requested size: 13.55058pt x 13.55058pt.
 ) (./Capitulos/Apendices/apendices.tex (./Capitulos/Apendices/ApenA.tex
 LaTeX Info: Redefining \. on input line 7.
@@ -4742,7 +4743,7 @@ LaTeX Info: Redefining \% on input line 7.
 l.7 \chapter
             {Introducción a teoría de grupos}]
 Ap\'{e}ndice A.
-<Pictures//chapter_head_3.pdf, id=3452, 845.1575pt x 597.23125pt>
+<Pictures//chapter_head_3.pdf, id=3455, 845.1575pt x 597.23125pt>
 File: Pictures//chapter_head_3.pdf Graphic file (type pdf)
 <use Pictures//chapter_head_3.pdf>
 Package pdftex.def Info: Pictures//chapter_head_3.pdf  used on input line 7.
@@ -4980,7 +4981,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 668--669
 
  []
 
-<Capitulos/Apendices/Ap_A3.png, id=3582, 2541.495pt x 1192.455pt>
+<Capitulos/Apendices/Ap_A3.png, id=3585, 2541.495pt x 1192.455pt>
 File: Capitulos/Apendices/Ap_A3.png Graphic file (type png)
 <use Capitulos/Apendices/Ap_A3.png>
 Package pdftex.def Info: Capitulos/Apendices/Ap_A3.png  used on input line 672.
@@ -5003,7 +5004,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 775--776
 
  []
 
-<Capitulos/Apendices/Ap_A.png, id=3594, 539.76656pt x 486.31688pt>
+<Capitulos/Apendices/Ap_A.png, id=3597, 539.76656pt x 486.31688pt>
 File: Capitulos/Apendices/Ap_A.png Graphic file (type png)
 <use Capitulos/Apendices/Ap_A.png>
 Package pdftex.def Info: Capitulos/Apendices/Ap_A.png  used on input line 788.
@@ -5170,7 +5171,7 @@ to.pdf>
 d-eps-converted-to.pdf Capitulos/Apendices/paridad.eps>
 (epstopdf)             \includegraphics on input line 1408.
 Package epstopdf Info: Output file is already uptodate.
-<Capitulos/Apendices/paridad-eps-converted-to.pdf, id=3734, 586.19pt x 287.0725
+<Capitulos/Apendices/paridad-eps-converted-to.pdf, id=3737, 586.19pt x 287.0725
 pt>
 File: Capitulos/Apendices/paridad-eps-converted-to.pdf Graphic file (type pdf)
 <use Capitulos/Apendices/paridad-eps-converted-to.pdf>
@@ -5241,9 +5242,9 @@ Package logreq Info: Writing requests to 'QFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49746 strings out of 478287
- 963147 string characters out of 5849290
- 1801569 words of memory out of 5000000
+ 49749 strings out of 478287
+ 963168 string characters out of 5849290
+ 1801590 words of memory out of 5000000
  64571 multiletter control sequences out of 15000+600000
  591972 words of font info for 541 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -5309,10 +5310,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/zapfding/uzdr.pfb>
-Output written on QFT.pdf (268 pages, 25213071 bytes).
+Output written on QFT.pdf (268 pages, 25212962 bytes).
 PDF statistics:
- 4609 PDF objects out of 5155 (max. 8388607)
- 3920 compressed objects within 40 object streams
- 1697 named destinations out of 1728 (max. 500000)
+ 4613 PDF objects out of 5155 (max. 8388607)
+ 3924 compressed objects within 40 object streams
+ 1700 named destinations out of 1728 (max. 500000)
  172795 words of extra memory for PDF output out of 184870 (max. 10000000)
 
